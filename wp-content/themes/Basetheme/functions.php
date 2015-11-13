@@ -18,6 +18,20 @@ $sage_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
+  'lib/function-debug.php',                // Custom functions
+  'lib/function-get-featured-image-url.php',      // Custom functions
+  'lib/function-get-tax-names.php',               // Custom functions
+  'lib/function-getslug.php',                     // Custom functions
+  'lib/function-get_id_from_slug.php',            // Custom functions
+  'lib/function_clean_youtube_link.php',            // Custom functions
+  'lib/function-display-gravity-form.php',            // Custom functions
+  'lib/function-display-gravity-form.php',            // Custom functions
+  'lib/gravity_forms-v5.php',            // Custom functions
+  
+
+  'lib/aq_resizer.php',                // Custom functions
+
+
 ];
 
 foreach ($sage_includes as $file) {

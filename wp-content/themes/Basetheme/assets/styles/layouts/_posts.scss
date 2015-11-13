@@ -1,0 +1,60 @@
+/*======================================
+=            Property post Obj            =
+======================================*/
+.property-obj {
+	padding:2.7em 2.7em 0.5em 2.7em;
+	span { 
+		font-size:2.3em; 
+		color:#fff;
+		font-family:$primary-font; 
+		//font wrong
+	}
+	img {
+		display:auto;
+		width:100%;
+		max-width:100%;
+		overflow:hidden;
+	}
+	ul,li { list-style:none; margin: 0; padding: 0;}
+	li {
+		padding:1em;
+		font-size:1em;
+		display: inline-block;
+		text-align:center;
+		i { width: 100%; 
+			clear:both;
+			font-size:0.8em;
+		}
+		span {
+			 width:100%; 
+			 display:block; 
+			clear:both;
+			font-size:0.8em;
+		}
+	}
+	a {
+		font-size:1.8em;
+		text-transform:uppercase;
+		padding:1em 0em;
+		display:inline-block;
+	}
+}
+/*==========================================
+=      Featured Propery Obj             =
+==========================================*/
+.featured {
+	background:$purple-dark;
+	min-height:50vh;
+	padding-right:0px;
+	margin: 0;
+	.title {
+	 text-transform:uppercase;
+	 margin: 0;
+	 font-family:$primary-font;
+	 color:#fff;
+	 font-size:3em;
+	 padding:0.3em 1em 0.3em 1em;
+	 background:$purple;
+	}
+
+}

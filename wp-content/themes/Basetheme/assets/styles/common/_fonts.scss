@@ -1,0 +1,70 @@
+
+@font-face {
+	font-family: 'Yanone Kaffeesatz';
+	src: url($icon-font-path+'YanoneKaffeesatz-Bold.eot');
+	src: url($icon-font-path+'YanoneKaffeesatz-Bold.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'YanoneKaffeesatz-Bold.woff') format('woff'),
+		url($icon-font-path+'YanoneKaffeesatz-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Yanone Kaffeesatz';
+	src: url($icon-font-path+'YanoneKaffeesatz-Regular.eot');
+	src: url($icon-font-path+'YanoneKaffeesatz-Regular.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'YanoneKaffeesatz-Regular.woff') format('woff'),
+		url($icon-font-path+'YanoneKaffeesatz-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Scheherazade';
+	src: url($icon-font-path+'Scheherazade-Regular.eot');
+	src: url($icon-font-path+'Scheherazade-Regular.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Scheherazade-Regular.woff') format('woff'),
+		url($icon-font-path+'Scheherazade-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Scheherazade';
+	src: url($icon-font-path+'Scheherazade-Bold.eot');
+	src: url($icon-font-path+'Scheherazade-Bold.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Scheherazade-Bold.woff') format('woff'),
+		url($icon-font-path+'Scheherazade-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Niconne';
+	src: url($icon-font-path+'Niconne-Regular.eot');
+	src: url($icon-font-path+'Niconne-Regular.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'Niconne-Regular.woff') format('woff'),
+		url($icon-font-path+'Niconne-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Yanone Kaffeesatz';
+	src: url($icon-font-path+'YanoneKaffeesatz-ExtraLight.eot');
+	src: url($icon-font-path+'YanoneKaffeesatz-ExtraLight.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'YanoneKaffeesatz-ExtraLight.woff') format('woff'),
+		url($icon-font-path+'YanoneKaffeesatz-ExtraLight.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Yanone Kaffeesatz';
+	src: url($icon-font-path+'YanoneKaffeesatz-Light.eot');
+	src: url($icon-font-path+'YanoneKaffeesatz-Light.eot?#iefix') format('embedded-opentype'),
+		url($icon-font-path+'YanoneKaffeesatz-Light.woff') format('woff'),
+		url($icon-font-path+'YanoneKaffeesatz-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}

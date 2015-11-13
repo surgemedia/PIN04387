@@ -1,1 +1,12 @@
+html,body {margin: 0; padding: 0;}
+h1 { font-family: $primary-font; 
+	 letter-spacing:2px;
+}
+h2 { font-family: $secondary-font;}
+a {
+	color:$brand-light;
+}
 
+.grey-bg {
+	background:$grey;
+}

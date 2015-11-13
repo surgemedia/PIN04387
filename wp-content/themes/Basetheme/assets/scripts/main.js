@@ -71,7 +71,44 @@
     }
   };
 
-  // Load Events
+  // Load Events 
   $(document).ready(UTIL.loadEvents);
+
+  /*==========================================
+=            Youtube background            =
+==========================================*/
+$('#main-content').YTPlayer({
+  videoId: $('#main-content').data('video-id'),
+   playerVars: {
+    modestbranding: 0,
+    autoplay: 1,
+    controls: 0,
+    showinfo: 0,
+    wmode: 'transparent',
+    branding: 0,
+    rel: 0,
+    autohide: 0
+  },
+  callback: function() {
+    // console.log($('#video-bg').data('video-id'));
+  }
+
+  });  
+
+  /*======================================
+  =            Choosen Select            =
+  ======================================*/
+  $("select").chosen({disable_search_threshold: 10});
+
+  /*=============================================
+  = Enabling multi-level navigation =
+  ===============================================*/
+  $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+      event.preventDefault(); 
+      event.stopPropagation(); 
+      $(this).parent().siblings().removeClass('open');
+      $(this).parent().toggleClass('open');
+  });
+
 
 })(jQuery); // Fully reference jQuery after this point.

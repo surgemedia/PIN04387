@@ -2,6 +2,7 @@
   "dependencies": {
     "main.js": {
       "files": [
+        "scripts/youtubeBackground/src/jquery.youtubebackground.js",
         "scripts/main.js"
       ],
       "main": true

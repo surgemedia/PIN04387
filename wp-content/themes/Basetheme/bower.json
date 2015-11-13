@@ -8,11 +8,15 @@
   "private": true,
   "dependencies": {
     "modernizr": "2.8.2",
-    "bootstrap-sass-official": "3.3.5"
+    "bootstrap-sass-official": "3.3.5",
+    "chosen": "~1.4.2"
   },
   "overrides": {
     "modernizr": {
       "main": "./modernizr.js"
+    },
+    "chosen": {
+     "main": [ "./chosen.jquery.min.js" ]
     },
     "bootstrap-sass-official": {
       "main": [
@@ -36,5 +40,8 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
       ]
     }
+  },
+  "devDependencies": {
+    "chosen": "~1.4.2"
   }
 }

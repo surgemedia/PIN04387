@@ -1,0 +1,112 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "Post Duplicator"
+msgstr ""
+
+#. Short description.
+msgid "Creates functionality to duplicate any and all post types, including taxonomies &amp; custom fields."
+msgstr ""
+
+#. Screenshot description.
+msgid "Sample view of the duplicate post link"
+msgstr ""
+
+#. Screenshot description.
+msgid "View of the settings page"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "This plugin was created to make an exact duplicate of a selected post. Custom post types are supported, along with custom taxonomies and custom fields."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "*Note: Comments are not passed to the new post."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "This plugin is simply meant to quickly and easily duplicate a post. Just hover over a post in the edit screen and select 'Duplicate {post_type}' to create a duplicate post."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "I created this plugin mainly for myself when I'm develping WordPress sites. I always need dummy content to fill out the look of a website and wanted a very quick and easy way to create multiple posts."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Upload <code>m4c-postduplicator</code> directory to the <code>/wp-content/plugins/</code> directory"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin through the 'Plugins' menu in WordPress"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added page duplication support for the WP Customer Area plugin"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Now supports multiple values of a single custom field during duplication"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added German language files"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Japanese language files"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated settings file for localization"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Modified duplicated posts data: post_date_gmt, post_modified, post_modified_gmt"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Changed the default published status to Draft"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Changed the default post date of duplicated posts to be the current time."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Cleaned up some code."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated localization code and files."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated metaboxer code."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added a settings page to set 'post status' and 'date' of duplicated posts."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated filenames and paths so the plugin works."
+msgstr ""
+
+#. Found in faq header.
+msgid "Are there any settings I need to configure?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How do I install the plugin?"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid ""
+"No, but there are a couple settings you can adjust if you choose to do so.\n"
+"View the settings by going to 'Tools &gt; Post Duplicator'."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Check out the 'Installation' tab."
+msgstr ""

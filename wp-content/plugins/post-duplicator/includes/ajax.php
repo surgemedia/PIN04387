@@ -1,11 +1,10 @@
 <?php
 
-add_action( 'wp_ajax_m4c_duplicate_post', 'm4c_duplicate_post' );
 /**
  * Thehe jQuery ajax call to create a new post.
  * Duplicates all the data including custom meta.
  *
- * @since 1.0.0
+ * @since 2.9
  */
 function m4c_duplicate_post() {
 	
@@ -20,11 +19,11 @@ function m4c_duplicate_post() {
 	
 	// Get the post as an array
 	$duplicate = get_post( $original_id, 'ARRAY_A' );
-	
+		
 	$settings = get_mtphr_post_duplicator_settings();
 	
 	// Modify some of the elements
-	$duplicate['post_title'] = $duplicate['post_title'].' .';
+	$duplicate['post_title'] = $duplicate['post_title'].' Copy';
 	
 	// Set the status
 	if( $settings['status'] != 'same' ) {
@@ -33,15 +32,22 @@ function m4c_duplicate_post() {
 	
 	// Set the post date
 	$timestamp = ( $settings['timestamp'] == 'duplicate' ) ? strtotime($duplicate['post_date']) : current_time('timestamp',0);
+	$timestamp_gmt = ( $settings['timestamp'] == 'duplicate' ) ? strtotime($duplicate['post_date_gmt']) : current_time('timestamp',1);
+	
 	if( $settings['time_offset'] ) {
 		$offset = intval($settings['time_offset_seconds']+$settings['time_offset_minutes']*60+$settings['time_offset_hours']*3600+$settings['time_offset_days']*86400);
 		if( $settings['time_offset_direction'] == 'newer' ) {
 			$timestamp = intval($timestamp+$offset);
+			$timestamp_gmt = intval($timestamp_gmt+$offset);
 		} else {
 			$timestamp = intval($timestamp-$offset);
+			$timestamp_gmt = intval($timestamp_gmt-$offset);
 		}
 	}
 	$duplicate['post_date'] = date('Y-m-d H:i:s', $timestamp);
+	$duplicate['post_date_gmt'] = date('Y-m-d H:i:s', $timestamp_gmt);
+	$duplicate['post_modified'] = date('Y-m-d H:i:s', current_time('timestamp',0));
+	$duplicate['post_modified_gmt'] = date('Y-m-d H:i:s', current_time('timestamp',1));
 
 	// Remove some of the keys
 	unset( $duplicate['ID'] );
@@ -61,10 +67,15 @@ function m4c_duplicate_post() {
 	// Duplicate all the custom fields
 	$custom_fields = get_post_custom( $original_id );
   foreach ( $custom_fields as $key => $value ) {
-		add_post_meta( $duplicate_id, $key, maybe_unserialize($value[0]) );
+	  if( is_array($value) && count($value) > 0 ) {
+			foreach( $value as $i=>$v ) {
+				add_post_meta( $duplicate_id, $key, maybe_unserialize($v) );
+			}
+		}
   }
 
 	echo 'Duplicate Post Created!';
 
 	die(); // this is required to return a proper result
 }
+add_action( 'wp_ajax_m4c_duplicate_post', 'm4c_duplicate_post' );
