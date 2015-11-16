@@ -355,7 +355,7 @@ class PMXI_Admin_Import extends PMXI_Controller_Admin {
 				}
 				else $this->errors->add('form-validation', __('Unable to download feed resource.', 'wp_all_import_plugin')); 
 			}								
-			
+		
 			if ( ! $this->errors->get_error_codes() ) {
 				
 				// xml is valid				
@@ -425,7 +425,7 @@ class PMXI_Admin_Import extends PMXI_Controller_Admin {
 				PMXI_Plugin::$session->save_data(); 						
 				
 				$xml = $this->get_xml();
-				
+					
 				if ( empty($xml) )
 				{
 					$this->errors->add('form-validation', __('Please confirm you are importing a valid feed.<br/> Often, feed providers distribute feeds with invalid data, improperly wrapped HTML, line breaks where they should not be, faulty character encodings, syntax errors in the XML, and other issues.<br/><br/>WP All Import has checks in place to automatically fix some of the most common problems, but we can’t catch every single one.<br/><br/>It is also possible that there is a bug in WP All Import, and the problem is not with the feed.<br/><br/>If you need assistance, please contact support – <a href="mailto:support@wpallimport.com">support@wpallimport.com</a> – with your XML/CSV file. We will identify the problem and release a bug fix if necessary.', 'wp_all_import_plugin')); 					
@@ -462,8 +462,7 @@ class PMXI_Admin_Import extends PMXI_Controller_Admin {
 	 * Step #2: Choose elements
 	 */
 	public function element()
-	{
-					
+	{				
 		$xpath = new DOMXPath($this->data['dom']);		
 		$post = $this->input->post(array('xpath' => ''));
 		$this->data['post'] =& $post;
@@ -1355,6 +1354,11 @@ class PMXI_Admin_Import extends PMXI_Controller_Admin {
 			
 			PMXI_Plugin::$session->set('encoding', $post['import_encoding']);
 			PMXI_Plugin::$session->save_data();
+
+			$wp_uploads = wp_upload_dir();	
+			$functions = $wp_uploads['basedir'] . DIRECTORY_SEPARATOR . WP_ALL_IMPORT_UPLOADS_BASE_DIRECTORY . DIRECTORY_SEPARATOR . 'functions.php';
+			if ( @file_exists($functions) )
+				require_once $functions;
 			
 			// validate
 			try {			

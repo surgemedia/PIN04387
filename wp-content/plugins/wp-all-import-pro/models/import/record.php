@@ -1827,7 +1827,7 @@ class PMXI_Import_Record extends PMXI_Model_Record {
 					$logger and !$is_cron and PMXI_Plugin::$session->errors++;
 					$skipped++;
 				} else {										
-															
+					
 					if ("manual" != $this->options['duplicate_matching'] or empty($articleData['ID'])){						
 						// associate post with import												
 						$postRecord->isEmpty() and $postRecord->set(array(
@@ -2432,8 +2432,9 @@ class PMXI_Import_Record extends PMXI_Model_Record {
 													$success_images = true;												
 
 													$post_thumbnail_id = get_post_thumbnail_id( $pid );
+													
 													if ($bundle_data['type'] == 'images' and empty($post_thumbnail_id) and $this->options[$option_slug . 'is_featured'] ) {
-														set_post_thumbnail($pid, $attid);
+														set_post_thumbnail($pid, $attid);														
 													}
 													elseif(!in_array($attid, $gallery_attachment_ids) and $post_thumbnail_id != $attid){
 														$gallery_attachment_ids[] = $attid;	
