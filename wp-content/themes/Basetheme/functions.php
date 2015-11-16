@@ -27,7 +27,7 @@ $sage_includes = [
   'lib/function-display-gravity-form.php',            // Custom functions
   'lib/function-display-gravity-form.php',            // Custom functions
   'lib/gravity_forms-v5.php',            // Custom functions
-  
+  'lib/acf-option-page.php',            // Custom functions
 
   'lib/aq_resizer.php',                // Custom functions
 

@@ -5,20 +5,35 @@
 	
 	.side-block {
 	overflow:hidden;
-	min-height:52.3vh;
+	min-height:504px;
 	-webkit-background-size: 100% auto;
 	background-size: 100% auto;
 	position:relative;
+	text-align:center;
 	.overlay {
-		 border:4px solid $pink;
+		float:none;
+		margin-top:12em;
+		display:inline-block;
+		 border:4px solid #fff;
 		 padding:3em;
-		position:absolute;
-		top:0px;
-		left:0px;
-		right:0px;
-		bottom:0px;
-		span {
+		 background: transparentize($pink, 0.5);
+		  text-align: center;
+		  width:50%;
+			&:hover {
+				background:$pink;
+				cursor: pointer;
+			}
 
+			a {
+				font-size: 3em;
+			    font-family: $primary-font;
+			    width: 100%;
+			    text-align: center;
+			    color:#fff;
+			    text-transform:uppercase;
+			    font-weight:thin;
+			    text-decoration:none;
+		
 		}
 
 	 }

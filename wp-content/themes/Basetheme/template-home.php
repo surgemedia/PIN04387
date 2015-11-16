@@ -11,9 +11,6 @@
 			$args = array (
 				'post_type' => array( 'property' ),
 				'p' => get_field('featured_property')[0],
-
-
-
 				); 
 			$query = new WP_Query( $args );
 			
@@ -36,12 +33,22 @@
 		 $image_url = aq_resize($image,960,730,true,true,true);
 		  ?>
 		<div class="col-lg-6 side-block" style="background-image:url(<?php echo $image_url ?>);">
-			<div class="overlay">
-				<span class="cat-link"><a href="<?php the_sub_field('title_link'); ?>">
-					<?php the_sub_field('title'); ?></a>
+			
+			<span class=" overlay">
+
+						<a href="<?php the_sub_field('title_link'); ?>">
+						<?php 
+							$sideblocks_title = explode(' ',get_sub_field('title'));
+							// debug($sideblocks_title);
+						 ?>
+						<?php
+							echo $sideblocks_title[0];
+							echo '<strong> '.$sideblocks_title[1].'</strong>';
+
+						 ?></a>
+
 				</span>
-				
-			</div>
+		
 		</div>
     <?php endwhile; ?>
 
