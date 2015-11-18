@@ -110,5 +110,11 @@ $('#main-content').YTPlayer({
       $(this).parent().toggleClass('open');
   });
 
+  
+/*====================================
+=            Map function            =
+====================================*/
+
+
 
 })(jQuery); // Fully reference jQuery after this point.

@@ -64,22 +64,7 @@
 	</hgroup>
 </section>
 
-<section id="contact-us">
-<div class="row">
-	<div class="headshot col-lg-6">
-		<img src="https://unsplash.it/960/700?image=832" alt="">
-		<div class="hgroup">
-			<h1><strong></strong><span></span></h1>
-			<a href="" class="contactus"></a>
-		</div>
-	</div>
-	<div class="form col-lg-6 grey-bg">
-		<div id="gravity-form" class="col-lg-8 col-md-offset-2">
-		<?php  displayGravityForm(get_field('form')); ?>
-		</div>
-	</div>
-	</div>
-</section>
+
 
 
 <?php endwhile; ?>

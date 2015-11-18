@@ -1,85 +1,143 @@
 <?php
+
 /**
- * Template Name: Home Template
+ * Template Name: Property Search Template
  */
 ?>
-<?php while (have_posts()) : the_post(); ?>
-<section id="featured" class="container-fluid">
-	<div class="row">
-	<?php  
-				// WP_Query arguments
-			$args = array (
-				'post_type' => array( 'property' ),
-				'p' => get_field('featured_property')[0],
-				); 
-			$query = new WP_Query( $args );
-			
-			if ( $query->have_posts() ) {
-				while ( $query->have_posts() ) {
-					$query->the_post();
-					// debug(get_post_meta(get_the_id() ));
-					include(locate_template('templates/home-featured-property-obj.php'));
-				}
-			} else {
-				// no posts found
-			}
+<script>
+load(function(json) {
+var arr = [];
+jQuery.each(json, function (i, jsonSingle) {
+        arr.push({
+            property: jsonSingle
+        });
+    });           
+    console.log(arr);
 
-			wp_reset_postdata(); ?>
-		<?php 
-	if(get_field('side_blocks')): ?>
-    <?php while(the_repeater_field('side_blocks')): ?>
-    	<?php 
-    	 $image = get_sub_field('image');
-		 $image_url = aq_resize($image,960,730,true,true,true);
-		  ?>
-		<div class="col-lg-6 side-block" style="background-image:url(<?php echo $image_url ?>);">
-			
-			<span class=" overlay">
 
-						<a href="<?php the_sub_field('title_link'); ?>">
-						<?php 
-							$sideblocks_title = explode(' ',get_sub_field('title'));
-							// debug($sideblocks_title);
-						 ?>
-						<?php
-							echo $sideblocks_title[0];
-							echo '<strong> '.$sideblocks_title[1].'</strong>';
+var wooloowin = JSON.search(arr, '//property[contains(property_term, "wooloowin")]');
+console.log(wooloowin);
 
-						 ?></a>
+});
 
-				</span>
-		
-		</div>
-    <?php endwhile; ?>
+function load(callback)
+{
+    jQuery.ajax({  
+        type: "GET",  
+        url: "http://localhost/PinnacleProperties/wp-json/wp/v2/json-property",  
+        contentType: "application/json; charset=utf-8",  
+        dataType: "json",  
+        success: function (json) {
+            // Call our callback with the message
+            callback(json);
+        },  
+        failure: function () {
+           console.log()
+        }
+     }); 
+}
+</script>
+<?php 
+// no default values. using these as examples
+$taxonomies = array( 
+    'location'
+);
 
- <?php endif; ?>
-		
-		
+$args = array(
+    'orderby'           => 'name', 
+    'order'             => 'ASC',
+    'hide_empty'        => true, 
+    'exclude'           => array(), 
+    'exclude_tree'      => array(), 
+    'include'           => array(),
+    'number'            => '', 
+    'fields'            => 'all', 
+    'slug'              => '',
+    'parent'            => '',
+    'hierarchical'      => true, 
+    'child_of'          => 0,
+    'childless'         => false,
+    'get'               => '', 
+    'name__like'        => '',
+    'description__like' => '',
+    'pad_counts'        => false, 
+    'offset'            => '', 
+    'search'            => '', 
+    'cache_domain'      => 'core'
+); 
+
+    $terms = get_terms($taxonomies, $args);
+   // debug($terms);
+ ?>
+<section id="search">
+
+   <select name="" id="jsonSearch">
+   <option value="">Surbub</option>
+    <?php 
+    for ($i=0; $i <= sizeof($terms); $i++) { 
+        echo '<option value='.$terms[$i]->slug.'>'.$terms[$i]->name.'</option>';
+    }
+     ?>
+    </select>
+
+
+  <button onclick=""></button>
+
+</section>
+
+<script>
+
+function getServiceInfo (url,container){
+
+    jQuery.getJSON(url, function(data) {
+
+    for (var i = 0; i < data.length; i++) {
+        console.log(data);
+    }
+
+    });
+getServiceInfo('http://localhost/PinnacleProperties/wp-json/wp/v2/json-property','#jsonConsole')
+
+}
+
+
+// function get_object_meta(key,value){
+//     var object = jQuery.grep(json, function( n, i ) {
+//     return n.proptery_meta[] ===;
+//     });
+//     return object;
+// }
+
+
+
+</script>
+
+<pre id="jsonConsole" ></pre>
+    <?php
+//     global $wp_post_types;
+// // debug( $wp_post_types[ 'property' ] );
+// // WP_Query arguments
+// $args = array('post_type' => array('property'), 'p' => 37,);
+// $query = new WP_Query($args);
+
+// if ($query->have_posts()) {
+//     while ($query->have_posts()) {
+//         $query->the_post();
+        
+//         debug(get_post());
+//         debug(get_post_meta(get_the_id() ));
+        
+//     }
+// } 
+// else {
+    
+//     // no posts found
+    
+// }
+wp_reset_postdata(); ?>
+<div class="container-fluid">
+    <?php
+
+
+ ?>
 </div>
-
-</section>
-<section id="main-content" data-video-id="13wt6cmCRK0">
-	<hgroup>
-		<h1 class="text-center col-lg-12"><span class="thin">About</span> Pinnacle Properties</h1> 
-	</hgroup>
-</section>
-
-<section id="contact-us">
-<div class="row">
-	<div class="headshot col-lg-6">
-		<img src="https://unsplash.it/960/700?image=832" alt="">
-		<div class="hgroup">
-			<h1><strong></strong><span></span></h1>
-			<a href="" class="contactus"></a>
-		</div>
-	</div>
-	<div class="form col-lg-6 grey-bg">
-		<div id="gravity-form" class="col-lg-8 col-md-offset-2">
-		<?php  displayGravityForm(get_field('form')); ?>
-		</div>
-	</div>
-	</div>
-</section>
-
-
-<?php endwhile; ?>

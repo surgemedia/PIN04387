@@ -2,6 +2,7 @@
   "dependencies": {
     "main.js": {
       "files": [
+        "scripts/defiant.js/dist/defiant-latest.js",
         "scripts/youtubeBackground/src/jquery.youtubebackground.js",
         "scripts/main.js"
       ],
