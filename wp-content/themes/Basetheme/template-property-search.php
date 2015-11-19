@@ -4,6 +4,7 @@
  * Template Name: Property Search Template
  */
 ?>
+
 <script>
 load(function(json) {
 var arr = [];
@@ -19,6 +20,7 @@ var wooloowin = JSON.search(arr, '//property[contains(property_term, "wooloowin"
 console.log(wooloowin);
 
 });
+
 
 function load(callback)
 {
@@ -65,7 +67,7 @@ $args = array(
     'search'            => '', 
     'cache_domain'      => 'core'
 ); 
-
+    
     $terms = get_terms($taxonomies, $args);
    // debug($terms);
  ?>

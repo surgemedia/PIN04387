@@ -9,7 +9,12 @@
   </div>
   <div class="form col-lg-6 grey-bg">
     <div id="gravity-form" class="col-lg-8 col-md-offset-2">
-    <?php  displayGravityForm(get_field('form')); ?>
+
+    <?php  
+    $pageID = get_option('page_on_front'); 
+    displayGravityForm(get_field('form',$pageID));
+
+     ?>
     </div>
   </div>
   </div>
