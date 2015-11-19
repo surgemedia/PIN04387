@@ -115,6 +115,29 @@ $('#main-content').YTPlayer({
 =            Map function            =
 ====================================*/
 
+/*=============================================
+=            Scrolling Menu Mobile            =
+=============================================*/
 
+var menuScroll = {
+  setBackground : function(elem){
+    $(window).scroll(function(event) {
+     var st = $(this).scrollTop();
+
+        
+      if (st > 4){
+             // downscroll code
+            $(elem).addClass('solid');
+            
+       } else {
+          // upscroll code
+          $(elem).removeClass('solid');
+       }
+       
+     
+    });
+  } 
+}
+menuScroll.setBackground('.banner');
 
 })(jQuery); // Fully reference jQuery after this point.
