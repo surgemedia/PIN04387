@@ -1,6 +1,6 @@
 <?php 
 // Register Custom Post Type
-function custom_post_type() {
+function testimonials_post_type() {
 
 	$labels = array(
 		'name'                => _x( 'Testimonials', 'Post Type General Name', 'text_domain' ),
@@ -20,11 +20,11 @@ function custom_post_type() {
 		'not_found_in_trash'  => __( 'Testimonial Not found in Trash', 'text_domain' ),
 	);
 	$args = array(
-		'label'               => __( 'Testimonials', 'text_domain' ),
+		'label'               => __( 'testimonial', 'text_domain' ),
 		'description'         => __( 'Write your Testimonial', 'text_domain' ),
 		'labels'              => $labels,
 		'supports'            => array('title', ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
+		'taxonomies'          => array( ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -39,9 +39,9 @@ function custom_post_type() {
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
 	);
-	register_post_type( 'Testimonials', $args );
+	register_post_type( 'testimonial', $args );
 
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'custom_post_type', 0 );
+add_action( 'init', 'testimonials_post_type', 0 );
