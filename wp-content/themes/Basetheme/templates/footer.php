@@ -24,15 +24,22 @@
   <?php debug(get_field('mailchimp','option')) ?>
 		<?php  displayGravityForm(); ?>
     <?php 
-    $footer_list = get_field('contact_details','option');
+    $footer_list = get_field('contact_details','option');?>
 
-    for ($i=0; $i < count($footer_list); $i++) { 
-    	debug($footer_list[$i]);
-    }
-     ?>
-
+    	<ul class="info"> 
+    <?php for ($i=0; $i < count($footer_list); $i++) { ?>
+      <li>
+          <?php echo $footer_list[$i]['label'];?> 
+          <a href="<?php echo $footer_list[$i]['Clickable_link'];?>">
+            <?php echo $footer_list[$i]['value'];?>
+          </a>
+      </li>
+      
+    <?php } ?>
+    </ul>
+    
   </div>
   <div class="foot">
-  	<?php the_field('footer_text','option') ?>
+  	<span><?php the_field('footer_text','option') ?></span>
   </div>
 </footer>

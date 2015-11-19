@@ -1,0 +1,45 @@
+.jumbotron {
+	font-family:$primary-font;
+	color:#fff;
+	background-size: cover;
+	display: table-cell;
+    width: 100vw;
+    text-align: center;
+    vertical-align: bottom;
+    position:relative;
+    padding-bottom: 0;
+	.content {
+		font-size: 90px;
+		height: 2em;
+    line-height: 2;
+    background: rgba(0,0,0,0.7);
+		span{
+			text-transform: capitalize;
+			display: inline-block;
+		}
+		h1{
+			font-size: inherit;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+	}
+}
+.big {
+		height:100vh;
+	}
+
+/*===============================================
+=            Jumbotron Content Page             =
+===============================================*/
+
+.jumbotron.content-page{
+	height: 14em;
+  position: relative;
+  background-color: 0;
+  .content{
+  	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
