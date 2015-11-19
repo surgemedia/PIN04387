@@ -1,5 +1,5 @@
 <?php 
-$the_property = get_post(get_the_id() );
+// $the_property = get_post(get_the_id() );
 $the_property_meta = get_post_meta(get_the_id() );
  ?>
 <div class="col-lg-6 featured">
