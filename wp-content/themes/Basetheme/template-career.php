@@ -1,15 +1,15 @@
 <?php
 /**
- * Template Name: About Template
+ * Template Name: Career Template
  */
 ?>
 <?php while (have_posts()) : the_post(); ?>
 
 <?php 
-	$extraClass="big";
+	$extraClass="small";
 	$image=getFeaturedUrl(get_the_id());
-	$preTitle=get_the_title();
-	$title="pinnacle property qld";
+	$preTitle="";
+	$title=get_the_title();
 	$postTitle="";
 	include(locate_template('templates/part-jumbotron.php')); ?>
 	

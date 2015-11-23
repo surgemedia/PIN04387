@@ -36,7 +36,16 @@
 }
 .big {
 		height:100vh;
+		.content {
+		 height: 2.5em;
+		}
 	}
+.small{
+		height: 300px;
+		.content {
+		 height: 1.5em;
+		}
+}
 
 /*===============================================
 =            Jumbotron Content Page             =
