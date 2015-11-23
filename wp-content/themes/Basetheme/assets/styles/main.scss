@@ -12,7 +12,10 @@
 @import "components/_forms";
 @import "components/_navs";
 @import "components/_grid";
+@import "components/_content";
+@import "components/_sides";
 @import "components/_jumbotron";
+@import "components/_google_map";
 @import "components/_wp-classes";
 @import "layouts/_header";
 @import "layouts/_sidebar";
@@ -20,3 +23,21 @@
 @import "layouts/_pages";
 @import "layouts/_posts";
 
+@media (max-width: $screen-sm-max) {
+	@import "res/_res-xs-sm.scss";
+}
+@media (max-width: $screen-xs-max) {
+	@import "res/_res-xs.scss";
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	@import "res/_res-sm.scss";
+}
+@media (min-width: $screen-md-min) {
+	@import "res/_res-md-lg.scss";
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	@import "res/_res-md.scss";
+}
+@media (min-width: $screen-lg-min) {
+	@import "res/_res-lg.scss";
+}

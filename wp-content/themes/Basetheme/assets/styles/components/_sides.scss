@@ -1,0 +1,53 @@
+.side{
+	padding: 0; 
+	h2{
+		font-size: 48px;
+		color: $brand-primary;
+	}
+	ul{
+		list-style: none;
+		padding-left: 1em;
+		padding-bottom: 2em;
+		border-bottom: 1px $grey solid;
+		li{
+		  margin-top:2em;
+
+		  a{
+			 font-size: 24px;
+			}
+		}
+	}
+}
+
+.quick-links{
+	padding: 6%
+}
+
+.staff{
+	.staff-image{
+		img{
+			width:100%;
+		}
+		span{
+			width: 100%;
+	    background: $purple;
+	    text-align: center;
+	    display: block;
+	    color: #fff;
+	    font-size: 48px;
+		}
+	}
+	ul{
+		 padding-right: 2em;
+		 padding-left: 2em;
+			a{
+		    background: #3F999A;
+		    color: #fff;
+		    text-align: center;
+		    text-decoration: none;
+		    display: block;
+		    height: 2em;
+		    line-height: 2em;
+			}
+	}
+}
