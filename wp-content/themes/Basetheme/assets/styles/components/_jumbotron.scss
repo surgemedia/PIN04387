@@ -10,17 +10,27 @@
     padding-bottom: 0;
 	.content {
 		font-size: 90px;
-		height: 2em;
-    line-height: 2;
-    background: rgba(0,0,0,0.7);
+    height: 2.5em;
+    line-height: 1;
+    background: rgba(0,0,0,.7);
+    width: 100vw;
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
 		span{
 			text-transform: capitalize;
-			display: inline-block;
+			&.before-title{
+				display: inline-block;
+			}
+			&.after-title{
+				display: block;
+			}
 		}
 		h1{
 			font-size: inherit;
 			display: inline-block;
 			text-transform: uppercase;
+			margin:0;
 		}
 	}
 }
