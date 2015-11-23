@@ -1,0 +1,6 @@
+/var/www/realestatesconnected/feedsync/SAMPLES/*
+/var/www/realestatesconnected/feedsync/output/*
+/output/images/*
+*.xml
+*.zip
+tmp/log/error.log
