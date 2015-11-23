@@ -7,7 +7,16 @@
 <?php
 while (have_posts()):
     the_post(); ?>
-<div class="col-md-3">
+<?php 
+    $extraClass="big";
+    $image=getFeaturedUrl(get_the_id());
+    $preTitle="";
+    $title="pinnacle property qld";
+    $postTitle="Exceeding Expectations";
+    include(locate_template('templates/part-jumbotron.php')); ?>
+
+
+<div class="col-md-3 side">
 	<?php
     $team_side = get_field('team_left_column');
     
@@ -46,7 +55,7 @@ while (have_posts()):
     wp_reset_postdata();
 ?>
 </div>
-<div class="col-md-3 pull-right">
+<div class="col-md-3 pull-right side">
 	<?php
     $team_side = get_field('team_right_column');
     
@@ -87,7 +96,7 @@ while (have_posts()):
     wp_reset_postdata();
 ?>
 </div>
-<div class="col-md-6">
+<div class="col-md-6 general-content">
 	<?php
     the_content(); ?>
 </div>
