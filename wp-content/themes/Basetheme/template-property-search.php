@@ -6,6 +6,11 @@
 ?>
 
 <script>
+function get(){
+
+}
+
+
 load(function(json) {
 var arr = [];
 jQuery.each(json, function (i, jsonSingle) {
