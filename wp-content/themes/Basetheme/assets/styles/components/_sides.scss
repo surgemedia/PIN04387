@@ -1,5 +1,5 @@
 .side{
-	padding: 2%;
+	padding: 0; 
 	h2{
 		font-size: 48px;
 		color: $brand-primary;
@@ -16,5 +16,34 @@
 			 font-size: 24px;
 			}
 		}
+	}
+}
+
+.staff{
+	.staff-image{
+		img{
+			width:100%;
+		}
+		span{
+			width: 100%;
+	    background: $purple;
+	    text-align: center;
+	    display: block;
+	    color: #fff;
+	    font-size: 48px;
+		}
+	}
+	ul{
+		 padding-right: 2em;
+		 padding-left: 2em;
+			a{
+		    background: #3F999A;
+		    color: #fff;
+		    text-align: center;
+		    text-decoration: none;
+		    display: block;
+		    height: 2em;
+		    line-height: 2em;
+			}
 	}
 }
