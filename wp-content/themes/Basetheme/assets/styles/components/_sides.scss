@@ -1,0 +1,20 @@
+.side{
+	padding: 2%;
+	h2{
+		font-size: 48px;
+		color: $brand-primary;
+	}
+	ul{
+		list-style: none;
+		padding-left: 1em;
+		padding-bottom: 2em;
+		border-bottom: 1px $grey solid;
+		li{
+		  margin-top:2em;
+
+		  a{
+			 font-size: 24px;
+			}
+		}
+	}
+}
