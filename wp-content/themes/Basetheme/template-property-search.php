@@ -6,12 +6,16 @@
 ?>
 
 <script>
-function get(){
+var searchForm = function(){
+var obj = [];
+obj.surbub = jQuery('#suburb').val();
+obj.property_type =  jQuery("#type").val();
+obj.bedrooms = jQuery("#bedrooms").val();
+obj.car_space = jQuery("#car-space").val();
+obj.bathrooms = jQuery("#bathrooms").val();
+// return obj;
 
-}
-
-
-load(function(json) {
+load(function(json,obj) {
 var arr = [];
 jQuery.each(json, function (i, jsonSingle) {
         arr.push({
@@ -21,10 +25,30 @@ jQuery.each(json, function (i, jsonSingle) {
     console.log(arr);
 
 
-var wooloowin = JSON.search(arr, '//property[contains(property_term, "wooloowin")]');
-console.log(wooloowin);
+var suburb_results = JSON.search(arr, '//property[contains(property_term, "'+obj.suburb+'" )]');
+console.log(suburb_results);
 
 });
+
+
+}
+
+// console.log(searchForm.surbub);
+
+// load(function(json) {
+// var arr = [];
+// jQuery.each(json, function (i, jsonSingle) {
+//         arr.push({
+//             property: jsonSingle
+//         });
+//     });           
+//     console.log(arr);
+
+
+// // var wooloowin = JSON.search(arr, '//property[contains(property_term, "wooloowin")]');
+// // console.log(wooloowin);
+
+// });
 
 
 function load(callback)
@@ -76,19 +100,51 @@ $args = array(
     $terms = get_terms($taxonomies, $args);
    // debug($terms);
  ?>
-<section id="search">
 
-   <select name="" id="jsonSearch">
-   <option value="">Surbub</option>
-    <?php 
-    for ($i=0; $i <= sizeof($terms); $i++) { 
-        echo '<option value='.$terms[$i]->slug.'>'.$terms[$i]->name.'</option>';
-    }
-     ?>
-    </select>
+<section id="search" class="col-lg-12">
+    <div id="jsonSearch">
+      <div class="search col-lg-6">
+           <select name="suburb" id="suburb">
+           <option value="">Surbub</option>
+            <?php 
+            for ($i=0; $i <= sizeof($terms); $i++) { 
+                echo '<option value='.$terms[$i]->slug.'>'.$terms[$i]->name.'</option>';
+            }
+             ?>
+            </select>
+    </div>
+   <select name="type" id="type">
+    <option value="NULL">Any</option>
+       <option value="House">House</option>
+   </select>
+   <select name="bedrooms" id="bedrooms">
+   <option value="NULL">Any</option>
+         <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+   </select>
+   <select name="car_space" id="car-space">
+   <option value="NULL">Any</option>
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+   </select>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Bathrooms</label>
+       <select name="bathrooms" id="bathrooms" class="form-control">
+   <option value="NULL">Any</option>
+       <option value="">1</option>
+       <option value="">2</option>
+       <option value="">3</option>
+       <option value="">4</option>
+   </select>
+  </div>
+  
 
-
-  <button onclick=""></button>
+  <button onclick="searchForm(); ">Submit</button>
+</div>
 
 </section>
 
