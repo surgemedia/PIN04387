@@ -306,7 +306,70 @@ var menuScroll = {
      
     });
   } 
-}
+};
 menuScroll.setBackground('.banner');
+
+/*===================================
+  =            Owl Carousel           =
+  ====================================*/
+  var owl = jQuery(".owl-carousel");
+
+  owl.owlCarousel({
+    
+    center:true,
+    items:2,
+    loop:true,
+    margin:0,
+    dots:false,
+    navText:["NEXT","PREVIOUS"],
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        900:{
+            items:2,
+            nav:false
+        },
+        1200:{
+            items:2,
+            nav:false
+        }
+    }
+
+  });
+
+/*====================================================
+=           Social Networking Share Modal            =
+====================================================*/
+
+function appendShareLinks() {
+    var fbLink = 'https://www.facebook.com/sharer/sharer.php?u='+location.href,
+    twLink = 'https://twitter.com/home?status='+location.href,
+    gpLink = 'https://plus.google.com/share?url='+location.href,
+    ldLink = 'https://www.linkedin.com/shareArticle?mini=true&url='+location.href+'&title=Maxconnect&summary=&source=',
+    mailLink= 'mailto:?Subject= Pinnacle Properties&Body=Hi look at this oportunity at '+location.href;
+    if($("a.mailLink").length>0) {
+        $("a.mailLink").attr('href',mailLink);
+    }
+    if($("a.fbLink").length>0) {
+        $("a.fbLink").attr('href',fbLink);
+    }
+    if($("a.twLink").length>0) {
+        $("a.twLink").attr('href',twLink);
+    }
+    if($("a.gpLink").length>0) {
+        $("a.gpLink").attr('href',gpLink);
+    }
+    if($("a.ldLink").length>0) {
+        $("a.ldLink").attr('href',ldLink);
+    }
+}
+$('#shareBtn').on('click',function(){
+    appendShareLinks();
+    $('#myShareModal').modal();
+});
+appendShareLinks();
+
 
 })(jQuery); // Fully reference jQuery after this point.

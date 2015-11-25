@@ -10,7 +10,8 @@
     "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.5",
     "chosen": "~1.4.2",
-    "defiant.js": "~1.3.4"
+    "defiant.js": "~1.3.4",
+    "owl.carousel": "*"
   },
   "overrides": {
     "modernizr": {
@@ -25,6 +26,11 @@
       "main": 
         "./src/defiant.js"
     },
+    "owl.carousel": {
+      "main": [
+        "./dist/owl.carousel.js"
+      ]
+    },    
     "bootstrap-sass-official": {
       "main": [
         "./assets/stylesheets/_bootstrap.scss",
@@ -50,6 +56,7 @@
   },
   "devDependencies": {
     "chosen": "~1.4.2",
-    "defiant.js": "defiant-js#~1.3.4"
+    "defiant.js": "defiant-js#~1.3.4",
+    "owl.carousel": "*"
   }
 }
