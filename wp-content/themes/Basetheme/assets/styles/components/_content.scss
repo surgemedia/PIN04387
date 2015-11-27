@@ -47,3 +47,28 @@
 .owl-carousel{
   border-top: 110px solid $brand-dark;
 }
+
+/*===================================
+=            Testimonial            =
+===================================*/
+
+
+.testimonial {
+    height: 500px;
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    color: $brand-primary;
+    .content{
+      font-size: 36px;
+      width: 60%;
+      margin: auto;
+      text-align: center;
+    }
+    .author{
+      margin-top: 2em;
+      text-align: center;
+      font-size: 18px;
+    }
+
+}

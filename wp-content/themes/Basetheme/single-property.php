@@ -51,7 +51,19 @@
 
 
 </div>
+<?php if ($the_property_meta['property_status'][0]=='sold'):?>
+	<div class="testimonial">
+		<div class="content">
+			“I just want to say a belated thanks to the team at Pinnacle Properties and to recommend their service to anyone looking to sell their property! It was an absolute pleasure selling my house  with Von. She is always very prompt, positive and helpful.”
 
+		</div>
+			<div class="author">
+				Martin Shane
+			</div>
+	</div>
+
+
+<?php endif; ?>
   	<!-- <div class="custom-nav row">
         <div class="col-xs-6">
           <div class="customPrevBtn">PREVIOUS</div>
@@ -59,12 +71,13 @@
         <div class="col-xs-6">
           <div class="customNextBtn">NEXT</div>
         </div>
-      </div> 
+      </div> -->
 
-<?php debug($the_property); ?>
-<?php debug($the_property_meta); ?>-->
+
 <div class="col-xs-12 col-md-6 col-md-push-3 general-content">
 	<?php  echo $the_property->post_content; ?>
+	<?php debug($the_property); ?>
+<?php debug($the_property_meta); ?>
 </div>
 <div class="col-sm-6 col-md-3 col-md-pull-6 side">
 	<div class="property-info">
