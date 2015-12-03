@@ -47,7 +47,21 @@
 .owl-carousel{
   border-top: 110px solid $brand-dark;
 }
+.customPrevBtn,
+.customNextBtn{
+  position: absolute;
+    top: 380px;
+    
+    z-index: 1;
+    i{
+      background: $secondary-primary;
+      padding: 1em;
+      color:#fff;
 
+    }
+}
+.customPrevBtn{left: 21px;}
+.customNextBtn{right:20px;}
 /*===================================
 =            Testimonial            =
 ===================================*/

@@ -36,9 +36,9 @@
 		float:right;
 		margin:0 0.9em 0 0 ;
 	}
+ }
 }
-}
-.chosen-container {
+ .chosen-container {
 	border:4px solid $grey-dark;
 	background-image:none  !important;
 	background:#fff  !important;
@@ -99,5 +99,12 @@
 			}
 		}
 	}
+} 
+
+/*==================================
+=            Search Box            =
+==================================*/
+#search{
+	border-top: 110px solid $brand-dark;
 }
 

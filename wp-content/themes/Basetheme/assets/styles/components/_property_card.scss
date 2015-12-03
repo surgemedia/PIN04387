@@ -1,0 +1,34 @@
+.property-card{
+	height: 527px;
+  vertical-align: middle;
+  color:#fff;
+  text-align: center;
+	position: relative;
+	.content{
+		position:absolute;
+		top:40%;
+		z-index: 2;
+		.suburb,
+		.street{
+			font-size: 36px;
+		}
+		.amenity{
+			list-style: none;
+			padding: 0;
+			li{
+				display: inline-block;
+			}
+		}
+	}
+	&:before{
+		background: $brand-dark;
+		opacity: .5;
+		content: "";
+		z-index: 1;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top:0;
+		left:0;
+	}
+}

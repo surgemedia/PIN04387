@@ -1,7 +1,7 @@
 <section id="contact-us">
 <div class="row">
   <div class="headshot col-lg-6">
-    <img src="https://unsplash.it/960/700?image=832" alt="">
+    <img width="78%" src="http://localhost/PinnacleProperties/wp-content/uploads/2015/11/VON-400x400.png" alt="">
     <div class="hgroup">
       <h1><strong></strong><span></span></h1>
       <a href="" class="contactus"></a>
@@ -42,5 +42,6 @@
   <div class="foot">
   	<span><?php the_field('footer_text','option') ?></span>
   </div>
+  
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 </footer>
