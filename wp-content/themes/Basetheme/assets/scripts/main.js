@@ -9,111 +9,10 @@
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
-
-(function($) {
-
-  // Use this variable to set up the common and page specific functions. If you
-  // rename this variable, you will also need to rename the namespace below.
-  var Sage = {
-    // All pages
-    'common': {
-      init: function() {
-        // JavaScript to be fired on all pages
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-      }
-    },
-    // Home page
-    'home': {
-      init: function() {
-        // JavaScript to be fired on the home page
-      },
-      finalize: function() {
-        // JavaScript to be fired on the home page, after the init JS
-      }
-    },
-    // About us page, note the change from about-us to about_us.
-    'about_us': {
-      init: function() {
-        // JavaScript to be fired on the about us page
-      }
-    }
-  };
-
-  // The routing fires all common scripts, followed by the page specific scripts.
-  // Add additional events for more control over timing e.g. a finalize event
-  var UTIL = {
-    fire: function(func, funcname, args) {
-      var fire;
-      var namespace = Sage;
-      funcname = (funcname === undefined) ? 'init' : funcname;
-      fire = func !== '';
-      fire = fire && namespace[func];
-      fire = fire && typeof namespace[func][funcname] === 'function';
-
-      if (fire) {
-        namespace[func][funcname](args);
-      }
-    },
-    loadEvents: function() {
-      // Fire common init JS
-      UTIL.fire('common');
-
-      // Fire page-specific init JS, and then finalize JS
-      $.each(document.body.className.replace(/-/g, '_').split(/\s+/), function(i, classnm) {
-        UTIL.fire(classnm);
-        UTIL.fire(classnm, 'finalize');
-      });
-
-      // Fire common finalize JS
-      UTIL.fire('common', 'finalize');
-    }
-  };
-
-  // Load Events 
-  $(document).ready(UTIL.loadEvents);
-
-  /*==========================================
-=            Youtube background            =
-==========================================*/
-$('#main-content').YTPlayer({
-  videoId: $('#main-content').data('video-id'),
-   playerVars: {
-    modestbranding: 0,
-    autoplay: 1,
-    controls: 0,
-    showinfo: 0,
-    wmode: 'transparent',
-    branding: 0,
-    rel: 0,
-    autohide: 0
-  },
-  callback: function() {
-    // console.log($('#video-bg').data('video-id'));
-  }
-
-  });  
-
-  /*======================================
-  =            Choosen Select            =
-  ======================================*/
-  $("select").chosen({disable_search_threshold: 10});
-
-  /*=============================================
-  = Enabling multi-level navigation =
-  ===============================================*/
-  $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
-      event.preventDefault(); 
-      event.stopPropagation(); 
-      $(this).parent().siblings().removeClass('open');
-      $(this).parent().toggleClass('open');
-  });
-
-  
 /*====================================
 =            Map function            =
 ====================================*/
+var property_json = [];
 (function($) {
 
 /*
@@ -284,6 +183,109 @@ $(document).ready(function(){
 });
 
 })(jQuery);
+
+(function($) {
+
+  // Use this variable to set up the common and page specific functions. If you
+  // rename this variable, you will also need to rename the namespace below.
+  var Sage = {
+    // All pages
+    'common': {
+      init: function() {
+        // JavaScript to be fired on all pages
+      },
+      finalize: function() {
+        // JavaScript to be fired on all pages, after page specific JS is fired
+      }
+    },
+    // Home page
+    'home': {
+      init: function() {
+        // JavaScript to be fired on the home page
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+      }
+    },
+    // About us page, note the change from about-us to about_us.
+    'about_us': {
+      init: function() {
+        // JavaScript to be fired on the about us page
+      }
+    }
+  };
+
+  // The routing fires all common scripts, followed by the page specific scripts.
+  // Add additional events for more control over timing e.g. a finalize event
+  var UTIL = {
+    fire: function(func, funcname, args) {
+      var fire;
+      var namespace = Sage;
+      funcname = (funcname === undefined) ? 'init' : funcname;
+      fire = func !== '';
+      fire = fire && namespace[func];
+      fire = fire && typeof namespace[func][funcname] === 'function';
+
+      if (fire) {
+        namespace[func][funcname](args);
+      }
+    },
+    loadEvents: function() {
+      // Fire common init JS
+      UTIL.fire('common');
+
+      // Fire page-specific init JS, and then finalize JS
+      $.each(document.body.className.replace(/-/g, '_').split(/\s+/), function(i, classnm) {
+        UTIL.fire(classnm);
+        UTIL.fire(classnm, 'finalize');
+      });
+
+      // Fire common finalize JS
+      UTIL.fire('common', 'finalize');
+    }
+  };
+
+  // Load Events 
+  $(document).ready(UTIL.loadEvents);
+
+  /*==========================================
+=            Youtube background            =
+==========================================*/
+$('#main-content').YTPlayer({
+  videoId: $('#main-content').data('video-id'),
+   playerVars: {
+    modestbranding: 0,
+    autoplay: 1,
+    controls: 0,
+    showinfo: 0,
+    wmode: 'transparent',
+    branding: 0,
+    rel: 0,
+    autohide: 0
+  },
+  callback: function() {
+    // console.log($('#video-bg').data('video-id'));
+  }
+
+  });  
+
+  /*======================================
+  =            Choosen Select            =
+  ======================================*/
+  $("select").chosen({disable_search_threshold: 10});
+
+  /*=============================================
+  = Enabling multi-level navigation =
+  ===============================================*/
+  $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+      event.preventDefault(); 
+      event.stopPropagation(); 
+      $(this).parent().siblings().removeClass('open');
+      $(this).parent().toggleClass('open');
+  });
+
+  
+
 /*=============================================
 =            Scrolling Menu Mobile            =
 =============================================*/
@@ -306,7 +308,154 @@ var menuScroll = {
      
     });
   } 
-}
+};
 menuScroll.setBackground('.banner');
 
+/*===================================
+  =            Owl Carousel           =
+  ====================================*/
+  var owl = jQuery(".owl-carousel");
+
+  owl.owlCarousel({
+    
+    center:true,
+    items:2,
+    loop:true,
+    margin:0,
+    dots:false,
+    navText:["NEXT","PREVIOUS"],
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        900:{
+            items:2,
+            nav:false
+        },
+        1200:{
+            items:2,
+            nav:false
+        }
+    }
+
+  });
+// Go to the next item
+jQuery('.customNextBtn').click(function() {
+    owl.trigger('next.owl.carousel');
+});
+// Go to the previous item
+jQuery('.customPrevBtn').click(function() {
+    // With optional speed parameter
+    // Parameters has to be in square bracket '[]'
+    owl.trigger('prev.owl.carousel', [300]);
+});
+/*====================================================
+=           Social Networking Share Modal            =
+====================================================*/
+
+ 
+function appendShareLinks() {
+    var fbLink = 'https://www.facebook.com/sharer/sharer.php?u='+location.href,
+    twLink = 'https://twitter.com/home?status='+location.href,
+    gpLink = 'https://plus.google.com/share?url='+location.href,
+    ldLink = 'https://www.linkedin.com/shareArticle?mini=true&url='+location.href+'&title=Maxconnect&summary=&source=',
+    mailLink= 'mailto:?Subject= Pinnacle Properties&Body=Hi look at this oportunity at '+location.href;
+    if($("a.mailLink").length>0) {
+        $("a.mailLink").attr('href',mailLink);
+    }
+    if($("a.fbLink").length>0) {
+        $("a.fbLink").attr('href',fbLink);
+    }
+    if($("a.twLink").length>0) {
+        $("a.twLink").attr('href',twLink);
+    }
+    if($("a.gpLink").length>0) {
+        $("a.gpLink").attr('href',gpLink);
+    }
+    if($("a.ldLink").length>0) {
+        $("a.ldLink").attr('href',ldLink);
+    }
+}
+$('#shareBtn').on('click',function(){
+    appendShareLinks();
+    $('#myShareModal').modal();
+});
+appendShareLinks();
+
+
+/*=============================================================
+=            Search Property (Defiant/Wp-Rest-API)            =
+=============================================================*/
+
+function load(callback){
+    $.ajax({  
+        type: "GET",  
+        url: "http://localhost/PinnacleProperties/wp-json/wp/v2/json-property",  
+        contentType: "application/json; charset=utf-8",  
+        dataType: "json",  
+        success: function (json) {
+            // Call our callback with the message
+            property_json = callback(json);
+            // console.log("raw array: ");
+            // console.log(json);
+            //testing = json;
+            htm = Defiant.render('property', property_json);
+            document.getElementById('output').innerHTML = htm;
+        },  
+        failure: function () {
+           console.log()
+        }
+     }); 
+}
+
+load(tag_property); //Tag function out of $ evironment
+
+
+
 })(jQuery); // Fully reference jQuery after this point.
+
+function tag_property(json){
+  var arr = [];
+
+
+jQuery.each(json, function (i, jsonSingle) {
+        arr.push({
+            property: jsonSingle
+        });
+    });           
+    
+    // console.log("array with property: ");
+    // console.log(arr);
+ return arr; 
+
+}
+function search(){
+  var bed   = jQuery("#bed").val().trim()!==""?jQuery("#bed").val():0,
+      car   = jQuery("#car").val().trim()!==""?jQuery("#car").val(): 0,
+      bath  = jQuery("#bath").val().trim()!==""?jQuery("#bath").val(): 0,
+      type  = jQuery("#type").val(),
+      suburb = jQuery("#suburb").val();
+  
+  var filter_suburb = "//property[contains(property_term,'"+suburb+"')]",
+      filter_type = "//property[contains(property_meta/property_category,'"+type+"')]",
+      filter_bed = "//property[property_meta/property_bedrooms >= "+bed+"]",
+      filter_bath = "//property[property_meta/property_bathrooms >= "+bath+"]",
+      filter_car = "//property[property_meta/property_garage >= "+car+"]";
+
+console.log("bed: "+filter_bed+" bath: "+filter_bath+" car: "+filter_car+" type: "+filter_type+" suburb: "+filter_suburb);
+
+  var search_json = JSON.search(property_json, filter_suburb );
+
+  search_json = JSON.search(tag_property(search_json), filter_bath );
+  search_json = JSON.search(tag_property(search_json), filter_car );
+  search_json = JSON.search(tag_property(search_json), filter_bed );
+  search_json = JSON.search(tag_property(search_json), filter_type );
+
+  search_json=tag_property(search_json);
+  console.log("array filtered by wooloowin: ");
+  console.log(search_json);
+  var htm = Defiant.render('property', search_json);
+
+  document.getElementById('output').innerHTML = htm;
+}

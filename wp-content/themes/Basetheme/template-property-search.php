@@ -5,69 +5,6 @@
  */
 ?>
 
-<script>
-var searchForm = function(){
-var obj = [];
-obj.surbub = jQuery('#suburb').val();
-obj.property_type =  jQuery("#type").val();
-obj.bedrooms = jQuery("#bedrooms").val();
-obj.car_space = jQuery("#car-space").val();
-obj.bathrooms = jQuery("#bathrooms").val();
-// return obj;
-
-load(function(json,obj) {
-var arr = [];
-jQuery.each(json, function (i, jsonSingle) {
-        arr.push({
-            property: jsonSingle
-        });
-    });           
-    console.log(arr);
-
-
-var suburb_results = JSON.search(arr, '//property[contains(property_term, "'+obj.suburb+'" )]');
-console.log(suburb_results);
-
-});
-
-
-}
-
-// console.log(searchForm.surbub);
-
-// load(function(json) {
-// var arr = [];
-// jQuery.each(json, function (i, jsonSingle) {
-//         arr.push({
-//             property: jsonSingle
-//         });
-//     });           
-//     console.log(arr);
-
-
-// // var wooloowin = JSON.search(arr, '//property[contains(property_term, "wooloowin")]');
-// // console.log(wooloowin);
-
-// });
-
-
-function load(callback)
-{
-    jQuery.ajax({  
-        type: "GET",  
-        url: "http://localhost/PinnacleProperties/wp-json/wp/v2/json-property",  
-        contentType: "application/json; charset=utf-8",  
-        dataType: "json",  
-        success: function (json) {
-            // Call our callback with the message
-            callback(json);
-        },  
-        failure: function () {
-           console.log()
-        }
-     }); 
-}
-</script>
 <?php 
 // no default values. using these as examples
 $taxonomies = array( 
@@ -101,81 +38,183 @@ $args = array(
    // debug($terms);
  ?>
 
-<section id="search" class="col-lg-12">
-    <div id="jsonSearch">
-      <div class="search col-lg-6">
-           <select name="suburb" id="suburb">
-           <option value="">Surbub</option>
+<div class="search-header row">
+    <section id="search" class="col-lg-6">
+        <div class="filter">
+            <label for="suburb">REFINE SEARCH TERMS</label>
+            <input type="text" name="suburb" id="suburb">
+            <button onclick="search();">SEARCH</button>
+        </div>
+        
+        <div class="surrounding">
+            <input type="checkbox" name="surrounding" value="include"> INCLUDE SURROUNDING PROPERTIES
+        </div>
+        
+        <div class="field">
+            <label for="">PROPERTY TYPE</label>
+            <select name="" id="type">
+             <option value="">- Any -</option>
+              
+                
             <?php 
             for ($i=0; $i <= sizeof($terms); $i++) { 
                 echo '<option value='.$terms[$i]->slug.'>'.$terms[$i]->name.'</option>';
             }
              ?>
             </select>
-    </div>
-   <select name="type" id="type">
-    <option value="NULL">Any</option>
-       <option value="House">House</option>
-   </select>
-   <select name="bedrooms" id="bedrooms">
-   <option value="NULL">Any</option>
-         <option value="1">1</option>
-       <option value="2">2</option>
-       <option value="3">3</option>
-       <option value="4">4</option>
-   </select>
-   <select name="car_space" id="car-space">
-   <option value="NULL">Any</option>
-       <option value="1">1</option>
-       <option value="2">2</option>
-       <option value="3">3</option>
-       <option value="4">4</option>
-   </select>
-    <div class="form-group">
-    <label for="exampleInputEmail1">Bathrooms</label>
-       <select name="bathrooms" id="bathrooms" class="form-control">
-   <option value="NULL">Any</option>
-       <option value="">1</option>
-       <option value="">2</option>
-       <option value="">3</option>
-       <option value="">4</option>
-   </select>
-  </div>
-  
+        </div>
+        
+        <div class="field">
+            <label for="">BEDROOMS</label>
+            <select name="" id="bed">
+             <option value="">- Any -</option>
+             <option value="1">- 1 + -</option>
+             <option value="2">- 2 + -</option>  
+             <option value="3">- 3 + -</option>  
+            <?php 
+            /*for ($i=0; $i <= sizeof($terms); $i++) { 
+                echo '<option value='.$terms[$i]->slug.'>'.$terms[$i]->name.'</option>';
+            }*/
+             ?>
+            </select>
+        </div>
+        
+        <div class="field">
+            <label for="">BATHROOMS</label>
+            <select name="" id="bath">
+             <option value="">- Any -</option>
+             <option value="1">- 1 + -</option>
+             <option value="2">- 2 + -</option>  
+             <option value="3">- 3 + -</option>  
+            <?php 
+            /*for ($i=0; $i <= sizeof($terms); $i++) { 
+                echo '<option value='.$terms[$i]->slug.'>'.$terms[$i]->name.'</option>';
+            }*/
+             ?>
+            </select>
+        </div>
+        
+        <div class="field">
+            <label for="">CAR SPACES</label>
+            <select name="" id="car">
+             <option value="">- Any -</option>
+             <option value="1">- 1 + -</option>
+             <option value="2">- 2 + -</option>  
+             <option value="3">- 3 + -</option> 
+            <?php 
+                   /* for ($i=0; $i <= sizeof($terms); $i++) { 
+                echo '<option value='.$terms[$i]->slug.'>'.$terms[$i]->name.'</option>';
+            }*/
+             ?>
+            </select>
+        </div>
+    </section>
+    <section class="search-feature col-lg-6 row">
+        <?php  
+                    // WP_Query arguments
+                $args = array (
+                    'post_type' => array( 'property' ),
+                    'p' => get_field('featured_property')[0],
+                    ); 
+                $query = new WP_Query( $args );
+                
+                if ( $query->have_posts() ) {
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                        // debug(get_post_meta(get_the_id() ));?>
+                         <?php 
+                    // $the_property = get_post(get_the_id() );
+                    $the_property = get_post();
+                    $the_property_meta = get_post_meta(get_the_id() );
+                     ?>
+                    <div class="col-sm-6">
+                        <?php 
+                             $image = getFeaturedUrl(get_the_id()); 
+                             $image_url = aq_resize($image,960,621,true,true,true);
+                        ?>
+                        <img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>">
+                        <h1 class="title"><strong>Propery</strong> of the week</h1>
+                    </div>
+                    <div class="col-sm-6 ">   
+                            <div class="property-obj">
+                                <div class="suburb"><?php echo $the_property_meta['property_address_suburb'][0]; ?></div>
+                                <div class="street">
+                                    <?php echo $the_property_meta['property_address_street_number'][0]; ?> &nbsp;
+                                    <?php echo $the_property_meta['property_address_street'][0]; ?>
+                                </div>
+                                <ul>
+                                    <li><i class="icon-BED"></i>
+                                        <span><?php echo $the_property_meta['property_bedrooms'][0]; ?></span>
+                                    </li>
+                                    <li><i class="icon-BATH"></i>
+                                        <span><?php echo $the_property_meta['property_bathrooms'][0]; ?></span>
+                                    </li>
+                                    <li><i class="icon-CAR"></i>
+                                        <span><?php echo $the_property_meta['property_garage'][0]; ?></span>
+                                    </li>
+                                </ul>
+                                
+                                <a href="<?php echo $the_property->guid; ?>" class="details">Details</a>
 
-  <button onclick="searchForm(); ">Submit</button>
+                            </div>
+                        </div>   
+                
+
+
+                <?php    }
+                } else {
+                    // no posts found
+                }
+    
+                wp_reset_postdata(); ?>
+        
+    <section>
 </div>
-
+    
 </section>
+<div id="blogPostContainer"> </div>
 
-<script>
+<!-- Defiant template -->
+<script type="defiant/xsl-template">
+<xsl:template name="property">
+    
+    <xsl:for-each select="//property">
+        <article class="property-card col-lg-6" style="background:url('{property_image}');">
+        
+        <a href="{link}" class="content">
+            <div class="suburb"><xsl:value-of select="property_meta/property_address_suburb"/></div>
+            <div class="street">
+                <span>
+                    <xsl:value-of select="property_meta/property_address_street_number"/>
+                </span>
+                <span>
+                    <xsl:value-of select="property_meta/property_address_street"/>
+                </span>
+            </div>
+            <i class="icon-BED">
+                    <xsl:value-of select="property_meta/property_bedrooms"/>
+                </i>
+            <i class="icon-BATH">
+                    <xsl:value-of select="property_meta/property_bathrooms"/>
+                    
+                </i>
+            <i class="icon-CAR">
+                    <xsl:value-of select="property_meta/property_garage"/>
+                    
+                </i>
+        </a>
+    </article>
 
-function getServiceInfo (url,container){
-
-    jQuery.getJSON(url, function(data) {
-
-    for (var i = 0; i < data.length; i++) {
-        console.log(data);
-    }
-
-    });
-getServiceInfo('http://localhost/PinnacleProperties/wp-json/wp/v2/json-property','#jsonConsole')
-
-}
-
-
-// function get_object_meta(key,value){
-//     var object = jQuery.grep(json, function( n, i ) {
-//     return n.proptery_meta[] ===;
-//     });
-//     return object;
-// }
-
-
+    </xsl:for-each>
+    
+</xsl:template>
 
 </script>
 
-<pre id="jsonConsole" ></pre>
+<!-- Output element -->
+<div id="output" class="row"></div>
+
+
     <?php
 //     global $wp_post_types;
 // // debug( $wp_post_types[ 'property' ] );

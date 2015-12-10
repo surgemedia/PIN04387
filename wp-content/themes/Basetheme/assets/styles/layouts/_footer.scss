@@ -1,5 +1,16 @@
 .content-info{
 	text-align: center;
+	.foot{
+		height:110px;
+		background: $brand-dark;
+		text-align: center;
+		span{
+			color:#fff;
+			line-height: 110px;
+			font-size: 20px;
+		}
+	}
+}
 	.info{
 		padding: 0;
     list-style: none;
@@ -14,14 +25,3 @@
     	}
     }
 	}
-	.foot{
-		height:110px;
-		background: $brand-dark;
-		text-align: center;
-		span{
-			color:#fff;
-			line-height: 110px;
-			font-size: 20px;
-		}
-	}
-}

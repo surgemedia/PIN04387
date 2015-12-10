@@ -2,7 +2,7 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/defiant.js/dist/defiant-latest.js",
+        
         "scripts/youtubeBackground/src/jquery.youtubebackground.js",
         "scripts/main.js"
       ],
@@ -10,7 +10,8 @@
     },
     "main.css": {
       "files": [
-        "styles/main.scss"
+        "styles/main.scss",
+        "styles/chosen.min.css"
       ],
       "main": true
     },

@@ -9,8 +9,9 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.5",
-    "chosen": "~1.4.2",
-    "defiant.js": "~1.3.4"
+    "chosen": "*",
+    "owl.carousel": "*",
+    "defiant-js": "*"
   },
   "overrides": {
     "modernizr": {
@@ -18,13 +19,20 @@
     },
     "chosen": {
       "main": [
-        "./chosen.jquery.min.js"
+        "./chosen.jquery.min.js",
+        "./chosen.css"
       ]
     },
-    "defiant.js": {
-      "main": 
-        "./src/defiant.js"
+    "owl.carousel": {
+      "main": [
+        "./dist/owl.carousel.js"
+      ]
     },
+    "defiant-js": {
+      "main": [
+        "./dist/defiant.js"
+      ]
+    },      
     "bootstrap-sass-official": {
       "main": [
         "./assets/stylesheets/_bootstrap.scss",
@@ -49,7 +57,6 @@
     }
   },
   "devDependencies": {
-    "chosen": "~1.4.2",
-    "defiant.js": "defiant-js#~1.3.4"
+  
   }
 }

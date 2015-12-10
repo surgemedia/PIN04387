@@ -5,6 +5,14 @@
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import "../../bower_components/owl.carousel/src/scss/owl.animate.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.autoheight.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.lazyload.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.theme.default.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.theme.green.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.video.scss";
+
 @import "common/_global";
 @import "common/_fonts";
 @import "components/_buttons";
@@ -13,6 +21,7 @@
 @import "components/_navs";
 @import "components/_grid";
 @import "components/_content";
+@import "components/_property_card";
 @import "components/_sides";
 @import "components/_jumbotron";
 @import "components/_google_map";
