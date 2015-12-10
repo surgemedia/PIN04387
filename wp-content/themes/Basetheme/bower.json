@@ -19,7 +19,8 @@
     },
     "chosen": {
       "main": [
-        "./chosen.jquery.min.js"
+        "./chosen.jquery.min.js",
+        "./chosen.css"
       ]
     },
     "owl.carousel": {
