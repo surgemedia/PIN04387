@@ -70,6 +70,13 @@ function meta_register_property() {
             'schema'          => null,
         )
     );
+     register_api_field( 'property', 'property_image',
+        array(
+            'get_callback'    => 'meta_get_property_image',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
 }
 function meta_get_property( $object ) {
     return get_post_meta( $object[ 'id' ]);
@@ -79,5 +86,29 @@ function meta_get_property_term( $object ) {
     return wp_get_post_terms($object[ 'id' ], 'location', array("fields" => "all"))[0];
 }
 
+function meta_get_property_image( $object ) {
+    return getFeaturedUrl($object[ 'id' ]);
+}
+
+
+/*==========================================================
+=            Remove unused information property            =
+==========================================================*/
+
+// function qod_remove_extra_data( $data, $post, $context ) {
+//   // We only want to modify the 'view' context, for reading posts
+//   if ( $context !== 'view' || is_wp_error( $data ) ) {
+//     return $data;
+//   }
+  
+//   // Here, we unset any data we don't want to see on the front end:
+//   unset( $data['author'] );
+//   unset( $data['status'] );
+//   // continue unsetting whatever other fields you want
+// ​
+//   return $data;
+// }
+// ​
+// add_filter( 'json_prepare_post', 'qod_remove_extra_data', 12, 3 );
 
  ?>
