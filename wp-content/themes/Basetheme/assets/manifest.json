@@ -10,7 +10,8 @@
     },
     "main.css": {
       "files": [
-        "styles/main.scss"
+        "styles/main.scss",
+        "styles/chosen.min.css"
       ],
       "main": true
     },

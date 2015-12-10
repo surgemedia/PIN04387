@@ -87,3 +87,52 @@
 	.form { padding:1em;}
 }
 
+/*===============================
+=         Search Feature        =
+===============================*/
+.search-header{
+	border-top: 110px solid $brand-dark;
+}
+.search-feature{
+padding: 0;
+	img{
+		height: 18.7em;
+    width: 100%;
+	}
+	h1{
+		background: $brand-primary;
+    margin: 0;
+    height: 72px;
+    padding: .5em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+	}
+	.property-obj{
+		a{
+			padding: 0;
+		}
+		.suburb,
+		.street{
+			font-size: 36px;
+			text-transform: capitalize;
+		}
+		ul{
+			
+			li{
+				i{
+					font-size: 30px;
+				}
+				span{
+					font-size: 18px;
+					color:#000;
+
+				}
+			  &:first-child{
+			  	padding-left: 0;
+			  }	
+			}
+
+		}
+	}
+}

@@ -12,6 +12,7 @@
 /*====================================
 =            Map function            =
 ====================================*/
+var property_json = [];
 (function($) {
 
 /*
@@ -353,6 +354,7 @@ jQuery('.customPrevBtn').click(function() {
 =           Social Networking Share Modal            =
 ====================================================*/
 
+ 
 function appendShareLinks() {
     var fbLink = 'https://www.facebook.com/sharer/sharer.php?u='+location.href,
     twLink = 'https://twitter.com/home?status='+location.href,
@@ -386,8 +388,7 @@ appendShareLinks();
 =            Search Property (Defiant/Wp-Rest-API)            =
 =============================================================*/
 
-function load(callback)
-{
+function load(callback){
     $.ajax({  
         type: "GET",  
         url: "http://localhost/PinnacleProperties/wp-json/wp/v2/json-property",  
@@ -395,9 +396,12 @@ function load(callback)
         dataType: "json",  
         success: function (json) {
             // Call our callback with the message
-            callback(json);
-            console.log("raw array: ");
-            console.log(json);
+            property_json = callback(json);
+            // console.log("raw array: ");
+            // console.log(json);
+            //testing = json;
+            htm = Defiant.render('property', property_json);
+            document.getElementById('output').innerHTML = htm;
         },  
         failure: function () {
            console.log()
@@ -405,25 +409,53 @@ function load(callback)
      }); 
 }
 
-load(function(json) {
-var arr = [];
-$.each(json, function (i, jsonSingle) {
-        arr.push({
-            property: jsonSingle
-        });
-    });           
-    console.log("array with property: ");
-    
-    console.log(arr);
-
-
-var wooloowin = JSON.search(arr, '//property[contains(property_term, "wooloowin")]');
-console.log("array filtered by wooloowin: ");
-console.log(wooloowin);
-htm = Defiant.render('property', arr);
-document.getElementById('output').innerHTML = htm;
-});
+load(tag_property); //Tag function out of $ evironment
 
 
 
 })(jQuery); // Fully reference jQuery after this point.
+
+function tag_property(json){
+  var arr = [];
+
+
+jQuery.each(json, function (i, jsonSingle) {
+        arr.push({
+            property: jsonSingle
+        });
+    });           
+    
+    // console.log("array with property: ");
+    // console.log(arr);
+ return arr; 
+
+}
+function search(){
+  var bed   = jQuery("#bed").val().trim()!==""?jQuery("#bed").val():0,
+      car   = jQuery("#car").val().trim()!==""?jQuery("#car").val(): 0,
+      bath  = jQuery("#bath").val().trim()!==""?jQuery("#bath").val(): 0,
+      type  = jQuery("#type").val(),
+      suburb = jQuery("#suburb").val();
+  
+  var filter_suburb = "//property[contains(property_term,'"+suburb+"')]",
+      filter_type = "//property[contains(property_meta/property_category,'"+type+"')]",
+      filter_bed = "//property[property_meta/property_bedrooms >= "+bed+"]",
+      filter_bath = "//property[property_meta/property_bathrooms >= "+bath+"]",
+      filter_car = "//property[property_meta/property_garage >= "+car+"]";
+
+console.log("bed: "+filter_bed+" bath: "+filter_bath+" car: "+filter_car+" type: "+filter_type+" suburb: "+filter_suburb);
+
+  var search_json = JSON.search(property_json, filter_suburb );
+
+  search_json = JSON.search(tag_property(search_json), filter_bath );
+  search_json = JSON.search(tag_property(search_json), filter_car );
+  search_json = JSON.search(tag_property(search_json), filter_bed );
+  search_json = JSON.search(tag_property(search_json), filter_type );
+
+  search_json=tag_property(search_json);
+  console.log("array filtered by wooloowin: ");
+  console.log(search_json);
+  var htm = Defiant.render('property', search_json);
+
+  document.getElementById('output').innerHTML = htm;
+}

@@ -50,8 +50,8 @@
 		}
 		ul{
 			 
-			 padding-right: 2em;
-			 padding-left: 2em;
+			 margin-right: 2em;
+			 margin-left: 2em;
 				a{
 			    background: #3F999A;
 			    color: #fff;
@@ -60,6 +60,7 @@
 			    display: block;
 			    height: 2em;
 			    line-height: 2em;
+			    margin-bottom: 1em;
 				}
 				p{
 					font-size: 18px;
@@ -78,9 +79,11 @@
 			font-size: 18px;
 			margin-top: 1em;
 			margin-right: 2em;
+			display: inline-block;
+    	text-align: center;
 			&:before{
 				font-size: 26px;
-
+    		display: block;
 			}
 			div{
 				text-align: center;
@@ -97,7 +100,7 @@
 	/*----------  Inspections  ----------*/
 	.inspection{
 		font-size: 18px;
-		padding: 5%;
+		padding: 2% 5% 2% 5%;
 		.box{
 			border: 1px solid $grey-dark;
 			padding: 1em;
@@ -106,24 +109,34 @@
 		i{
 			font-size: 24px;
 			margin-right: 1em;
+			vertical-align: sub;
+			color: $brand-primary;
 		}
-		li a{
-			font-size: inherit;
-			color:$font-color;
+		li{ 
+			margin-top:1em;
+			a{
+				font-size: 18px;
+				color:$font-color;
+			}
 		}
 	}
 	
 	/*----------  Social links  ----------*/
 	.social-links{
-		padding: 5%;
+		padding: 2% 5% 2% 5%;
 		i{
 			font-size: 24px;
 			margin-right: 1em;
+			vertical-align: sub;
+			color: $brand-primary;
 		}
-		li a{
-			font-size: inherit;
-			color:$font-color;
-		}
+		li{
+			margin-top:1em;
+			a{
+				font-size: 18px;
+				color:$font-color;
+			}
+		} 
 	}
 
 	/*----------  Goolgle Map  ----------*/
