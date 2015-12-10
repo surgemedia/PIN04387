@@ -1,37 +1,11 @@
 
-<!-- <section id="jumbotron" class="container-fluid">
-	<div class="row">
-	<?php
-		 $image = getFeaturedUrl(get_the_id());
-		 $image_url = aq_resize($image,960,621,true,true,true);
-		 debug($image_url);
-	?>
-	<?php
-		// debug(get_post());
+<?php
+		
 		$the_property = get_post(get_the_id()) ;
 		$the_property_meta = get_post_meta(get_the_id()) ;
 
 
 	 ?>
-</div>
-</section>
-<section class="container-fluid">
-	<div class="col-lg-3">
-		<?php debug(get_the_title()); ?>
-		<?php  echo $the_property_meta['property_bedrooms'][0]; ?>
-		<?php  echo $the_property_meta['property_bathrooms'][0]; ?>
-		<?php  echo $the_property_meta['property_carport'][0]; ?>
-		<?php debug($the_property); ?>
-		<?php  echo $the_property->post_content; ?>
-		<?php  debug($the_property->post_content); ?>
-		<?php  debug(get_the_permalink()); ?>
-
-	</div>
-	<div class="col-lg-6">
-		<h1> <?php $the_property_meta['property_heading'][0] ?></h1>
-	</div>
-	<div class="col-lg-3"></div>
-</section> -->
 <div class="owl-carousel">
 
 <?php  $gallery = explode( ',', $the_property_meta['epl_slides_order'][0] );
@@ -51,8 +25,8 @@
 
 
 </div>
-<div class="customPrevBtn"><i class="glyphicon glyphicon-chevron-left"></i></div>
-<div class="customNextBtn"><i class="glyphicon glyphicon-chevron-right"></i></div>
+<div class="customPrevBtn"><i class="icon-arrow-left"></i></div>
+<div class="customNextBtn"><i class="icon-arrow-right"></i></div>
 <?php if ($the_property_meta['property_status'][0]=='sold'):?>
 	<div class="testimonial">
 		<div class="content">
@@ -70,7 +44,7 @@
 
 
 <div class="col-xs-12 col-md-6 col-md-push-3 general-content">
-	<?php  echo $the_property->post_content; ?>
+	<?php  echo str_replace("\r", "<br />", $the_property->post_content); ?>
 
 <!-- 	<?php debug($the_property); ?>
 <?php debug($the_property_meta); ?> -->
@@ -78,11 +52,16 @@
 <div class="col-sm-6 col-md-3 col-md-pull-6 side">
 	<div class="property-info">
 		<div class="address">
-		 <?php the_title(); ?>
+			<div class="suburb"><?php echo $the_property_meta['property_address_suburb'][0]; ?></div>
+      <div class="street">
+          <?php echo $the_property_meta['property_address_street_number'][0]; ?> &nbsp;
+          <?php echo $the_property_meta['property_address_street'][0]; ?>
+      </div>
 		</div>
-		<i class="glyphicon glyphicon-envelope"><div><?php echo $the_property_meta['property_bedrooms'][0]; ?></div></i>
-		<i class="glyphicon glyphicon-cloud"><div><?php echo $the_property_meta['property_bathrooms'][0]; ?></div></i>
-		<i class="glyphicon glyphicon-pencil"><div><?php echo $the_property_meta['property_carport'][0]; ?></div></i>
+
+		<i class="icon-BED"><?php echo $the_property_meta['property_bedrooms'][0]; ?></i>
+		<i class="icon-BATH"><?php echo $the_property_meta['property_bathrooms'][0]; ?></i>
+		<i class="icon-CAR"><?php echo $the_property_meta['property_garage'][0]; ?></i>
 
 		<div class="price">
 			<?php  echo $the_property->property_price_view; ?>
@@ -122,14 +101,14 @@
 		     <strong>Open for inspection Times</strong>
 		  </li>
 		  <li>
-		     <div class="box">31 December 2015</div>
+		     <div class="box"><?php echo $the_property_meta['property_inspection_times'][0]; ?></div>
 			</li>
 			<li>
-			   <i class="glyphicon glyphicon-cloud"></i>
+			   <i class="icon-save-to-calendar"></i>
 			   <a href="">Save to Calendar</a>
 			</li>
 	    <li>
-	       <i class="glyphicon glyphicon-pencil"></i>
+	       <i class="icon-google-icon"></i>
 				 <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=<?php the_title();?>&dates=<?php echo $the_property_meta['property_inspection_times'][0]; ?>/20140320T221500Z&details=For+details,+link+here:+http://www.example.com&location=Waldorf+Astoria,+301+Park+Ave+,+New+York,+NY+10022&sf=true&output=xml">Save to Google Calendar</a>
 			</li>
 		</ul>
@@ -138,15 +117,15 @@
 		<div class="social-links">
 			<ul>
 				<li>
-					<i class="glyphicon glyphicon-cloud"></i>
+					<i class="icon-send-to-a-friend"></i>
 					<a class="mailLink" href="">Send to a Friend</a>
 				</li>
 				<li>
-					<i class="glyphicon glyphicon-pencil"></i>
+					<i class="icon-facebook"></i>
 					<a class="fbLink" href="">Share this property</a>
 				</li>
 				<li>
-					<i class="glyphicon glyphicon-envelope"></i>
+					<i class="icon-twitter"></i>
 					<a class="twLink" href="">Share this property</a>
 				</li>
 			</ul>
