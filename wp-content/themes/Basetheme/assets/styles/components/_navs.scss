@@ -29,25 +29,48 @@ transition: all ease 0.3s;
 	    top: 3em;
     }
 		nav{
-			ul{
-				li{
+			 
+			ul.nav > li{
 					color:#fff;
 					display: inline-block;
 					a{
 						color: inherit;
 						display: inline-block;
 						padding: 0;
+						&.active+ul{
+							display: block;
+						}
+						&:hover,
+						&:focus{
+							background: none;
+						}
+					}
+					ul.sub-menu{
+						text-align: center;
+						display:none;
+						position:absolute;
+						background: $brand-primary;
+						padding: 1em;
+				    width: 169px;
+				    top: 27px;
+				    right: -63px;
+				    list-style: none;
+				    a{
+				    	padding: .5em 0;
+				    }
 					}
 					&:nth-child(n+2):before{
 						content: "/";
 						margin: 0 2em;
 					}
 				}
-			}
+				
+			
 		}
 	}
 	&.solid{
 		transition: all ease 0.3s;
 		background: $brand-dark;
 	}
+
 }
