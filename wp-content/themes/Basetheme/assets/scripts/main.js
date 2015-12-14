@@ -142,7 +142,7 @@ function center_map( map ) {
   });
 
   // only 1 marker?
-  if( map.markers.length == 1 )
+  if( map.markers.length === 1 )
   {
     // set center of map
       map.setCenter( bounds.getCenter() );
@@ -384,37 +384,83 @@ $('#shareBtn').on('click',function(){
 appendShareLinks();
 
 
+/*===================================
+=            Menu Active            =
+===================================*/
+
+function menuActive(navTag){
+    
+    
+    $(".menu-item-has-children > a").click(function(event){
+      event.preventDefault();
+      jQuery(this).toggleClass("active");
+      jQuery(this).parent().siblings(".menu-item-has-children").children("a").removeClass("active");
+    });
+
+}
+
+menuActive("nav");
+/*===========================================
+=            Toggle Active Class            =
+===========================================*/
+var toggleActiveClass = {
+   toggle : function(container){
+    jQuery(container+" span").click(function(){
+      jQuery(this).toggleClass("active");
+      jQuery(this).siblings().removeClass("active");
+    });
+   }
+
+};
+
+
+//toggleActiveClass.toggle();
+
+/*=============================================
+=            Get Suburbs from file            =
+=============================================*/
+/*$.getJSON( "script/post-codes.json", function( data ) {
+  var items = [];
+  $.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
+});
+*/
+
+})(jQuery); // Fully reference jQuery after this point.
+
 /*=============================================================
 =            Search Property (Defiant/Wp-Rest-API)            =
 =============================================================*/
 
 function load(callback){
-    $.ajax({  
-        type: "GET",  
+    jQuery.ajax({  
+        type: "get",  
         url: "http://localhost/PinnacleProperties/wp-json/wp/v2/json-property",  
         contentType: "application/json; charset=utf-8",  
         dataType: "json",  
         success: function (json) {
             // Call our callback with the message
-            property_json = callback(json);
+           
+           property_json = callback(json);
             // console.log("raw array: ");
-            // console.log(json);
+            console.log(json);
+            console.log(property_json);
             //testing = json;
             htm = Defiant.render('property', property_json);
             document.getElementById('output').innerHTML = htm;
         },  
         failure: function () {
-           console.log()
+           console.log("fail");
         }
      }); 
+
 }
-
-load(tag_property); //Tag function out of $ evironment
-
-
-
-})(jQuery); // Fully reference jQuery after this point.
-
 function tag_property(json){
   var arr = [];
 
@@ -430,6 +476,10 @@ jQuery.each(json, function (i, jsonSingle) {
  return arr; 
 
 }
+load(tag_property); //Tag function out of $ evironment
+
+
+
 function search(){
   var bed   = jQuery("#bed").val().trim()!==""?jQuery("#bed").val():0,
       car   = jQuery("#car").val().trim()!==""?jQuery("#car").val(): 0,
@@ -437,16 +487,37 @@ function search(){
       type  = jQuery("#type").val(),
       suburb = jQuery("#suburb").val();
   
-  var filter_suburb = "//property[contains(property_term,'"+suburb+"')]",
-      filter_type = "//property[contains(property_meta/property_category,'"+type+"')]",
+  var search_json;
+  var suburbSearch="";
+   var filter_suburb; 
+    if (suburb !== null){
+      for (var i = suburb.length - 1; i >= 0; i--) {
+        
+        if (i===0){
+          suburbSearch+="contains(property_term,'"+suburb[i]+"')";
+        }else{
+          suburbSearch+="contains(property_term,'"+suburb[i]+"') or ";
+          
+        }
+        
+      }
+      filter_suburb = "//property["+suburbSearch+"]";
+      search_json = JSON.search(property_json, filter_suburb );
+    }else{
+      
+      search_json = property_json;
+    }
+
+  var filter_type = "//property[contains(property_meta/property_category,'"+type+"')]",
       filter_bed = "//property[property_meta/property_bedrooms >= "+bed+"]",
       filter_bath = "//property[property_meta/property_bathrooms >= "+bath+"]",
       filter_car = "//property[property_meta/property_garage >= "+car+"]";
 
 console.log("bed: "+filter_bed+" bath: "+filter_bath+" car: "+filter_car+" type: "+filter_type+" suburb: "+filter_suburb);
 
-  var search_json = JSON.search(property_json, filter_suburb );
-
+ 
+  
+  
   search_json = JSON.search(tag_property(search_json), filter_bath );
   search_json = JSON.search(tag_property(search_json), filter_car );
   search_json = JSON.search(tag_property(search_json), filter_bed );
@@ -459,3 +530,5 @@ console.log("bed: "+filter_bed+" bath: "+filter_bath+" car: "+filter_car+" type:
 
   document.getElementById('output').innerHTML = htm;
 }
+
+
