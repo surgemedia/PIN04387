@@ -27,7 +27,7 @@ function post_type_team() {
 		'label'                 => __( 'Team', 'text_domain' ),
 		'description'           => __( 'Team Page', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'thumbnail', ),
+		'supports'              => array( 'title', 'thumbnail', 'editor',),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
