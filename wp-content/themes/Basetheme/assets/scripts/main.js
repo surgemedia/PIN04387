@@ -142,7 +142,7 @@ function center_map( map ) {
   });
 
   // only 1 marker?
-  if( map.markers.length == 1 )
+  if( map.markers.length === 1 )
   {
     // set center of map
       map.setCenter( bounds.getCenter() );
@@ -384,36 +384,76 @@ $('#shareBtn').on('click',function(){
 appendShareLinks();
 
 
+/*===================================
+=            Menu Active            =
+===================================*/
+
+function menuActive(navTag){
+    
+    
+    $(".menu-item-has-children > a").click(function(event){
+      event.preventDefault();
+      jQuery(this).toggleClass("active");
+      jQuery(this).parent().siblings(".menu-item-has-children").children("a").removeClass("active");
+    });
+
+}
+
+menuActive("nav");
+/*===========================================
+=            Toggle Active Class            =
+===========================================*/
+var toggleActiveClass = {
+   toggle : function(container){
+    jQuery(container+" span").click(function(){
+      jQuery(this).toggleClass("active");
+      jQuery(this).siblings().removeClass("active");
+    });
+   }
+
+};
+
+
+//toggleActiveClass.toggle();
+
+/*=============================================
+=            Get Suburbs from file            =
+=============================================*/
+/*$.getJSON( "script/post-codes.json", function( data ) {
+  var items = [];
+  $.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
+});
+*/
+
+})(jQuery); // Fully reference jQuery after this point.
+
 /*=============================================================
 =            Search Property (Defiant/Wp-Rest-API)            =
 =============================================================*/
+function toRad(number) { return number * Math.PI / 180; }
 
-function load(callback){
-    $.ajax({  
-        type: "GET",  
-        url: "http://localhost/PinnacleProperties/wp-json/wp/v2/json-property",  
-        contentType: "application/json; charset=utf-8",  
-        dataType: "json",  
-        success: function (json) {
-            // Call our callback with the message
-            property_json = callback(json);
-            // console.log("raw array: ");
-            // console.log(json);
-            //testing = json;
-            htm = Defiant.render('property', property_json);
-            document.getElementById('output').innerHTML = htm;
-        },  
-        failure: function () {
-           console.log()
-        }
-     }); 
+function getDistance(lat1,lon1,lat2,lon2){
+
+var R = 6371; // km 
+//has a problem with the .toRad() method below.
+var x1 = lat2-lat1;
+var dLat = toRad(x1);  
+var x2 = lon2-lon1;
+var dLon = toRad(x2);  
+var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
+                Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * 
+                Math.sin(dLon/2) * Math.sin(dLon/2);  
+var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+var d = R * c; 
+  return d
 }
-
-load(tag_property); //Tag function out of $ evironment
-
-
-
-})(jQuery); // Fully reference jQuery after this point.
 
 function tag_property(json){
   var arr = [];
@@ -424,38 +464,128 @@ jQuery.each(json, function (i, jsonSingle) {
             property: jsonSingle
         });
     });           
-    
-    // console.log("array with property: ");
-    // console.log(arr);
+
  return arr; 
 
 }
+
+
+
+function load(callback){
+    jQuery.ajax({  
+        type: "get",  
+        url: "http://localhost/PinnacleProperties/wp-json/wp/v2/json-property",  
+        contentType: "application/json; charset=utf-8",  
+        dataType: "json",  
+        success: function (json) {
+            // Call our callback with the message
+           
+           property_json = callback(json);
+            // console.log("raw array: ");
+            // console.log(json);
+            // console.log(property_json);
+            //testing = json;
+            var filter_current = '//property[property_meta/property_status = "current" ]';
+            temp_json = JSON.search(property_json, filter_current );
+            var htm = Defiant.render('property', callback(temp_json));
+            document.getElementById('output').innerHTML = htm;
+        },  
+        failure: function () {
+           console.log("fail");
+        }
+     }); 
+
+}
+
+load(tag_property); //Tag function out of $ evironment
+
+
+
 function search(){
   var bed   = jQuery("#bed").val().trim()!==""?jQuery("#bed").val():0,
       car   = jQuery("#car").val().trim()!==""?jQuery("#car").val(): 0,
       bath  = jQuery("#bath").val().trim()!==""?jQuery("#bath").val(): 0,
       type  = jQuery("#type").val(),
-      suburb = jQuery("#suburb").val();
+      suburb = jQuery("#suburb").val(),
+      surrounding = jQuery("#surrounding").is(':checked');
+      console.log(surrounding);
   
-  var filter_suburb = "//property[contains(property_term,'"+suburb+"')]",
-      filter_type = "//property[contains(property_meta/property_category,'"+type+"')]",
-      filter_bed = "//property[property_meta/property_bedrooms >= "+bed+"]",
-      filter_bath = "//property[property_meta/property_bathrooms >= "+bath+"]",
-      filter_car = "//property[property_meta/property_garage >= "+car+"]";
+/*=====================================================
+=       Search Suburb(Unless Surrounding           =
+=====================================================*/
+var search_json;
+var suburbSearch="";
+var filter_suburb; 
+    if (suburb !== null && false == surrounding){
+      for (var i = suburb.length - 1; i >= 0; i--) {
+        if (i === 0){
+          suburbSearch+="contains(property_term,'"+suburb[i]+"')";
+        }else{
+          suburbSearch+="contains(property_term,'"+suburb[i]+"') or ";
+        }
+      }
+      filter_suburb = "//property["+suburbSearch+"]";
+      search_json = JSON.search(property_json, filter_suburb );
+    } else {
+      search_json = property_json;
+    }
+/*=======================================================
+=            Filter by Bath,Bed,Type and Car            =
+=======================================================*/
+var filter_type = "//property[contains(property_meta/property_category,'"+type+"')]",
+    filter_bed = "//property[property_meta/property_bedrooms >= "+bed+"]",
+    filter_bath = "//property[property_meta/property_bathrooms >= "+bath+"]",
+    filter_car = "//property[property_meta/property_garage >= "+car+"]";
 
-console.log("bed: "+filter_bed+" bath: "+filter_bath+" car: "+filter_car+" type: "+filter_type+" suburb: "+filter_suburb);
+    search_json = JSON.search(tag_property(search_json), filter_bath );
+    search_json = JSON.search(tag_property(search_json), filter_car );
+    search_json = JSON.search(tag_property(search_json), filter_bed );
+    search_json = JSON.search(tag_property(search_json), filter_type );
 
-  var search_json = JSON.search(property_json, filter_suburb );
+/*=====================================================
+=            Search Surrounding properties            =
+=====================================================*/
+    if(null != suburb && true == surrounding){
+    jQuery.getJSON('http://localhost/PinnacleProperties/wp-content/themes/Basetheme/dist/scripts/post-codes.json', function( data ) {
+      var suburbPostcode="";
+      if (suburb !== null){
+      for (var i = suburb.length - 1; i >= 0; i--) {
+        if (i === 0){
+          suburbPostcode+="contains(name,'"+suburb[i]+"')";
+        }else{
+          suburbPostcode+="contains(name,'"+suburb[i]+"') or ";
+            }
+        }
+      }
+      var filter_suburbPostcode = "//*["+suburbPostcode+"][state = 1]";
 
-  search_json = JSON.search(tag_property(search_json), filter_bath );
-  search_json = JSON.search(tag_property(search_json), filter_car );
-  search_json = JSON.search(tag_property(search_json), filter_bed );
-  search_json = JSON.search(tag_property(search_json), filter_type );
+      var suburb_data = JSON.search(data,filter_suburbPostcode);
+      console.log(suburb_data);
+      var closeProperies;
+      if (suburb_data !== null){
+      for (var i = suburb_data.length - 1; i >= 0; i--) {
+            var subLat = suburb_data[i].lat;
+            var subLng = suburb_data[i].lng;
+        for(var j = search_json.length - 1; j >= 0; j--){
+          var explodable = search_json[j].property.property_meta.property_address_coordinates[0];
+          var propLat = explodable.split(',')[0];
+          var propLng = explodable.split(',')[1];
 
+          console.log(subLat,subLng);
+          console.log(propLat,propLng);
+              console.log(getDistance(subLat,subLng,propLat,propLng));
+        }
+        
+        }
+      }
+     });
+  }
+/*=============================================================
+=            Returning Search JSON for Tempalting             =
+=============================================================*/
   search_json=tag_property(search_json);
-  console.log("array filtered by wooloowin: ");
-  console.log(search_json);
   var htm = Defiant.render('property', search_json);
-
   document.getElementById('output').innerHTML = htm;
 }
+
+
