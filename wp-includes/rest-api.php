@@ -8,6 +8,13 @@
  */
 
 /**
+ * Version number for our API.
+ *
+ * @var string
+ */
+define( 'REST_API_VERSION', '2.0' );
+
+/**
  * Registers a REST API route.
  *
  * @since 4.4.0
