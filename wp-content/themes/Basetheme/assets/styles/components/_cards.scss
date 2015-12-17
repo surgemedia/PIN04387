@@ -1,6 +1,6 @@
 .card{
 	padding: 0;
-	height: 642px;
+	height: 530px;
 	.head-card{
 		overflow: hidden;
 		height: 180px;
@@ -11,21 +11,28 @@
 		}
 	}
 	.content-card{
-		padding: 10%;
+		padding: 10% 15% 10% 15%;
+		height: 295;
+		overflow: hidden;
 		.title{
 			font-size: 36px;
     	text-transform: uppercase;
     	color: $brand-primary;
     	line-height: 1;
     	margin-bottom: .6em;
+    	font-family: $primary-font;
 		}
 		p{
 			font-size: 14px;
 		}
-		a{
-			font-size: 18px;
-			text-transform: uppercase;
+		&.big{
+			height: 495;
 		}
+	}
+	a{
+		font-size: 18px;
+		text-transform: uppercase;
+		padding: 0 15%;
 	}
 	&.grey-dark{
 		background-color: $grey-dark;

@@ -11,8 +11,7 @@
     <div class="content-card">
         <div class="title"><?php the_title(); ?></div>
         <p><?php the_content(); ?></p>
-        <a href="">read more</a>
-
     </div>
+    <a href="">read more</a>
 
 </div>
