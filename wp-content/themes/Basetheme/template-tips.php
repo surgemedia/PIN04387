@@ -3,7 +3,7 @@
  * Template Name: Tips Template
  */
 ?>
-<?php while (have_posts()) : the_post(); ?>
+
 
 <?php 
 	$extraClass="small";
@@ -23,22 +23,39 @@
 				Martin Shane
 			</div>
 	</div>
+<?php 
+// WP_Query arguments
+$args = array (
+	'post_type'              => array( 'tips' )
+
+);
+
+// The Query
+$the_query = new WP_Query( $args );?>
+<?php if ( $the_query->have_posts() ) {
+      
+      while ( $the_query->have_posts() ) {
+        $the_query->the_post();?>
+
+<?php 
+	// echo "string 1";
+	debug(get_post());
+	$color="grey-dark";
+	$image=getFeaturedUrl(get_the_id());
+
+	include(locate_template('templates/part-tips-card.php')); ?>
 
 
-<div class="card col-lg-4">
-	
-	<div class="head-card">
-		<img src="http://lorempixel.com/400/200/sports/Dummy-Text/" alt="">
-	</div>
-	<div class="content-card">
-		<div class="title">what is the value of a quiet home?</div>
-		<p>According to property experts, the majority of the housing market does put higher value on homes that are quiet. But is quiet in the ear of the beholder?</p>
-		<a href="">read more</a>
 
-	</div>
-
-</div>
+<?php 
+  }
+  
+} else {
+ echo "string";
+}
+/* Restore original Post Data */
+wp_reset_postdata();
+?>
 
 
 
-<?php endwhile; ?>
