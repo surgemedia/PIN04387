@@ -38,8 +38,6 @@ $the_query = new WP_Query( $args );?>
         $the_query->the_post();?>
 
 <?php 
-
-	
 	$image=wp_get_attachment_url( get_post_thumbnail_id($post->ID));
 	// debug($image);
 	include(locate_template('templates/part-tips-card.php')); 
