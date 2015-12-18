@@ -516,8 +516,8 @@ jQuery.each(json, function (i, jsonSingle) {
 }
 
 
-if( jQuery("#search") ){
-function load(callback){
+
+function load(callback,status){
     jQuery.ajax({  
         type: "get",  
         url: "http://localhost/PinnacleProperties/wp-json/wp/v2/json-property",  
@@ -525,13 +525,9 @@ function load(callback){
         dataType: "json",  
         success: function (json) {
             // Call our callback with the message
-           
            property_json = callback(json);
-            // console.log("raw array: ");
-            // console.log(json);
-            // console.log(property_json);
-            //testing = json;
-            var filter_current = '//property[property_meta/property_status = "current" ]';
+            
+            var filter_current = '//property[property_meta/property_status = "'+status+'" ]';
             temp_json = JSON.search(property_json, filter_current );
             property_json = temp_json;
             var htm = Defiant.render('property', callback(temp_json));
@@ -543,9 +539,6 @@ function load(callback){
      }); 
 
 }
-
-load(tag_property); //Tag function out of $ evironment
-
 
 
 function search(){
@@ -628,13 +621,13 @@ var filter_type = "//property[contains(property_meta/property_category,'"+type+"
       }
     
       var final_props = closeProperies;
-       var htm = Defiant.render('property', final_props);
+      var htm = Defiant.render('property', final_props);
       if("" != htm ){
       document.getElementById('output').innerHTML = htm;
     } else {
-      warning = "<div id='no-results' class='text-center'><h3>Sorry, there isn't any results for that search</h3><p>try lowing including surrounding properties</p></div>";
-      document.getElementById('output').innerHTML = warning;
-      var htm = Defiant.render('property', property_json);
+      // warning = "<div id='no-results' class='text-center'><h3>Sorry, there isn't any results for that search</h3><p>try including surrounding properties</p></div>";
+      // document.getElementById('output').innerHTML = warning;
+      // var htm = Defiant.render('property', property_json);
     }
      });
   }
@@ -647,5 +640,17 @@ if( 0 <= closeProperies.length ){
   document.getElementById('output').innerHTML = htm;
   }
 }
+/*=======================================
+=            Call Properties            =
+=======================================*/
+if(saleType){
+  switch(saleType) {
+    case 'current':
+      load(tag_property,'current'); 
+      break;
+    case 'sold': 
+      load(tag_property,'sold');
+      break;
+  }
 }
 

@@ -31,10 +31,14 @@ $args = array(
 ); 
     $terms = get_terms($taxonomies, $args);
 ?>
+<script>
+    var saleType = "current";
+</script>
 <div class="search-header row">
         <?php include(locate_template('templates/organism-searchbox.php')); ?>
         <?php include(locate_template('templates/molecule-property-of-the-week.php')); ?>
     <!-- Defiant template -->
+</div>
     <script type="defiant/xsl-template">
         <?php include(locate_template('templates/molecule-property.php')); ?>
     </script>
