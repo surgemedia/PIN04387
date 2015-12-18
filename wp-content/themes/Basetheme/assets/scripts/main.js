@@ -520,7 +520,7 @@ jQuery.each(json, function (i, jsonSingle) {
 function load(callback,status){
     jQuery.ajax({  
         type: "get",  
-        url: "http://localhost/PinnacleProperties/wp-json/wp/v2/json-property",  
+        url: "http://www.pinnacleproperties.com.au/wp-json/wp/v2/json-property",  
         contentType: "application/json; charset=utf-8",  
         dataType: "json",  
         success: function (json) {
@@ -587,7 +587,7 @@ var filter_type = "//property[contains(property_meta/property_category,'"+type+"
 =====================================================*/
     var closeProperies = [];
     if(null != suburb && true == surrounding){
-    jQuery.getJSON('http://localhost/PinnacleProperties/wp-content/themes/Basetheme/dist/scripts/post-codes.json', function( data ) {
+    jQuery.getJSON('http://www.pinnacleproperties.com.au/wp-content/themes/Basetheme/dist/scripts/post-codes.json', function( data ) {
       var suburbPostcode="";
       if (null !== suburb ){
       for (var i = suburb.length - 1; i >= 0; i--) {
