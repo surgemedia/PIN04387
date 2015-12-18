@@ -28,13 +28,29 @@
 		&.big{
 			height: 475px;
 		}
+		&.small{
+			padding: 10% 15% 0 15%;
+   		height: 210px;
+
+
+		}
 	}
 	a{
 		font-size: 18px;
 		text-transform: uppercase;
 		padding: 0 15%;
+		text-decoration: none;
+		&:hover{
+			color:$brand-light;
+		}
 	}
 	&.grey-dark{
 		background-color: $grey-dark;
 	}	
+	&.brand-dark{
+		background-color: $brand-dark;
+		p{
+			color:#fff;
+		}
+	}
 }
