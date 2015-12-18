@@ -4,7 +4,7 @@
  * Thehe jQuery ajax call to create a new post.
  * Duplicates all the data including custom meta.
  *
- * @since 2.11
+ * @since 2.14
  */
 function m4c_duplicate_post() {
 	
@@ -24,6 +24,7 @@ function m4c_duplicate_post() {
 	
 	// Modify some of the elements
 	$duplicate['post_title'] = $duplicate['post_title'].' Copy';
+	$duplicate['post_name'] = sanitize_title($duplicate['post_name'].$settings['slug']);
 	
 	// Set the status
 	if( $settings['status'] != 'same' ) {
@@ -74,7 +75,9 @@ function m4c_duplicate_post() {
   foreach ( $custom_fields as $key => $value ) {
 	  if( is_array($value) && count($value) > 0 ) {
 			foreach( $value as $i=>$v ) {
-				add_post_meta( $duplicate_id, $key, maybe_unserialize($v) );
+				if( $key != '_edit_lock' && $key != '_wp_old_slug' ) {
+					add_post_meta( $duplicate_id, $key, maybe_unserialize($v) );
+				}
 			}
 		}
   }

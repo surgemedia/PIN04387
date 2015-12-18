@@ -122,19 +122,20 @@
           display:block;
          }
          input{
-              border: 4px solid #D7D7D7;
-              min-height: 3em;
-              outline-style: none;
-              background: #fff;
-              width: 79.5%;
-          
-         } 
+               border: 4px solid #D7D7D7;
+                 min-height: 3em;
+                 outline-style: none;
+                 background: #fff;
+                /*  width: 79.5%; */
+            
+           } 
          button{
           background-color: $secondary-primary;
           color:#fff;
           border:none;
           width: 18%;
           padding: .8em;
+          margin-left: 4.5%;
          }
 
      }
@@ -142,6 +143,9 @@
           width: 50%;
           float: left;
           
+     }
+     #suburb_chosen{
+        width: 75.5% !important;
      }
 }
 

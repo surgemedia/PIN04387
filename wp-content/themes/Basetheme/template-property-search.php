@@ -42,7 +42,14 @@ $args = array(
     <section id="search" class="col-lg-6">
         <div class="filter">
             <label for="suburb">REFINE SEARCH TERMS</label>
-            <input type="text" name="suburb" id="suburb">
+            <select name="suburb" id="suburb" multiple>
+                <?php 
+            for ($i=0; $i <= sizeof($terms); $i++) { 
+                echo '<option value='.$terms[$i]->slug.'>'.$terms[$i]->name.'</option>';
+            }
+             ?>
+            </select>
+            <!-- <input type="text" name="suburb" id="suburb"> -->
             <button onclick="search();">SEARCH</button>
         </div>
         
@@ -51,17 +58,29 @@ $args = array(
         </div>
         
         <div class="field">
-            <label for="">PROPERTY TYPE</label>
-            <select name="" id="type">
-             <option value="">- Any -</option>
-              
-                
-            <?php 
-            for ($i=0; $i <= sizeof($terms); $i++) { 
-                echo '<option value='.$terms[$i]->slug.'>'.$terms[$i]->name.'</option>';
-            }
-             ?>
+            <label for="property_category">PROPERTY TYPE</label>
+            
+            <select name="property_category" id="type" class="">
+                <option value="" selected="selected">- Any -</option>
+                <option value="House" >House</option>
+                <option value="Unit">Unit</option>
+                <option value="Townhouse">Townhouse</option>
+                <option value="Villa">Villa</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Flat">Flat</option>
+                <option value="Studio">Studio</option>
+                <option value="Warehouse">Warehouse</option>
+                <option value="DuplexSemi-detached">Duplex Semi-detached</option>
+                <option value="Alpine">Alpine</option>
+                <option value="AcreageSemi-rural">Acreage Semi-rural</option>
+                <option value="Retirement">Retirement</option>
+                <option value="BlockOfUnits">Block Of Units</option>
+                <option value="Terrace">Terrace</option>
+                <option value="ServicedApartment">Serviced Apartment</option>
+                <option value="Other">Other</option>
             </select>
+
+            
         </div>
         
         <div class="field">
@@ -179,6 +198,7 @@ $args = array(
 <xsl:template name="property">
     
     <xsl:for-each select="//property">
+        <h1>Property</h1>    
         <article class="property-card col-lg-6" style="background:url('{property_image}');">
         
         <a href="{link}" class="content">
@@ -207,6 +227,30 @@ $args = array(
 
     </xsl:for-each>
     
+</xsl:template>
+
+<xsl:template name="tree">
+    <h1>Tree</h1>
+    <xsl:call-template name="tree-walker"/>
+</xsl:template>
+
+<xsl:template name="tree-walker">
+    <xsl:param name="indent" />
+    <xsl:for-each select="./*">
+        <xsl:sort order="descending" select="count(./*)"/>
+        <div class="tree-item">
+            <xsl:value-of select="$indent"/> <xsl:value-of select="@name"/>
+            <xsl:if test="count(./*) > 0">
+                <div class="item-children">
+                    <xsl:call-template name="tree-walker">
+                        <xsl:with-param name="indent">
+                            <xsl:value-of select="$indent"/>&#160;&#160;
+                        </xsl:with-param>
+                    </xsl:call-template>
+                </div>
+            </xsl:if>
+        </div>
+    </xsl:for-each>
 </xsl:template>
 
 </script>
