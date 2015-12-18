@@ -2,7 +2,6 @@
   "dependencies": {
     "main.js": {
       "files": [
-        
         "scripts/youtubeBackground/src/jquery.youtubebackground.js",
         "scripts/main.js"
       ],
@@ -22,6 +21,11 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+     "post-codes.json": {
+      "files": [
+        "scripts/post-codes.json"
+      ]
     },
     "modernizr.js": {
       "bower": ["modernizr"]
