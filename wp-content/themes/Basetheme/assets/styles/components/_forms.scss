@@ -177,14 +177,7 @@
             text-transform:capitalize;
         }
      }
-    .chosen-container-active.chosen-with-drop .chosen-single div b {
-        background-position:-1px 0px;
-        tranform:rotate(180deg);
-        border-right:4px solid $grey-dark;
-        border-left: 0px;
-        background:#fff;
-        border-radius:0px;
-    }
+     
 }
 
 #no-results {
@@ -194,7 +187,14 @@
     color:$brand-dark;
 
 }
-
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+        background-position:-1px 0px;
+        tranform:rotate(180deg);
+        border-right:4px solid $grey-dark;
+        border-left: 0px;
+        background:#fff;
+        border-radius:0px;
+    }
 
 
 

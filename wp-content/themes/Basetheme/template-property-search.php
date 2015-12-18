@@ -4,7 +4,6 @@
 */
 ?>
 <?php
-// no default values. using these as examples
 $taxonomies = array(
     'location'
 );
@@ -29,24 +28,16 @@ $args = array(
                 'offset'            => '',
                 'search'            => '',
         'cache_domain'      => 'core'
-);
-    
+); 
     $terms = get_terms($taxonomies, $args);
-// debug($terms);
 ?>
 <div class="search-header row">
-    <?php include(locate_template('templates/organism-searchbox.php')); ?>
-    <?php include(locate_template('templates/molecule-property-of-the-week.php')); ?>
+        <?php include(locate_template('templates/organism-searchbox.php')); ?>
+        <?php include(locate_template('templates/molecule-property-of-the-week.php')); ?>
     <!-- Defiant template -->
     <script type="defiant/xsl-template">
-    <?php include(locate_template('templates/molecule-property.php')); ?>
+        <?php include(locate_template('templates/molecule-property.php')); ?>
     </script>
     <!-- Output element -->
     <div id="output" class="row"></div>
-    <?php
- 
-    wp_reset_postdata(); ?>
-    <div class="container-fluid">
-        <?php
-        ?>
-    </div>
+    <?php wp_reset_postdata(); ?>
