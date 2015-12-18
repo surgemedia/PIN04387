@@ -8,7 +8,7 @@ $the_property_meta = get_post_meta(get_the_id() );
 		 $image_url = aq_resize($image,960,621,true,true,true);
 	?>
 	<img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>">
-        <h1 class="title"><strong>Propery</strong> of the week</h1>
+        <h1 class="title"><strong>Property</strong> of the week</h1>
         <div class="property-obj">
             <span><?php the_title(); ?></span>
             <ul>

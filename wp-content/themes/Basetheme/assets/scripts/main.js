@@ -248,6 +248,33 @@ $(document).ready(function(){
   // Load Events 
   $(document).ready(UTIL.loadEvents);
 
+/*========================================
+=            Filter Prototype            =
+========================================*/
+if (!Array.prototype.filter) {
+  Array.prototype.filter = function (fn, context) {
+    var i,
+        value,
+        result = [],
+        length;
+        if (!this || typeof fn !== 'function' || (fn instanceof RegExp)) {
+          throw new TypeError();
+        }
+        length = this.length;
+        for (i = 0; i < length; i++) {
+          if (this.hasOwnProperty(i)) {
+            value = this[i];
+            if (fn.call(context, value, i, this)) {
+              result.push(value);
+            }
+          }
+        }
+    return result;
+  };
+}
+
+
+
   /*==========================================
 =            Youtube background            =
 ==========================================*/
@@ -434,6 +461,25 @@ var toggleActiveClass = {
 
 })(jQuery); // Fully reference jQuery after this point.
 
+/*===================================
+=            Clean Array            =
+===================================*/
+function cleanArray(actual) {
+  var newArray = new Array();
+  for (var i = 0; i < actual.length; i++) {
+    // console.log(actual[i]);
+    if (actual[i] != '') {
+      newArray.push(actual[i]);
+    }
+  }
+  return newArray;
+}
+
+
+
+
+
+
 /*=============================================================
 =            Search Property (Defiant/Wp-Rest-API)            =
 =============================================================*/
@@ -460,9 +506,9 @@ function tag_property(json){
 
 
 jQuery.each(json, function (i, jsonSingle) {
-        arr.push({
-            property: jsonSingle
-        });
+          arr.push({
+              property: jsonSingle
+          });
     });           
 
  return arr; 
@@ -470,7 +516,7 @@ jQuery.each(json, function (i, jsonSingle) {
 }
 
 
-
+if( jQuery("#search") ){
 function load(callback){
     jQuery.ajax({  
         type: "get",  
@@ -487,6 +533,7 @@ function load(callback){
             //testing = json;
             var filter_current = '//property[property_meta/property_status = "current" ]';
             temp_json = JSON.search(property_json, filter_current );
+            property_json = temp_json;
             var htm = Defiant.render('property', callback(temp_json));
             document.getElementById('output').innerHTML = htm;
         },  
@@ -508,7 +555,7 @@ function search(){
       type  = jQuery("#type").val(),
       suburb = jQuery("#suburb").val(),
       surrounding = jQuery("#surrounding").is(':checked');
-      console.log(surrounding);
+      // console.log(surrounding);
   
 /*=====================================================
 =       Search Suburb(Unless Surrounding           =
@@ -516,7 +563,7 @@ function search(){
 var search_json;
 var suburbSearch="";
 var filter_suburb; 
-    if (suburb !== null && false == surrounding){
+    if (null !== suburb  && false == surrounding){
       for (var i = suburb.length - 1; i >= 0; i--) {
         if (i === 0){
           suburbSearch+="contains(property_term,'"+suburb[i]+"')";
@@ -525,7 +572,7 @@ var filter_suburb;
         }
       }
       filter_suburb = "//property["+suburbSearch+"]";
-      search_json = JSON.search(property_json, filter_suburb );
+      search_json = JSON.search(tag_property(property_json), filter_suburb );
     } else {
       search_json = property_json;
     }
@@ -545,24 +592,25 @@ var filter_type = "//property[contains(property_meta/property_category,'"+type+"
 /*=====================================================
 =            Search Surrounding properties            =
 =====================================================*/
+    var closeProperies = [];
     if(null != suburb && true == surrounding){
     jQuery.getJSON('http://localhost/PinnacleProperties/wp-content/themes/Basetheme/dist/scripts/post-codes.json', function( data ) {
       var suburbPostcode="";
-      if (suburb !== null){
+      if (null !== suburb ){
       for (var i = suburb.length - 1; i >= 0; i--) {
-        if (i === 0){
-          suburbPostcode+="contains(name,'"+suburb[i]+"')";
+        if (0 === i){
+          suburbPostcode+="name='"+suburb[i].toUpperCase()+"'";
         }else{
-          suburbPostcode+="contains(name,'"+suburb[i]+"') or ";
+          suburbPostcode+="name='"+suburb[i].toUpperCase()+"' or ";
             }
         }
       }
       var filter_suburbPostcode = "//*["+suburbPostcode+"][state = 1]";
 
       var suburb_data = JSON.search(data,filter_suburbPostcode);
-      console.log(suburb_data);
-      var closeProperies;
-      if (suburb_data !== null){
+      // console.log(suburb_data);
+
+      if (null != suburb_data  ){
       for (var i = suburb_data.length - 1; i >= 0; i--) {
             var subLat = suburb_data[i].lat;
             var subLng = suburb_data[i].lng;
@@ -570,22 +618,34 @@ var filter_type = "//property[contains(property_meta/property_category,'"+type+"
           var explodable = search_json[j].property.property_meta.property_address_coordinates[0];
           var propLat = explodable.split(',')[0];
           var propLng = explodable.split(',')[1];
-
-          console.log(subLat,subLng);
-          console.log(propLat,propLng);
-              console.log(getDistance(subLat,subLng,propLat,propLng));
-        }
+              if(10 >= getDistance(subLat,subLng,propLat,propLng) && jQuery.inArray(search_json[j].property.slug,closeProperies != -1) ){
+                closeProperies.push(search_json[j]);      
+              }
+          }
         
         }
+
       }
+    
+      var final_props = closeProperies;
+       var htm = Defiant.render('property', final_props);
+      if("" != htm ){
+      document.getElementById('output').innerHTML = htm;
+    } else {
+      warning = "<div id='no-results' class='text-center'><h3>Sorry, there isn't any results for that search</h3><p>try lowing including surrounding properties</p></div>";
+      document.getElementById('output').innerHTML = warning;
+      var htm = Defiant.render('property', property_json);
+    }
      });
   }
 /*=============================================================
 =            Returning Search JSON for Tempalting             =
 =============================================================*/
+if( 0 <= closeProperies.length ){
   search_json=tag_property(search_json);
   var htm = Defiant.render('property', search_json);
   document.getElementById('output').innerHTML = htm;
+  }
 }
-
+}
 
