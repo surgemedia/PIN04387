@@ -9,7 +9,8 @@
     },
     "main.css": {
       "files": [
-        "styles/main.scss"
+        "styles/main.scss",
+        "styles/chosen.min.css"
       ],
       "main": true
     },
@@ -20,6 +21,11 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+     "post-codes.json": {
+      "files": [
+        "scripts/post-codes.json"
+      ]
     },
     "modernizr.js": {
       "bower": ["modernizr"]

@@ -1,0 +1,40 @@
+.card{
+	padding: 0;
+	height: 530px;
+	.head-card{
+		overflow: hidden;
+		height: 180px;
+		img{
+			width: 100%;
+			height: auto;
+			
+		}
+	}
+	.content-card{
+		padding: 10% 15% 10% 15%;
+		height: 295px;
+		overflow: hidden;
+		.title{
+			font-size: 36px;
+    	text-transform: uppercase;
+    	color: $brand-primary;
+    	line-height: 1;
+    	margin-bottom: .6em;
+    	font-family: $primary-font;
+		}
+		p{
+			font-size: 14px;
+		}
+		&.big{
+			height: 475px;
+		}
+	}
+	a{
+		font-size: 18px;
+		text-transform: uppercase;
+		padding: 0 15%;
+	}
+	&.grey-dark{
+		background-color: $grey-dark;
+	}	
+}

@@ -1,0 +1,60 @@
+{
+    "key": "group_5668d4fca3cd8",
+    "title": "Multiple Featured-Property",
+    "fields": [
+        {
+            "key": "field_564192c67e605",
+            "label": "Featured Property",
+            "name": "featured_property",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "property"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": 1,
+            "max": 1,
+            "return_format": "id"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-home.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-property-search.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1449710965
+}

@@ -3,10 +3,21 @@ h1 { font-family: $primary-font;
 	 letter-spacing:2px;
 }
 h2 { font-family: $secondary-font;}
+.side{
+	h2{ font-family: $primary-font;
+			text-transform: uppercase;
+	}
+}
+
 a {
+	
 	color:$brand-light;
 }
 
 .grey-bg {
 	background:$grey;
+}
+p{
+	line-height: 2;
+	font-family: $fourth-font;
 }
