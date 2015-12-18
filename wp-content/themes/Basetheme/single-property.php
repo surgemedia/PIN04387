@@ -8,14 +8,18 @@
 	 ?>
 <div class="owl-carousel">
 
-<?php  $gallery = explode( ',', $the_property_meta['epl_slides_order'][0] );
+<?php
+// debug(get_attached_media( 'image' ));
+// $gallery_dirty = get_attached_media( 'image' );
 
 
+// $gallery = explode( ',', $the_property_meta['epl_slides_order'][0] );
+ $gallery =  get_attached_media( 'image' );
 			foreach ($gallery as $index => $image_id): ?>
 
-	   <div class="wrap"
-	   			>
-<img  style='background-image:url(<?php  $feat_image = wp_get_attachment_url($image_id);
+	   <div class="wrap">
+	   <?php //debug($image_id); ?>
+<img  style='background-image:url(<?php  $feat_image = wp_get_attachment_url($image_id->ID);
 	                            echo $feat_image;?>)' alt="" >
 	                            </div>
 	<?	endforeach; ?>
@@ -62,7 +66,6 @@ wp_reset_postdata(); ?>
 
 <div class="col-xs-12 col-md-6 col-md-push-3 general-content">
 	<?php  echo str_replace("\r", "<br />", $the_property->post_content); ?>
-
 <!-- 	<?php debug($the_property); ?>
 <?php debug($the_property_meta); ?> -->
 </div>
