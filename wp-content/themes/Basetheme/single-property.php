@@ -18,27 +18,44 @@
 <img  style='background-image:url(<?php  $feat_image = wp_get_attachment_url($image_id);
 	                            echo $feat_image;?>)' alt="" >
 	                            </div>
-	<?	endforeach;
-				?>
-
-
-
-
+	<?	endforeach; ?>
 </div>
 <div class="customPrevBtn"><i class="icon-arrow-left"></i></div>
 <div class="customNextBtn"><i class="icon-arrow-right"></i></div>
 <?php if ($the_property_meta['property_status'][0]=='sold'):?>
-	<div class="testimonial">
-		<div class="content">
-			“I just want to say a belated thanks to the team at Pinnacle Properties and to recommend their service to anyone looking to sell their property! It was an absolute pleasure selling my house  with Von. She is always very prompt, positive and helpful.”
+	<?php $compare_id = get_the_id(); 
+	// debug($compare_id); ?>
+		
+			<?php 
+		$args = array (
+	'post_type'              => array( 'testimonial' ),
+);
 
-		</div>
+$query_quote = new WP_Query($args);
+
+// The Loop
+if ( $query_quote->have_posts() ) {
+	while ( $query_quote->have_posts() ) {
+		$query_quote->the_post(); ?>
+	<?php if(get_field('select_property')[0]  == $compare_id ) { ?>
+	<div class="testimonial">
+			<div class="content">
+				<?php echo  '"'.get_the_content().'"'; ?>
+			</div>	
 			<div class="author">
-				Martin Shane
+				<?php the_field('name') ?>
 			</div>
 	</div>
+	<?php } ?>
+<?php
 
+	}
+} else {
+	// no posts found
+}
 
+// Restore original Post Data
+wp_reset_postdata(); ?>	
 <?php endif; ?>
   	
 
