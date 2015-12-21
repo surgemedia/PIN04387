@@ -29,12 +29,40 @@
                     <li>p: <?php the_field('phone'); ?></li>
                     <li>m: <?php the_field('mobile'); ?></li>
                     <li><?php the_field('email'); ?></li>
-                    <li><a href="<?php the_permalink(); ?>">More About <?php echo $name; ?></a></li>
+                    <li><a href="#modalItem_<?php echo get_the_ID();?>" data-toggle="modal" >More About <?php echo $name; ?></a></li>
                 </ul>
             </div>
             
-            
-            
+           <div class="modal fade" id="modalItem_<?php echo get_the_ID();?>" role="dialog" aria-labelledby="gridSystemModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    
+                     
+                    <a href="#" class="close" data-dismiss="modal" aria-label="Close"><span class="sharpe-icon-close2" aria-hidden="true"></span></a>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src=<?php echo $image_url; ?> >
+                        </div>
+                        <div class="col-lg-6">
+                            
+                            <span><?php echo $name; ?> <strong><?php echo $surname; ?></strong></span>
+                            <?php the_content(); ?>
+                            <ul class="">
+                                <li>p: <?php the_field('phone'); ?></li>
+                                <li>m: <?php the_field('mobile'); ?></li>
+                            </ul>
+                            <div><?php the_field('email'); ?></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+              
+ 
             
          <?php
         }
