@@ -50,8 +50,6 @@
 		}
 		ul{
 			 
-			 margin-right: 2em;
-			 margin-left: 2em;
 				a{
 			    background: #3F999A;
 			    color: #fff;
@@ -62,9 +60,36 @@
 			    line-height: 2em;
 			    margin-bottom: 1em;
 				}
+			 margin-right: 2em;
+			 margin-left: 2em;
 				p{
 					font-size: 18px;
 				}
+		}
+		.staff-info{
+			text-align: center;
+			margin-top: 2em;
+			a{
+		    margin-top: 1em;
+		    background: #3F999A;
+		    color: #fff;
+		    font-size: 16px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: block;
+		    height: 3em;
+		    line-height: 3em;
+		    margin-bottom: 1em;
+			}
+			span{
+				margin-right: 1em;
+			}
+			.position{
+				margin-bottom: 1em;
+			}
+			.email{
+				margin-top: 1em;
+			}
 		}
 	}
 	

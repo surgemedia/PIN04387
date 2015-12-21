@@ -1,11 +1,10 @@
-
-<?php
-    $team_side = get_field($team_side_column);
+    <?php
+    
     
     // WP_Query arguments
     $args = array(
         'post_type' => array('team'),
-        'post__in' =>  $team_side,
+        
     );
     
     // The Query
@@ -20,18 +19,21 @@
             $full_name=explode(" ", get_the_title());
             $name=$full_name[0];
             $surname=$full_name[1]?>
+            <div class="col-sm-6 col-md-3 side remove-padding">
             <div class="staff">
                 <div class="staff-image">
                     <img src=<?php echo $image_url; ?> >
                     <span><?php echo $name; ?> <strong><?php echo $surname; ?></strong></span>
                 </div>
-                <ul>
-                    <li><strong><?php the_field('job_title'); ?></strong></li>
-                    <li>p: <?php the_field('phone'); ?></li>
-                    <li>m: <?php the_field('mobile'); ?></li>
-                    <li><?php the_field('email'); ?></li>
-                    <li><a href="#modalItem_<?php echo get_the_ID();?>" data-toggle="modal" >More About <?php echo $name; ?></a></li>
-                </ul>
+                <div class="staff-info col-lg-12">
+                    <div class="position">
+                        <strong><?php the_field('job_title'); ?></strong>
+                    </div>
+                    <span>Phone: <?php the_field('phone'); ?></span>
+                    <span>Mobile: <?php the_field('mobile'); ?></span>
+                    <div class="email">Email: <?php the_field('email'); ?></div>
+                    <a href="#modalItem_<?php echo get_the_ID();?>" data-toggle="modal" >More About <?php echo $name; ?></a>
+                </div>
             </div>
             
            <div class="modal fade" id="modalItem_<?php echo get_the_ID();?>" role="dialog" aria-labelledby="gridSystemModalLabel">
@@ -61,8 +63,8 @@
                   </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                   </div><!-- /.modal -->
-              
-     
+              </div>
+ 
             
          <?php
         }
@@ -74,6 +76,6 @@
     }
     
     // Restore original Post Data
-    unset($team_side);
+    
     wp_reset_postdata();
-    ?>
+?>

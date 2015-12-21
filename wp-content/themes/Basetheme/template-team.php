@@ -4,38 +4,33 @@
  * Template Name: Team Template
  */
 ?>
+<div class="row">
 <?php
-while (have_posts()):
-    the_post(); ?>
-<?php 
-    $extraClass="big";
-    $image=getFeaturedUrl(get_the_id());
-    $preTitle="";
-    $title="pinnacle property qld";
-    $postTitle="Exceeding Expectations";
-    include(locate_template('templates/part-jumbotron.php')); ?>
-
-<div class="col-xs-12 col-md-6 col-md-push-3 general-content">
-    <?php
-    the_content(); ?>
-</div>
-
-<div class="col-sm-6 col-md-3 col-md-pull-6 side">
+    while (have_posts()):
+        the_post(); ?>
     <?php 
+        $extraClass="big";
+        $image=getFeaturedUrl(get_the_id());
+        $preTitle="";
+        $title="pinnacle property qld";
+        $postTitle="Exceeding Expectations";
+        include(locate_template('templates/part-jumbotron.php')); ?>
     
-    $team_side_column="team_left_column";
-    include(locate_template('templates/part-team-side.php')); ?>
+    <div class="tips-content">
+        <div class="content">
+            <?php the_content(); ?>
+        </div>
+    </div>
     
-</div>
-<div class="col-sm-6 col-md-3 side">
-<?php 
+    <?php 
+        
+        $team_side_column="team_right_column";
+        include(locate_template('templates/part-team-row.php')); ?>
     
-    $team_side_column="team_right_column";
-    include(locate_template('templates/part-team-side.php')); ?>
-</div>
-
-
-
-
-<?php
-endwhile; ?>
+    
+    
+    
+    
+    <?php
+    endwhile; ?>
+    </div>
