@@ -278,23 +278,23 @@ if (!Array.prototype.filter) {
   /*==========================================
 =            Youtube background            =
 ==========================================*/
-$('#main-content').YTPlayer({
-  videoId: $('#main-content').data('video-id'),
-   playerVars: {
-    modestbranding: 0,
-    autoplay: 1,
-    controls: 0,
-    showinfo: 0,
-    wmode: 'transparent',
-    branding: 0,
-    rel: 0,
-    autohide: 0
-  },
-  callback: function() {
-    // console.log($('#video-bg').data('video-id'));
-  }
+// $('#main-content').YTPlayer({
+//   videoId: $('#main-content').data('video-id'),
+//    playerVars: {
+//     modestbranding: 0,
+//     autoplay: 1,
+//     controls: 0,
+//     showinfo: 0,
+//     wmode: 'transparent',
+//     branding: 0,
+//     rel: 0,
+//     autohide: 0
+//   },
+//   callback: function() {
+//     // console.log($('#video-bg').data('video-id'));
+//   }
 
-  });  
+//   });  
 
   /*======================================
   =            Choosen Select            =
