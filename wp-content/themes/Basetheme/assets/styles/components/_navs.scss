@@ -30,13 +30,17 @@ transition: all ease 0.3s;
     }
 		nav{
 			 
-			ul.nav > li{
+			ul li{
 					color:#fff;
 					display: inline-block;
+					position: static;
 					a{
 						color: inherit;
 						display: inline-block;
 						padding: 0;
+						&.active{
+							color:$brand-light;
+						}
 						&.active+ul{
 							display: block;
 						}
@@ -49,12 +53,13 @@ transition: all ease 0.3s;
 						text-align: center;
 						display:none;
 						position:absolute;
-						background: $brand-primary;
+						background: rgba(51,8,53,.5);
 						padding: 1em;
-				    width: 169px;
-				    top: 27px;
-				    right: -63px;
+				    width: 600px;
+				    top: 48px;
+				    right: 0px;
 				    list-style: none;
+				    border: 2px solid #fff;
 				    a{
 				    	padding: .5em 0;
 				    }
