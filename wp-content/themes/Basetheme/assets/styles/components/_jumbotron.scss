@@ -8,6 +8,7 @@
     vertical-align: bottom;
     position:relative;
     padding-bottom: 0;
+    border-top: 110px solid $brand-dark;
 	.content {
 		font-size: 90px;
     height: 2.5em;
@@ -41,7 +42,7 @@
 		}
 	}
 .small{
-		height: 300px;
+		height: 410px;
 		.content {
 		 height: 1.5em;
 		}

@@ -1,4 +1,4 @@
-<header class="banner" role="banner">
+<header class="banner <?php if(is_front_page()){ echo "home"; }?>" role="banner">
   <div class="container-fluid">
     <div class="logo-wrap">
       <a class="brand" href="<?= esc_url(home_url('/')); ?>">
