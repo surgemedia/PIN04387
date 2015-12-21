@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Selling Tips Template
+ * Template Name: In Media Template
  */
 ?>
 <div class="row">
@@ -25,8 +25,7 @@
 	<?php 
 	// WP_Query arguments
 	$args = array (
-		'post_type'  	=> array( 'tips' ),
-		'category'		=> 'selling',
+		'post_type'  	=> array( 'post' ),
 	);
 	
 	// The Query

@@ -9,7 +9,7 @@
 		$extraClass="small";
 		$image=getFeaturedUrl(get_the_id());
 		$preTitle="";
-		$title="For<b>Buyers</b>";
+		$title=get_field("light")."<b>".get_field("bold")."</b>";
 		$postTitle="";
 		include(locate_template('templates/part-jumbotron.php')); ?>
 		
