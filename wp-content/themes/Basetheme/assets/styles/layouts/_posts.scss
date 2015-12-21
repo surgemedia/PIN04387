@@ -6,8 +6,8 @@
 	span { 
 		font-size:2.3em; 
 		color:#fff;
-		font-family:$primary-font; 
-		//font wrong
+		font-family:$fourth-font; 
+		font-weight:400;
 	}
 	img {
 		display:auto;
@@ -17,26 +17,31 @@
 	}
 	ul,li { list-style:none; margin: 0; padding: 0;}
 	li {
-		padding:1em;
+		padding:0.5em 1em 0 0;
 		font-size:1em;
 		display: inline-block;
 		text-align:center;
 		i { width: 100%; 
-			clear:both;
-			font-size:0.8em;
+				clear:both;
+			    font-size: 2.5em;
+			    color: #fff;
+			    line-height:1em;
+				
 		}
 		span {
 			 width:100%; 
 			 display:block; 
 			clear:both;
-			font-size:0.8em;
+			font-size:1em;
 		}
 	}
 	a {
-		font-size:1.8em;
+		font-family:$fourth-font; 
+		font-size:1.2em;
 		text-transform:uppercase;
 		padding:1em 0em;
 		display:inline-block;
+		font-weight: 400;
 	}
 }
 /*==========================================
@@ -48,13 +53,17 @@
 	padding-right:0px;
 	margin: 0;
 	.title {
+		font-weight:100;
 	 text-transform:uppercase;
 	 margin: 0;
 	 font-family:$primary-font;
 	 color:#fff;
 	 font-size:3em;
-	 padding:0.3em 1em 0.3em 1em;
+	 padding:0.2em 1em 0.2em 1em;
 	 background:$purple;
+	 strong {
+	 	font-weight:400;
+	 }
 	}
 
 }

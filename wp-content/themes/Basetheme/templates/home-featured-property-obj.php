@@ -12,9 +12,15 @@ $the_property_meta = get_post_meta(get_the_id() );
         <div class="property-obj">
             <span><?php the_title(); ?></span>
             <ul>
-                <li><a href=""><i class="icon bed">bed</i><span><?php echo $the_property_meta['property_bedrooms'][0]; ?></span></a></li>
-                <li><a href=""><i class="icon bath">bath</i><span><?php echo $the_property_meta['property_bathrooms'][0]; ?></span></a></li>
-                <li><a href=""><i class="icon car">car</i><span><?php echo $the_property_meta['property_carport'][0]; ?></span></a></li>
+                <li><i class="icon-BED"></i>
+                        <span><?php echo $the_property_meta['property_bedrooms'][0]; ?></span>
+                    </li>
+                    <li><i class="icon-BATH"></i>
+                        <span><?php echo $the_property_meta['property_bathrooms'][0]; ?></span>
+                    </li>
+                    <li><i class="icon-CAR"></i>
+                        <span><?php echo $the_property_meta['property_garage'][0]; ?></span>
+                    </li>
             </ul>
             <a href="" class="details">Details</a>
 

@@ -10,15 +10,29 @@ $sidebar-sm-columns:    4;
 /*================================
 =            Colors            =
 ================================*/
-$brand-primary:     #761472;
-$brand-dark: 				#330835;
-$brand-light: 			#D499C7;
-$secondary-primary: #3F999A;
-$secondary-dark:    #296768;
-$grey: 							#EBEBEB;
-$grey-dark: 				#D7D7D7;
-$font-color:        #3D3D3D;
-$black:							#000;
+// Color 1 default: #D397C3
+// Color 2 default: #320E33
+// Color 3 default: #761472
+// Color 4 default: #339999
+// Color 5 default: #ebebeb
+// Color 6 default: #666666
+
+
+
+$brand-primary:    		#761472;
+$brand-dark: 			#320E33;
+$brand-light: 			#D397C3;
+$secondary-primary: 	#339999;
+$secondary-dark:    	#296768;
+$grey-light:			#ebebeb;
+$grey: 					#E6E6E6;
+$grey-dark: 			#D7D7D7;
+
+$font-color:        	#3D3D3D;
+$font-color-light: 		#666666;
+$font-color-lighter: 	#999999;
+
+$black:					#000000;
 
 //Font 
 $primary-font : 'Yanone Kaffeesatz';

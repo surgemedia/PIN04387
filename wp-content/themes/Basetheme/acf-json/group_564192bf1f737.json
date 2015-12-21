@@ -11,13 +11,14 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 50,
+                "width": 100,
                 "class": "",
                 "id": ""
             },
+            "collapsed": "",
             "min": "",
             "max": 2,
-            "layout": "block",
+            "layout": "table",
             "button_label": "Add Block",
             "sub_fields": [
                 {
@@ -81,39 +82,22 @@
                     "max_size": "",
                     "mime_types": ""
                 }
-            ],
-            "collapsed": ""
-        },
-        {
-            "key": "field_5642d2daeea8c",
-            "label": "Video",
-            "name": "video",
-            "type": "oembed",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 70,
-                "class": "",
-                "id": ""
-            },
-            "width": "",
-            "height": ""
+            ]
         },
         {
             "key": "field_5642d2f1eea8d",
-            "label": "Image to show before video loads",
+            "label": "Bg Image",
             "name": "fallback_image",
             "type": "image",
-            "instructions": "",
+            "instructions": "This will be the background of this section",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 30,
+                "width": 50,
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "url",
             "preview_size": "full",
             "library": "all",
             "min_width": "",
@@ -123,6 +107,22 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5642d2daeea8c",
+            "label": "Video",
+            "name": "video",
+            "type": "oembed",
+            "instructions": "Leave blank if you don't have a video yet",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
         },
         {
             "key": "field_5642d311eea8e",
@@ -245,5 +245,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1449710914
+    "modified": 1450670934
 }

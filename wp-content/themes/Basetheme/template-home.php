@@ -33,9 +33,7 @@
 		 $image_url = aq_resize($image,960,730,true,true,true);
 		  ?>
 		<div class="col-lg-6 side-block" style="background-image:url(<?php echo $image_url ?>);">
-			
 			<span class=" overlay">
-
 						<a href="<?php the_sub_field('title_link'); ?>">
 						<?php 
 							$sideblocks_title = explode(' ',get_sub_field('title'));
@@ -54,55 +52,74 @@
 
  <?php endif; ?>
 		
-		
 </div>
 
 </section>
+
+<?php /*  Dont delete because video is coming ?>
 <section id="main-content" data-video-id="13wt6cmCRK0" class="row">
-	<hgroup>
+	<hgroup class="col-md-8 col-md-offset-2">
 		<h1 class="text-center col-lg-12"><span class="thin">About</span> Pinnacle Properties</h1> 
+	<p><?php the_content(); ?></p>
+	<a href="/about/">Read More</a>
 	</hgroup>
 </section>
+<?php */ ?>
+
+<?php 
+    	 $image = get_field('fallback_image');
+		 $image_url = aq_resize($image,1920,730,true,true,true);
+ ?>
+<section id="main-content" class="row"  style="">
+<div class="pattern"></div>
+		<hgroup class="col-md-8 col-md-offset-2">
+			<h1 class="text-center col-lg-12"><span class="thin">About</span> Pinnacle Properties</h1> 
+		<p><?php the_content(); ?></p>
+		<a href="/about/">Read More</a>
+		</hgroup>
+<img class="bg-img" src="<?php echo $image_url ?>" alt="bg-ground" height="auto" width="100%">
+
+</section>
+
+
 
 
 <section id="contact-us">
 <div class="row">
-  <div class="headshot col-lg-6">
-    <img width="78%" src="http://localhost/PinnacleProperties/wp-content/uploads/2015/11/VON-400x400.png" alt="">
+  <div class="headshot col-lg-6 text-center">
+  	<?php
+  	$image = get_field('headshot');
+	$image_url = aq_resize($image,960,730,true,true,true);
+		  ?>
+    <img class="img-responsive"  src="<?php echo $image_url; ?>" alt="">
     <div class="hgroup">
-      <h1><strong></strong><span></span></h1>
-      <a href="" class="contactus"></a>
+      <h1>
+      	<strong><?php echo get_field('headshot_title'); ?></strong>
+      	<span>/ <?php echo get_field('headshot_job_title'); ?></span>
+      </h1>
+      <a href="" class="contactus"><?php the_field('subheading') ?></a>
     </div>
   </div>
   <div class="form col-lg-6 grey-bg">
     <div id="gravity-form" class="col-lg-8 col-md-offset-2">
-
     <?php  
     $pageID = get_option('page_on_front'); 
+   	if(get_field('form',$pageID)){
     displayGravityForm(get_field('form',$pageID));
-
+	}
      ?>
     </div>
   </div>
   </div>
 </section>
 <div class="container">
-  <?php debug(get_field('mailchimp','option')) ?>
-		<?php  displayGravityForm(); ?>
-    <?php 
-    $footer_list = get_field('contact_details','option');?>
-
-    	<ul class="info"> 
-    <?php for ($i=0; $i < count($footer_list); $i++) { ?>
-      <li>
-          <?php echo $footer_list[$i]['label'];?> 
-          <a href="<?php echo $footer_list[$i]['Clickable_link'];?>">
-            <?php echo $footer_list[$i]['value'];?>
-          </a>
-      </li>
-      
-    <?php } ?>
-    </ul>
-    
+	<div id="email-marketing" class="col-md-6 col-md-offset-3">
+  <?php
+  // $testing = get_field('email_signup','option');
+  // debug($testing);
+  	if(get_field('email_signup','option')){ ?>
+		<?php  displayGravityForm(get_field('email_signup','option')); ?>
+    <?php }; ?> 
+    </div>
   </div>
 <?php endwhile; ?>
