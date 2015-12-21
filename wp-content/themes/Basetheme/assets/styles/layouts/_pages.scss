@@ -131,9 +131,9 @@
 		height:100%;
 		color:#fff;
 		img {
-			margin-top: 2em;
+			margin-top: 0em;
 			display:inline-block;
-			max-height:550px;
+			width:100%;
 		}
 		.hgroup{
 			position:absolute;
@@ -162,32 +162,78 @@
 }
 
 #email-marketing {
+margin-top:4em;
+margin-bottom:4em;
+font-family:$fourth-font;
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
 	.gform_title {
 		border: 0px;
     	display:inline-block;
+    	margin:0px;
+		text-align:center;
+		width:100%;
+
 	}
 	.gform_body {
-		 display:inline-block;
-		
+		margin:0 0em 0 3em ;
+	    border: 3px solid #E6E6E6;
+    display: inline-block;
+    float: left;
+    width: 60%;
+    height: 3em;
+    position: relative;
 		input {
-			  width:100%;
+	height: 2.4em;
+    overflow: hidden;
+    width: 95%;
+    border: 0;
+    padding: 0 0 0 0.5em;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 		}
 
 	}
+	.gfield_label {
+		display:none;
+	}
 	.gform_footer {
-    border: 0px;
-    border-color: $secondary-primary;
-    padding: 1em 6em;
-    font-size: 1.3em;
-    font-family: $fourth-font;
-    float: right;
-    margin: 0 .9em 0 0;
-    padding: .7em 2.4em;
-    font-size: 1.3em;
-    font-weight: 400;
+			
+	    border: 0px;
+	    border-color: $secondary-primary;
+	    font-size: 1.3em;
+	    font-family: $fourth-font;
+	    float: left;
+	    margin: 0;
+	    padding: 0;
+	    font-size: 1.3em;
+	    font-weight: 400;
+	    clear:none;
+	    input {
+	    height: 2.3em;
+	    overflow: hidden;
+	    border: 0;
+	    padding: .2em 1em;
+	    line-height: 0;
+	    
+		}
+	}
 }
-}
-
 /*===============================
 =         Search Feature        =
 ===============================*/
@@ -201,7 +247,8 @@ padding: 0;
     width: 100%;
 	}
 	h1{
-		background: $brand-primary;
+	background: $brand-primary;
+
     margin: 0;
     height: 72px;
     padding: .5em;
@@ -212,17 +259,27 @@ padding: 0;
 	.property-obj{
 		a{
 			padding: 0;
+			margin: 1.2em 0 0 0 ;
+			font-weight:bold;
 		}
 		.suburb,
 		.street{
 			font-size: 36px;
-			text-transform: capitalize;
+			text-transform: uppercase;
+			font-family:$fourth-font;
+			line-height:1.1em;
+
 		}
 		ul{
 			
 			li{
-				i{
-					font-size: 30px;
+				i { 	
+				width: 100%; 
+				clear:both;
+			    font-size: 2.5em;
+			    color: $font-color;
+			    line-height:1em;
+				
 				}
 				span{
 					font-size: 18px;
