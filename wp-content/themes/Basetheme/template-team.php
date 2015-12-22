@@ -9,11 +9,11 @@
     while (have_posts()):
         the_post(); ?>
     <?php 
-        $extraClass="big";
+        $extraClass=get_field("jumbotron_size");
         $image=getFeaturedUrl(get_the_id());
         $preTitle=get_field("light");
-        $title="<b>".get_field("bold")"</b>";
-        $postTitle=get_field("light2");
+        $title="<b>".get_field("bold")."</b>";
+        $postTitle=("small"!==get_field("jumbotron_size")) ? get_field("light2") : "";
         include(locate_template('templates/part-jumbotron.php')); ?>
     
     <div class="tips-content">

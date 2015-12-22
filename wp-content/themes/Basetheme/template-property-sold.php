@@ -8,7 +8,7 @@
     $image=getFeaturedUrl(get_the_id());
     $preTitle=get_field("light");
     $title="<b>".get_field("bold")."</b>";
-    $postTitle=get_field("light2");
+    $postTitle=("small"!==get_field("jumbotron_size")) ? get_field("light2") : "";
     include(locate_template('templates/part-jumbotron.php')); 
 ?>
 <script>
