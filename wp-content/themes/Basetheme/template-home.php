@@ -76,7 +76,7 @@
 			<h1 class="text-center col-lg-12"><span class="thin">About</span> Pinnacle Properties</h1> 
 		<?php if(strlen(get_the_content()) > 0){ ?>
 		<p><?php the_content(); ?></p>
-		<?php } else { ?>
+		<?php } else { 
 		$about_id = get_id_from_slug('about');
 		$content = get_post_page_content($about_id); ?>
 		<p> <?php truncate( $content ,50,'',true) ?>;</p> 
@@ -91,7 +91,7 @@
 
 
 <section id="contact-us">
-<div class="row">
+<div class="row grey-bg">
   <div class="headshot col-lg-6 text-center">
   	<?php
   	$image = get_field('headshot');
@@ -103,14 +103,16 @@
       	<strong><?php echo get_field('headshot_title'); ?></strong>
       	<span>/ <?php echo get_field('headshot_job_title'); ?></span>
       </h1>
-      <a href="" class="contactus"><?php the_field('subheading') ?></a>
+      <a href="/contact-us/" class="contactus"><?php the_field('subheading') ?></a>
     </div>
   </div>
   <div class="form col-lg-6 grey-bg">
     <div id="gravity-form" class="col-lg-8 col-md-offset-2">
+    <h3 class="other_title">Contact Us <span>Today</span></h3>
     <?php  
     $pageID = get_option('page_on_front'); 
    	if(get_field('form',$pageID)){
+
     displayGravityForm(get_field('form',$pageID));
 	}
      ?>
