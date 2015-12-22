@@ -4,11 +4,11 @@
 */
 ?>
 <?php 
-    $extraClass="small";
+    $extraClass=get_field("jumbotron_size");
     $image=getFeaturedUrl(get_the_id());
-    $preTitle="";
-    $title=get_the_title();
-    $postTitle="";
+    $preTitle=get_field("light");
+    $title="<b>".get_field("bold")."</b>";
+    $postTitle=("small"!==get_field("jumbotron_size")) ? get_field("light2") : "";
     include(locate_template('templates/part-jumbotron.php')); 
 ?>
 <script>

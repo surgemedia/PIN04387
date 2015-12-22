@@ -1,11 +1,13 @@
     <?php
     
-    
-    // WP_Query arguments
-    $args = array(
-        'post_type' => array('team'),
+    $team = get_field('team_row');
         
-    );
+        // WP_Query arguments
+        $args = array(
+            'post_type' => array('team'),
+            'post__in' =>  $team,
+            'orderby' => 'post__in',
+         );
     
     // The Query
     $query = new WP_Query($args);
@@ -29,9 +31,9 @@
                     <div class="position">
                         <strong><?php the_field('job_title'); ?></strong>
                     </div>
-                    <span>Phone: <?php the_field('phone'); ?></span>
-                    <span>Mobile: <?php the_field('mobile'); ?></span>
-                    <div class="email">Email: <?php the_field('email'); ?></div>
+                    <span>p: <?php the_field('phone'); ?></span>
+                    <span>m: <?php the_field('mobile'); ?></span>
+                    <div class="email"><?php the_field('email'); ?></div>
                     <a href="#modalItem_<?php echo get_the_ID();?>" data-toggle="modal" >More About <?php echo $name; ?></a>
                 </div>
             </div>
@@ -79,3 +81,4 @@
     
     wp_reset_postdata();
 ?>
+ 

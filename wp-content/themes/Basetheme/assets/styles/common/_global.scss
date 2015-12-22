@@ -14,14 +14,33 @@ a {
 	color:$brand-light;
 }
 
-.grey-bg {
+.bg_grey {
+	background:$grey;
+  position: absolute;
+  height: 400%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.grey-bg{
 	background:$grey;
 }
+
 p{
+	color: $font-color-light;
 	line-height: 2;
 	font-family: $fourth-font;
+}
+
+ol{
+	li{
+		font-family: $fourth-font;
+		line-height: 2;
+	}
 }
 .remove-padding{
 	padding-left: 0;
 	padding-right: 0;
 }
+

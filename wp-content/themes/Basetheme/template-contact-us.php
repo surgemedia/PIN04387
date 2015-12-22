@@ -6,11 +6,11 @@
 <div class="row"><?php while (have_posts()) : the_post(); ?>
 	
 	<?php 
-		$extraClass="small";
+		$extraClass=get_field("jumbotron_size");
 		$image=getFeaturedUrl(get_the_id());
-		$preTitle="";
-		$title=get_the_title();
-		$postTitle="";
+		$preTitle=get_field("light");
+		$title="<b>".get_field("bold")."</b>";
+		$postTitle=("small"!==get_field("jumbotron_size")) ? get_field("light2") : "";
 		include(locate_template('templates/part-jumbotron.php')); ?>
 		
 	<div class="col-xs-12 col-md-6 col-md-push-3 general-content">
@@ -46,7 +46,7 @@
 				<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
 			</div>
 			<?php endif; ?>
-	
+	<div class="bg_grey visible-lg"> </div>
 	</div>
 	<div class="col-sm-6 col-md-3 col-md-pull-6 side">
 		<?php 
