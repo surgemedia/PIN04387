@@ -16,6 +16,5 @@
         <div class="title"><?php the_title(); ?></div>
         <p><?php truncate(get_the_content(),75,"",true); ?></p>
     </div>
-    <a href="<?php echo $link ?>">read more</a>
-
+    <a href="<?php echo $link ?>" target="<?php echo $target ?>">read more</a>
 </div>

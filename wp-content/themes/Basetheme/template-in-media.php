@@ -40,8 +40,15 @@
 	
 		
 		$image=wp_get_attachment_url( get_post_thumbnail_id($post->ID));
-		$link=get_field('external_link') ? get_field('url') : get_permalink();
-		// debug($image);
+		if(get_field('external_link')){
+			$link=get_field('url'); 
+			$target="_blank";
+		}else{
+			$link=get_permalink();
+			$target="";
+		}
+		
+		// debug($link);
 		include(locate_template('templates/part-inmedia-card.php')); 
 	
 		if (""==$color) $color = 'grey-dark';
