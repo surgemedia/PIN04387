@@ -1,4 +1,4 @@
-
+<div class="row">
 <?php
 		
 		$the_property = get_post(get_the_id()) ;
@@ -66,8 +66,7 @@ wp_reset_postdata(); ?>
 
 <div class="col-xs-12 col-md-6 col-md-push-3 general-content">
 	<?php  echo str_replace("\r", "<br />", $the_property->post_content); ?>
-<!-- 	<?php debug($the_property); ?>
-<?php debug($the_property_meta); ?> -->
+	<div class="bg_grey visible-lg"> </div>
 </div>
 <div class="col-sm-6 col-md-3 col-md-pull-6 side">
 	<div class="property-info">
@@ -100,8 +99,8 @@ wp_reset_postdata(); ?>
 					</div>
 				<?php endif; ?>
 				<div class="button-map">
-					<a href="">Enlarge MAP</a>
-					<a href="">Street view</a>
+					<a target="_blank" href="http://maps.google.com/?q=<?php echo $location[0]; ?>,<?php echo $location[1]; ?>">Enlarge MAP</a>
+					<a target="_blank" href="http://maps.google.com/?q=<?php echo $location[0]; ?>,<?php echo $location[1]; ?>&layer=c&cbll=<?php echo $location[0]; ?>,<?php echo $location[1]; ?>">Street view</a>
 				</div>
 
 
@@ -111,11 +110,13 @@ wp_reset_postdata(); ?>
 
 <div class="col-sm-6 col-md-3 side">
     <?php
-
-    $agentID="123asd";
+    // $the_property_meta
+    $agentID= $the_property_meta['property_agent'];
     include(locate_template('templates/part-agent-side.php')); ?>
 
 <div class="inspection">
+<!-- <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css"> -->
+
 		<ul>
 		  <li>
 		     <strong>Open for inspection Times</strong>
@@ -123,16 +124,25 @@ wp_reset_postdata(); ?>
 		  <li>
 		     <div class="box"><?php echo $the_property_meta['property_inspection_times'][0]; ?></div>
 			</li>
-			<li>
+			<!-- <li>
 			   <i class="icon-save-to-calendar"></i>
 			   <a href="">Save to Calendar</a>
-			</li>
-	    <li>
+			</li> -->
+	    <!-- <li>
 	       <i class="icon-google-icon"></i>
-				 <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=<?php the_title();?>&dates=<?php echo $the_property_meta['property_inspection_times'][0]; ?>/20140320T221500Z&details=For+details,+link+here:+http://www.example.com&location=Waldorf+Astoria,+301+Park+Ave+,+New+York,+NY+10022&sf=true&output=xml">Save to Google Calendar</a>
-			</li>
+				 <a href="https://www.google.com/calendar/render?
+				 action=TEMPLATE&
+				 text=<?php echo sanitize_title(get_the_title());?>
+				 &ctz=Australia/Brisbane
+				 &dates=<?php echo $the_property_meta['property_inspection_times'][0]; ?>/
+				 &details=View+Property <?php echo get_permalink(); ?>
+				 &location=<?php echo sanitize_title(get_the_title());?>
+				 &sf=true
+				 &output=xml">Save to Google Calendar</a>
+			</li> -->
 		</ul>
 </div>
+
 
 		<div class="social-links">
 			<ul>
@@ -151,3 +161,38 @@ wp_reset_postdata(); ?>
 			</ul>
 		</div>
 </div>
+</div>
+<script type="text/javascript">(function () {
+            if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+                var h = d[g]('body')[0];h.appendChild(s); }})();
+    </script>
+    <!-- 3. Place event data -->
+    <?php
+
+    $the_date = explode('to',$the_property_meta['property_inspection_times'][0]);
+   	$start_time = explode(' ',$the_property_meta['property_inspection_times'][0]);
+   	$end_time = $start_time[3];
+
+   	$final_data = date("d-m-Y", strtotime($the_date[0]));
+   	$start_time = date("H:i", strtotime($start_time[1]));
+   	$end_time =  date("H:i", strtotime($end_time));
+   
+
+    // debug($final_time)
+     ?>
+    <!-- <span class="addtocalendar atc-style-blue">
+        <var class="atc_event">
+            <var class="atc_date_start"><?php echo $final_data; echo ' '.$start_time; ?></var>
+            <var class="atc_date_end">><?php echo $final_data; echo  ' '.$end_time; ?></var>
+            <var class="atc_timezone">Australia/Brisbane</var>
+            <var class="atc_title">Inspection <?php the_title(); ?></var>
+            <var class="atc_description">Inspections <?php $the_property_meta['property_inspection_times'][0] ?> </var>
+            <var class="atc_location"><?php the_title(); ?></var>
+            <var class="atc_organizer">Pinnacle Properties</var>
+            <var class="atc_organizer_email">info@pinnacleproperties.com.au</var>
+        </var>
+    </span> -->

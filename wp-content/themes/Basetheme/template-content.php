@@ -16,8 +16,7 @@
 		
 	
 	<div class="col-xs-12 col-md-6 col-md-push-3 general-content">
-		<?php
-	    the_content(); ?>
+		<?php the_content(); ?>
 
 	<div class="bg_grey visible-lg"> </div>
 	</div>

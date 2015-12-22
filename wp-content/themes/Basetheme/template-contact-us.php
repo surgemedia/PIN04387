@@ -15,7 +15,15 @@
 		
 	<div class="col-xs-12 col-md-6 col-md-push-3 general-content">
 		<?php the_content(); ?>
-	
+	 <div id="gravity-form" class="contactus">
+    <?php  
+    $pageID = get_option('page_on_front'); 
+   	if(get_field('form',$pageID)){
+
+    displayGravityForm(get_field('form',$pageID));
+	}
+     ?>
+    </div>
 		<?php 
 	
 			$location = get_field('map_location','option');
