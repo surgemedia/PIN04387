@@ -1,0 +1,38 @@
+.content-info{
+	text-align: center;
+	display: inline-block;
+    width: 100%;
+	
+	.foot{
+
+		height:110px;
+		background: $brand-dark;
+		text-align: center;
+		span{
+			color:#fff;
+    font-family:$fourth-font;
+    font-weight:100;
+			line-height: 110px;
+			font-size: 20px;
+		}
+	}
+}
+	.info{
+	padding: 0;
+    list-style: none;
+    padding: 2em 0;
+    text-align:center;
+    font-family:$fourth-font;
+    li{
+    	color:$font-color-light;
+    	font-size: 20px;
+    	display: inline-block;
+    	padding-right:2em; 
+    	text-align:center;
+    	a{
+    		color:inherit;
+    		font-family:$fourth-font;
+    		font-size:0.9em;
+    	}
+    }
+	}

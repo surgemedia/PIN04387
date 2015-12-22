@@ -5,7 +5,7 @@
 	
 	.side-block {
 	overflow:hidden;
-	min-height:504px;
+	min-height:449px;
 	-webkit-background-size: 100% auto;
 	background-size: 100% auto;
 	position:relative;
@@ -14,8 +14,8 @@
 		float:none;
 		margin-top:12em;
 		display:inline-block;
-		 border:4px solid #fff;
-		 padding:3em;
+		 border:2px solid #fff;
+		 padding:1em;
 		 background: transparentize($pink, 0.5);
 		  text-align: center;
 		  width:50%;
@@ -25,13 +25,13 @@
 			}
 
 			a {
-				font-size: 3em;
+				font-size: 3.5em;
 			    font-family: $primary-font;
 			    width: 100%;
 			    text-align: center;
 			    color:#fff;
 			    text-transform:uppercase;
-			    font-weight:thin;
+			    font-weight:100;
 			    text-decoration:none;
 		
 		}
@@ -45,19 +45,52 @@
 	overflow:hidden;
 	position: relative;
 	border-top:4px solid #fff;
-	h1 {
+	background-color:rgba(0,0,0,1);
+	.bg-img {
 		position:absolute;
-		color:#fff;
-		top:20vh;
+		top:0px;
 		left:0px;
-		right:0px;
-		bottom:0px;
-		font-size:7em;
-		z-index:3;
-		font-weight:bold;
-		text-transform:uppercase;
-		.thin { 
-			font-weight:100;
+		opacity:0.3;
+		min-height:100% !important;
+	}
+	hgroup {
+		h1 {
+			margin-top: 1em;;
+			color:#fff;
+			font-size:7em;
+			z-index:3;
+			font-weight:bold;
+			text-transform:uppercase;
+			.thin { 
+				font-weight:100;
+			}
+		}
+		p {
+			text-align:center;
+			display:block;
+			margin:0 auto;
+			width:90%;
+			position:relative;
+			z-index: 99;
+			color:#fff;
+		}
+		a {
+			margin: 1em 0 0 0;
+			position:relative;
+			z-index: 99;
+			width:100%;
+			display:block;
+			text-align:center;
+			padding:1em;
+			color:$brand-light;
+			font-family:$fourth-font;
+			font-size:1.3em;
+			text-transform:uppercase;
+			font-weight:bold;
+		}
+		a:hover {
+			color:#fff;
+			text-decoration: none;
 		}
 	}
 	
@@ -66,24 +99,214 @@
 		top:-25vh;
 		z-index:1;
 	}
+	.pattern,
 	#ytplayer-shield {
 		z-index:2;
 		position: absolute;
 		width:100%;
 		height: 100%;
-		opacity:0.5;
+		opacity:0.1;
 		top:0px;
 		left:0px;
-		background:url($pattern);
+		background-image:url($pattern);
 	}
+	// .pattern {
+	// 	background-color:#000;
+	// }
+	
 }
 #contact-us {
+	position:relative;
+	height: 52.95em;
+	.row {
+		height:100%;
+	}
 	.headshot,
 	.form {
 		margin: 0;
 		padding:0px;
 		overflow:hidden;
 	}
+	.headshot {
+		height:100%;
+		color:#fff;
+		img {
+			margin-top: 0em;
+			display:inline-block;
+			width:100%;
+		}
+		.hgroup{
+			position:absolute;
+			bottom:0px;
+			width:100%;
+			text-transform:uppercase;
+			background:$brand-primary; 
+			padding:2.5em 1em;
+			h1 {
+				font-size:3.7em;
+			}
+			span {
+				font-weight:100;
+			}
+		}
+		a {
+			font-family:$fourth-font;
+			font-weight:bold;
+			font-size:1.2em;
+			width:100%;
+			text-align:center;
+			
+		}
+	}
 	.form { padding:1em;}
 }
+
+#email-marketing {
+margin-top:4em;
+margin-bottom:4em;
+font-family:$fourth-font;
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
+	.gform_title {
+		border: 0px;
+    	display:inline-block;
+    	margin:0px;
+		text-align:center;
+		width:100%;
+
+	}
+	.gform_body {
+		margin:0 0em 0 3em ;
+	    border: 3px solid #E6E6E6;
+    display: inline-block;
+    float: left;
+    width: 60%;
+    height: 3em;
+    position: relative;
+		input {
+	height: 2.4em;
+    overflow: hidden;
+    width: 95%;
+    border: 0;
+    padding: 0 0 0 0.5em;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+		}
+
+	}
+	.gfield_label {
+		display:none;
+	}
+	.gform_footer {
+			
+	    border: 0px;
+	    border-color: $secondary-primary;
+	    font-size: 1.3em;
+	    font-family: $fourth-font;
+	    float: left;
+	    margin: 0;
+	    padding: 0;
+	    font-size: 1.3em;
+	    font-weight: 400;
+	    clear:none;
+	    input {
+	    height: 2.3em;
+	    overflow: hidden;
+	    border: 0;
+	    padding: .2em 1em;
+	    line-height: 0;
+	    
+		}
+	}
+}
+/*===============================
+=         Search Feature        =
+===============================*/
+.search-header{
+	border-top: 110px solid $brand-dark;
+}
+.search-feature{
+padding: 0;
+	img{
+		height: 18.7em;
+    width: 100%;
+	}
+	h1{
+	background: $brand-primary;
+
+    margin: 0;
+    height: 72px;
+    padding: .5em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+	}
+	.property-obj{
+		a{
+			padding: 0;
+			margin: 1.2em 0 0 0 ;
+			font-weight:bold;
+		}
+		.suburb,
+		.street{
+			font-size: 36px;
+			text-transform: uppercase;
+			font-family:$fourth-font;
+			line-height:1.1em;
+
+		}
+		ul{
+			
+			li{
+				i { 	
+				width: 100%; 
+				clear:both;
+			    font-size: 2.5em;
+			    color: $font-color;
+			    line-height:1em;
+				
+				}
+				span{
+					font-size: 18px;
+					color:#000;
+
+				}
+			  &:first-child{
+			  	padding-left: 0;
+			  }	
+			}
+
+		}
+	}
+}
+
+/*=============================
+=            TIPS             =
+=============================*/
+.tips-content{
+	min-height: 300px;
+	padding: 5em 0;
+	.content{
+		font-family: $fourth-font;
+		width: 670px;
+		margin: auto;
+	}
+}
+
+
 
