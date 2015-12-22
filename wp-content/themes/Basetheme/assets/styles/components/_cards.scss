@@ -11,7 +11,8 @@
 		}
 	}
 	.content-card{
-		padding: 10% 15% 10% 15%;
+		padding: 10% 15% 0 15%;
+		margin-bottom: 10%;
 		height: 295px;
 		overflow: hidden;
 		.title{
@@ -26,7 +27,7 @@
 			font-size: 14px;
 		}
 		&.big{
-			height: 475px;
+			height: 405px;
 		}
 		&.small{
 			padding: 10% 15% 0 15%;

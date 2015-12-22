@@ -8,9 +8,9 @@
 	<?php 
 		$extraClass="small";
 		$image=getFeaturedUrl(get_the_id());
-		$preTitle="";
-		$title=get_field("light")."<b>".get_field("bold")."</b>";
-		$postTitle="";
+		$preTitle=get_field("light");
+		$title="<b>".get_field("bold")."</b>";
+		$postTitle=get_field("light2");
 		include(locate_template('templates/part-jumbotron.php')); ?>
 		
 		<?php while (have_posts()) : the_post(); ?>
@@ -26,7 +26,7 @@
 	// WP_Query arguments
 	$args = array (
 		'post_type'  	=> array( 'tips' ),
-		'category'		=> 'buying',
+		'type_of_tip'         => 'buying',
 	);
 	
 	// The Query
