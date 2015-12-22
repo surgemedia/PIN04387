@@ -51,7 +51,7 @@
 			}
 		}
 		ul{
-			 
+			 font-family: $fourth-font;
 				a{
 			    background: #3F999A;
 			    color: #fff;
@@ -66,6 +66,9 @@
 			 margin-left: 2em;
 				p{
 					font-size: 18px;
+				}
+				strong{
+					text-transform: uppercase;
 				}
 		}
 		.staff-info{
@@ -90,6 +93,7 @@
 			.position{
 				margin-bottom: 1em;
 				text-transform: uppercase;
+				color: $font-color-light;
 			}
 			.email{
 				margin-top: 1em;
