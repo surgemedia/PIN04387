@@ -221,4 +221,16 @@
         border-radius:0px !important;
     }
 
+#gravity-form.contactus {
+    overflow:hidden !important;
+    margin:0 0 3em 0 !important;
+    display:block !important;
+    .gfield {
+        margin-top:1em;
+    }
+    #field_1_5 {
+        margin:0.5em 0 0 0;
+    }
+    .gform_heading { display:none;}
 
+}
