@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="logo-wrap">
       <a class="brand" href="<?= esc_url(home_url('/')); ?>">
-        <img src="<?php the_field("logo","option") ?>" alt="<?php bloginfo('name'); ?>">
+        <img title="Pinnacle Properties - Everything we touch turns to.. SOLD" src="<?php the_field("logo","option") ?>" alt="Pinnacle Properties - Everything we touch turns to.. SOLD">
       </a>
     </div>
     <div class="menu-wrap">
