@@ -14,7 +14,7 @@
     <?php endif;?>
     <div class="content-card <?php echo $content_size ?>">
         <div class="title"><?php the_title(); ?></div>
-        <p><?php truncate(get_content(),40,"",true); ?></p>
+        <p><?php truncate(get_the_content(),75,"",true); ?></p>
     </div>
     <a href="<?php the_permalink(); ?>">read more</a>
 

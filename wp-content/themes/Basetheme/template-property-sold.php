@@ -4,7 +4,7 @@
 */
 ?>
 <?php 
-    $extraClass="small";
+    $extraClass=get_field("jumbotron_size");
     $image=getFeaturedUrl(get_the_id());
     $preTitle=get_field("light");
     $title="<b>".get_field("bold")."</b>";

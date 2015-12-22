@@ -28,9 +28,11 @@ a {
 }
 
 p{
+	color: $font-color-light;
 	line-height: 2;
 	font-family: $fourth-font;
 }
+
 ol{
 	li{
 		font-family: $fourth-font;

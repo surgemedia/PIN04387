@@ -6,6 +6,7 @@
     $args = array(
         'post_type' => array('team'),
         'post__in' =>  $team_side,
+        'orderby' => 'post__in',
     );
     
     // The Query

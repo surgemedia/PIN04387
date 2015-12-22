@@ -47,6 +47,7 @@
 		    display: block;
 		    color: #fff;
 		    font-size: 40px;
+		    font-family: $primary-font;
 			}
 		}
 		ul{
@@ -70,16 +71,17 @@
 		.staff-info{
 			text-align: center;
 			margin-top: 2em;
+			font-family: $fourth-font;
 			a{
 		    margin-top: 1em;
 		    background: #3F999A;
 		    color: #fff;
-		    font-size: 16px;
+		    font-size: 24px;
 		    text-align: center;
 		    text-decoration: none;
 		    display: block;
-		    height: 3em;
-		    line-height: 3em;
+		    height: 2em;
+		    line-height: 2em;
 		    margin-bottom: 1em;
 			}
 			span{
@@ -87,6 +89,7 @@
 			}
 			.position{
 				margin-bottom: 1em;
+				text-transform: uppercase;
 			}
 			.email{
 				margin-top: 1em;
