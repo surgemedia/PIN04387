@@ -27,6 +27,8 @@ $sage_includes = [
   'lib/function-get_id_from_slug.php',            // get id from slug
   'lib/function_clean_youtube_link.php',            // just get the v=
   'lib/function-display-gravity-form.php',            // Easy ACF to Gravity form display func
+  'lib/function-truncate-content.php',            // truncate long text
+  'lib/function-get_post_page_content.php',            // get content from another page
   'lib/gravity_forms-v5.php',            // Adds Gravity form to ACF
   'lib/acf-option-page.php',            // theme Option Page
   'lib/wp-api-register-property.php',            // WP API post type addons

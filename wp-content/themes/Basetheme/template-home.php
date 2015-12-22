@@ -74,7 +74,13 @@
 <div class="pattern"></div>
 		<hgroup class="col-md-8 col-md-offset-2">
 			<h1 class="text-center col-lg-12"><span class="thin">About</span> Pinnacle Properties</h1> 
+		<?php if(strlen(get_the_content()) > 0){ ?>
 		<p><?php the_content(); ?></p>
+		<?php } else { ?>
+		$about_id = get_id_from_slug('about');
+		$content = get_post_page_content($about_id); ?>
+		<p> <?php truncate( $content ,50,'',true) ?>;</p> 
+		<?php } ?>
 		<a href="/about/">Read More</a>
 		</hgroup>
 <img class="bg-img" src="<?php echo $image_url ?>" alt="bg-ground" height="auto" width="100%">
