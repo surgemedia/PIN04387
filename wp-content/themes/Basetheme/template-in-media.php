@@ -40,8 +40,9 @@
 	
 		
 		$image=wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+		$link=get_field('external_link') ? get_field('url') : get_permalink();
 		// debug($image);
-		include(locate_template('templates/part-tips-card.php')); 
+		include(locate_template('templates/part-inmedia-card.php')); 
 	
 		if (""==$color) $color = 'grey-dark';
 	      else $color = "";
