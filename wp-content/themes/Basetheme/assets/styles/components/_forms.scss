@@ -1,18 +1,39 @@
 #gravity-form {
-.gform_wrapper {
+    .other_title {
+        font-size:4em;
+      text-align:center;
+      font-family:$primary-font;
+      text-transform:uppercase;
+      width:100%;
+      font-weight:bold;
+      span {
+        font-weight:100;
+      }
+    }
 
+.gform_wrapper {
+    .gform_heading {
+        text-align:center !important;
+    }
+    
 	.gform_title {
-		font-size:4em;
-		text-align:center;
-		font-family:$primary-font;
-		text-transform:uppercase;
-		width:100%;
+		display:none;
 	}
 	.gform_description {
 		text-align:center;
 		width:100%;
-	}
+        font-family: $fourth-font;
+        color:$font-color-light  !important;
+        text-align:center !important;
 
+	}
+    #field_1_5 {
+        .gfield_label {
+            margin: 0.7em;
+            font-family: $fourth-font;
+            color:$font-color-light  !important;
+        }
+    }
 	.no-label {
 		label {
 		display:none !important;
@@ -76,7 +97,7 @@
      			border-left:4px solid $grey-dark;
      			}
      			b:hover {
-     			background-image:url($drop-arrow) !important;
+     			
                     
      			}
      		}
@@ -193,13 +214,11 @@
 
 }
 .chosen-container-active.chosen-with-drop .chosen-single div b {
-        background-position:-1px 0px;
-        tranform:rotate(180deg);
-        border-right:4px solid $grey-dark;
-        border-left: 0px;
-        background:#fff;
-        border-radius:0px;
+        background-position:-1px 0px !important;
+        transform:rotate(180deg) !important;
+        border-right:4px solid $grey-dark !important;
+        border-left: 0px !important;
+        border-radius:0px !important;
     }
-
 
 

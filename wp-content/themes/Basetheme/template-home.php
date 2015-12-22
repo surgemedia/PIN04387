@@ -108,9 +108,11 @@
   </div>
   <div class="form col-lg-6 grey-bg">
     <div id="gravity-form" class="col-lg-8 col-md-offset-2">
+    <h3 class="other_title">Contact Us <span>Today</span></h3>
     <?php  
     $pageID = get_option('page_on_front'); 
    	if(get_field('form',$pageID)){
+
     displayGravityForm(get_field('form',$pageID));
 	}
      ?>
