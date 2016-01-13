@@ -56,13 +56,13 @@
 			<?php endif; ?>
 		
 <div class="social row">
-	<div class="col-lg-8"><?php
+	<div class="col-xs-12 col-sm-8 col-md-12 col-lg-8"><?php
 		  // $testing = get_field('email_signup','option');
 		  // debug($testing);
 		    if(get_field('email_signup','option')){ ?>
 		    <?php  displayGravityForm(get_field('email_signup','option')); ?>
 		    <?php }; ?> </div>
-	<div class="col-lg-4">
+	<div class="col-xs-12 col-sm-4 col-md-12 col-lg-4">
 			<div class="followus">
 				<h3>Follow Us</h3>
 				<ul>

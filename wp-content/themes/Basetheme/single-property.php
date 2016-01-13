@@ -65,6 +65,7 @@ wp_reset_postdata(); ?>
 
 
 <div class="col-xs-12 col-md-6 col-md-push-3 general-content">
+	<a href="" class="back" ><i class="icon-arrow-left"></i> BACK TO SEARCH RESULTS</a>
 	<?php echo wpautop( $the_property->post_content); ?> 
 	<div class="bg_grey visible-lg"> </div>
 </div>

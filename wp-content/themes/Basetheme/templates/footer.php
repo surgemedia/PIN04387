@@ -1,4 +1,6 @@
+
 <div class="container">
+<?php if (!is_page_template('template-contact-us.php')): ?>
   <div id="email-marketing" class="col-md-6 col-md-offset-3">
   <?php
   // $testing = get_field('email_signup','option');
@@ -7,6 +9,7 @@
     <?php  displayGravityForm(get_field('email_signup','option')); ?>
     <?php }; ?> 
     </div>
+<?php endif ?>
   </div>
 <div class="container">
 <?php 
