@@ -13,6 +13,17 @@
         $wp_post_types[$post_type_name]->rest_controller_class = 'WP_REST_Posts_Controller';
     }
   }
+  add_action( 'init', 'easyRentals_rest_support', 25 );
+  function easyRentals_rest_support() {
+    global $wp_post_types;
+    //be sure to set this to the name of your post type!
+    $post_type_name = 'rental';
+    if( isset( $wp_post_types[ $post_type_name ] ) ) {
+        $wp_post_types[$post_type_name]->show_in_rest = true;
+        $wp_post_types[$post_type_name]->rest_base = 'json-rental';
+        $wp_post_types[$post_type_name]->rest_controller_class = 'WP_REST_Posts_Controller';
+    }
+  }
 /*=======================================================
 =            Allow WPAPI TO USE Feature TAX            =
 =======================================================*/
@@ -54,7 +65,11 @@
 =            Expose Property Meta            =
 ============================================*/
 add_action( 'rest_api_init', 'meta_register_property' );
+
 function meta_register_property() {
+    /*===============================
+    =            Selling            =
+    ===============================*/
     register_api_field( 'property', 'property_meta',
         array(
             'get_callback'    => 'meta_get_property',
@@ -70,6 +85,30 @@ function meta_register_property() {
         )
     );
      register_api_field( 'property', 'property_image',
+        array(
+            'get_callback'    => 'meta_get_property_image',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+     /*===============================
+     =            Rentals            =
+     ===============================*/
+     register_api_field( 'rental', 'property_meta',
+        array(
+            'get_callback'    => 'meta_get_property',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+     register_api_field( 'rental', 'property_term',
+        array(
+            'get_callback'    => 'meta_get_property_term',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+     register_api_field( 'rental', 'property_image',
         array(
             'get_callback'    => 'meta_get_property_image',
             'update_callback' => null,
@@ -111,12 +150,18 @@ function my_remove_extra_product_data( $data, $post, $context ) {
     if ( 'property' !== $data[ 'type' ] ) {
         return $data;
     }
+     if ( 'rental' !== $data[ 'type' ] ) {
+      
+        return $data;
+    }
     // now proceed as you saw in the other examples
     if ( $context !== 'view' || is_wp_error( $data ) ) {
         return $data;
     }
     // unset unwanted fields
     unset( $data[ 'comment_status' ] );
+   
+
 
 
     // finally, return the filtered data
