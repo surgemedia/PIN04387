@@ -46,6 +46,13 @@
                 "operator": "==",
                 "value": "template-property-search.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-property-rental.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -56,5 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1449710965
+    "modified": 1452667047
 }

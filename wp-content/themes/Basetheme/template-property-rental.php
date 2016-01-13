@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Property Search Template
+* Template Name: Rental Property Search Template
 */
 ?>
 <?php
@@ -33,7 +33,7 @@ $args = array(
 ?>
 <script>
     var saleType = "current";
-    var property_type = "property";
+    var property_type = "rental";
 
 </script>
 <div class="search-header row">

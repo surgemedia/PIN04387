@@ -20,6 +20,22 @@ function debug($bug){
          $dom1->documentElement->appendChild($dom1->importNode($xpathQuery->item($i), true)); 
      } // for($i = 0; $i < $xpathQuery->length; $i++) 
      $xml1 = simplexml_import_dom($dom1); 
+  } 
+    function simplexml_mergeRental (SimpleXMLElement &$xml1, SimpleXMLElement $xml2) { 
+     // convert SimpleXML objects into DOM ones 
+     $dom1 = new DomDocument(); 
+     $dom2 = new DomDocument(); 
+     $dom1->loadXML($xml1->asXML()); 
+     $dom2->loadXML($xml2->asXML()); 
+   
+     // pull all child elements of second XML 
+     $xpath = new domXPath($dom2); 
+     $xpathQuery = $xpath->query('/propertyList/rental'); 
+     for($i = 0; $i < $xpathQuery->length; $i++) { 
+         // and pump them into first one 
+         $dom1->documentElement->appendChild($dom1->importNode($xpathQuery->item($i), true)); 
+     } // for($i = 0; $i < $xpathQuery->length; $i++) 
+     $xml1 = simplexml_import_dom($dom1); 
   } // function simplexml_merge (SimpleXMLElement &$xml1, SimpleXMLElement $xml2)  
 
 
@@ -61,6 +77,7 @@ for ($i=0; $i < sizeof($all_xml_files); $i++) {
 
 	  	//Adds the data to all props
 	    simplexml_merge($stock_xml, $xml_app); 
+	    simplexml_mergeRental($stock_xml, $xml_app);
 	    file_put_contents("allprops.xml", $stock_xml->asXML());
 
 	    rename($all_xml_files[$i], 'merged/'.$all_xml_files[$i]);

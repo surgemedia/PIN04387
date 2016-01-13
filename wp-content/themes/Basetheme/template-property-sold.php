@@ -13,6 +13,7 @@
 ?>
 <script>
     var saleType = "sold";
+    var property_type = "property";
 </script>
 <div class="tips-content">
         <div class="content">

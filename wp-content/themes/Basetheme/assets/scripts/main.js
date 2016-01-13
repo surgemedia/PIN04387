@@ -517,10 +517,10 @@ jQuery.each(json, function (i, jsonSingle) {
 
 
 
-function load(callback,status){
+function load(callback,status,property_type){
     jQuery.ajax({  
         type: "get",  
-        url: "http://www.pinnacleproperties.com.au/wp-json/wp/v2/json-property",  
+        url: "http://www.pinnacleproperties.com.au/wp-json/wp/v2/json-"+property_type,  
         contentType: "application/json; charset=utf-8",  
         dataType: "json",  
         success: function (json) {
@@ -643,13 +643,17 @@ if( 0 <= closeProperies.length ){
 /*=======================================
 =            Call Properties            =
 =======================================*/
-if(saleType){
+if(saleType && property_type){
   switch(saleType) {
     case 'current':
-      load(tag_property,'current'); 
+      load(tag_property,'current',property_type); 
       break;
     case 'sold': 
-      load(tag_property,'sold');
+      load(tag_property,'sold',property_type);
+      break;
+  
+  case 'leased': 
+      load(tag_property,'sold',property_type);
       break;
   }
 }
