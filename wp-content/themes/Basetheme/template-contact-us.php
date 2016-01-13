@@ -54,6 +54,30 @@
 				<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
 			</div>
 			<?php endif; ?>
+		
+<div class="social row">
+	<div class="col-lg-8"><?php
+		  // $testing = get_field('email_signup','option');
+		  // debug($testing);
+		    if(get_field('email_signup','option')){ ?>
+		    <?php  displayGravityForm(get_field('email_signup','option')); ?>
+		    <?php }; ?> </div>
+	<div class="col-lg-4">
+			<div class="followus">
+				<h3>Follow Us</h3>
+				<ul>
+					<li>
+						<a class="fbLink" href=""><i class="icon-facebook"></i></a>
+					</li>
+					<li>
+						<a class="twLink" href=""><i class="icon-twitter"></i></a>
+					</li>
+				</ul>
+			</div>
+	</div>
+
+</div>
+
 	<div class="bg_grey visible-lg"> </div>
 	</div>
 	<div class="col-sm-6 col-md-3 col-md-pull-6 side">

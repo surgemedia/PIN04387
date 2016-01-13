@@ -65,7 +65,7 @@ wp_reset_postdata(); ?>
 
 
 <div class="col-xs-12 col-md-6 col-md-push-3 general-content">
-	<?php  echo str_replace("\r", "<br />", $the_property->post_content); ?>
+	<?php echo wpautop( $the_property->post_content); ?> 
 	<div class="bg_grey visible-lg"> </div>
 </div>
 <div class="col-sm-6 col-md-3 col-md-pull-6 side">
@@ -78,9 +78,9 @@ wp_reset_postdata(); ?>
       </div>
 		</div>
 
-		<i class="icon-BED"><?php echo $the_property_meta['property_bedrooms'][0]; ?></i>
-		<i class="icon-BATH"><?php echo $the_property_meta['property_bathrooms'][0]; ?></i>
-		<i class="icon-CAR"><?php echo $the_property_meta['property_garage'][0]; ?></i>
+		<i class="icon-BED" data-toggle="tooltip" data-placement="top" title="Bed"><?php echo $the_property_meta['property_bedrooms'][0]; ?></i>
+		<i class="icon-BATH" data-toggle="tooltip" data-placement="top" title="Bath"><?php echo $the_property_meta['property_bathrooms'][0]; ?></i>
+		<i class="icon-CAR" data-toggle="tooltip" data-placement="top" title="Car"><?php echo $the_property_meta['property_garage'][0]; ?></i>
 
 		<div class="price">
 			<?php  echo $the_property->property_price_view; ?>

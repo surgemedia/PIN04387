@@ -21,7 +21,9 @@
                                         $image = getFeaturedUrl(get_the_id());
                                         $image_url = aq_resize($image,960,621,true,true,true);
             ?>
-            <img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>">
+            <div class="img">
+                <img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>">
+            </div>
             <h1 class="title"><strong>Property</strong> of the week</h1>
         </div>
         <div class="col-sm-6 ">
@@ -32,13 +34,13 @@
                     <?php echo $the_property_meta['property_address_street'][0]; ?>
                 </div>
                 <ul>
-                    <li><i class="icon-BED"></i>
+                    <li><i class="icon-BED" data-toggle="tooltip" data-placement="top" title="Bed"></i>
                         <span><?php echo $the_property_meta['property_bedrooms'][0]; ?></span>
                     </li>
-                    <li><i class="icon-BATH"></i>
+                    <li><i class="icon-BATH" data-toggle="tooltip" data-placement="top" title="Bath"></i>
                         <span><?php echo $the_property_meta['property_bathrooms'][0]; ?></span>
                     </li>
-                    <li><i class="icon-CAR"></i>
+                    <li><i class="icon-CAR" data-toggle="tooltip" data-placement="top" title="Car"></i>
                         <span><?php echo $the_property_meta['property_garage'][0]; ?></span>
                     </li>
                 </ul>

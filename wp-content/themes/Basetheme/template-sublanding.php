@@ -34,10 +34,9 @@ if( have_rows('card') ):
         // display a sub field value
         $title=get_sub_field('title');
         $image=get_sub_field('image');
-				$linkto=get_sub_field('link_to');
+				$linkto = (get_sub_field('link_to')==="false") ? get_sub_field('link_to_external') : get_sub_field('link_to_internal') ;
 				$linktext=get_sub_field('link_text');
 				$content= get_sub_field('content');
-
 				include(locate_template('templates/part-sublanding-card.php')); 
 	
 				if ("grey-dark"==$color) $color = 'brand-dark';

@@ -102,6 +102,7 @@
       <h1>
       	<strong><?php echo get_field('headshot_title'); ?></strong>
       	<span>/ <?php echo get_field('headshot_job_title'); ?></span>
+      	<div><?php echo get_field('headshot_license_title'); ?></div>
       </h1>
       <a href="/contact-us/" class="contactus"><?php the_field('subheading') ?></a>
     </div>
