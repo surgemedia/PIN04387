@@ -117,7 +117,7 @@
 }
 #contact-us {
 	position:relative;
-	height: 52.95em;
+	height: 54.95em;
 	.row {
 		height:100%;
 	}
@@ -145,6 +145,7 @@
 			h1 {
 				font-size:3.7em;
 			}
+			div,
 			span {
 				font-weight:100;
 			}
@@ -239,13 +240,31 @@ button:hover
 ===============================*/
 .search-header{
 	border-top: 110px solid $brand-dark;
+	height: 24em;
 }
 .search-feature{
 padding: 0;
-	img{
-		height: 18.7em;
-    width: 100%;
+	.img{
+		overflow: hidden;
+    height: 18.7em;
+    position: relative;
+		img{
+			height: 100%;
+	    width: auto;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    @media (min-width: 855px) and (max-width: $screen-md-max){
+				height: auto;
+			  width: 100%;
+			}
+	    @media (min-width: 1738px){
+				height: auto;
+			  width: 100%;
+			}
+		}
 	}
+	
 	h1{
 	background: $brand-primary;
 

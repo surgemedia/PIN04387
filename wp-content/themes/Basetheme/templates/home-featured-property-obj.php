@@ -12,13 +12,13 @@ $the_property_meta = get_post_meta(get_the_id() );
         <div class="property-obj">
             <span><?php the_title(); ?></span>
             <ul>
-                <li><i class="icon-BED"></i>
+                <li><i class="icon-BED" data-toggle="tooltip" data-placement="top" title="Bed"></i>
                         <span><?php echo $the_property_meta['property_bedrooms'][0]; ?></span>
                     </li>
-                    <li><i class="icon-BATH"></i>
+                    <li><i class="icon-BATH" data-toggle="tooltip" data-placement="top" title="Bath"></i>
                         <span><?php echo $the_property_meta['property_bathrooms'][0]; ?></span>
                     </li>
-                    <li><i class="icon-CAR"></i>
+                    <li><i class="icon-CAR" data-toggle="tooltip" data-placement="top" title="Car"></i>
                         <span><?php echo $the_property_meta['property_garage'][0]; ?></span>
                     </li>
             </ul>
