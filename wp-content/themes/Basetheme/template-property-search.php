@@ -34,14 +34,10 @@ $args = array(
 <script>
     var saleType = "current";
     var property_type = "property";
-/*   jQuery( document ).ready(function() {
+   jQuery( document ).ready(function() {
     
-    if (document.referrer==="http://www.pinnacleproperties.com.au/"){
-        cleanCookie();
-    }else{
-        getCookie();
-    }   
-});*/
+    
+});
 
 </script>
 <div class="search-header row">
