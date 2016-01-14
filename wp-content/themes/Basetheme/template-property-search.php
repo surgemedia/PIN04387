@@ -32,11 +32,13 @@ $args = array(
     $terms = get_terms($taxonomies, $args);
 ?>
 <script>
-    if (document.referrer && document.referrer!=""){
-        console.log(document.referrer);   
-    }   
     var saleType = "current";
     var property_type = "property";
+    if (document.referrer==="http://www.pinnacleproperties.com.au/"){
+        cleanCookie();
+    }else{
+        getCookkies();
+    }   
 
 </script>
 <div class="search-header row">

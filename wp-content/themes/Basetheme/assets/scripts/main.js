@@ -678,26 +678,24 @@ function setCookie(bed, car, bath, type, suburb, surrounding) {
 }
 
 function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-    }
-    return "";
+      jQuery("#bed").val(document.cookie("bed"));
+      jQuery("#car").val(document.cookie("car"));
+      jQuery("#bath").val(document.cookie("bath"));
+      jQuery("#type").val(document.cookie("type"));
+      jQuery("#suburb").val(document.cookie("suburb"));
+      if(!document.cookie("surrounding")){
+        jQuery("#surrounding").removeProp( "checked" );
+      }
+
 }
 
-function checkCookie() {
-    var user = getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 365);
-        }
-    }
+function cleanCookie() {
+    document.cookie = "bed="";";
+    document.cookie = "car="";";
+    document.cookie = "bath="";";
+    document.cookie = "type="";";
+    document.cookie = "suburb="";";
+    document.cookie = "surrounding="";";
 }
 
 
