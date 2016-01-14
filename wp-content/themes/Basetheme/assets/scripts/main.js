@@ -520,6 +520,17 @@ jQuery.each(json, function (i, jsonSingle) {
 
 }
 
+function noResults(){
+  jQuery(document).ready(function($) {
+        setTimeout(function(){
+        if(property_json.length < 1 || property_json == 'undefind'){
+            jQuery('#output').addClass('hidden');
+            jQuery('#noResults').removeClass('hidden');
+            }
+        }, 1000);
+            });
+}
+
 
 
 function load(callback,status,property_type){
