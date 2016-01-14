@@ -1,4 +1,4 @@
-/* ========================================================================
+ ========================================================================
  * DOM-based Routing
  * Based on http://goo.gl/EUTi53 by Paul Irish
  *
@@ -554,7 +554,7 @@ function search(){
       suburb = jQuery("#suburb").val(),
       surrounding = jQuery("#surrounding").is(':checked');
       // console.log(surrounding);
-      setCookie(bed, car, bath, type, suburb, surrounding);
+      // setCookie(bed, car, bath, type, suburb, surrounding);
 /*=====================================================
 =       Search Suburb(Unless Surrounding           =
 =====================================================*/
@@ -667,7 +667,7 @@ if(saleType && property_type){
 =            Cookies            =
 ===============================*/
 
-function setCookie(bed, car, bath, type, suburb, surrounding) {
+/*function setCookie(bed, car, bath, type, suburb, surrounding) {
     document.cookie = "bed="+bed+";";
     document.cookie = "car="+car+";";
     document.cookie = "bath="+bath+";";
@@ -677,12 +677,12 @@ function setCookie(bed, car, bath, type, suburb, surrounding) {
 
 }
 
-function getCookie(cname) {
+function getCookie() {
       jQuery("#bed").val(document.cookie("bed"));
       jQuery("#car").val(document.cookie("car"));
       jQuery("#bath").val(document.cookie("bath"));
       jQuery("#type").val(document.cookie("type"));
-      jQuery("#suburb").val(document.cookie("suburb"));
+      jQuery("#suburb").text(document.cookie("suburb"));
       if(!document.cookie("surrounding")){
         jQuery("#surrounding").removeProp( "checked" );
       }
@@ -697,7 +697,3 @@ function cleanCookie() {
     document.cookie = "suburb="";";
     document.cookie = "surrounding="";";
 }
-
-
-
-

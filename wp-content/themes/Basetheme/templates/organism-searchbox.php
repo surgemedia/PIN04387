@@ -12,7 +12,7 @@
         </div>
 
         <div class="surrounding">
-            <input id="surrounding" type="checkbox" name="surrounding" value="include"> INCLUDE SURROUNDING PROPERTIES
+            <input id="surrounding" type="checkbox" name="surrounding" value="include" checked="checked"> INCLUDE SURROUNDING PROPERTIES
         </div>
 
         <div class="field">
