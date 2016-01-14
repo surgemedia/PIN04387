@@ -1,0 +1,15 @@
+#noResults {
+	background:none;
+	border:0px;
+	margin: 0 0 5em 0;
+	padding: 0;
+	height: 0;
+	&.hidden { display:none;}
+	.content {
+		padding-top:2em;
+		padding-bottom:2em;
+
+		background:$teal;
+		font-size:3em;
+	}
+}

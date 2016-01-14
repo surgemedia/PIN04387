@@ -33,6 +33,8 @@
 @import "layouts/_footer";
 @import "layouts/_pages";
 @import "layouts/_posts";
+@import "components/_no_results";
+
 
 @media (max-width: $screen-sm-max) {
 	@import "res/_res-xs-sm.scss";
