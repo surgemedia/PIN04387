@@ -3,17 +3,14 @@
 		
 		$the_property = get_post(get_the_id()) ;
 		$the_property_meta = get_post_meta(get_the_id()) ;
+		// debug($the_property);
+		// debug($the_property_meta);
 
 
 	 ?>
 <div class="owl-carousel">
 
 <?php
-// debug(get_attached_media( 'image' ));
-// $gallery_dirty = get_attached_media( 'image' );
-
-
-// $gallery = explode( ',', $the_property_meta['epl_slides_order'][0] );
  $gallery =  get_attached_media( 'image' );
 			foreach ($gallery as $index => $image_id): ?>
 
@@ -67,7 +64,6 @@ wp_reset_postdata(); ?>
 <div class="col-xs-12 col-md-6 col-md-push-3 general-content">
 	<a href="" class="back" ><i class="icon-arrow-left"></i> BACK TO SEARCH RESULTS</a>
 	<?php echo wpautop( $the_property->post_content); ?> 
-	<div class="bg_grey visible-lg"> </div>
 </div>
 <div class="col-sm-6 col-md-3 col-md-pull-6 side">
 	<div class="property-info">
@@ -84,7 +80,21 @@ wp_reset_postdata(); ?>
 		<i class="icon-CAR" data-toggle="tooltip" data-placement="top" title="Car"><?php echo $the_property_meta['property_garage'][0]; ?></i>
 
 		<div class="price">
-			<?php  echo $the_property->property_price_view; ?>
+		<?php
+		// debug($the_property_meta);
+		$end_price;
+		 switch ($the_property->post_type) {
+			case 'property':
+				$end_price = $the_property->property_price_view;
+				break;
+			case 'rental':
+				$end_price = $the_property->property_rent_view;
+				break;
+			default:
+				$end_price = $the_property->property_price_view;
+				break;
+		} ?>
+			<?php  echo $end_price ?>
 		</div>
 
 	</div>
@@ -125,22 +135,15 @@ wp_reset_postdata(); ?>
 		  <li>
 		     <div class="box"><?php echo $the_property_meta['property_inspection_times'][0]; ?></div>
 			</li>
-			<!-- <li>
+
+			<li>
 			   <i class="icon-save-to-calendar"></i>
-			   <a href="">Save to Calendar</a>
-			</li> -->
-	    <!-- <li>
+			   <a id="ical" href="">Save to Calendar</a>
+			</li>
+	  <li>
 	       <i class="icon-google-icon"></i>
-				 <a href="https://www.google.com/calendar/render?
-				 action=TEMPLATE&
-				 text=<?php echo sanitize_title(get_the_title());?>
-				 &ctz=Australia/Brisbane
-				 &dates=<?php echo $the_property_meta['property_inspection_times'][0]; ?>/
-				 &details=View+Property <?php echo get_permalink(); ?>
-				 &location=<?php echo sanitize_title(get_the_title());?>
-				 &sf=true
-				 &output=xml">Save to Google Calendar</a>
-			</li> -->
+				 <a id="gcal" href="#">Save to Google Calendar</a>
+			</li> 
 		</ul>
 </div>
 
@@ -185,10 +188,11 @@ wp_reset_postdata(); ?>
 
     // debug($final_time)
      ?>
-    <!-- <span class="addtocalendar atc-style-blue">
+    <span class="hidden addtocalendar atc-style-blue">
         <var class="atc_event">
-            <var class="atc_date_start"><?php echo $final_data; echo ' '.$start_time; ?></var>
-            <var class="atc_date_end">><?php echo $final_data; echo  ' '.$end_time; ?></var>
+        <?php //debug($final_data.' '.$end_time); ?>
+            <var class="atc_date_start"><?php echo $final_data.' '.$start_time; ?></var>
+            <var class="atc_date_end"><?php echo $final_data.' '.$end_time; ?></var>
             <var class="atc_timezone">Australia/Brisbane</var>
             <var class="atc_title">Inspection <?php the_title(); ?></var>
             <var class="atc_description">Inspections <?php $the_property_meta['property_inspection_times'][0] ?> </var>
@@ -196,4 +200,15 @@ wp_reset_postdata(); ?>
             <var class="atc_organizer">Pinnacle Properties</var>
             <var class="atc_organizer_email">info@pinnacleproperties.com.au</var>
         </var>
-    </span> -->
+    </span>
+    <script>
+  jQuery(document).ready(function($) {
+   	setTimeout(function(){
+			var ical = jQuery('.atcb-item-link')[0].href;
+			var gcal = jQuery('.atcb-item-link')[1].href;
+
+			jQuery('#ical').attr('href',ical); 
+			jQuery('#gcal').attr('href',gcal);
+		}, 2000);
+	  });
+	</script>
