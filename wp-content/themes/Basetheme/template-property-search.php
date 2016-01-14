@@ -32,6 +32,9 @@ $args = array(
     $terms = get_terms($taxonomies, $args);
 ?>
 <script>
+    if (document.referrer && document.referrer!=""){
+        console.log(document.referrer);   
+    }   
     var saleType = "current";
 </script>
 <div class="search-header row">
