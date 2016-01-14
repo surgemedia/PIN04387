@@ -1,12 +1,18 @@
-<header class="banner" role="banner">
-  <div class="container">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-    <nav role="navigation">
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-      endif;
-      ?>
-    </nav>
+<header class="banner <?php if(is_front_page()){ echo "home"; }?>" role="banner">
+  <div class="container-fluid">
+    <div class="logo-wrap">
+      <a class="brand" href="<?= esc_url(home_url('/')); ?>">
+        <img title="Pinnacle Properties - Everything we touch turns to.. SOLD" src="<?php the_field("logo","option") ?>" alt="Pinnacle Properties - Everything we touch turns to.. SOLD">
+      </a>
+    </div>
+    <div class="menu-wrap">
+      <nav role="navigation" class="text-right">
+        <?php
+        if (has_nav_menu('primary_navigation')) :
+          wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+        endif;
+        ?>
+      </nav>
+    </div>
   </div>
 </header>

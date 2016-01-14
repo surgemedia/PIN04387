@@ -6,3 +6,4 @@ node_modules
 npm-debug.log
 local-config.php
 wp-config.php
+*.xml

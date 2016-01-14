@@ -1,0 +1,13 @@
+<?php
+require_once('../config.php');
+require_once('functions.php');
+global $feedsync_db;
+
+$type = '';
+$status = 'withdrawn';
+
+$results = feedsync_list_listing_type( $type , $status );
+$page = 'withdrawn';
+
+echo display_export_data($results , $page );
+

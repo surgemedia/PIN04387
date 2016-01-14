@@ -8,16 +8,31 @@
   "private": true,
   "dependencies": {
     "modernizr": "2.8.2",
-    "bootstrap-sass-official": "3.3.5",
-    "chosen": "~1.4.2"
+    "bootstrap-sass-official": "*",
+    "chosen": "*",
+    "owl.carousel": "*",
+    "defiant-js": "*"
   },
   "overrides": {
     "modernizr": {
       "main": "./modernizr.js"
     },
     "chosen": {
-     "main": [ "./chosen.jquery.min.js" ]
+      "main": [
+        "./chosen.jquery.min.js",
+        "./chosen.css"
+      ]
     },
+    "owl.carousel": {
+      "main": [
+        "./dist/owl.carousel.js"
+      ]
+    },
+    "defiant-js": {
+      "main": [
+        "./dist/defiant.js"
+      ]
+    },      
     "bootstrap-sass-official": {
       "main": [
         "./assets/stylesheets/_bootstrap.scss",
@@ -42,6 +57,6 @@
     }
   },
   "devDependencies": {
-    "chosen": "~1.4.2"
+  
   }
 }

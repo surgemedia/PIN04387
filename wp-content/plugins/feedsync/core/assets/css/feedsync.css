@@ -1,0 +1,71 @@
+/*
+FeedSync Application CSS
+*/
+#feedsync-settings-navigation {
+	margin-bottom: 1em;
+}
+.feedsync-overlay {
+    background-color: #000000;
+    border-top: 5px solid #008000;
+    color: #ffffff;
+    height: 100%;
+    opacity: 0.6;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.listings-list-panel {
+	font-size: 0.9em;
+}
+.feedsync-image {
+	opacity:0.9;
+	padding:3px;
+	transition: all .2s ease-in-out;
+}
+.feedsync-image:hover {
+	opacity:1;
+	transform: scale(1.1);
+}
+.ajax-loading {
+	background-image: url("../images/loader.gif");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+
+.status.sold,
+.status.leased {
+	color: #ff0000;
+}
+.status.current {
+	color: #00ab1b;
+}
+@media screen and (max-width: 1000px) {
+    .geocode {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .unique-id {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .geocode,
+    .first-date,
+    .mod-date,
+    .unique-id,
+    .telephone {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    .status,
+    .agent_id {
+        display: none;
+    }
+}

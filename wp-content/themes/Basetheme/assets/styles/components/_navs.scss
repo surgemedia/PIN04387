@@ -1,0 +1,84 @@
+.banner{
+	/* background: $brand-dark; */
+	/* font-size: 14px; */
+	font-weight: bold;
+	height:110px;
+	position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+	transition: all ease 0.3s;
+ 
+	&.home{
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.65+0,0+100 */
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	}
+
+	div{
+		position: relative;
+    
+		.logo-wrap{
+			position: absolute;
+    	top: 1em;
+    	left: 5em;
+		}
+    .menu-wrap{
+			position: absolute;
+	    right: 5em;
+	    top: 3em;
+    }
+		nav{
+			 
+			ul li{
+					color:#fff;
+					display: inline-block;
+					position: static;
+					a{
+						color: inherit;
+						display: inline-block;
+						padding: 0;
+						&.active{
+							color:$brand-light;
+						}
+						&.active+ul{
+							display: block;
+						}
+						&:hover,
+						&:focus{
+							background: none;
+						}
+					}
+					ul.sub-menu{
+						text-align: center;
+						display:none;
+						position:absolute;
+						background: rgba(51,8,53,.5);
+						padding: 1em;
+				    width: 600px;
+				    top: 68px;
+				    right: 0px;
+				    list-style: none;
+				    border: 2px solid #fff;
+				    a{
+				    	padding: .5em 0;
+				    }
+					}
+					&:nth-child(n+2):before{
+						content: "/";
+						margin: 0 2em;
+					}
+				}
+				
+			
+		}
+	}
+	&.solid{
+		transition: all ease 0.3s;
+		background: $brand-dark;
+	}
+
+}

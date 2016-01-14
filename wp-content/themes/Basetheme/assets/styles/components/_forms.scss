@@ -1,18 +1,40 @@
 #gravity-form {
-.gform_wrapper {
+    .other_title {
+        font-size:4em;
+      text-align:center;
+      font-family:$primary-font;
+      text-transform:uppercase;
+      width:100%;
+      font-weight:bold;
+      span {
+        font-weight:100;
+      }
+    }
 
+.gform_wrapper {
+    .gform_heading {
+        text-align:center !important;
+    }
+    
 	.gform_title {
-		font-size:4em;
-		text-align:center;
-		font-family:$primary-font;
-		text-transform:uppercase;
-		width:100%;
+		display:none;
 	}
 	.gform_description {
 		text-align:center;
 		width:100%;
+        font-family: $fourth-font;
+        color:$font-color-light  !important;
+        text-align:center !important;
+        line-height: 2;
 	}
-
+    #field_1_3,
+    #field_1_5 {
+        .gfield_label {
+            margin: 0.7em;
+            font-family: $fourth-font;
+            color:$font-color-light  !important;
+        }
+    }
 	.no-label {
 		label {
 		display:none !important;
@@ -30,73 +52,186 @@
 	.gform_button {
 		border:0px;
 		border-color:$teal;
-		padding:0.5em 2em;
+		padding:1em 6em;
 		font-size:1.3em;
-		font-family:$secondary-font;
+		font-family:$fourth-font;
 		float:right;
 		margin:0 0.9em 0 0 ;
+        padding: 0.7em 2.4em;
+        font-size: 1.3em;
+        font-weight: 400;
 	}
+ }
 }
-}
-.chosen-container {
-	border:4px solid $grey-dark;
-	background-image:none  !important;
-	background:#fff  !important;
-	width:(98%) !important;
-	.chosen-single {
-		// padding:1em !important;
-		min-height:3em;
-		line-height:3em;
-		display:block;
-		border:0px !important;
-		background-image:none  !important;
-		background:#fff  !important;
-		box-shadow:none !important;
-		span {
-			min-height:3em;
-			line-height:3em;
-			margin-right:2em !important;
-		}
-		div {
-			width:3.5em !important;
-			vertical-align:middle !important;
-			border:0px !important;
-			background-image:none !important;
-			b {
-			background-image:url($arrow) !important;
-			background-size:100% 100% !important;
-			width:3.5em !important;
-			vertical-align:middle !important;
-			display:table-cell;
-			border-left:4px solid $grey-dark;
-			}
-			b:hover {
-			background-image:url($drop-arrow) !important;
+ .chosen-container {
+     	border:4px solid $grey-dark;
+     	background-image:none  !important;
+     	background:#fff  !important;
+     	width:(97.5%) !important;
+     	.chosen-single {
+     		// padding:1em !important;
+     		min-height:3em;
+     		line-height:3em;
+     		display:block;
+     		border:0px !important;
+     		background-image:none  !important;
+     		background:#fff  !important;
+     		box-shadow:none !important;
+     		span {
+     			min-height:3em;
+     			line-height:3em;
+     			margin-right:2em !important;
+                text-transform:uppercase;
+                color: $font-color-lighter;
+     		}
+     		div {
+     			width:3.5em !important;
+     			vertical-align:middle !important;
+     			border:0px !important;
+     			background-image:none !important;
+     			b {
+     			background-image:url($arrow) !important;
+     			background-size:100% 100% !important;
+     			width:3.5em !important;
+     			vertical-align:middle !important;
+     			/* display:table-cell; */
+     			border-left:4px solid $grey-dark;
+     			}
+     			b:hover {
+     			
+                    
+     			}
+     		}
+     	}
+     	.chosen-drop {
+     		border:4px solid $grey-dark !important;
+     		background-image:none  !important;
+     		background:#fff  !important;
+     		.chosen-results {
+     			margin: 0px !important;
+     			padding:0px !important;
+     			li {
+     				padding:0.5em;
+     				background-image:none  !important;
+     				background:none !important;
+     			}
+     			li.highlighted {
+     				background-image:none  !important;
+     				background:$teal  !important;
+     			}
+     			li.result-selected {
+     				background-image:none  !important;
+     				background:$grey  !important;
+     				color:#000 !important;
+     			}
+     		}
+     	}
+     }  
+ 
+ /*==================================
+ =            Search Box            =
+ ==================================*/
+#search{
+	min-height: 24em;
+     background: $grey;
+     padding-top: 2em;
+     label{
+       color: $brand-primary;
+       padding-left: 1em;
+       font-weight:normal;
+       margin:1em 0 0 0 ;
+     }
+     .surrounding{
+          color: $brand-primary;
+          margin: 1em 0;
+     }
+     .filter{
+         label{
+          display:block;
+          font-weight:bold;
+         }
+         input{
+               border: 4px solid $grey-dark;
+                 min-height: 3em;
+                 outline-style: none;
+                 background: #fff;
+                /*  width: 79.5%; */
+            
+           } 
+         button{
+          background-color: $secondary-primary;
+          color:#fff;
+          border:none;
+          width: 18%;
+          padding: .8em;
+          margin-left: 4.5%;
+         }
 
-			}
-		}
-	}
-	.chosen-drop {
-		border:4px solid $grey-dark !important;
-		background-image:none  !important;
-		background:#fff  !important;
-		.chosen-results {
-			margin: 0px !important;
-			padding:0px !important;
-			li {
-				padding:0.5em;
-				background-image:none  !important;
-				background:none !important;
-			}
-			li.highlighted {
-				background-image:none  !important;
-				background:$teal  !important;
-			}
-			li.result-selected {
-				background-image:none  !important;
-				background:$grey  !important;
-				color:#000 !important;
-			}
-		}
-	}
+     }
+     .field{
+          width: 50%;
+          float: left;
+          
+     }
+     .search-choice {
+        border: 0px;
+        box-shadow: none;
+        border-radius: 0.2em;
+        background: $secondary-primary;
+        color: #fff;
+        padding: .7em 2em 0.7em 1em;
+        margin: 0.4em 0.1em;
+        text-transform: capitalize;
+        .search-choice-close {
+                background: #fff;
+                border-radius: 100%;
+                display: inline-block;
+                margin: 0.7em .5em 1em 2em;
+                font-size: .5em;
+                text-align: center;
+                font-weight: 700;
+        &::before {
+                content: "x";
+                color: $secondary-primary;
+                margin: 0px;
+        }
+        }
+     }
+
+     #suburb_chosen{
+        width: 75.5% !important;
+        .chosen-results {
+            text-transform:capitalize;
+        }
+     }
+     
+}
+
+#no-results {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background:$brand-light;
+    color:$brand-dark;
+
+}
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+        background-position:-1px 0px !important;
+        transform:rotate(180deg) !important;
+        border-right:4px solid $grey-dark !important;
+        border-left: 0px !important;
+        border-radius:0px !important;
+    }
+
+#gravity-form.contactus {
+    overflow:hidden !important;
+    margin:0 0 3em 0 !important;
+    display:block !important;
+    .gfield {
+        margin-top:1em;
+    }
+    #field_1_5 {
+        margin:0.5em 0 0 0;
+    }
+    .gform_heading { display:none;}
+
 }

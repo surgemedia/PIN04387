@@ -1,0 +1,44 @@
+.modal{
+	.modal-dialog{
+		width:90%;
+	  .modal-content{
+	  	border-radius: 0;
+	  	.modal-body{
+	  			padding: 0;
+	  			img{
+	  				width:100%;
+	  			}
+	  			.name{
+	  				color:$brand-primary;
+	  				font-size: 34px;
+	  				margin-bottom: 1em;
+	  			}
+	  			.agent-info{
+	  				padding: 3em 3em 3em 3em;
+	  			}
+	  			.contact-info{
+	  				margin-top: 3em;
+	  				span{
+	  					margin-right: 1em;
+	  				}
+	  				.email{
+	  					margin-top: 1em;
+	  				}
+	  			}
+	  			.close{
+	  				position: absolute;
+	  				right: 30px;
+	  				top: 30px;
+	  				border: 1px solid;
+	  				padding: .5em;
+	  				z-index: 1;
+	  			}
+	  	}
+	  }
+	}
+}
+.modal-backdrop.in{
+	background-color: $brand-dark;
+	opacity: .8;
+
+}

@@ -1,0 +1,789 @@
+0000.000 (0) Opened log file at time: Fri, 11 Dec 2015 02:59:04 +0000 on http://localhost/PinnacleProperties
+0000.004 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.11.18 WP: 4.4 PHP: 5.6.10 (Darwin Desktop-8s-imac.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64) MySQL: 5.5.44 Server: Apache/2.2.29 (Unix) mod_wsgi/3.4 Python/2.7.8 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zg DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.8 Perl/v5.20.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 40.4M | 40.8M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.006 (0) Free space on disk containing Updraft's temporary directory: 343259.3 Mb
+0000.012 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.058 (0) Requesting semaphore lock (fd)
+0000.063 (0) Set semaphore last lock (fd) time to 2015-12-11 02:59:04
+0000.065 (0) Semaphore lock (fd) complete
+0000.072 (0) Backup run: resumption=0, nonce=4fb8c8056278, begun at=1449802744 (0s ago), job type=backup
+0000.075 (0) Scheduling a resumption (1) after 300 seconds (1449803044) in case this run gets aborted
+0000.149 (0) Checking if we have a zip executable available
+0000.153 (0) Testing: /usr/bin/zip
+0000.159 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.161 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.162 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.164 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=128) (out=105) (deflated 18%)
+0000.165 (0) Output: total bytes=128, compressed=105 -> 18% savings
+0000.174 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=135) (out=111) (deflated 18%)
+0000.176 (0) Output: total bytes=263, compressed=216 -> 18% savings
+0000.189 (0) Working binary zip found: /usr/bin/zip
+0000.194 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.195 (0) Creation of backups of directories: beginning
+0000.202 (0) Beginning creation of dump of plugins (split every: 500 Mb)
+0000.707 (0) Total entities for the zip file: 463 directories, 3037 files (0 skipped as non-modified), 45.7 Mb
+0000.736 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0000.741 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 200 files added (on-disk size: 0 Kb)
+0000.745 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 300 files added (on-disk size: 0 Kb)
+0000.751 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 400 files added (on-disk size: 0 Kb)
+0000.756 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 500 files added (on-disk size: 0 Kb)
+0000.757 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (8 Mb, 3037 files batched, 501 (501) added so far); re-opening (prior size: 0 Kb)
+0001.944 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: size is now: 3.80 Mb
+0001.951 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 600 files added (on-disk size: 3923.8 Kb)
+0001.958 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 700 files added (on-disk size: 3923.8 Kb)
+0001.963 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 800 files added (on-disk size: 3923.8 Kb)
+0001.968 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 900 files added (on-disk size: 3923.8 Kb)
+0001.974 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 1000 files added (on-disk size: 3923.8 Kb)
+0001.975 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.8 Mb, 3037 files batched, 501 (1002) added so far); re-opening (prior size: 3923.8 Kb)
+0002.602 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: size is now: 5.70 Mb
+0002.612 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 1100 files added (on-disk size: 5799.7 Kb)
+0002.617 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 1200 files added (on-disk size: 5799.7 Kb)
+0002.622 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 1300 files added (on-disk size: 5799.7 Kb)
+0002.627 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 1400 files added (on-disk size: 5799.7 Kb)
+0002.631 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 1500 files added (on-disk size: 5799.7 Kb)
+0002.633 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (10.1 Mb, 3037 files batched, 501 (1503) added so far); re-opening (prior size: 5799.7 Kb)
+0004.359 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: size is now: 9.40 Mb
+0004.374 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 1600 files added (on-disk size: 9654.3 Kb)
+0004.379 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 1700 files added (on-disk size: 9654.3 Kb)
+0004.384 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 1800 files added (on-disk size: 9654.3 Kb)
+0004.388 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 1900 files added (on-disk size: 9654.3 Kb)
+0004.393 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 2000 files added (on-disk size: 9654.3 Kb)
+0004.395 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (14.6 Mb, 3037 files batched, 501 (2004) added so far); re-opening (prior size: 9654.3 Kb)
+0006.507 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: size is now: 13.70 Mb
+0006.645 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 2100 files added (on-disk size: 14008.2 Kb)
+0006.651 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 2200 files added (on-disk size: 14008.2 Kb)
+0006.657 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 2300 files added (on-disk size: 14008.2 Kb)
+0006.662 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 2400 files added (on-disk size: 14008.2 Kb)
+0006.668 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 2500 files added (on-disk size: 14008.2 Kb)
+0006.672 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.8 Mb, 3037 files batched, 501 (2505) added so far); re-opening (prior size: 14008.2 Kb)
+0007.184 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 2600 files added (on-disk size: 14821.5 Kb)
+0007.189 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 2700 files added (on-disk size: 14821.5 Kb)
+0007.194 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 2800 files added (on-disk size: 14821.5 Kb)
+0007.198 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 2900 files added (on-disk size: 14821.5 Kb)
+0007.203 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip.tmp: 3000 files added (on-disk size: 14821.5 Kb)
+0007.205 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.5 Mb, 3037 files batched, 501 (3006) added so far); re-opening (prior size: 14821.5 Kb)
+0008.695 (0) Created plugins zip (0) - 18887.3 Kb in 8.5 s (2224.5 Kb/s) (SHA1 checksum: c6d947188fe82af4ee0cb32dfb3ac3e6eb16c0db)
+0008.699 (0) Beginning creation of dump of themes (split every: 500 Mb)
+0026.111 (0) Total entities for the zip file: 10593 directories, 40658 files (0 skipped as non-modified), 145.2 Mb
+0026.168 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 2.0 seconds have passed since the last write (0 Mb, 1 (1) files added so far); re-opening (prior size: 0 Kb)
+0026.803 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: size is now: 4.80 Mb
+0026.819 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 100 files added (on-disk size: 4888.1 Kb)
+0026.826 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 200 files added (on-disk size: 4888.1 Kb)
+0026.832 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 300 files added (on-disk size: 4888.1 Kb)
+0026.836 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 400 files added (on-disk size: 4888.1 Kb)
+0026.841 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 500 files added (on-disk size: 4888.1 Kb)
+0026.843 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (12.7 Mb, 40658 files batched, 501 (502) added so far); re-opening (prior size: 4888.1 Kb)
+0028.606 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: size is now: 9.10 Mb
+0028.617 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 600 files added (on-disk size: 9368.7 Kb)
+0028.623 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 700 files added (on-disk size: 9368.7 Kb)
+0028.629 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 800 files added (on-disk size: 9368.7 Kb)
+0028.633 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 900 files added (on-disk size: 9368.7 Kb)
+0028.638 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 1000 files added (on-disk size: 9368.7 Kb)
+0028.639 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (8.9 Mb, 40658 files batched, 501 (1003) added so far); re-opening (prior size: 9368.7 Kb)
+0031.828 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: size is now: 12.90 Mb
+0031.841 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 1100 files added (on-disk size: 13188.8 Kb)
+0031.846 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 1200 files added (on-disk size: 13188.8 Kb)
+0031.855 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 1300 files added (on-disk size: 13188.8 Kb)
+0031.861 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 1400 files added (on-disk size: 13188.8 Kb)
+0031.866 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 1500 files added (on-disk size: 13188.8 Kb)
+0031.868 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (1504) added so far); re-opening (prior size: 13188.8 Kb)
+0036.999 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 1600 files added (on-disk size: 13750.6 Kb)
+0037.093 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 1700 files added (on-disk size: 13750.6 Kb)
+0037.098 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 1800 files added (on-disk size: 13750.6 Kb)
+0037.104 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 1900 files added (on-disk size: 13750.6 Kb)
+0037.112 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 2000 files added (on-disk size: 13750.6 Kb)
+0037.114 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.6 Mb, 40658 files batched, 501 (2005) added so far); re-opening (prior size: 13750.6 Kb)
+0047.456 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 2100 files added (on-disk size: 14448.1 Kb)
+0047.717 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 2200 files added (on-disk size: 14448.1 Kb)
+0047.723 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 2300 files added (on-disk size: 14448.1 Kb)
+0047.728 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 2400 files added (on-disk size: 14448.1 Kb)
+0047.735 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 2500 files added (on-disk size: 14448.1 Kb)
+0047.738 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.2 Mb, 40658 files batched, 501 (2506) added so far); re-opening (prior size: 14448.1 Kb)
+0050.046 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 2600 files added (on-disk size: 15091.6 Kb)
+0050.051 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 2700 files added (on-disk size: 15091.6 Kb)
+0050.056 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 2800 files added (on-disk size: 15091.6 Kb)
+0050.061 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 2900 files added (on-disk size: 15091.6 Kb)
+0050.066 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 3000 files added (on-disk size: 15091.6 Kb)
+0050.068 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (11.5 Mb, 40658 files batched, 501 (3007) added so far); re-opening (prior size: 15091.6 Kb)
+0053.007 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: size is now: 19.90 Mb
+0053.024 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 3100 files added (on-disk size: 20370 Kb)
+0053.029 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 3200 files added (on-disk size: 20370 Kb)
+0053.034 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 3300 files added (on-disk size: 20370 Kb)
+0053.039 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 3400 files added (on-disk size: 20370 Kb)
+0053.044 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 3500 files added (on-disk size: 20370 Kb)
+0053.046 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.3 Mb, 40658 files batched, 501 (3508) added so far); re-opening (prior size: 20370 Kb)
+0057.261 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 3600 files added (on-disk size: 21027.8 Kb)
+0057.386 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 3700 files added (on-disk size: 21027.8 Kb)
+0057.391 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 3800 files added (on-disk size: 21027.8 Kb)
+0057.397 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 3900 files added (on-disk size: 21027.8 Kb)
+0057.402 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 4000 files added (on-disk size: 21027.8 Kb)
+0057.404 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.1 Mb, 40658 files batched, 501 (4009) added so far); re-opening (prior size: 21027.8 Kb)
+0058.687 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 4100 files added (on-disk size: 21863.2 Kb)
+0058.692 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 4200 files added (on-disk size: 21863.2 Kb)
+0058.699 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 4300 files added (on-disk size: 21863.2 Kb)
+0058.805 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 4400 files added (on-disk size: 21863.2 Kb)
+0058.815 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 4500 files added (on-disk size: 21863.2 Kb)
+0058.817 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.2 Mb, 40658 files batched, 501 (4510) added so far); re-opening (prior size: 21863.2 Kb)
+0063.566 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 4600 files added (on-disk size: 22917.8 Kb)
+0063.571 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 4700 files added (on-disk size: 22917.8 Kb)
+0063.576 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 4800 files added (on-disk size: 22917.8 Kb)
+0063.583 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 4900 files added (on-disk size: 22917.8 Kb)
+0063.589 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 5000 files added (on-disk size: 22917.8 Kb)
+0063.591 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.6 Mb, 40658 files batched, 501 (5011) added so far); re-opening (prior size: 22917.8 Kb)
+0068.351 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 5100 files added (on-disk size: 23617.1 Kb)
+0068.356 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 5200 files added (on-disk size: 23617.1 Kb)
+0068.362 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 5300 files added (on-disk size: 23617.1 Kb)
+0068.366 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 5400 files added (on-disk size: 23617.1 Kb)
+0068.371 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 5500 files added (on-disk size: 23617.1 Kb)
+0068.374 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.3 Mb, 40658 files batched, 501 (5512) added so far); re-opening (prior size: 23617.1 Kb)
+0075.063 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 5600 files added (on-disk size: 24533.5 Kb)
+0075.068 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 5700 files added (on-disk size: 24533.5 Kb)
+0075.073 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 5800 files added (on-disk size: 24533.5 Kb)
+0075.079 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 5900 files added (on-disk size: 24533.5 Kb)
+0075.085 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 6000 files added (on-disk size: 24533.5 Kb)
+0075.087 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (6013) added so far); re-opening (prior size: 24533.5 Kb)
+0080.230 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 6100 files added (on-disk size: 25040.6 Kb)
+0080.238 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 6200 files added (on-disk size: 25040.6 Kb)
+0080.247 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 6300 files added (on-disk size: 25040.6 Kb)
+0080.254 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 6400 files added (on-disk size: 25040.6 Kb)
+0080.263 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 6500 files added (on-disk size: 25040.6 Kb)
+0080.265 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.6 Mb, 40658 files batched, 501 (6514) added so far); re-opening (prior size: 25040.6 Kb)
+0085.839 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 6600 files added (on-disk size: 25940.2 Kb)
+0085.845 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 6700 files added (on-disk size: 25940.2 Kb)
+0085.851 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 6800 files added (on-disk size: 25940.2 Kb)
+0085.858 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 6900 files added (on-disk size: 25940.2 Kb)
+0085.995 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 7000 files added (on-disk size: 25940.2 Kb)
+0086.000 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4 Mb, 40658 files batched, 501 (7015) added so far); re-opening (prior size: 25940.2 Kb)
+0090.263 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 7100 files added (on-disk size: 28149.5 Kb)
+0090.273 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 7200 files added (on-disk size: 28149.5 Kb)
+0090.282 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 7300 files added (on-disk size: 28149.5 Kb)
+0090.287 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 7400 files added (on-disk size: 28149.5 Kb)
+0090.293 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 7500 files added (on-disk size: 28149.5 Kb)
+0090.295 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (7516) added so far); re-opening (prior size: 28149.5 Kb)
+0098.740 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 7600 files added (on-disk size: 28714.9 Kb)
+0098.821 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 7700 files added (on-disk size: 28714.9 Kb)
+0098.828 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 7800 files added (on-disk size: 28714.9 Kb)
+0098.833 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 7900 files added (on-disk size: 28714.9 Kb)
+0098.839 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 8000 files added (on-disk size: 28714.9 Kb)
+0098.842 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (8017) added so far); re-opening (prior size: 28714.9 Kb)
+0104.702 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 8100 files added (on-disk size: 29226.4 Kb)
+0104.709 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 8200 files added (on-disk size: 29226.4 Kb)
+0104.714 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 8300 files added (on-disk size: 29226.4 Kb)
+0104.720 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 8400 files added (on-disk size: 29226.4 Kb)
+0104.780 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 8500 files added (on-disk size: 29226.4 Kb)
+0104.783 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.6 Mb, 40658 files batched, 501 (8518) added so far); re-opening (prior size: 29226.4 Kb)
+0110.678 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 8600 files added (on-disk size: 30059.6 Kb)
+0110.683 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 8700 files added (on-disk size: 30059.6 Kb)
+0110.689 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 8800 files added (on-disk size: 30059.6 Kb)
+0110.693 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 8900 files added (on-disk size: 30059.6 Kb)
+0110.698 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 9000 files added (on-disk size: 30059.6 Kb)
+0110.701 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.6 Mb, 40658 files batched, 501 (9019) added so far); re-opening (prior size: 30059.6 Kb)
+0112.418 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 9100 files added (on-disk size: 31025 Kb)
+0112.423 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 9200 files added (on-disk size: 31025 Kb)
+0112.428 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 9300 files added (on-disk size: 31025 Kb)
+0112.433 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 9400 files added (on-disk size: 31025 Kb)
+0112.439 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 9500 files added (on-disk size: 31025 Kb)
+0112.442 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (9520) added so far); re-opening (prior size: 31025 Kb)
+0117.391 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 9600 files added (on-disk size: 31603.1 Kb)
+0117.398 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 9700 files added (on-disk size: 31603.1 Kb)
+0117.405 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 9800 files added (on-disk size: 31603.1 Kb)
+0117.412 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 9900 files added (on-disk size: 31603.1 Kb)
+0117.417 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 10000 files added (on-disk size: 31603.1 Kb)
+0117.420 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.9 Mb, 40658 files batched, 501 (10021) added so far); re-opening (prior size: 31603.1 Kb)
+0123.458 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 10100 files added (on-disk size: 32345.2 Kb)
+0123.464 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 10200 files added (on-disk size: 32345.2 Kb)
+0123.472 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 10300 files added (on-disk size: 32345.2 Kb)
+0123.479 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 10400 files added (on-disk size: 32345.2 Kb)
+0123.487 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 10500 files added (on-disk size: 32345.2 Kb)
+0123.490 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.6 Mb, 40658 files batched, 501 (10522) added so far); re-opening (prior size: 32345.2 Kb)
+0129.628 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 10600 files added (on-disk size: 33086.5 Kb)
+0129.634 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 10700 files added (on-disk size: 33086.5 Kb)
+0129.639 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 10800 files added (on-disk size: 33086.5 Kb)
+0129.645 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 10900 files added (on-disk size: 33086.5 Kb)
+0129.651 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 11000 files added (on-disk size: 33086.5 Kb)
+0129.654 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (11023) added so far); re-opening (prior size: 33086.5 Kb)
+0136.570 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 11100 files added (on-disk size: 33679 Kb)
+0136.644 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 11200 files added (on-disk size: 33679 Kb)
+0136.650 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 11300 files added (on-disk size: 33679 Kb)
+0136.654 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 11400 files added (on-disk size: 33679 Kb)
+0136.661 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 11500 files added (on-disk size: 33679 Kb)
+0136.684 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (11524) added so far); re-opening (prior size: 33679 Kb)
+0142.782 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 11600 files added (on-disk size: 34235.3 Kb)
+0142.789 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 11700 files added (on-disk size: 34235.3 Kb)
+0142.795 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 11800 files added (on-disk size: 34235.3 Kb)
+0142.866 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 11900 files added (on-disk size: 34235.3 Kb)
+0142.876 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 12000 files added (on-disk size: 34235.3 Kb)
+0142.879 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.1 Mb, 40658 files batched, 501 (12025) added so far); re-opening (prior size: 34235.3 Kb)
+0148.042 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 12100 files added (on-disk size: 34827.4 Kb)
+0148.049 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 12200 files added (on-disk size: 34827.4 Kb)
+0148.054 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 12300 files added (on-disk size: 34827.4 Kb)
+0148.061 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 12400 files added (on-disk size: 34827.4 Kb)
+0148.067 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 12500 files added (on-disk size: 34827.4 Kb)
+0148.070 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.1 Mb, 40658 files batched, 501 (12526) added so far); re-opening (prior size: 34827.4 Kb)
+0154.561 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 12600 files added (on-disk size: 35435 Kb)
+0154.566 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 12700 files added (on-disk size: 35435 Kb)
+0154.572 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 12800 files added (on-disk size: 35435 Kb)
+0154.577 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 12900 files added (on-disk size: 35435 Kb)
+0154.582 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 13000 files added (on-disk size: 35435 Kb)
+0154.585 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (13027) added so far); re-opening (prior size: 35435 Kb)
+0167.638 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 13100 files added (on-disk size: 36058.8 Kb)
+0167.722 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 13200 files added (on-disk size: 36058.8 Kb)
+0167.728 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 13300 files added (on-disk size: 36058.8 Kb)
+0167.738 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 13400 files added (on-disk size: 36058.8 Kb)
+0167.749 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 13500 files added (on-disk size: 36058.8 Kb)
+0167.754 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (13528) added so far); re-opening (prior size: 36058.8 Kb)
+0176.007 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 13600 files added (on-disk size: 36683.9 Kb)
+0176.012 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 13700 files added (on-disk size: 36683.9 Kb)
+0176.018 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 13800 files added (on-disk size: 36683.9 Kb)
+0176.024 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 13900 files added (on-disk size: 36683.9 Kb)
+0176.029 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 14000 files added (on-disk size: 36683.9 Kb)
+0176.033 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (14029) added so far); re-opening (prior size: 36683.9 Kb)
+0186.495 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 14100 files added (on-disk size: 37399.5 Kb)
+0187.429 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 14200 files added (on-disk size: 37399.5 Kb)
+0187.791 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 2.0 seconds have passed since the last write (0.3 Mb, 208 (14237) files added so far); re-opening (prior size: 37399.5 Kb)
+0195.284 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 14300 files added (on-disk size: 37643.9 Kb)
+0195.290 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 14400 files added (on-disk size: 37643.9 Kb)
+0195.296 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 14500 files added (on-disk size: 37643.9 Kb)
+0195.301 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 14600 files added (on-disk size: 37643.9 Kb)
+0195.307 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 14700 files added (on-disk size: 37643.9 Kb)
+0195.310 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.8 Mb, 40658 files batched, 501 (14738) added so far); re-opening (prior size: 37643.9 Kb)
+0203.514 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 14800 files added (on-disk size: 38303.3 Kb)
+0203.519 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 14900 files added (on-disk size: 38303.3 Kb)
+0203.527 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 15000 files added (on-disk size: 38303.3 Kb)
+0203.615 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 15100 files added (on-disk size: 38303.3 Kb)
+0203.624 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 15200 files added (on-disk size: 38303.3 Kb)
+0203.628 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.2 Mb, 40658 files batched, 501 (15239) added so far); re-opening (prior size: 38303.3 Kb)
+0213.846 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 15300 files added (on-disk size: 39084.9 Kb)
+0213.852 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 15400 files added (on-disk size: 39084.9 Kb)
+0213.857 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 15500 files added (on-disk size: 39084.9 Kb)
+0213.863 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 15600 files added (on-disk size: 39084.9 Kb)
+0213.868 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 15700 files added (on-disk size: 39084.9 Kb)
+0213.871 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (15740) added so far); re-opening (prior size: 39084.9 Kb)
+0220.974 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 15800 files added (on-disk size: 39750.2 Kb)
+0220.979 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 15900 files added (on-disk size: 39750.2 Kb)
+0220.985 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 16000 files added (on-disk size: 39750.2 Kb)
+0220.991 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 16100 files added (on-disk size: 39750.2 Kb)
+0220.996 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 16200 files added (on-disk size: 39750.2 Kb)
+0220.999 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (16241) added so far); re-opening (prior size: 39750.2 Kb)
+0228.987 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 16300 files added (on-disk size: 40404.5 Kb)
+0228.993 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 16400 files added (on-disk size: 40404.5 Kb)
+0228.999 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 16500 files added (on-disk size: 40404.5 Kb)
+0229.004 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 16600 files added (on-disk size: 40404.5 Kb)
+0229.009 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 16700 files added (on-disk size: 40404.5 Kb)
+0229.013 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (16742) added so far); re-opening (prior size: 40404.5 Kb)
+0238.566 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 16800 files added (on-disk size: 41100.3 Kb)
+0238.572 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 16900 files added (on-disk size: 41100.3 Kb)
+0238.577 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 17000 files added (on-disk size: 41100.3 Kb)
+0238.582 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 17100 files added (on-disk size: 41100.3 Kb)
+0238.588 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 17200 files added (on-disk size: 41100.3 Kb)
+0238.591 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (17243) added so far); re-opening (prior size: 41100.3 Kb)
+0247.359 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 17300 files added (on-disk size: 41824.6 Kb)
+0247.365 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 17400 files added (on-disk size: 41824.6 Kb)
+0247.370 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 17500 files added (on-disk size: 41824.6 Kb)
+0247.375 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 17600 files added (on-disk size: 41824.6 Kb)
+0247.381 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 17700 files added (on-disk size: 41824.6 Kb)
+0247.384 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (17744) added so far); re-opening (prior size: 41824.6 Kb)
+0261.287 (0) The scheduled resumption is within 45 seconds - will reschedule
+0261.324 (0) Rescheduling resumption 1: moving to 345 seconds from now (1449803350)
+0261.329 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 300 + 45 = 345
+0261.546 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 17800 files added (on-disk size: 42481.5 Kb)
+0261.710 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 17900 files added (on-disk size: 42481.5 Kb)
+0261.720 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 18000 files added (on-disk size: 42481.5 Kb)
+0261.725 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 18100 files added (on-disk size: 42481.5 Kb)
+0261.733 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 18200 files added (on-disk size: 42481.5 Kb)
+0261.737 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.1 Mb, 40658 files batched, 501 (18245) added so far); re-opening (prior size: 42481.5 Kb)
+0274.246 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 18300 files added (on-disk size: 43172.7 Kb)
+0274.251 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 18400 files added (on-disk size: 43172.7 Kb)
+0274.258 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 18500 files added (on-disk size: 43172.7 Kb)
+0274.264 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 18600 files added (on-disk size: 43172.7 Kb)
+0274.269 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 18700 files added (on-disk size: 43172.7 Kb)
+0274.272 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.8 Mb, 40658 files batched, 501 (18746) added so far); re-opening (prior size: 43172.7 Kb)
+0281.605 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 18800 files added (on-disk size: 43778.9 Kb)
+0281.705 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 18900 files added (on-disk size: 43778.9 Kb)
+0281.711 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 19000 files added (on-disk size: 43778.9 Kb)
+0281.716 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 19100 files added (on-disk size: 43778.9 Kb)
+0281.723 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 19200 files added (on-disk size: 43778.9 Kb)
+0281.727 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (19247) added so far); re-opening (prior size: 43778.9 Kb)
+0288.996 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 19300 files added (on-disk size: 44483.9 Kb)
+0289.002 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 19400 files added (on-disk size: 44483.9 Kb)
+0289.007 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 19500 files added (on-disk size: 44483.9 Kb)
+0289.013 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 19600 files added (on-disk size: 44483.9 Kb)
+0289.019 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 19700 files added (on-disk size: 44483.9 Kb)
+0289.022 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (19748) added so far); re-opening (prior size: 44483.9 Kb)
+0299.529 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 19800 files added (on-disk size: 45168.6 Kb)
+0299.535 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 19900 files added (on-disk size: 45168.6 Kb)
+0299.540 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 20000 files added (on-disk size: 45168.6 Kb)
+0299.546 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 20100 files added (on-disk size: 45168.6 Kb)
+0299.551 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 20200 files added (on-disk size: 45168.6 Kb)
+0299.555 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (20249) added so far); re-opening (prior size: 45168.6 Kb)
+0306.091 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 20300 files added (on-disk size: 45827 Kb)
+0306.247 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 20400 files added (on-disk size: 45827 Kb)
+0306.271 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 20500 files added (on-disk size: 45827 Kb)
+0306.279 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 20600 files added (on-disk size: 45827 Kb)
+0306.284 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 20700 files added (on-disk size: 45827 Kb)
+0306.288 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2 Mb, 40658 files batched, 501 (20750) added so far); re-opening (prior size: 45827 Kb)
+0310.956 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 20800 files added (on-disk size: 46671.6 Kb)
+0310.962 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 20900 files added (on-disk size: 46671.6 Kb)
+0310.967 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 21000 files added (on-disk size: 46671.6 Kb)
+0311.067 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 21100 files added (on-disk size: 46671.6 Kb)
+0311.127 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 21200 files added (on-disk size: 46671.6 Kb)
+0311.155 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.1 Mb, 40658 files batched, 501 (21251) added so far); re-opening (prior size: 46671.6 Kb)
+0315.639 (0) The time we have been running (315.6) is approaching the resumption interval (345) - increasing resumption interval to 346
+0315.754 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 21300 files added (on-disk size: 47268.3 Kb)
+0315.793 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 21400 files added (on-disk size: 47268.3 Kb)
+0315.809 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 21500 files added (on-disk size: 47268.3 Kb)
+0315.816 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 21600 files added (on-disk size: 47268.3 Kb)
+0315.822 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 21700 files added (on-disk size: 47268.3 Kb)
+0315.826 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (21752) added so far); re-opening (prior size: 47268.3 Kb)
+0321.806 (0) The time we have been running (321.8) is approaching the resumption interval (346) - increasing resumption interval to 352
+0322.032 (0) The time we have been running (322) is approaching the resumption interval (352) - increasing resumption interval to 353
+0322.149 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 21800 files added (on-disk size: 47843.6 Kb)
+0322.181 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 21900 files added (on-disk size: 47843.6 Kb)
+0322.188 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 22000 files added (on-disk size: 47843.6 Kb)
+0322.195 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 22100 files added (on-disk size: 47843.6 Kb)
+0322.202 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 22200 files added (on-disk size: 47843.6 Kb)
+0322.211 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (22253) added so far); re-opening (prior size: 47843.6 Kb)
+0327.762 (0) The time we have been running (327.8) is approaching the resumption interval (353) - increasing resumption interval to 358
+0327.832 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 22300 files added (on-disk size: 48404.3 Kb)
+0327.901 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 22400 files added (on-disk size: 48404.3 Kb)
+0327.933 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 22500 files added (on-disk size: 48404.3 Kb)
+0327.940 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 22600 files added (on-disk size: 48404.3 Kb)
+0327.948 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 22700 files added (on-disk size: 48404.3 Kb)
+0327.952 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.3 Mb, 40658 files batched, 501 (22754) added so far); re-opening (prior size: 48404.3 Kb)
+0332.823 (0) The time we have been running (332.8) is approaching the resumption interval (358) - increasing resumption interval to 363
+0332.828 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 22800 files added (on-disk size: 49600.7 Kb)
+0332.833 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 22900 files added (on-disk size: 49600.7 Kb)
+0332.839 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 23000 files added (on-disk size: 49600.7 Kb)
+0332.844 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 23100 files added (on-disk size: 49600.7 Kb)
+0332.850 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 23200 files added (on-disk size: 49600.7 Kb)
+0332.896 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.3 Mb, 40658 files batched, 501 (23255) added so far); re-opening (prior size: 49600.7 Kb)
+0334.844 (0) The time we have been running (334.8) is approaching the resumption interval (363) - increasing resumption interval to 365
+0334.850 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 23300 files added (on-disk size: 50147.6 Kb)
+0334.855 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 23400 files added (on-disk size: 50147.6 Kb)
+0334.860 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 23500 files added (on-disk size: 50147.6 Kb)
+0334.865 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 23600 files added (on-disk size: 50147.6 Kb)
+0334.955 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 23700 files added (on-disk size: 50147.6 Kb)
+0334.963 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.9 Mb, 40658 files batched, 501 (23756) added so far); re-opening (prior size: 50147.6 Kb)
+0339.827 (0) The time we have been running (339.8) is approaching the resumption interval (365) - increasing resumption interval to 370
+0339.920 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 23800 files added (on-disk size: 50822.2 Kb)
+0339.964 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 23900 files added (on-disk size: 50822.2 Kb)
+0339.970 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 24000 files added (on-disk size: 50822.2 Kb)
+0339.975 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 24100 files added (on-disk size: 50822.2 Kb)
+0339.980 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 24200 files added (on-disk size: 50822.2 Kb)
+0339.983 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (24257) added so far); re-opening (prior size: 50822.2 Kb)
+0345.772 (0) The time we have been running (345.8) is approaching the resumption interval (370) - increasing resumption interval to 376
+0345.777 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 24300 files added (on-disk size: 51313.9 Kb)
+0345.782 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 24400 files added (on-disk size: 51313.9 Kb)
+0345.854 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 24500 files added (on-disk size: 51313.9 Kb)
+0345.864 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 24600 files added (on-disk size: 51313.9 Kb)
+0345.913 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 24700 files added (on-disk size: 51313.9 Kb)
+0345.917 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.2 Mb, 40658 files batched, 501 (24758) added so far); re-opening (prior size: 51313.9 Kb)
+0351.118 (0) The time we have been running (351.1) is approaching the resumption interval (376) - increasing resumption interval to 382
+0351.188 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 24800 files added (on-disk size: 52137.7 Kb)
+0351.197 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 24900 files added (on-disk size: 52137.7 Kb)
+0351.204 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 25000 files added (on-disk size: 52137.7 Kb)
+0351.255 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 25100 files added (on-disk size: 52137.7 Kb)
+0351.285 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 25200 files added (on-disk size: 52137.7 Kb)
+0351.294 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.9 Mb, 40658 files batched, 501 (25259) added so far); re-opening (prior size: 52137.7 Kb)
+0356.797 (0) The time we have been running (356.8) is approaching the resumption interval (382) - increasing resumption interval to 387
+0358.567 (0) The time we have been running (358.6) is approaching the resumption interval (387) - increasing resumption interval to 389
+0358.734 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 25300 files added (on-disk size: 52918 Kb)
+0358.810 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 25400 files added (on-disk size: 52918 Kb)
+0358.816 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 25500 files added (on-disk size: 52918 Kb)
+0358.821 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 25600 files added (on-disk size: 52918 Kb)
+0358.825 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 25700 files added (on-disk size: 52918 Kb)
+0358.829 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.8 Mb, 40658 files batched, 501 (25760) added so far); re-opening (prior size: 52918 Kb)
+0362.632 (0) The time we have been running (362.6) is approaching the resumption interval (389) - increasing resumption interval to 393
+0362.636 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 25800 files added (on-disk size: 53727.6 Kb)
+0362.641 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 25900 files added (on-disk size: 53727.6 Kb)
+0362.647 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 26000 files added (on-disk size: 53727.6 Kb)
+0362.652 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 26100 files added (on-disk size: 53727.6 Kb)
+0362.657 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 26200 files added (on-disk size: 53727.6 Kb)
+0362.660 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.4 Mb, 40658 files batched, 501 (26261) added so far); re-opening (prior size: 53727.6 Kb)
+0364.981 (0) The time we have been running (365) is approaching the resumption interval (393) - increasing resumption interval to 395
+0364.986 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 26300 files added (on-disk size: 54356 Kb)
+0364.991 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 26400 files added (on-disk size: 54356 Kb)
+0364.996 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 26500 files added (on-disk size: 54356 Kb)
+0365.107 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 26600 files added (on-disk size: 54356 Kb)
+0365.160 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 26700 files added (on-disk size: 54356 Kb)
+0365.173 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.6 Mb, 40658 files batched, 501 (26762) added so far); re-opening (prior size: 54356 Kb)
+0370.323 (0) The time we have been running (370.3) is approaching the resumption interval (395) - increasing resumption interval to 401
+0370.354 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 26800 files added (on-disk size: 54988.1 Kb)
+0370.360 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 26900 files added (on-disk size: 54988.1 Kb)
+0370.366 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 27000 files added (on-disk size: 54988.1 Kb)
+0370.397 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 27100 files added (on-disk size: 54988.1 Kb)
+0370.463 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 27200 files added (on-disk size: 54988.1 Kb)
+0370.471 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (27263) added so far); re-opening (prior size: 54988.1 Kb)
+0375.791 (0) The time we have been running (375.8) is approaching the resumption interval (401) - increasing resumption interval to 406
+0377.706 (0) The time we have been running (377.7) is approaching the resumption interval (406) - increasing resumption interval to 408
+0377.847 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 27300 files added (on-disk size: 55561.2 Kb)
+0377.953 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 27400 files added (on-disk size: 55561.2 Kb)
+0378.077 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 27500 files added (on-disk size: 55561.2 Kb)
+0378.085 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 27600 files added (on-disk size: 55561.2 Kb)
+0378.090 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 27700 files added (on-disk size: 55561.2 Kb)
+0378.094 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.2 Mb, 40658 files batched, 501 (27764) added so far); re-opening (prior size: 55561.2 Kb)
+0383.796 (0) The time we have been running (383.8) is approaching the resumption interval (408) - increasing resumption interval to 414
+0384.056 (0) The time we have been running (384) is approaching the resumption interval (414) - increasing resumption interval to 415
+0384.061 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 27800 files added (on-disk size: 56177.2 Kb)
+0384.144 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 27900 files added (on-disk size: 56177.2 Kb)
+0384.153 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 28000 files added (on-disk size: 56177.2 Kb)
+0384.215 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 28100 files added (on-disk size: 56177.2 Kb)
+0384.221 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 28200 files added (on-disk size: 56177.2 Kb)
+0384.225 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (28265) added so far); re-opening (prior size: 56177.2 Kb)
+0389.387 (0) The time we have been running (389.4) is approaching the resumption interval (415) - increasing resumption interval to 420
+0389.392 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 28300 files added (on-disk size: 56756.4 Kb)
+0389.397 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 28400 files added (on-disk size: 56756.4 Kb)
+0389.488 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 28500 files added (on-disk size: 56756.4 Kb)
+0389.524 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 28600 files added (on-disk size: 56756.4 Kb)
+0389.555 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 28700 files added (on-disk size: 56756.4 Kb)
+0389.560 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (28766) added so far); re-opening (prior size: 56756.4 Kb)
+0394.809 (0) The time we have been running (394.8) is approaching the resumption interval (420) - increasing resumption interval to 425
+0396.178 (0) The time we have been running (396.2) is approaching the resumption interval (425) - increasing resumption interval to 427
+0396.297 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 28800 files added (on-disk size: 57328 Kb)
+0396.314 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 28900 files added (on-disk size: 57328 Kb)
+0396.322 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 29000 files added (on-disk size: 57328 Kb)
+0396.328 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 29100 files added (on-disk size: 57328 Kb)
+0396.360 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 29200 files added (on-disk size: 57328 Kb)
+0396.378 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (29267) added so far); re-opening (prior size: 57328 Kb)
+0401.796 (0) The time we have been running (401.8) is approaching the resumption interval (427) - increasing resumption interval to 432
+0404.103 (0) The time we have been running (404.1) is approaching the resumption interval (432) - increasing resumption interval to 435
+0404.108 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 29300 files added (on-disk size: 57891.7 Kb)
+0404.113 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 29400 files added (on-disk size: 57891.7 Kb)
+0404.118 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 29500 files added (on-disk size: 57891.7 Kb)
+0404.208 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 29600 files added (on-disk size: 57891.7 Kb)
+0404.216 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 29700 files added (on-disk size: 57891.7 Kb)
+0404.220 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.6 Mb, 40658 files batched, 501 (29768) added so far); re-opening (prior size: 57891.7 Kb)
+0407.988 (0) The time we have been running (408) is approaching the resumption interval (435) - increasing resumption interval to 438
+0407.993 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 29800 files added (on-disk size: 58595.3 Kb)
+0407.998 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 29900 files added (on-disk size: 58595.3 Kb)
+0408.003 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 30000 files added (on-disk size: 58595.3 Kb)
+0408.007 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 30100 files added (on-disk size: 58595.3 Kb)
+0408.083 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 30200 files added (on-disk size: 58595.3 Kb)
+0408.090 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.6 Mb, 40658 files batched, 501 (30269) added so far); re-opening (prior size: 58595.3 Kb)
+0411.161 (0) The time we have been running (411.1) is approaching the resumption interval (438) - increasing resumption interval to 442
+0411.166 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 30300 files added (on-disk size: 59555.6 Kb)
+0411.171 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 30400 files added (on-disk size: 59555.6 Kb)
+0411.176 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 30500 files added (on-disk size: 59555.6 Kb)
+0411.181 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 30600 files added (on-disk size: 59555.6 Kb)
+0411.186 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 30700 files added (on-disk size: 59555.6 Kb)
+0411.190 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.3 Mb, 40658 files batched, 501 (30770) added so far); re-opening (prior size: 59555.6 Kb)
+0413.329 (0) The time we have been running (413.3) is approaching the resumption interval (442) - increasing resumption interval to 444
+0413.333 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 30800 files added (on-disk size: 60233.1 Kb)
+0413.338 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 30900 files added (on-disk size: 60233.1 Kb)
+0413.343 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 31000 files added (on-disk size: 60233.1 Kb)
+0413.347 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 31100 files added (on-disk size: 60233.1 Kb)
+0413.352 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 31200 files added (on-disk size: 60233.1 Kb)
+0413.356 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.4 Mb, 40658 files batched, 501 (31271) added so far); re-opening (prior size: 60233.1 Kb)
+0416.309 (0) The time we have been running (416.3) is approaching the resumption interval (444) - increasing resumption interval to 447
+0416.396 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 31300 files added (on-disk size: 61172.1 Kb)
+0416.401 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 31400 files added (on-disk size: 61172.1 Kb)
+0416.409 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 31500 files added (on-disk size: 61172.1 Kb)
+0416.413 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 31600 files added (on-disk size: 61172.1 Kb)
+0416.419 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 31700 files added (on-disk size: 61172.1 Kb)
+0416.422 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (31772) added so far); re-opening (prior size: 61172.1 Kb)
+0420.227 (0) The time we have been running (420.2) is approaching the resumption interval (447) - increasing resumption interval to 451
+0420.232 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 31800 files added (on-disk size: 61721.3 Kb)
+0420.236 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 31900 files added (on-disk size: 61721.3 Kb)
+0420.317 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 32000 files added (on-disk size: 61721.3 Kb)
+0420.381 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 32100 files added (on-disk size: 61721.3 Kb)
+0420.390 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 32200 files added (on-disk size: 61721.3 Kb)
+0420.394 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.8 Mb, 40658 files batched, 501 (32273) added so far); re-opening (prior size: 61721.3 Kb)
+0425.787 (0) The time we have been running (425.8) is approaching the resumption interval (451) - increasing resumption interval to 456
+0425.985 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 32300 files added (on-disk size: 63199.3 Kb)
+0425.991 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 32400 files added (on-disk size: 63199.3 Kb)
+0426.060 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 32500 files added (on-disk size: 63199.3 Kb)
+0426.068 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 32600 files added (on-disk size: 63199.3 Kb)
+0426.073 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 32700 files added (on-disk size: 63199.3 Kb)
+0426.078 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (32774) added so far); re-opening (prior size: 63199.3 Kb)
+0431.810 (0) The time we have been running (431.8) is approaching the resumption interval (456) - increasing resumption interval to 462
+0433.633 (0) The time we have been running (433.6) is approaching the resumption interval (462) - increasing resumption interval to 464
+0433.638 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 32800 files added (on-disk size: 63784.8 Kb)
+0433.642 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 32900 files added (on-disk size: 63784.8 Kb)
+0433.703 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 33000 files added (on-disk size: 63784.8 Kb)
+0433.788 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 33100 files added (on-disk size: 63784.8 Kb)
+0433.796 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 33200 files added (on-disk size: 63784.8 Kb)
+0433.831 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3 Mb, 40658 files batched, 501 (33275) added so far); re-opening (prior size: 63784.8 Kb)
+0438.707 (0) The time we have been running (438.7) is approaching the resumption interval (464) - increasing resumption interval to 469
+0438.711 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 33300 files added (on-disk size: 64827.2 Kb)
+0438.716 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 33400 files added (on-disk size: 64827.2 Kb)
+0438.721 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 33500 files added (on-disk size: 64827.2 Kb)
+0438.727 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 33600 files added (on-disk size: 64827.2 Kb)
+0438.734 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 33700 files added (on-disk size: 64827.2 Kb)
+0438.739 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.1 Mb, 40658 files batched, 501 (33776) added so far); re-opening (prior size: 64827.2 Kb)
+0443.788 (0) The time we have been running (443.8) is approaching the resumption interval (469) - increasing resumption interval to 474
+0445.260 (0) The time we have been running (445.2) is approaching the resumption interval (474) - increasing resumption interval to 476
+0445.265 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 33800 files added (on-disk size: 65499.5 Kb)
+0445.272 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 33900 files added (on-disk size: 65499.5 Kb)
+0445.278 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 34000 files added (on-disk size: 65499.5 Kb)
+0445.284 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 34100 files added (on-disk size: 65499.5 Kb)
+0445.289 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 34200 files added (on-disk size: 65499.5 Kb)
+0445.294 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.1 Mb, 40658 files batched, 501 (34277) added so far); re-opening (prior size: 65499.5 Kb)
+0450.786 (0) The time we have been running (450.8) is approaching the resumption interval (476) - increasing resumption interval to 481
+0451.443 (0) The time we have been running (451.4) is approaching the resumption interval (481) - increasing resumption interval to 482
+0451.447 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 34300 files added (on-disk size: 66186.8 Kb)
+0451.453 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 34400 files added (on-disk size: 66186.8 Kb)
+0451.458 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 34500 files added (on-disk size: 66186.8 Kb)
+0451.463 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 34600 files added (on-disk size: 66186.8 Kb)
+0451.467 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 34700 files added (on-disk size: 66186.8 Kb)
+0451.471 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.2 Mb, 40658 files batched, 501 (34778) added so far); re-opening (prior size: 66186.8 Kb)
+0456.820 (0) The time we have been running (456.8) is approaching the resumption interval (482) - increasing resumption interval to 487
+0459.139 (0) The time we have been running (459.1) is approaching the resumption interval (487) - increasing resumption interval to 490
+0459.143 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 34800 files added (on-disk size: 66907.2 Kb)
+0459.148 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 34900 files added (on-disk size: 66907.2 Kb)
+0459.153 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 35000 files added (on-disk size: 66907.2 Kb)
+0459.158 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 35100 files added (on-disk size: 66907.2 Kb)
+0459.162 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 35200 files added (on-disk size: 66907.2 Kb)
+0459.166 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (35279) added so far); re-opening (prior size: 66907.2 Kb)
+0464.795 (0) The time we have been running (464.8) is approaching the resumption interval (490) - increasing resumption interval to 495
+0466.405 (0) The time we have been running (466.4) is approaching the resumption interval (495) - increasing resumption interval to 497
+0466.409 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 35300 files added (on-disk size: 67499.6 Kb)
+0466.414 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 35400 files added (on-disk size: 67499.6 Kb)
+0466.420 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 35500 files added (on-disk size: 67499.6 Kb)
+0466.425 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 35600 files added (on-disk size: 67499.6 Kb)
+0466.430 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 35700 files added (on-disk size: 67499.6 Kb)
+0466.434 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (35780) added so far); re-opening (prior size: 67499.6 Kb)
+0471.794 (0) The time we have been running (471.8) is approaching the resumption interval (497) - increasing resumption interval to 502
+0472.656 (0) The time we have been running (472.6) is approaching the resumption interval (502) - increasing resumption interval to 503
+0472.660 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 35800 files added (on-disk size: 68165.2 Kb)
+0472.665 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 35900 files added (on-disk size: 68165.2 Kb)
+0472.670 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 36000 files added (on-disk size: 68165.2 Kb)
+0472.675 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 36100 files added (on-disk size: 68165.2 Kb)
+0472.680 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 36200 files added (on-disk size: 68165.2 Kb)
+0472.685 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (36281) added so far); re-opening (prior size: 68165.2 Kb)
+0477.789 (0) The time we have been running (477.8) is approaching the resumption interval (503) - increasing resumption interval to 508
+0479.783 (0) The time we have been running (479.8) is approaching the resumption interval (508) - increasing resumption interval to 510
+0479.788 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 36300 files added (on-disk size: 68789 Kb)
+0479.793 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 36400 files added (on-disk size: 68789 Kb)
+0479.798 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 36500 files added (on-disk size: 68789 Kb)
+0479.803 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 36600 files added (on-disk size: 68789 Kb)
+0479.808 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 36700 files added (on-disk size: 68789 Kb)
+0479.813 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (36782) added so far); re-opening (prior size: 68789 Kb)
+0485.789 (0) The time we have been running (485.8) is approaching the resumption interval (510) - increasing resumption interval to 516
+0488.479 (0) The time we have been running (488.5) is approaching the resumption interval (516) - increasing resumption interval to 519
+0488.482 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 36800 files added (on-disk size: 69430.8 Kb)
+0488.487 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 36900 files added (on-disk size: 69430.8 Kb)
+0488.494 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 37000 files added (on-disk size: 69430.8 Kb)
+0488.500 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 37100 files added (on-disk size: 69430.8 Kb)
+0488.505 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 37200 files added (on-disk size: 69430.8 Kb)
+0488.510 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 Mb, 40658 files batched, 501 (37283) added so far); re-opening (prior size: 69430.8 Kb)
+0493.801 (0) The time we have been running (493.8) is approaching the resumption interval (519) - increasing resumption interval to 524
+0499.815 (0) The time we have been running (499.8) is approaching the resumption interval (524) - increasing resumption interval to 530
+0500.066 (0) The time we have been running (500.1) is approaching the resumption interval (530) - increasing resumption interval to 531
+0500.070 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 37300 files added (on-disk size: 70060.4 Kb)
+0500.075 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 37400 files added (on-disk size: 70060.4 Kb)
+0500.080 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 37500 files added (on-disk size: 70060.4 Kb)
+0500.086 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 37600 files added (on-disk size: 70060.4 Kb)
+0500.091 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 37700 files added (on-disk size: 70060.4 Kb)
+0500.096 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.8 Mb, 40658 files batched, 501 (37784) added so far); re-opening (prior size: 70060.4 Kb)
+0505.846 (0) The time we have been running (505.8) is approaching the resumption interval (531) - increasing resumption interval to 536
+0511.788 (0) The time we have been running (511.8) is approaching the resumption interval (536) - increasing resumption interval to 542
+0515.644 (0) The time we have been running (515.6) is approaching the resumption interval (542) - increasing resumption interval to 546
+0515.648 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 37800 files added (on-disk size: 70692.9 Kb)
+0515.654 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 37900 files added (on-disk size: 70692.9 Kb)
+0515.660 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 38000 files added (on-disk size: 70692.9 Kb)
+0515.665 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 38100 files added (on-disk size: 70692.9 Kb)
+0515.671 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 38200 files added (on-disk size: 70692.9 Kb)
+0515.675 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (38285) added so far); re-opening (prior size: 70692.9 Kb)
+0520.910 (0) The time we have been running (520.9) is approaching the resumption interval (546) - increasing resumption interval to 551
+0525.026 (0) The time we have been running (525) is approaching the resumption interval (551) - increasing resumption interval to 556
+0525.030 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 38300 files added (on-disk size: 71387.4 Kb)
+0525.035 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 38400 files added (on-disk size: 71387.4 Kb)
+0525.040 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 38500 files added (on-disk size: 71387.4 Kb)
+0525.045 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 38600 files added (on-disk size: 71387.4 Kb)
+0525.051 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 38700 files added (on-disk size: 71387.4 Kb)
+0525.055 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.8 Mb, 40658 files batched, 501 (38786) added so far); re-opening (prior size: 71387.4 Kb)
+0530.807 (0) The time we have been running (530.8) is approaching the resumption interval (556) - increasing resumption interval to 561
+0536.791 (0) The time we have been running (536.8) is approaching the resumption interval (561) - increasing resumption interval to 567
+0538.484 (0) The time we have been running (538.5) is approaching the resumption interval (567) - increasing resumption interval to 569
+0538.488 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 38800 files added (on-disk size: 71954.3 Kb)
+0538.494 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 38900 files added (on-disk size: 71954.3 Kb)
+0538.499 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 39000 files added (on-disk size: 71954.3 Kb)
+0538.504 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 39100 files added (on-disk size: 71954.3 Kb)
+0538.509 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 39200 files added (on-disk size: 71954.3 Kb)
+0538.514 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.2 Mb, 40658 files batched, 501 (39287) added so far); re-opening (prior size: 71954.3 Kb)
+0543.801 (0) The time we have been running (543.8) is approaching the resumption interval (569) - increasing resumption interval to 574
+0549.818 (0) The time we have been running (549.8) is approaching the resumption interval (574) - increasing resumption interval to 580
+0550.281 (0) The time we have been running (550.3) is approaching the resumption interval (580) - increasing resumption interval to 581
+0550.337 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 39300 files added (on-disk size: 72657.1 Kb)
+0550.343 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 39400 files added (on-disk size: 72657.1 Kb)
+0550.348 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 39500 files added (on-disk size: 72657.1 Kb)
+0550.353 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 39600 files added (on-disk size: 72657.1 Kb)
+0550.358 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 39700 files added (on-disk size: 72657.1 Kb)
+0550.363 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 Mb, 40658 files batched, 501 (39788) added so far); re-opening (prior size: 72657.1 Kb)
+0555.799 (0) The time we have been running (555.8) is approaching the resumption interval (581) - increasing resumption interval to 586
+0560.990 (0) The time we have been running (561) is approaching the resumption interval (586) - increasing resumption interval to 591
+0560.993 (0) The scheduled resumption is within 45 seconds - will reschedule
+0560.997 (0) Rescheduling resumption 1: moving to 636 seconds from now (1449803941)
+0561.003 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 591 + 45 = 636
+0561.006 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 39800 files added (on-disk size: 73253.8 Kb)
+0561.087 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 39900 files added (on-disk size: 73253.8 Kb)
+0561.123 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 40000 files added (on-disk size: 73253.8 Kb)
+0561.164 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 40100 files added (on-disk size: 73253.8 Kb)
+0561.171 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 40200 files added (on-disk size: 73253.8 Kb)
+0561.176 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.5 Mb, 40658 files batched, 501 (40289) added so far); re-opening (prior size: 73253.8 Kb)
+0567.864 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 40300 files added (on-disk size: 73601.4 Kb)
+0567.933 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 40400 files added (on-disk size: 73601.4 Kb)
+0567.938 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 40500 files added (on-disk size: 73601.4 Kb)
+0568.147 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip.tmp: 40600 files added (on-disk size: 73601.4 Kb)
+0579.592 (0) Created themes zip (0) - 74146.4 Kb in 570.9 s (129.9 Kb/s) (SHA1 checksum: d3d8b94ce8e81818b8203629ccba5b9b3d645a67)
+0579.632 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone
+0579.635 (0) Looking for candidates to back up in: /Users/surgemedia/Documents/MAMP/PinnacleProperties/wp-content/uploads
+0579.637 (0) finding files: 2015: adding to list (1)
+0579.638 (0) finding files: wpallimport: adding to list (2)
+0579.640 (0) Beginning creation of dump of uploads (split every: 500 Mb)
+0579.743 (0) Total entities for the zip file: 10 directories, 161 files (0 skipped as non-modified), 64.7 Mb
+0579.750 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 Mb added on this batch (32.1 Mb, 161 files batched, 77 (77) added so far); re-opening (prior size: 0 Kb)
+0580.795 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-uploads.zip.tmp: size is now: 32.10 Mb
+0580.804 (0) A useful amount of data was added after this amount of zip processing: 2 s (normalised: 1.6 s, rate: 16219.6 Kb/s)
+0580.808 (0) Performance is good - will increase the amount of data we attempt to batch (time=2.02603411674, normalised_time=1.57833957502, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=99653080)
+0580.814 (0) Zip: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-uploads.zip.tmp: 100 files added (on-disk size: 32879.1 Kb)
+0585.792 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-uploads.zip.tmp: size is now: 64.80 Mb
+0586.482 (0) Created uploads zip (0) - 66311 Kb in 6.8 s (9696.6 Kb/s) (SHA1 checksum: 2b61fdeeacfdd8e8ec24f2bc19e3faf22f928583)
+0586.486 (0) Beginning backup of other directories found in the content directory (index: 0)
+0586.489 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql
+0586.491 (0) Looking for candidates to back up in: /Users/surgemedia/Documents/MAMP/PinnacleProperties/wp-content
+0586.492 (0) finding files: index.php: adding to list (1)
+0586.494 (0) finding files: plugins: skipping: this is the plugins directory
+0586.496 (0) finding files: themes: skipping: this is the themes directory
+0586.497 (0) finding files: updraft: skipping: this is the updraft directory
+0586.499 (0) finding files: upgrade: skipping: excluded by options
+0586.500 (0) finding files: uploads: skipping: this is the uploads directory
+0586.506 (0) Total entities for the zip file: 0 directories, 1 files (0 skipped as non-modified), 0 Mb
+0586.614 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-others.zip.tmp: size is now: 0.00 Mb
+0586.625 (0) Created others zip (0) - 0.2 Kb in 0.1 s (1.6 Kb/s) (SHA1 checksum: ca3c755e45e4450210b5076830dd6c63f49c0089)
+0586.634 (0) Saving backup status to database (elements: 8)
+0586.640 (0) Beginning creation of database dump (WordPress DB)
+0586.818 (0) Table JqXxVKTd8u_options: Total expected rows (approximate): 970
+0586.905 (0) Table JqXxVKTd8u_options: Total rows added: 225 in 0.09 seconds
+0586.911 (0) Table JqXxVKTd8u_options: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_options.table.gz - 120.5 Kb)
+0586.920 (0) Table JqXxVKTd8u_users: Total expected rows (approximate): 1
+0586.926 (0) Table JqXxVKTd8u_users: Total rows added: 1 in 0.00 seconds
+0586.928 (0) Table JqXxVKTd8u_users: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_users.table.gz - 0.6 Kb)
+0586.973 (0) Table JqXxVKTd8u_usermeta: Total expected rows (approximate): 51
+0586.979 (0) Table JqXxVKTd8u_usermeta: Total rows added: 51 in 0.00 seconds
+0586.988 (0) Table JqXxVKTd8u_usermeta: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_usermeta.table.gz - 2.1 Kb)
+0586.995 (0) Table JqXxVKTd8u_commentmeta: Total expected rows (approximate): 0
+0586.998 (0) Table JqXxVKTd8u_commentmeta: Total rows added: 0 in 0.00 seconds
+0587.001 (0) Table JqXxVKTd8u_commentmeta: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_commentmeta.table.gz - 0.4 Kb)
+0587.009 (0) Table JqXxVKTd8u_comments: Total expected rows (approximate): 1
+0587.014 (0) Table JqXxVKTd8u_comments: Total rows added: 1 in 0.00 seconds
+0587.017 (0) Table JqXxVKTd8u_comments: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_comments.table.gz - 0.7 Kb)
+0587.024 (0) Table JqXxVKTd8u_links: Total expected rows (approximate): 0
+0587.028 (0) Table JqXxVKTd8u_links: Total rows added: 0 in 0.00 seconds
+0587.030 (0) Table JqXxVKTd8u_links: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_links.table.gz - 0.4 Kb)
+0587.040 (0) Table JqXxVKTd8u_postmeta: Total expected rows (approximate): 520
+0587.094 (0) Table JqXxVKTd8u_postmeta: Total rows added: 865 in 0.05 seconds
+0587.098 (0) Table JqXxVKTd8u_postmeta: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_postmeta.table.gz - 9.1 Kb)
+0587.106 (0) Table JqXxVKTd8u_posts: Total expected rows (approximate): 128
+0587.159 (0) Table JqXxVKTd8u_posts: Total rows added: 153 in 0.05 seconds
+0587.164 (0) Table JqXxVKTd8u_posts: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_posts.table.gz - 12.5 Kb)
+0587.170 (0) Table JqXxVKTd8u_term_relationships: Total expected rows (approximate): 18
+0587.174 (0) Table JqXxVKTd8u_term_relationships: Total rows added: 18 in 0.00 seconds
+0587.175 (0) Table JqXxVKTd8u_term_relationships: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_term_relationships.table.gz - 0.4 Kb)
+0587.181 (0) Table JqXxVKTd8u_term_taxonomy: Total expected rows (approximate): 5
+0587.186 (0) Table JqXxVKTd8u_term_taxonomy: Total rows added: 5 in 0.00 seconds
+0587.187 (0) Table JqXxVKTd8u_term_taxonomy: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_term_taxonomy.table.gz - 0.5 Kb)
+0587.193 (0) Table JqXxVKTd8u_termmeta: Total expected rows (approximate): 0
+0587.196 (0) Table JqXxVKTd8u_termmeta: Total rows added: 0 in 0.00 seconds
+0587.197 (0) Table JqXxVKTd8u_termmeta: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_termmeta.table.gz - 0.4 Kb)
+0587.203 (0) Table JqXxVKTd8u_terms: Total expected rows (approximate): 5
+0587.206 (0) Table JqXxVKTd8u_terms: Total rows added: 5 in 0.00 seconds
+0587.208 (0) Table JqXxVKTd8u_terms: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_terms.table.gz - 0.5 Kb)
+0587.216 (0) Table JqXxVKTd8u_gf_addon_feed: Total expected rows (approximate): 0
+0587.219 (0) Table JqXxVKTd8u_gf_addon_feed: Total rows added: 0 in 0.00 seconds
+0587.220 (0) Table JqXxVKTd8u_gf_addon_feed: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_gf_addon_feed.table.gz - 0.4 Kb)
+0587.226 (0) Table JqXxVKTd8u_pmxi_files: Total expected rows (approximate): 0
+0587.229 (0) Table JqXxVKTd8u_pmxi_files: Total rows added: 0 in 0.00 seconds
+0587.230 (0) Table JqXxVKTd8u_pmxi_files: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_pmxi_files.table.gz - 0.4 Kb)
+0587.236 (0) Table JqXxVKTd8u_pmxi_history: Total expected rows (approximate): 0
+0587.240 (0) Table JqXxVKTd8u_pmxi_history: Total rows added: 0 in 0.00 seconds
+0587.244 (0) Table JqXxVKTd8u_pmxi_history: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_pmxi_history.table.gz - 0.4 Kb)
+0587.251 (0) Table JqXxVKTd8u_pmxi_imports: Total expected rows (approximate): 0
+0587.257 (0) Table JqXxVKTd8u_pmxi_imports: Total rows added: 0 in 0.00 seconds
+0587.259 (0) Table JqXxVKTd8u_pmxi_imports: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_pmxi_imports.table.gz - 0.6 Kb)
+0587.267 (0) Table JqXxVKTd8u_pmxi_posts: Total expected rows (approximate): 0
+0587.272 (0) Table JqXxVKTd8u_pmxi_posts: Total rows added: 0 in 0.00 seconds
+0587.275 (0) Table JqXxVKTd8u_pmxi_posts: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_pmxi_posts.table.gz - 0.3 Kb)
+0587.284 (0) Table JqXxVKTd8u_pmxi_templates: Total expected rows (approximate): 0
+0587.289 (0) Table JqXxVKTd8u_pmxi_templates: Total rows added: 0 in 0.00 seconds
+0587.291 (0) Table JqXxVKTd8u_pmxi_templates: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_pmxi_templates.table.gz - 0.4 Kb)
+0587.298 (0) Table JqXxVKTd8u_rg_form: Total expected rows (approximate): 4
+0587.302 (0) Table JqXxVKTd8u_rg_form: Total rows added: 4 in 0.00 seconds
+0587.304 (0) Table JqXxVKTd8u_rg_form: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_form.table.gz - 0.5 Kb)
+0587.311 (0) Table JqXxVKTd8u_rg_form_meta: Total expected rows (approximate): 4
+0587.315 (0) Table JqXxVKTd8u_rg_form_meta: Total rows added: 4 in 0.00 seconds
+0587.317 (0) Table JqXxVKTd8u_rg_form_meta: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_form_meta.table.gz - 1.8 Kb)
+0587.323 (0) Table JqXxVKTd8u_rg_form_view: Total expected rows (approximate): 77
+0587.331 (0) Table JqXxVKTd8u_rg_form_view: Total rows added: 77 in 0.01 seconds
+0587.333 (0) Table JqXxVKTd8u_rg_form_view: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_form_view.table.gz - 1.1 Kb)
+0587.339 (0) Table JqXxVKTd8u_rg_incomplete_submissions: Total expected rows (approximate): 0
+0587.342 (0) Table JqXxVKTd8u_rg_incomplete_submissions: Total rows added: 0 in 0.00 seconds
+0587.345 (0) Table JqXxVKTd8u_rg_incomplete_submissions: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_incomplete_submissions.table.gz - 0.4 Kb)
+0587.351 (0) Table JqXxVKTd8u_rg_lead: Total expected rows (approximate): 0
+0587.355 (0) Table JqXxVKTd8u_rg_lead: Total rows added: 0 in 0.00 seconds
+0587.356 (0) Table JqXxVKTd8u_rg_lead: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_lead.table.gz - 0.5 Kb)
+0587.362 (0) Table JqXxVKTd8u_rg_lead_detail: Total expected rows (approximate): 0
+0587.365 (0) Table JqXxVKTd8u_rg_lead_detail: Total rows added: 0 in 0.00 seconds
+0587.367 (0) Table JqXxVKTd8u_rg_lead_detail: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_lead_detail.table.gz - 0.4 Kb)
+0587.374 (0) Table JqXxVKTd8u_rg_lead_detail_long: Total expected rows (approximate): 0
+0587.376 (0) Table JqXxVKTd8u_rg_lead_detail_long: Total rows added: 0 in 0.00 seconds
+0587.378 (0) Table JqXxVKTd8u_rg_lead_detail_long: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_lead_detail_long.table.gz - 0.3 Kb)
+0587.386 (0) Table JqXxVKTd8u_rg_lead_meta: Total expected rows (approximate): 0
+0587.389 (0) Table JqXxVKTd8u_rg_lead_meta: Total rows added: 0 in 0.00 seconds
+0587.391 (0) Table JqXxVKTd8u_rg_lead_meta: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_lead_meta.table.gz - 0.4 Kb)
+0587.399 (0) Table JqXxVKTd8u_rg_lead_notes: Total expected rows (approximate): 0
+0587.405 (0) Table JqXxVKTd8u_rg_lead_notes: Total rows added: 0 in 0.00 seconds
+0587.407 (0) Table JqXxVKTd8u_rg_lead_notes: finishing file (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_lead_notes.table.gz - 0.4 Kb)
+0587.415 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_options.table.gz (1/27): adding to final database dump
+0587.513 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_users.table.gz (2/27): adding to final database dump
+0587.518 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_usermeta.table.gz (3/27): adding to final database dump
+0587.523 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_commentmeta.table.gz (4/27): adding to final database dump
+0587.527 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_comments.table.gz (5/27): adding to final database dump
+0587.529 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_links.table.gz (6/27): adding to final database dump
+0587.531 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_postmeta.table.gz (7/27): adding to final database dump
+0587.547 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_posts.table.gz (8/27): adding to final database dump
+0587.561 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_term_relationships.table.gz (9/27): adding to final database dump
+0587.563 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_term_taxonomy.table.gz (10/27): adding to final database dump
+0587.565 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_termmeta.table.gz (11/27): adding to final database dump
+0587.568 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_terms.table.gz (12/27): adding to final database dump
+0587.570 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_gf_addon_feed.table.gz (13/27): adding to final database dump
+0587.572 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_pmxi_files.table.gz (14/27): adding to final database dump
+0587.574 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_pmxi_history.table.gz (15/27): adding to final database dump
+0587.577 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_pmxi_imports.table.gz (16/27): adding to final database dump
+0587.579 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_pmxi_posts.table.gz (17/27): adding to final database dump
+0587.581 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_pmxi_templates.table.gz (18/27): adding to final database dump
+0587.584 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_form.table.gz (19/27): adding to final database dump
+0587.587 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_form_meta.table.gz (20/27): adding to final database dump
+0587.590 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_form_view.table.gz (21/27): adding to final database dump
+0587.593 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_incomplete_submissions.table.gz (22/27): adding to final database dump
+0587.595 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_lead.table.gz (23/27): adding to final database dump
+0587.597 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_lead_detail.table.gz (24/27): adding to final database dump
+0587.599 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_lead_detail_long.table.gz (25/27): adding to final database dump
+0587.602 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_lead_meta.table.gz (26/27): adding to final database dump
+0587.604 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db-table-JqXxVKTd8u_rg_lead_notes.table.gz (27/27): adding to final database dump
+0587.605 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db.gz: finished writing out complete database file (128 Kb)
+0587.618 (0) Total database tables backed up: 27 (backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db.gz, size: 152914, checksum (SHA1): 7a7a8a9a7b4dfbec3a521c5fce6df796ed01bbd3)
+0587.622 (0) Saving backup history
+0587.630 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0587.632 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0587.634 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0587.635 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-others.zip: others: This file has not yet been successfully uploaded: will queue
+0587.637 (0) backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db.gz: db: This file has not yet been successfully uploaded: will queue
+0587.642 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0587.648 (0) Cloud backup selection (1/1): none (last)
+0587.665 (0) No remote despatch: user chose no remote backup service
+0587.671 (0) Recording as successfully uploaded: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-plugins.zip (8d79edb2a533488582eb452a4c6501a0)
+0587.684 (0) Recording as successfully uploaded: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-themes.zip (bb6ab1cd11e001fd3f5333241c833db6)
+0587.692 (0) Recording as successfully uploaded: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-uploads.zip (b87f09c0d901394b3054a50e2248d08f)
+0587.700 (0) Recording as successfully uploaded: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-others.zip (8b8b3b571e5fa623dcca965d0f539998)
+0587.709 (0) Recording as successfully uploaded: backup_2015-12-11-0259_Pinnacle_Properties_4fb8c8056278-db.gz (0240d9c7241579181ce958f6e8d26d44)
+0587.721 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0587.723 (0) Number of backup sets in history: 1
+0587.725 (0) Examining backup set with datestamp: 1449802744 (Dec 11 2015 02:59:04)
+0587.726 (0) 1449802744: this backup set remains non-empty (1/1); will retain in history
+0587.727 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0587.731 (0) Resume backup (4fb8c8056278, 0): finish run
+0587.735 (0) Decremented the semaphore (fd) by 1
+0587.737 (0) Semaphore (fd) unlocked
+0587.738 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0587.743 (0) No email will/can be sent - the user has not configured an email address.
+0587.744 (0) The backup apparently succeeded and is now complete

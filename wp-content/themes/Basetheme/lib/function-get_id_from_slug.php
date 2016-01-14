@@ -7,3 +7,4 @@ function get_id_from_slug($page_slug) {
         return null;
     }
 }
+

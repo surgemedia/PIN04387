@@ -1,0 +1,53 @@
+/*===================================
+=            Career Form            =
+===================================*/
+.general-content{
+	.gform_wrapper{
+		form{
+			.gform_body{
+				li{
+					margin-top: 2em;
+					input[type="text"]{
+						border: 4px solid $grey-dark;
+    				height: 43px;
+					}
+					textarea{
+						border: 4px solid $grey-dark;
+					}
+				}
+				li.show-label{
+					.gfield_label{
+						display: block;
+						padding-left: 1em;
+					}
+				}
+				.no-label{
+					.gfield_label{
+						display: none;
+					}
+				}
+				.gfield_label{
+					padding-left: 2em;
+					color: $brand-light;
+				}
+				.half-size{
+					display: inline-block;
+					width: 97.5%;
+					margin-right: 2.5%;
+					input[type="text"]{
+						width:100%;
+					}
+				}
+
+			}
+			.gform_footer{
+				text-align: right;
+				.gform_button{
+						margin-right: 2.5%;
+						// padding: 1em 6em;
+						border:none;
+				}
+			}
+		}
+	}
+}
