@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Property Search Template
+* Template Name: Rental Property Search Template
 */
 ?>
 <?php
@@ -32,11 +32,8 @@ $args = array(
     $terms = get_terms($taxonomies, $args);
 ?>
 <script>
-    if (document.referrer && document.referrer!=""){
-        console.log(document.referrer);   
-    }   
     var saleType = "current";
-    var property_type = "property";
+    var property_type = "rental";
 
 </script>
 <div class="search-header row">

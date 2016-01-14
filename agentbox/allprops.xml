@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertyList SYSTEM "http://reaxml.realestate.com.au/propertyList.dtd">
+<propertyList date="2009-01-01-12:30:00" username="xmluser" password="xmlpassword">
+	<!-- Current Listing -->
+	<rental modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>ABCD1234</uniqueID>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+			<twitterURL>http://www.twitter.com/#!/JoeAtSomeDomain</twitterURL>
+			<facebookURL>http://www.facebook.com/pages/SomeDomain</facebookURL>
+			<linkedInURL> http://au.linkedin.com/pub/john-doe/37/599/39a</linkedInURL>
+		</listingAgent>
+		<dateAvailable>2009-01-26-12:30:00</dateAvailable>
+		<rent period="week">350</rent>
+        <newConstruction>true</newConstruction>
+		<bond>350</bond>
+		<address display="yes">
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<category name="House"/>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Don't pass up an opportunity like this! First to inspect will buy! Close to local amenities and schools. Features lavishly appointed bathrooms, modern kitchen, rustic outhouse.Don't pass up an opportunity like this! First to inspect will buy! Close to local amenities and schools. Features lavishly appointed bathrooms, modern kitchen, rustic outhouse.</description>
+    <allowances>
+        <petFriendly>1</petFriendly>
+        <smoker>1</smoker>
+        <furnished>1</furnished>
+    </allowances>
+		<features>
+			<bedrooms>4</bedrooms>
+			<bathrooms>2</bathrooms>
+			<ensuite>2</ensuite>
+			<garages>3</garages>
+			<carports>3</carports>
+      <remoteGarage>yes</remoteGarage>
+      <secureParking>yes</secureParking>
+			<airConditioning>1</airConditioning>
+			<alarmSystem>1</alarmSystem>
+			<vacuumSystem>no</vacuumSystem>
+			<intercom>no</intercom>
+			<pool type="inground">yes</pool>
+			<spa type="inground">no</spa>
+			<tennisCourt>yes</tennisCourt>
+      <balcony>yes</balcony>
+      <deck>yes</deck>
+      <courtyard>yes</courtyard>
+      <outdoorEnt>yes</outdoorEnt>
+      <shed>yes</shed>
+      <fullyFenced>yes</fullyFenced>
+			<openFirePlace>1</openFirePlace>
+			<heating type="other"/>
+                        <hotWaterService type="gas"/>
+			<otherFeatures>balcony, courtyard</otherFeatures>
+		</features>
+		<landDetails>
+			<area unit="square">60</area>
+			<frontage unit="meter">15</frontage>
+			<depth unit="meter" side="rear">40</depth>
+			<crossOver value="left"/>
+		</landDetails>
+		<buildingDetails>
+			<area unit="square">25</area>
+			<newlyBuilt value="yes"/>
+                        <energyRating>4.5</energyRating>
+		</buildingDetails>
+                <inspectionTimes>
+			<inspection>21-Jan-2009 11:00am to 1:00pm</inspection>
+			<inspection>22-Jan-2009 11:00am to 1:00pm</inspection>
+		</inspectionTimes>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+	</rental>
+	<!-- Leased Listing -->
+	<rental modTime="2009-01-01-12:30:00" status="leased">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>ABCD12345</uniqueID>
+	</rental>
+	<!-- Deleted Listing -->
+	<rental modTime="2009-01-01-12:30:00" status="withdrawn">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>ABCD123456</uniqueID>
+	</rental>
+<residential modTime="2016-01-12-09:48:14" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0001</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage value="no"/>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="no">120000</price>
+    <priceView/>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Pinnacle Properties Queensland Pty LTD</name>
+      <telephone type="BH">07 3279 0118</telephone>
+      <email>sales@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>1</streetNumber>
+      <street>Surge Media Test Road</street>
+      <suburb display="yes">Brisbane City</suburb>
+      <state>QLD</state>
+      <postcode>4000</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>1</bedrooms>
+      <bathrooms>1</bathrooms>
+      <garages>0</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>Main Headline</headline>
+    <description>Property Description</description>
+    <inspectionTimes/>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-18-10:12:04" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0001-145039752464478450-rsd.jpg" format="jpg"/>
+      <img id="a"/>
+      <img id="b"/>
+      <img id="c"/>
+      <img id="d"/>
+      <img id="e"/>
+      <img id="f"/>
+      <img id="g"/>
+      <img id="h"/>
+      <img id="i"/>
+      <img id="j"/>
+      <img id="k"/>
+      <img id="l"/>
+      <img id="n"/>
+      <img id="o"/>
+      <img id="p"/>
+      <img id="q"/>
+      <img id="r"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+    </objects>
+  </residential><residential modTime="2016-01-12-10:19:23" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0002</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage value="no"/>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="yes">350000</price>
+    <priceView>$385,000.00</priceView>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <landDetails>
+      <area unit="squareMeter">191</area>
+    </landDetails>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Von  Barnes</name>
+      <telephone type="mobile">0409481594</telephone>
+      <email>von.barnes@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>28</streetNumber>
+      <street>Park Edge Drive</street>
+      <suburb display="yes">Springfield Lakes</suburb>
+      <state>QLD</state>
+      <postcode>4300</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>4</bedrooms>
+      <bathrooms>2</bathrooms>
+      <garages>2</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>INVEST...LIVE...BREATHE</headline>
+    <description>This gorgeous 6 year old plantation built terrace house screams lifestyle. With no body corporate and stunning parkland views this home is ideal for new homeowners, an investor or anyone downsizing who still wants space.
+
+Very generously designed over two levels, the internal layout offers four spacious bedrooms. They provide a multitude of features for comfortable living including built-in robes, ceiling fans and window treatments. With external access from two of these bedrooms, it only enhances the layout.
+
+Upstairs, the long and spacious open plan kitchen/living/dining, with stylish timber flooring, also leads out to the external building, with views overlooking Edge Park. A split system reverse cycle air-conditioning keeps this home comfortable all year around. The functional galley style kitchen has a  900mm dual fuel cooker, range hood and Bosch dishwasher.
+
+The modern, easily maintained bathrooms on each level cater for two bedrooms each. Upstairs on the living level the toilet is separate for ease when entertaining guests. Downstairs the modern bathroom features a bath for the ultimate relaxation.
+
+The lower level also features an internal laundry with extra storage, tandem lockup garage with remote access, 3000L water tank and security screens throughout. The beautifully landscaped low maintenance lawn and gardens add a homely touch, without requiring your full attention every weekend.
+
+There are no body corporate fees as this home
+ is on its own title, with prime park side location and everything of need is within walking distance or a short drive. The local buses and schools are within walking distance, with Orion Shopping Centre being a 4 minute drive. This home is a must for any property portfolio.</description>
+    <inspectionTimes>
+      <inspection>16-Jan-2016 01:00PM to 01:30PM</inspection>
+    </inspectionTimes>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711785403500-rsd.jpg" format="jpg"/>
+      <img id="a" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711421401500-rsd.jpg" format="jpg"/>
+      <img id="b" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711215577521-rsd.jpg" format="jpg"/>
+      <img id="c" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711255153478-rsd.jpg" format="jpg"/>
+      <img id="d" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711394366001-rsd.jpg" format="jpg"/>
+      <img id="e" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711494902995-rsd.jpg" format="jpg"/>
+      <img id="f" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711524462401-rsd.jpg" format="jpg"/>
+      <img id="g" modTime="2015-12-24-16:05:15" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711567136374-rsd.jpg" format="jpg"/>
+      <img id="h" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711618070983-rsd.jpg" format="jpg"/>
+      <img id="i" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711628130991-rsd.jpg" format="jpg"/>
+      <img id="j" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711101077546-rsd.jpg" format="jpg"/>
+      <img id="k" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711182356081-rsd.jpg" format="jpg"/>
+      <img id="l" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711231336986-rsd.jpg" format="jpg"/>
+      <img id="n" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711498011227-rsd.jpg" format="jpg"/>
+      <img id="o" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711632860037-rsd.jpg" format="jpg"/>
+      <img id="p" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711692481575-rsd.jpg" format="jpg"/>
+      <img id="q" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711742130914-rsd.jpg" format="jpg"/>
+      <img id="r" modTime="2015-12-24-16:05:18" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711892861605-rsd.jpg" format="jpg"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+      <floorplan id="1" modTime="2015-12-24-16:15:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/fp-1-1P0002-145093771478396761-rsz.jpg" format="jpg"/>
+      <floorplan id="2"/>
+    </objects>
+  </residential><residential modTime="2016-01-12-09:29:42" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0001</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage value="no"/>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="no">120000</price>
+    <priceView/>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Pinnacle Properties Queensland Pty LTD</name>
+      <telephone type="BH">07 3279 0118</telephone>
+      <email>sales@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>1</streetNumber>
+      <street>Surge Media Test Road</street>
+      <suburb display="yes">Brisbane City</suburb>
+      <state>QLD</state>
+      <postcode>4000</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>1</bedrooms>
+      <bathrooms>1</bathrooms>
+      <garages>0</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>Main Headline</headline>
+    <description>Property Description</description>
+    <inspectionTimes/>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-18-10:12:04" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0001-145039752464478450-rsd.jpg" format="jpg"/>
+      <img id="a"/>
+      <img id="b"/>
+      <img id="c"/>
+      <img id="d"/>
+      <img id="e"/>
+      <img id="f"/>
+      <img id="g"/>
+      <img id="h"/>
+      <img id="i"/>
+      <img id="j"/>
+      <img id="k"/>
+      <img id="l"/>
+      <img id="n"/>
+      <img id="o"/>
+      <img id="p"/>
+      <img id="q"/>
+      <img id="r"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+    </objects>
+  </residential><residential modTime="2016-01-12-09:32:30" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0002</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage value="no"/>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="yes">350000</price>
+    <priceView>$385,000.00</priceView>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <landDetails>
+      <area unit="squareMeter">191</area>
+    </landDetails>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Von  Barnes</name>
+      <telephone type="mobile">0409481594</telephone>
+      <email>von.barnes@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>28</streetNumber>
+      <street>Park Edge Drive</street>
+      <suburb display="yes">Springfield Lakes</suburb>
+      <state>QLD</state>
+      <postcode>4300</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>4</bedrooms>
+      <bathrooms>2</bathrooms>
+      <garages>2</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>INVEST...LIVE...BREATHE</headline>
+    <description>This gorgeous 6 year old plantation built terrace house screams lifestyle. With no body corporate and stunning parkland views this home is ideal for new homeowners, an investor or anyone downsizing who still wants space.
+
+Very generously designed over two levels, the internal layout offers four spacious bedrooms. They provide a multitude of features for comfortable living including built-in robes, ceiling fans and window treatments. With external access from two of these bedrooms, it only enhances the layout.
+
+Upstairs, the long and spacious open plan kitchen/living/dining, with stylish timber flooring, also leads out to the external building, with views overlooking Edge Park. A split system reverse cycle air-conditioning keeps this home comfortable all year around. The functional galley style kitchen has a  900mm dual fuel cooker, range hood and Bosch dishwasher.
+
+The modern, easily maintained bathrooms on each level cater for two bedrooms each. Upstairs on the living level the toilet is separate for ease when entertaining guests. Downstairs the modern bathroom features a bath for the ultimate relaxation.
+
+The lower level also features an internal laundry with extra storage, tandem lockup garage with remote access, 3000L water tank and security screens throughout. The beautifully landscaped low maintenance lawn and gardens add a homely touch, without requiring your full attention every weekend.
+
+There are no body corporate fees as this home
+ is on its own title, with prime park side location and everything of need is within walking distance or a short drive. The local buses and schools are within walking distance, with Orion Shopping Centre being a 4 minute drive. This home is a must for any property portfolio.</description>
+    <inspectionTimes>
+      <inspection>16-Jan-2016 01:00PM to 02:00PM</inspection>
+    </inspectionTimes>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711785403500-rsd.jpg" format="jpg"/>
+      <img id="a" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711421401500-rsd.jpg" format="jpg"/>
+      <img id="b" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711215577521-rsd.jpg" format="jpg"/>
+      <img id="c" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711255153478-rsd.jpg" format="jpg"/>
+      <img id="d" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711394366001-rsd.jpg" format="jpg"/>
+      <img id="e" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711494902995-rsd.jpg" format="jpg"/>
+      <img id="f" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711524462401-rsd.jpg" format="jpg"/>
+      <img id="g" modTime="2015-12-24-16:05:15" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711567136374-rsd.jpg" format="jpg"/>
+      <img id="h" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711618070983-rsd.jpg" format="jpg"/>
+      <img id="i" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711628130991-rsd.jpg" format="jpg"/>
+      <img id="j" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711101077546-rsd.jpg" format="jpg"/>
+      <img id="k" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711182356081-rsd.jpg" format="jpg"/>
+      <img id="l" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711231336986-rsd.jpg" format="jpg"/>
+      <img id="n" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711498011227-rsd.jpg" format="jpg"/>
+      <img id="o" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711632860037-rsd.jpg" format="jpg"/>
+      <img id="p" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711692481575-rsd.jpg" format="jpg"/>
+      <img id="q" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711742130914-rsd.jpg" format="jpg"/>
+      <img id="r" modTime="2015-12-24-16:05:18" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711892861605-rsd.jpg" format="jpg"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+      <floorplan id="1" modTime="2015-12-24-16:15:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/fp-1-1P0002-145093771478396761-rsz.jpg" format="jpg"/>
+      <floorplan id="2"/>
+    </objects>
+  </residential><residential modTime="2016-01-12-09:29:42" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0001</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage value="no"/>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="no">120000</price>
+    <priceView/>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Pinnacle Properties Queensland Pty LTD</name>
+      <telephone type="BH">07 3279 0118</telephone>
+      <email>sales@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>1</streetNumber>
+      <street>Surge Media Test Road</street>
+      <suburb display="yes">Brisbane City</suburb>
+      <state>QLD</state>
+      <postcode>4000</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>1</bedrooms>
+      <bathrooms>1</bathrooms>
+      <garages>0</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>Main Headline</headline>
+    <description>Property Description</description>
+    <inspectionTimes/>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-18-10:12:04" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0001-145039752464478450-rsd.jpg" format="jpg"/>
+      <img id="a"/>
+      <img id="b"/>
+      <img id="c"/>
+      <img id="d"/>
+      <img id="e"/>
+      <img id="f"/>
+      <img id="g"/>
+      <img id="h"/>
+      <img id="i"/>
+      <img id="j"/>
+      <img id="k"/>
+      <img id="l"/>
+      <img id="n"/>
+      <img id="o"/>
+      <img id="p"/>
+      <img id="q"/>
+      <img id="r"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+    </objects>
+  </residential><residential modTime="2016-01-11-15:09:34" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0002</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage value="no"/>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="yes">350000</price>
+    <priceView>$385,000.00</priceView>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <landDetails>
+      <area unit="squareMeter">191</area>
+    </landDetails>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Von  Barnes</name>
+      <telephone type="mobile">0409481594</telephone>
+      <email>von.barnes@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>28</streetNumber>
+      <street>Park Edge Drive</street>
+      <suburb display="yes">Springfield Lakes</suburb>
+      <state>QLD</state>
+      <postcode>4300</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>4</bedrooms>
+      <bathrooms>2</bathrooms>
+      <garages>2</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>INVEST...LIVE...BREATHE</headline>
+    <description>This gorgeous 6 year old plantation built terrace house screams lifestyle. With no body corporate and stunning parkland views this home is ideal for new homeowners, an investor or anyone downsizing who still wants space.
+
+Very generously designed over two levels, the internal layout offers four spacious bedrooms. They provide a multitude of features for comfortable living including built-in robes, ceiling fans and window treatments. With external access from two of these bedrooms, it only enhances the layout.
+
+Upstairs, the long and spacious open plan kitchen/living/dining, with stylish timber flooring, also leads out to the external building, with views overlooking Edge Park. A split system reverse cycle air-conditioning keeps this home comfortable all year around. The functional galley style kitchen has a  900mm dual fuel cooker, range hood and Bosch dishwasher.
+
+The modern, easily maintained bathrooms on each level cater for two bedrooms each. Upstairs on the living level the toilet is separate for ease when entertaining guests. Downstairs the modern bathroom features a bath for the ultimate relaxation.
+
+The lower level also features an internal laundry with extra storage, tandem lockup garage with remote access, 3000L water tank and security screens throughout. The beautifully landscaped low maintenance lawn and gardens add a homely touch, without requiring your full attention every weekend.
+
+There are no body corporate fees as this home
+ is on its own title, with prime park side location and everything of need is within walking distance or a short drive. The local buses and schools are within walking distance, with Orion Shopping Centre being a 4 minute drive. This home is a must for any property portfolio.</description>
+    <inspectionTimes>
+      <inspection>16-Jan-2016 01:00PM to 02:00PM</inspection>
+    </inspectionTimes>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711785403500-rswf.jpg" format="jpg"/>
+      <img id="a" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711421401500-rswf.jpg" format="jpg"/>
+      <img id="b" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711215577521-rswf.jpg" format="jpg"/>
+      <img id="c" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711255153478-rswf.jpg" format="jpg"/>
+      <img id="d" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711394366001-rswf.jpg" format="jpg"/>
+      <img id="e" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711494902995-rswf.jpg" format="jpg"/>
+      <img id="f" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711524462401-rswf.jpg" format="jpg"/>
+      <img id="g" modTime="2015-12-24-16:05:15" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711567136374-rswf.jpg" format="jpg"/>
+      <img id="h" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711618070983-rswf.jpg" format="jpg"/>
+      <img id="i" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711628130991-rswf.jpg" format="jpg"/>
+      <img id="j" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711101077546-rswf.jpg" format="jpg"/>
+      <img id="k" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711182356081-rswf.jpg" format="jpg"/>
+      <img id="l" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711231336986-rswf.jpg" format="jpg"/>
+      <img id="n" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711498011227-rswf.jpg" format="jpg"/>
+      <img id="o" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711632860037-rswf.jpg" format="jpg"/>
+      <img id="p" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711692481575-rswf.jpg" format="jpg"/>
+      <img id="q" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711742130914-rswf.jpg" format="jpg"/>
+      <img id="r" modTime="2015-12-24-16:05:18" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711892861605-rswf.jpg" format="jpg"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+      <floorplan id="1" modTime="2015-12-24-16:15:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/fp-1-1P0002-145093771478396761-rsz.jpg" format="jpg"/>
+      <floorplan id="2"/>
+    </objects>
+  </residential><residential modTime="2016-01-11-09:14:30" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0002</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage>no</isHomeLandPackage>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="yes">350000</price>
+    <priceView>$385,000.00</priceView>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <landDetails>
+      <area unit="squareMeter">191</area>
+    </landDetails>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Von  Barnes</name>
+      <telephone type="mobile">0409481594</telephone>
+      <email>von.barnes@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>28</streetNumber>
+      <street>Park Edge Drive</street>
+      <suburb display="yes">Springfield Lakes</suburb>
+      <state>QLD</state>
+      <postcode>4300</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>4</bedrooms>
+      <bathrooms>2</bathrooms>
+      <garages>2</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>INVEST...LIVE...BREATHE</headline>
+    <description>This gorgeous 6 year old plantation built terrace house screams lifestyle. With no body corporate and stunning parkland views this home is ideal for new homeowners, an investor or anyone downsizing who still wants space.
+
+Very generously designed over two levels, the internal layout offers four spacious bedrooms. They provide a multitude of features for comfortable living including built-in robes, ceiling fans and window treatments. With external access from two of these bedrooms, it only enhances the layout.
+
+Upstairs, the long and spacious open plan kitchen/living/dining, with stylish timber flooring, also leads out to the external building, with views overlooking Edge Park. A split system reverse cycle air-conditioning keeps this home comfortable all year around. The functional galley style kitchen has a  900mm dual fuel cooker, range hood and Bosch dishwasher.
+
+The modern, easily maintained bathrooms on each level cater for two bedrooms each. Upstairs on the living level the toilet is separate for ease when entertaining guests. Downstairs the modern bathroom features a bath for the ultimate relaxation.
+
+The lower level also features an internal laundry with extra storage, tandem lockup garage with remote access, 3000L water tank and security screens throughout. The beautifully landscaped low maintenance lawn and gardens add a homely touch, without requiring your full attention every weekend.
+
+There are no body corporate fees as this home
+ is on its own title, with prime park side location and everything of need is within walking distance or a short drive. The local buses and schools are within walking distance, with Orion Shopping Centre being a 4 minute drive. This home is a must for any property portfolio.</description>
+    <inspectionTimes/>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711785403500-rswf.jpg" format="jpg"/>
+      <img id="a" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711421401500-rswf.jpg" format="jpg"/>
+      <img id="b" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711215577521-rswf.jpg" format="jpg"/>
+      <img id="c" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711255153478-rswf.jpg" format="jpg"/>
+      <img id="d" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711394366001-rswf.jpg" format="jpg"/>
+      <img id="e" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711494902995-rswf.jpg" format="jpg"/>
+      <img id="f" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711524462401-rswf.jpg" format="jpg"/>
+      <img id="g" modTime="2015-12-24-16:05:15" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711567136374-rswf.jpg" format="jpg"/>
+      <img id="h" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711618070983-rswf.jpg" format="jpg"/>
+      <img id="i" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711628130991-rswf.jpg" format="jpg"/>
+      <img id="j" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711101077546-rswf.jpg" format="jpg"/>
+      <img id="k" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711182356081-rswf.jpg" format="jpg"/>
+      <img id="l" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711231336986-rswf.jpg" format="jpg"/>
+      <img id="n" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711498011227-rswf.jpg" format="jpg"/>
+      <img id="o" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711632860037-rswf.jpg" format="jpg"/>
+      <img id="p" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711692481575-rswf.jpg" format="jpg"/>
+      <img id="q" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711742130914-rswf.jpg" format="jpg"/>
+      <img id="r" modTime="2015-12-24-16:05:18" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711892861605-rswf.jpg" format="jpg"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+      <floorplan id="1" modTime="2015-12-24-16:15:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/fp-1-1P0002-145093771478396761-rsz.jpg" format="jpg"/>
+      <floorplan id="2"/>
+    </objects>
+  </residential><residential modTime="2016-01-05-12:46:52" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0002</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage>no</isHomeLandPackage>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="yes">350000</price>
+    <priceView>$385,000.00</priceView>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <landDetails>
+      <area unit="squareMeter">191</area>
+    </landDetails>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Von  Barnes</name>
+      <telephone type="mobile">0409481594</telephone>
+      <email>von.barnes@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>28</streetNumber>
+      <street>Park Edge Drive</street>
+      <suburb display="yes">Springfield Lakes</suburb>
+      <state>QLD</state>
+      <postcode>4300</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>4</bedrooms>
+      <bathrooms>2</bathrooms>
+      <garages>2</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>INVEST...LIVE...BREATHE</headline>
+    <description>This gorgeous 6 year old plantation built terrace house screams lifestyle. With no body corporate and stunning parkland views this home is ideal for new homeowners, an investor or anyone downsizing who still wants space.
+
+Very generously designed over two levels, the internal layout offers four spacious bedrooms. They provide a multitude of features for comfortable living including built-in robes, ceiling fans and window treatments. With external access from two of these bedrooms, it only enhances the layout.
+
+Upstairs, the long and spacious open plan kitchen/living/dining, with stylish timber flooring, also leads out to the external building, with views overlooking Edge Park. A split system reverse cycle air-conditioning keeps this home comfortable all year around. The functional galley style kitchen has a  900mm dual fuel cooker, range hood and Bosch dishwasher.
+
+The modern, easily maintained bathrooms on each level cater for two bedrooms each. Upstairs on the living level the toilet is separate for ease when entertaining guests. Downstairs the modern bathroom features a bath for the ultimate relaxation.
+
+The lower level also features an internal laundry with extra storage, tandem lockup garage with remote access, 3000L water tank and security screens throughout. The beautifully landscaped low maintenance lawn and gardens add a homely touch, without requiring your full attention every weekend.
+
+There are no body corporate fees as this home
+ is on its own title, with prime park side location and everything of need is within walking distance or a short drive. The local buses and schools are within walking distance, with Orion Shopping Centre being a 4 minute drive. This home is a must for any property portfolio.</description>
+    <inspectionTimes/>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711785403500-rswf.jpg" format="jpg"/>
+      <img id="a" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711421401500-rswf.jpg" format="jpg"/>
+      <img id="b" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711215577521-rswf.jpg" format="jpg"/>
+      <img id="c" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711255153478-rswf.jpg" format="jpg"/>
+      <img id="d" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711394366001-rswf.jpg" format="jpg"/>
+      <img id="e" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711494902995-rswf.jpg" format="jpg"/>
+      <img id="f" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711524462401-rswf.jpg" format="jpg"/>
+      <img id="g" modTime="2015-12-24-16:05:15" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711567136374-rswf.jpg" format="jpg"/>
+      <img id="h" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711618070983-rswf.jpg" format="jpg"/>
+      <img id="i" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711628130991-rswf.jpg" format="jpg"/>
+      <img id="j" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711101077546-rswf.jpg" format="jpg"/>
+      <img id="k" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711182356081-rswf.jpg" format="jpg"/>
+      <img id="l" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711231336986-rswf.jpg" format="jpg"/>
+      <img id="n" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711498011227-rswf.jpg" format="jpg"/>
+      <img id="o" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711632860037-rswf.jpg" format="jpg"/>
+      <img id="p" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711692481575-rswf.jpg" format="jpg"/>
+      <img id="q" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711742130914-rswf.jpg" format="jpg"/>
+      <img id="r" modTime="2015-12-24-16:05:18" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711892861605-rswf.jpg" format="jpg"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+      <floorplan id="1" modTime="2015-12-24-16:15:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/fp-1-1P0002-145093771478396761-rsz.jpg" format="jpg"/>
+      <floorplan id="2"/>
+    </objects>
+  </residential><residential modTime="2015-12-24-16:35:05" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0002</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage>no</isHomeLandPackage>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="yes">350000</price>
+    <priceView>For Sale</priceView>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <landDetails>
+      <area unit="squareMeter">191</area>
+    </landDetails>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Von  Barnes</name>
+      <telephone type="mobile">0409481594</telephone>
+      <email>von.barnes@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>28</streetNumber>
+      <street>Park Edge Drive</street>
+      <suburb display="yes">Springfield Lakes</suburb>
+      <state>QLD</state>
+      <postcode>4300</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>4</bedrooms>
+      <bathrooms>2</bathrooms>
+      <garages>2</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>INVEST...LIVE...BREATHE</headline>
+    <description>This gorgeous 6 year old plantation built terrace house screams lifestyle. With no body corporate and stunning parkland views this home is ideal for new homeowners, an investor or anyone downsizing who still wants space.
+
+Very generously designed over two levels, the internal layout offers four spacious bedrooms. They provide a multitude of features for comfortable living including built-in robes, ceiling fans and window treatments. With external access from two of these bedrooms, it only enhances the layout.
+
+Upstairs, the long and spacious open plan kitchen/living/dining, with stylish timber flooring, also leads out to the external building, with views overlooking Edge Park. A split system reverse cycle air-conditioning keeps this home comfortable all year around. The functional galley style kitchen has a  900mm dual fuel cooker, range hood and Bosch dishwasher.
+
+The modern, easily maintained bathrooms on each level cater for two bedrooms each. Upstairs on the living level the toilet is separate for ease when entertaining guests. Downstairs the modern bathroom features a bath for the ultimate relaxation.
+
+The lower level also features an internal laundry with extra storage, tandem lockup garage with remote access, 3000L water tank and security screens throughout. The beautifully landscaped low maintenance lawn and gardens add a homely touch, without requiring your full attention every weekend.
+
+There are no body corporate fees as this home
+ is on its own title, with prime park side location and everything of need is within walking distance or a short drive. The local buses and schools are within walking distance, with Orion Shopping Centre being a 4 minute drive. This home is a must for any property portfolio.</description>
+    <inspectionTimes/>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711785403500-rswf.jpg" format="jpg"/>
+      <img id="a" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711421401500-rswf.jpg" format="jpg"/>
+      <img id="b" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711215577521-rswf.jpg" format="jpg"/>
+      <img id="c" modTime="2015-12-24-16:05:12" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711255153478-rswf.jpg" format="jpg"/>
+      <img id="d" modTime="2015-12-24-16:05:13" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711394366001-rswf.jpg" format="jpg"/>
+      <img id="e" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711494902995-rswf.jpg" format="jpg"/>
+      <img id="f" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711524462401-rswf.jpg" format="jpg"/>
+      <img id="g" modTime="2015-12-24-16:05:15" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711567136374-rswf.jpg" format="jpg"/>
+      <img id="h" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711618070983-rswf.jpg" format="jpg"/>
+      <img id="i" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711628130991-rswf.jpg" format="jpg"/>
+      <img id="j" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711101077546-rswf.jpg" format="jpg"/>
+      <img id="k" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711182356081-rswf.jpg" format="jpg"/>
+      <img id="l" modTime="2015-12-24-16:05:11" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711231336986-rswf.jpg" format="jpg"/>
+      <img id="n" modTime="2015-12-24-16:05:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711498011227-rswf.jpg" format="jpg"/>
+      <img id="o" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711632860037-rswf.jpg" format="jpg"/>
+      <img id="p" modTime="2015-12-24-16:05:16" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711692481575-rswf.jpg" format="jpg"/>
+      <img id="q" modTime="2015-12-24-16:05:17" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711742130914-rswf.jpg" format="jpg"/>
+      <img id="r" modTime="2015-12-24-16:05:18" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0002-145093711892861605-rswf.jpg" format="jpg"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+      <floorplan id="1" modTime="2015-12-24-16:15:14" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/fp-1-1P0002-145093771478396761-rsz.jpg" format="jpg"/>
+      <floorplan id="2"/>
+    </objects>
+  </residential><residential modTime="2015-12-18-10:20:03" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0001</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage>no</isHomeLandPackage>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="no">120000</price>
+    <priceView/>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Pinnacle Properties Queensland Pty LTD</name>
+      <telephone type="BH">07 3279 0118</telephone>
+      <email>sales@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>1</streetNumber>
+      <street>Surge Media Test Road</street>
+      <suburb display="yes">Brisbane City</suburb>
+      <state>QLD</state>
+      <postcode>4000</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>1</bedrooms>
+      <bathrooms>1</bathrooms>
+      <garages>0</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>Main Headline</headline>
+    <description>Property Description</description>
+    <inspectionTimes/>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-18-10:12:04" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0001-145039752464478450-rswf.jpg" format="jpg"/>
+      <img id="a"/>
+      <img id="b"/>
+      <img id="c"/>
+      <img id="d"/>
+      <img id="e"/>
+      <img id="f"/>
+      <img id="g"/>
+      <img id="h"/>
+      <img id="i"/>
+      <img id="j"/>
+      <img id="k"/>
+      <img id="l"/>
+      <img id="n"/>
+      <img id="o"/>
+      <img id="p"/>
+      <img id="q"/>
+      <img id="r"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+    </objects>
+  </residential><residential modTime="2015-12-18-10:20:03" status="current">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0001</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage>no</isHomeLandPackage>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="no">120000</price>
+    <priceView/>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Pinnacle Properties Queensland Pty LTD</name>
+      <telephone type="BH">07 3279 0118</telephone>
+      <email>sales@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>1</streetNumber>
+      <street>Surge Media Test Road</street>
+      <suburb display="yes">Brisbane City</suburb>
+      <state>QLD</state>
+      <postcode>4000</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>1</bedrooms>
+      <bathrooms>1</bathrooms>
+      <garages>0</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>Main Headline</headline>
+    <description>Property Description</description>
+    <inspectionTimes/>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-18-10:12:04" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0001-145039752464478450-rswf.jpg" format="jpg"/>
+      <img id="a"/>
+      <img id="b"/>
+      <img id="c"/>
+      <img id="d"/>
+      <img id="e"/>
+      <img id="f"/>
+      <img id="g"/>
+      <img id="h"/>
+      <img id="i"/>
+      <img id="j"/>
+      <img id="k"/>
+      <img id="l"/>
+      <img id="n"/>
+      <img id="o"/>
+      <img id="p"/>
+      <img id="q"/>
+      <img id="r"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+    </objects>
+  </residential><residential modTime="2015-12-18-10:12:55" status="offmarket">
+    <agentID>PP1524</agentID>
+    <uniqueID>1P0001</uniqueID>
+    <isMultiple/>
+    <isHomeLandPackage>no</isHomeLandPackage>
+    <tenancy>vacant</tenancy>
+    <authority value="exclusive"/>
+    <price display="no">120000</price>
+    <priceView/>
+    <underOffer value="no"/>
+    <exclusivity value="exclusive"/>
+    <outgoings/>
+    <buildingDetails>
+      <energyRating/>
+    </buildingDetails>
+    <listingAgent id="1">
+      <name>Pinnacle Properties Queensland Pty LTD</name>
+      <telephone type="BH">07 3279 0118</telephone>
+      <email>sales@pinnacleproperties.com.au</email>
+    </listingAgent>
+    <listingAgent id="2"/>
+    <listingAgent id="3"/>
+    <listingAgent id="4"/>
+    <address display="yes">
+      <subNumber/>
+      <lotNumber/>
+      <streetNumber>1</streetNumber>
+      <street>Surge Media Test Road</street>
+      <suburb display="yes">Brisbane City</suburb>
+      <state>QLD</state>
+      <postcode>4000</postcode>
+      <country>AUS</country>
+    </address>
+    <category name="House"/>
+    <features>
+      <openSpaces>0</openSpaces>
+      <bedrooms>1</bedrooms>
+      <bathrooms>1</bathrooms>
+      <garages>0</garages>
+      <carports>0</carports>
+      <airConditioning>0</airConditioning>
+      <builtInRobes>0</builtInRobes>
+      <alarmSystem>0</alarmSystem>
+      <tennisCourt>0</tennisCourt>
+      <intercom>0</intercom>
+      <openFirePlace>0</openFirePlace>
+      <vacuumSystem>0</vacuumSystem>
+      <ensuite>0</ensuite>
+      <toilet>0</toilet>
+    </features>
+    <headline>Main Headline</headline>
+    <description>Property Description</description>
+    <inspectionTimes/>
+    <externalLink href=""/>
+    <videoLink href=""/>
+    <objects>
+      <img id="m" modTime="2015-12-18-10:12:04" url="http://www.pinnaclepropertiesqld.agentboxcrm.com.au/lt-1-1P0001-145039752464478450-rswf.jpg" format="jpg"/>
+      <img id="a"/>
+      <img id="b"/>
+      <img id="c"/>
+      <img id="d"/>
+      <img id="e"/>
+      <img id="f"/>
+      <img id="g"/>
+      <img id="h"/>
+      <img id="i"/>
+      <img id="j"/>
+      <img id="k"/>
+      <img id="l"/>
+      <img id="n"/>
+      <img id="o"/>
+      <img id="p"/>
+      <img id="q"/>
+      <img id="r"/>
+      <img id="s"/>
+      <img id="t"/>
+      <img id="u"/>
+      <img id="v"/>
+      <img id="w"/>
+      <img id="x"/>
+      <img id="y"/>
+      <img id="z"/>
+    </objects>
+  </residential></propertyList>
