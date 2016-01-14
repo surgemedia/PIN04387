@@ -3,6 +3,7 @@
 * Template Name: Solded Properties Template
 */
 ?>
+<div class="row">
 <?php 
     $extraClass=get_field("jumbotron_size");
     $image=getFeaturedUrl(get_the_id());
@@ -17,13 +18,19 @@
 </script>
 <div class="tips-content">
         <div class="content">
+          <?php wp_reset_postdata(); ?>
             <?php the_content(); ?>
         </div>   
-</div>    
-    <!-- Defiant template -->
-    <script type="defiant/xsl-template">
+</div>
+     <!-- Defiant template -->
+
+<script type="defiant/xsl-template">
         <?php include(locate_template('templates/molecule-property.php')); ?>
-    </script>
+    </script>    
+
+    
     <!-- Output element -->
     <div id="output" class="row"></div>
+     <?php include(locate_template('templates/molecule-noResults.php' )); ?>
+    
     <?php wp_reset_postdata(); ?>

@@ -54,4 +54,5 @@ $args = array(
     </script>
     <!-- Output element -->
     <div id="output" class="row"></div>
+     <?php include(locate_template('templates/molecule-noResults.php' )); ?>
     <?php wp_reset_postdata(); ?>
