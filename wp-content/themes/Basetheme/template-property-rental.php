@@ -38,7 +38,9 @@ $args = array(
 </script>
 <div class="search-header row">
         <?php include(locate_template('templates/organism-searchbox.php')); ?>
-        <?php include(locate_template('templates/molecule-property-of-the-week.php')); ?>
+        
+        <?php $type="rental";
+              include(locate_template('templates/molecule-property-of-the-week.php')); ?>
     <!-- Defiant template -->
 </div>
     <script type="defiant/xsl-template">

@@ -34,15 +34,13 @@ $args = array(
 <script>
     var saleType = "current";
     var property_type = "property";
-   jQuery( document ).ready(function() {
-    
-    
-});
 
 </script>
 <div class="search-header row">
         <?php include(locate_template('templates/organism-searchbox.php')); ?>
-        <?php include(locate_template('templates/molecule-property-of-the-week.php')); ?>
+        
+        <?php $type="property";
+              include(locate_template('templates/molecule-property-of-the-week.php')); ?>
     <!-- Defiant template -->
 </div>
     <script type="defiant/xsl-template">

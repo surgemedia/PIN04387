@@ -30,7 +30,7 @@
     <?php while(the_repeater_field('side_blocks')): ?>
     	<?php 
     	 $image = get_sub_field('image');
-		 $image_url = aq_resize($image,960,730,true,true,true);
+		 $image_url = aq_resize($image,960,470,true,true,true);
 		  ?>
 		<div class="col-lg-6 side-block" style="background-image:url(<?php echo $image_url ?>);">
 			<span class=" overlay">
