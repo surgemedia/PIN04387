@@ -159,12 +159,15 @@
             
            } 
          button{
-          background-color: $secondary-primary;
-          color:#fff;
-          border:none;
-          width: 18%;
-          padding: .8em;
-          margin-left: 4.5%;
+            background-color: $secondary-primary;
+            color:#fff;
+            width: 23%;
+            height: 3.6em;
+            float: right;
+            margin-right: 4px;
+            border:none;
+            border-top: 4px $grey-light solid;
+            border-bottom: 4px $grey-light solid;
          }
 
      }
