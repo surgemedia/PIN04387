@@ -2,8 +2,9 @@
         <?php
                             // WP_Query arguments
                         $args = array (
-                            'post_type' => array( 'property' ),
+                            'post_type' => array( $type ),
                             'p' => get_field('featured_property')[0],
+                            'posts_per_page'         => '1',
                             );
                         $query = new WP_Query( $args );
                         
@@ -16,17 +17,17 @@
                             $the_property = get_post();
                             $the_property_meta = get_post_meta(get_the_id() );
         ?>
-        <div class="col-sm-6">
+        <div class="col-xs-12 col-sm-6">
             <?php
                                         $image = getFeaturedUrl(get_the_id());
-                                        $image_url = aq_resize($image,960,621,true,true,true);
+                                        $image_url = aq_resize($image,470,320,true,true,true);
             ?>
             <div class="img">
                 <img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>">
             </div>
             <h1 class="title"><strong>Property</strong> of the week</h1>
         </div>
-        <div class="col-sm-6 ">
+        <div class="col-xs-12 col-sm-6 ">
             <div class="property-obj">
                 <div class="suburb"><?php echo $the_property_meta['property_address_suburb'][0]; ?></div>
                 <div class="street">

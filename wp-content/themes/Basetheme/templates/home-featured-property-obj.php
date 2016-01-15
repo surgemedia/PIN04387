@@ -22,7 +22,7 @@ $the_property_meta = get_post_meta(get_the_id() );
                         <span><?php echo $the_property_meta['property_garage'][0]; ?></span>
                     </li>
             </ul>
-            <a href="" class="details">Details</a>
+            <a href="<?php the_permalink()?>" class="details">Details</a>
 
         </div>
     </div>
