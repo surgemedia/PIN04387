@@ -5,7 +5,7 @@
 ?>
 <?php while (have_posts()) : the_post(); ?>
 <section id="featured" class="row">
-	<div class="row">
+	<div class="">
 	<?php  
 				// WP_Query arguments
 			$args = array (
@@ -74,15 +74,23 @@
 <div class="pattern"></div>
 		<hgroup class="col-md-8 col-md-offset-2">
 			<h1 class="text-center col-lg-12"><span class="thin">About</span> Pinnacle Properties</h1> 
-		<?php if(strlen(get_the_content()) > 0){ ?>
-		<p><?php the_content(); ?></p>
-		<?php } else { 
-		$about_id = get_id_from_slug('about');
-		$content = get_post_page_content($about_id); ?>
-		<p> <?php truncate( $content ,50,'',true) ?>;</p> 
-		<?php } ?>
-		<a href="/about/">Read More</a>
+		
+		<div class="content-hidden">
+			<?php if(strlen(get_the_content()) > 0){ ?>
+			<p><?php the_content(); ?></p>
+			<?php } else { 
+			$about_id = get_id_from_slug('about');
+			$content = get_post_page_content($about_id); ?>
+			<p> <?php truncate( $content ,50,'',true) ?>;</p> 
+			<?php } ?>
+			<a href="#" class="" data-toggle="modal" data-target="#myModal">Read More</a>
+		</div>
+		<!-- Button trigger modal -->
+
 		</hgroup>
+
+
+
 <img class="bg-img" src="<?php echo $image_url ?>" alt="bg-ground" height="auto" width="100%">
 
 </section>
@@ -95,7 +103,7 @@
   <div class="headshot col-lg-6 text-center">
   	<?php
   	$image = get_field('headshot');
-	$image_url = aq_resize($image,960,730,true,true,true);
+	$image_url = aq_resize($image,700,770,true,true,false);
 		  ?>
     <img class="img-responsive"  src="<?php echo $image_url; ?>" alt="">
     <div class="hgroup">
@@ -121,5 +129,53 @@
   </div>
   </div>
 </section>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      	<div class="embed-container">
+					<?php
+
+							// get iframe HTML
+							$iframe = get_field('video');
+
+
+							// use preg_match to find iframe src
+							preg_match('/src="(.+?)"/', $iframe, $matches);
+							$src = $matches[1];
+
+
+							// add extra params to iframe src
+							$params = array(
+							    'controls'    => 0,
+							    'hd'        => 1,
+							    'autoplay'    => 1
+							);
+
+							$new_src = add_query_arg($params, $src);
+
+							$iframe = str_replace($src, $new_src, $iframe);
+
+
+							// add extra attributes to iframe html
+							$attributes = 'frameborder="0"';
+
+							$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+
+							// echo $iframe
+							echo $iframe;
+
+							?>
+				</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php endwhile; ?>

@@ -18,9 +18,10 @@
 	 <ul class="info"> 
     <?php for ($i=0; $i < count($footer_list); $i++) { ?>
       <li>
-          <?php echo $footer_list[$i]['label'];?> 
+          <span class="hidden-xs"> <?php echo $footer_list[$i]['label'];?></span>   
           <a href="<?php echo $footer_list[$i]['Clickable_link'];?>">
-            <?php echo $footer_list[$i]['value'];?>
+            <span class="hidden-xs"><?php echo $footer_list[$i]['value'];?></span>
+            <span class="visible-xs-block"> <?php echo $footer_list[$i]['label'];?></span>
           </a>
       </li>
       

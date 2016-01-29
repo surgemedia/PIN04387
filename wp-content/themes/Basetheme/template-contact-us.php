@@ -39,9 +39,10 @@
 			<ul class="info"> 
 	    	<?php for ($i=0; $i < count($footer_list); $i++) { ?>
 	      <li>
-	          <?php echo $footer_list[$i]['label'];?> 
-	          <a href="<?php echo $footer_list[$i]['Clickable_link'];?>">
-	            <?php echo $footer_list[$i]['value'];?>
+	          <span class="hidden-xs"><?php echo $footer_list[$i]['label'];?> </span>
+	          <a href="tel:<?php echo $footer_list[$i]['Clickable_link'];?>">
+	            <span class="hidden-xs"><?php echo $footer_list[$i]['value'];?></span>
+            <span class="visible-xs-block"> <?php echo $footer_list[$i]['label'];?></span>
 	          </a>
 	      </li>
 	      
@@ -78,7 +79,7 @@
 
 </div>
 
-	<div class="bg_grey visible-lg"> </div>
+	<!-- <div class="bg_grey visible-lg"> </div> -->
 	</div>
 	<div class="col-sm-6 col-md-3 col-md-pull-6 side">
 		<?php 
