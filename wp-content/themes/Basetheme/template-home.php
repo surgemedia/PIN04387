@@ -5,6 +5,45 @@
 ?>
 <script>
 	
+
+	/*===================================
+=            Modal Video            =
+===================================*/
+
+video = {
+  load : function(tag){
+    console.log("load video "+tag);
+    var id=jQuery("#"+tag).data("videocode");
+    console.log("Loading Video");
+    player = new YT.Player(tag, {
+          // height: '1000',
+          // width: '1500',
+          videoId: id,
+          events: {
+            // 'onReady': onPlayerReady,
+            // 'onStateChange': onPlayerStateChange
+          }
+        });
+  }
+  
+};
+ 
+function stopVideo() {
+       player.stopVideo();
+     }
+
+ function modalVideo(){
+    
+    jQuery('#myModal').on('hidden.bs.modal', function (e) {
+        stopVideo();
+       console.log("Stop Video");
+        
+      });
+  }
+jQuery(document).ready(function(){    
+video.load('player');
+modalVideo();
+});
 </script>
 <?php while (have_posts()) : the_post(); ?>
 <section id="featured" class="row">
@@ -74,28 +113,29 @@
 		 $image_url = aq_resize($image,1920,730,true,true,true);
  ?>
 <section id="main-content" class="row"  style="">
-<div class="pattern"></div>
-		<hgroup class="col-md-8 col-md-offset-2">
-			<h1 class="text-center col-lg-12"><span class="thin">About</span> Pinnacle Properties</h1> 
-		
-		<div class="content-hidden">
-			<?php if(strlen(get_the_content()) > 0){ ?>
-			<p><?php the_content(); ?></p>
-			<?php } else { 
-			$about_id = get_id_from_slug('about');
-			$content = get_post_page_content($about_id); ?>
-			<p> <?php truncate( $content ,50,'',true) ?>;</p> 
-			<?php } ?>
-			<a href="#" class="" data-toggle="modal" data-target="#myModal" onclick="video.load('player');">Read More</a>
-		</div>
-		<!-- Button trigger modal -->
+	<!-- <div class="bg-img" style="background-image:url('<?php echo $image_url ?>')"> -->
+		<div class="pattern"></div>
+				<hgroup class="col-md-8 col-md-offset-2">
+					<h1 class="text-center col-lg-12"><span class="thin">About</span> Pinnacle Properties</h1> 
+				
+				<div class="content-hidden">
+					<?php if(strlen(get_the_content()) > 0){ ?>
+					<p><?php the_content(); ?></p>
+					<?php } else { 
+					$about_id = get_id_from_slug('about');
+					$content = get_post_page_content($about_id); ?>
+					<p> <?php truncate( $content ,50,'',true) ?>;</p> 
+					<?php } ?>
+					<a href="#" class="" data-toggle="modal" data-target="#myModal" onclick="">View Video</a>
+				</div>
+				<!-- Button trigger modal -->
 
-		</hgroup>
+				</hgroup>
 
 
 
-<img class="bg-img" src="<?php echo $image_url ?>" alt="bg-ground" height="auto" width="100%">
-
+		<img class="bg-img" src="<?php echo $image_url ?>" alt="bg-ground" height="auto" width="100%">
+	<!-- </div> -->
 </section>
 
 
@@ -140,7 +180,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="stopVideo()"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="stopVideo()"><i class="icon-close" aria-hidden="true"></i></button>
       	
       		          <div class="embed-container">			
         <div id="player" data-videocode="<?php echo getYtCode(get_field('video')); ?>"></div>

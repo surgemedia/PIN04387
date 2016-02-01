@@ -38,11 +38,12 @@
 	
 			<ul class="info"> 
 	    	<?php for ($i=0; $i < count($footer_list); $i++) { ?>
-	      <li>
+	      <?php $hidden = ("Fax:"==$footer_list[$i]['label']) ? "hidden-xs no-padding" : "" ;?>
+	      <li class="<?php echo $hidden; ?>">
 	          <span class="hidden-xs"><?php echo $footer_list[$i]['label'];?> </span>
 	          <a href="tel:<?php echo $footer_list[$i]['Clickable_link'];?>">
 	            <span class="hidden-xs"><?php echo $footer_list[$i]['value'];?></span>
-            <span class="visible-xs-block"> <?php echo $footer_list[$i]['label'];?></span>
+            <span class="visible-xs-block"> <?php echo str_replace(":", "", $footer_list[$i]['label']);?></span>
 	          </a>
 	      </li>
 	      

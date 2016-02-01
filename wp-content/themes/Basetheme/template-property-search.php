@@ -51,6 +51,6 @@ $args = array(
         <?php include(locate_template('templates/molecule-property.php')); ?>
     </script>
     <!-- Output element -->
-    <div id="output" class="row"></div>
+    <div id="output"></div>
      <?php include(locate_template('templates/molecule-noResults.php' )); ?>
     <?php wp_reset_postdata(); ?>

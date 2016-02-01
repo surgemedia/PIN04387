@@ -32,9 +32,11 @@ $args = array(
     $terms = get_terms($taxonomies, $args);
 ?>
 <script>
+    jQuery(document).ready(function(){
     var saleType = "current";
     var property_type = "rental";
     loadProperties(saleType,property_type);
+    });
 </script>
 <div class="search-header row">
         <?php include(locate_template('templates/organism-searchbox.php')); ?>
@@ -47,6 +49,6 @@ $args = array(
         <?php include(locate_template('templates/molecule-property.php')); ?>
     </script>
     <!-- Output element -->
-    <div id="output" class="row"></div>
+    <div id="output"></div>
      <?php include(locate_template('templates/molecule-noResults.php' )); ?>
     <?php wp_reset_postdata(); ?>

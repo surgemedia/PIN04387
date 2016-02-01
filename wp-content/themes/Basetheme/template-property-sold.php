@@ -13,9 +13,11 @@
     include(locate_template('templates/part-jumbotron.php')); 
 ?>
 <script>
+    jQuery(document).ready(function(){
     var saleType = "sold";
     var property_type = "property";
     loadProperties(saleType,property_type);
+    });
 </script>
 <div class="tips-content">
         <div class="content">
