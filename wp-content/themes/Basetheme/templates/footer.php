@@ -34,5 +34,6 @@
   	<span><?php the_field('footer_text','option') ?></span>
   </div>
   
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> -->
 </footer>

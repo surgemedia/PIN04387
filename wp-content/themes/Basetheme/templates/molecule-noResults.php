@@ -4,4 +4,9 @@
     </div>
 </div>
 </div>
-<script>noResults();</script>
+<script>
+jQuery(document).ready(function(){
+	noResults();
+
+});
+</script>
