@@ -7,12 +7,11 @@
  *
  * .noConflict()
  * The routing is enclosed within an anonymous function so that you can
- * always reference jQuery with $, even when in .noConflict() mode.
+ * always reference jQuery with jQuery, even when in .noConflict() mode.
  * ======================================================================== */
 /*====================================
 =            Map function            =
 ====================================*/
-
 (function($) {
 
 /*
@@ -388,6 +387,8 @@ $('.customPrevBtn').click(function() {
     // Parameters has to be in square bracket '[]'
     owl.trigger('prev.owl.carousel', [300]);
 });
+
+})(jQuery); // Fully reference jQuery after this point.
 /*====================================================
 =           Social Networking Share Modal            =
 ====================================================*/
@@ -399,25 +400,25 @@ function appendShareLinks() {
     gpLink = 'https://plus.google.com/share?url='+location.href,
     ldLink = 'https://www.linkedin.com/shareArticle?mini=true&url='+location.href+'&title=Maxconnect&summary=&source=',
     mailLink= 'mailto:?Subject= Pinnacle Properties&Body=Hi look at this oportunity at '+location.href;
-    if($("a.mailLink").length>0) {
-        $("a.mailLink").attr('href',mailLink);
+    if(jQuery("a.mailLink").length>0) {
+        jQuery("a.mailLink").attr('href',mailLink);
     }
-    if($("a.fbLink").length>0) {
-        $("a.fbLink").attr('href',fbLink);
+    if(jQuery("a.fbLink").length>0) {
+        jQuery("a.fbLink").attr('href',fbLink);
     }
-    if($("a.twLink").length>0) {
-        $("a.twLink").attr('href',twLink);
+    if(jQuery("a.twLink").length>0) {
+        jQuery("a.twLink").attr('href',twLink);
     }
-    if($("a.gpLink").length>0) {
-        $("a.gpLink").attr('href',gpLink);
+    if(jQuery("a.gpLink").length>0) {
+        jQuery("a.gpLink").attr('href',gpLink);
     }
-    if($("a.ldLink").length>0) {
-        $("a.ldLink").attr('href',ldLink);
+    if(jQuery("a.ldLink").length>0) {
+        jQuery("a.ldLink").attr('href',ldLink);
     }
 }
-$('#shareBtn').on('click',function(){
+jQuery('#shareBtn').on('click',function(){
     appendShareLinks();
-    $('#myShareModal').modal();
+    jQuery('#myShareModal').modal();
 });
 appendShareLinks();
 
@@ -429,10 +430,10 @@ appendShareLinks();
 function menuActive(navTag){
     
     
-    $(".menu-item-has-children > a").click(function(event){
+    jQuery(".menu-item-has-children > a").click(function(event){
       event.preventDefault();
-      $(this).toggleClass("active");
-      $(this).parent().siblings(".menu-item-has-children").children("a").removeClass("active");
+      jQuery(this).toggleClass("active");
+      jQuery(this).parent().siblings(".menu-item-has-children").children("a").removeClass("active");
     });
 
 }
@@ -443,9 +444,9 @@ menuActive("nav");
 ===========================================*/
 var toggleActiveClass = {
    toggle : function(container){
-    $(container+" span").click(function(){
-      $(this).toggleClass("active");
-      $(this).siblings().removeClass("active");
+    jQuery(container+" span").click(function(){
+      jQuery(this).toggleClass("active");
+      jQuery(this).siblings().removeClass("active");
     });
    }
 
@@ -457,13 +458,13 @@ var toggleActiveClass = {
 /*=============================================
 =            Get Suburbs from file            =
 =============================================*/
-/*$.getJSON( "script/post-codes.json", function( data ) {
+/*jQuery.getJSON( "script/post-codes.json", function( data ) {
   var items = [];
-  $.each( data, function( key, val ) {
+  jQuery.each( data, function( key, val ) {
     items.push( "<li id='" + key + "'>" + val + "</li>" );
   });
  
-  $( "<ul/>", {
+  jQuery( "<ul/>", {
     "class": "my-new-list",
     html: items.join( "" )
   }).appendTo( "body" );
@@ -511,65 +512,24 @@ function getDistance(lat1,lon1,lat2,lon2){
     return d
 }
 
-function tag_property(json){
-  var arr = [];
-
-
-  $.each(json, function (i, jsonSingle) {
-            arr.push({
-                property: jsonSingle
-            });
-      });           
-
-   return arr; 
-
-}
 
 
 
-function renderHTML(htm){
-  document.getElementById('output').innerHTML = htm;
-}
 
 
 
-function load(callback,status,property_type,render){
-    $.ajax({  
-        type: "get",  
-        url: "http://www.pinnacleproperties.com.au/wp-json/wp/v2/json-"+property_type,  
-        contentType: "application/json; charset=utf-8",  
-        dataType: "json",  
-        success: function (json) {
-            // Call our callback with the message
-           property_json = callback(json);
-            
-            var filter_current = '//property[property_meta/property_status = "'+status+'" ]';
-            temp_json = JSON.search(property_json, filter_current );
-            property_json = temp_json;
-            if(render == true){
-            var htm = Defiant.render('property', callback(temp_json));
-            renderHTML(htm);
-            }
-            if(getCookie('suburb').length > 1){
-              setFields();
-              search(true);
-            }
-        },  
-        failure: function () {
-           console.log("fail");
-        }
-     }); 
 
-}
+
+
 
 
 function search(render){
-  var bed   = $("#bed").val(),
-      car   = $("#car").val(),
-      bath  = $("#bath").val(),
-      type  = $("#type").val(),
-      suburb = $("#suburb").val(),
-      surrounding = $("#surrounding").is(':checked');
+  var bed   = jQuery("#bed").val(),
+      car   = jQuery("#car").val(),
+      bath  = jQuery("#bath").val(),
+      type  = jQuery("#type").val(),
+      suburb = jQuery("#suburb").val(),
+      surrounding = jQuery("#surrounding").is(':checked');
       if(suburb == null){
         surrounding = false;
       }
@@ -629,7 +589,7 @@ function search(render){
     search_json=tag_property(search_json);
 
     if(null != suburb && true == surrounding){
-    $.getJSON('http://www.pinnacleproperties.com.au/wp-content/themes/Basetheme/dist/scripts/post-codes.json', function( data ) {
+    jQuery.getJSON('http://www.pinnacleproperties.com.au/wp-content/themes/Basetheme/dist/scripts/post-codes.json', function( data ) {
       var suburbPostcode="";
       if (null !== suburb ){
       for (var i = suburb.length - 1; i >= 0; i--) {
@@ -652,7 +612,7 @@ function search(render){
           var explodable = search_json[j].property.property_meta.property_address_coordinates[0];
           var propLat = explodable.split(',')[0];
           var propLng = explodable.split(',')[1];
-              if(10 >= getDistance(subLat,subLng,propLat,propLng) && $.inArray(search_json[j].property.slug,closeProperies != -1) ){
+              if(10 >= getDistance(subLat,subLng,propLat,propLng) && jQuery.inArray(search_json[j].property.slug,closeProperies != -1) ){
                 closeProperies.push(search_json[j]);      
               }
           }
@@ -678,6 +638,28 @@ function search(render){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+function noResults(){
+  console.log("enter no result");
+        setTimeout(function(){
+        if(property_json.length < 1 || property_json == 'undefind'){
+            jQuery('#output').addClass('hidden');
+            jQuery('#noResults').removeClass('hidden');
+            }
+        }, 1000);
+            
+}
 
 /*=======================================
 =       LOAD -  Call Properties       =
@@ -711,8 +693,18 @@ if(0 < saleType.length && 0 < property_type.length){
   }
 }
 }
-
-
+     
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+ 
 /*===============================
 =            Cookies            =
 ===============================*/
@@ -734,26 +726,17 @@ function setCookie(bed, car, bath, type, suburb, surrounding) {
 }
 
 
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-    }
-    return "";
-}
+
 function setFields() {
 
-      $("#bed").val(getCookie("bed")).trigger("chosen:updated");
-      $("#car").val(getCookie("car")).trigger("chosen:updated");
-      $("#bath").val(getCookie("bath")).trigger("chosen:updated");
-      $("#type").val(getCookie("type")).trigger("chosen:updated");
-      $("#suburb").val(getCookie("suburb")).trigger("chosen:updated");
+      jQuery("#bed").val(getCookie("bed")).trigger("chosen:updated");
+      jQuery("#car").val(getCookie("car")).trigger("chosen:updated");
+      jQuery("#bath").val(getCookie("bath")).trigger("chosen:updated");
+      jQuery("#type").val(getCookie("type")).trigger("chosen:updated");
+      jQuery("#suburb").val(getCookie("suburb")).trigger("chosen:updated");
       
       if(!getCookie("surrounding")){
-        $("#surrounding").removeProp( "checked" );
+        jQuery("#surrounding").removeProp( "checked" );
       }
 
 }
@@ -766,65 +749,48 @@ function cleanCookie() {
     document.cookie = "suburb=''";
     document.cookie = "surrounding=''";
 }
-
-/*===================================
-=            Modal Video            =
-===================================*/
-
-video = {
-  load : function(tag){
-    console.log("load video "+tag);
-    var id=$("#"+tag).data("videocode");
-    console.log("Loading Video");
-    player = new YT.Player(tag, {
-          // height: '1000',
-          // width: '1500',
-          videoId: id,
-          events: {
-            // 'onReady': onPlayerReady,
-            // 'onStateChange': onPlayerStateChange
-          }
-        });
-  }
-  
-};
- 
-
- // function stopVideo(){
- //    console.log("Stop video ");
- //    $('#myModal').on('hidden.bs.modal', function (e) {
- //        $(player).each(function(i){
- //           this.stopVideo();
- //          });
- //       console.log("Stop Video");
-        
- //      });
- //  }
-    
-
-
-function stopVideo() {
-       player.stopVideo();
-     }
-
-
-
-
-})(jQuery); // Fully reference jQuery after this point.
-
-(function($) {
-function noResults(){
-  console.log("enter no result");
-        setTimeout(function(){
-        if(property_json.length < 1 || property_json == 'undefind'){
-            jQuery('#output').addClass('hidden');
-            jQuery('#noResults').removeClass('hidden');
-            }
-        }, 1000);
+function load(callback,status,property_type,render){
+    jQuery.ajax({  
+        type: "get",  
+        url: "http://www.pinnacleproperties.com.au/wp-json/wp/v2/json-"+property_type,  
+        contentType: "application/json; charset=utf-8",  
+        dataType: "json",  
+        success: function (json) {
+            // Call our callback with the message
+           property_json = callback(json);
             
+            var filter_current = '//property[property_meta/property_status = "'+status+'" ]';
+            temp_json = JSON.search(property_json, filter_current );
+            property_json = temp_json;
+            if(render == true){
+            var htm = Defiant.render('property', callback(temp_json));
+            renderHTML(htm);
+            }
+            if(getCookie('suburb').length > 1){
+              setFields();
+              search(true);
+            }
+        },  
+        failure: function () {
+           console.log("fail");
+        }
+     }); 
+
 }
 
+function tag_property(json){
+  var arr = [];
 
-     
-})(jQuery);
- 
+
+  jQuery.each(json, function (i, jsonSingle) {
+            arr.push({
+                property: jsonSingle
+            });
+      });           
+
+   return arr; 
+
+}
+function renderHTML(htm){
+  document.getElementById('output').innerHTML = htm;
+}
