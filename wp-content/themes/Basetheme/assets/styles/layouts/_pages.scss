@@ -43,7 +43,12 @@
 	 }
 	}
 }
-
+/* // background-size: cover;
+//     position: absolute;
+//     width: 100%;
+//     background-position: 42% 51%;
+//     height: 100%;
+//     opacity: 0.8; */
 #main-content {
 	height:57vh;
 	overflow:hidden;
@@ -161,7 +166,7 @@
 		overflow:hidden;
 	}
 	.headshot {
-		height:100%;
+		height:auto;
 		color:#fff;
 		background: #BBBBB9;
 		img {
@@ -275,20 +280,7 @@
 		}
 }
 
-.modal .modal-dialog{
-	width: 70%;
-	.modal-content .modal-body .close {
-	    position: absolute;
-	    right: -44px;
-	    top: 0px;
-	    border: 1px solid;
-	    padding: .5em;
-	    z-index: 1;
-	    background-color: $secondary-primary;
-	    opacity:1;
-	    color:#fff;
-	}
-} 
+
 /*===============================
 =         Search Feature        =
 ===============================*/
@@ -320,14 +312,17 @@ padding: 0;
 	}
 	
 	h1{
-	background: $brand-primary;
-
+		background: $brand-primary;
+		font-weight: 100;
     margin: 0;
     height: 72px;
     padding: .5em;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
+    strong{
+    	font-weight: 500;
+    }
 	}
 	.property-obj{
 		a{
@@ -338,10 +333,16 @@ padding: 0;
 		.suburb,
 		.street{
 			font-size: 36px;
-			text-transform: uppercase;
+			
 			font-family:$fourth-font;
 			line-height:1.1em;
 
+		}
+		.suburb{
+			text-transform: uppercase;
+		}
+		.street{
+			text-transform: capitalize;
 		}
 		ul{
 			

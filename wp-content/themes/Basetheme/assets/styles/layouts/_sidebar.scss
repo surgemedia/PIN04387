@@ -108,6 +108,12 @@
 		.address{
 			font-size: 36px;
 		}
+		.suburb{
+			text-transform: uppercase;
+		}
+		.street{
+			text-transform: capitalize;
+		}	
 		i{
 			font-size: 18px;
 			margin-top: 1em;

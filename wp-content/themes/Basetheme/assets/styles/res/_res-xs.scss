@@ -13,7 +13,7 @@
 	}
 }
 #contact-us .headshot {
-	height: 110vh;
+	height: auto;
 	.hgroup{
 		padding: 1.5em 1em;
 		h1{
@@ -26,11 +26,15 @@
 		height:auto;
 	}
 }
+.navbar-header{
+	/* z-index: 9999; */
+}
 .navbar-toggle{
 	border: 1px solid #fff;
 	border-radius: 0;
 	margin-top: 17px;
 	background-color: $brand-light;
+	
 	.icon-bar{
 		background-color: #fff;
 		margin: 8px 0;
@@ -40,15 +44,18 @@
 	}
 }
 
-.banner div .logo-wrap {
-    
-    left: 2em;
-    a{
-		img{
-			width:76px; 
+.banner div {
+	position: static;
+	.logo-wrap {
+	    
+	    left: 2em;
+	    a{
+			img{
+				width:76px; 
+			}
 		}
 	}
-}
+}	
 .jumbotron{
 	border-top:91px;
 }
@@ -63,7 +70,8 @@
 	top:6.5em;
 	right:initial;
 	width:100%;
-
+	position:fixed;
+	height:auto;
 	.navbar-collapse{
 		margin-right: -15px;
 		margin-left: -15px;
@@ -196,4 +204,17 @@
 	}
 .content-info .foot span{
 	font-size: 14px;
+}
+
+#main-content .bg-img{
+	left: initial;
+	right: -100%;
+}
+
+.modal .modal-dialog {
+	width:95%;
+	.modal-content .modal-body .close{
+		right:0;
+	}
+	
 }
