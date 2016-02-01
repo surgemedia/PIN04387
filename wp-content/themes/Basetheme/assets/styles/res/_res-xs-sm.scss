@@ -1,7 +1,12 @@
+.maxheight{ 
+    max-height: initial;
+    overflow: visible;
+}
 /*===================================
 =            Career Form            =
 ===================================*/
 .general-content{
+	height: initial;
 	.gform_wrapper{
 		form{
 			.gform_body{
