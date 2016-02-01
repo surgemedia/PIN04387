@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: SubLanding Template
+ * Template Name: SubLanding
  */
 ?>
 <div class="row">

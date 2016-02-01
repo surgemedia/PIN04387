@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Career Template
+ * Template Name: Careers
  */
 ?>
 <?php while (have_posts()) : the_post(); ?>

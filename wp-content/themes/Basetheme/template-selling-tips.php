@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Selling Tips Template
+ * Template Name: Selling Tips
  */
 ?>
 <div class="row">
@@ -16,6 +16,7 @@
 		<?php while (have_posts()) : the_post(); ?>
 	<div class="tips-content">
 			<div class="content">
+			<?php edit_post_link(); ?>
 				<?php the_content(); ?>
 	
 			</div>

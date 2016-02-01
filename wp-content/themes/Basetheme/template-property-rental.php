@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Rental Property Search Template
+* Template Name: Rental Property Search
 */
 ?>
 <?php
@@ -34,7 +34,7 @@ $args = array(
 <script>
     var saleType = "current";
     var property_type = "rental";
-
+    loadProperties(saleType,property_type);
 </script>
 <div class="search-header row">
         <?php include(locate_template('templates/organism-searchbox.php')); ?>

@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Property Search Template
+* Template Name: Sell Property Search
 */
 ?>
 <?php
@@ -32,8 +32,12 @@ $args = array(
     $terms = get_terms($taxonomies, $args);
 ?>
 <script>
-    var saleType = "current";
-    var property_type = "property";
+  
+   jQuery(document).ready(function(){
+   var saleType = "current";
+   var  property_type = "property";
+   loadProperties(saleType,property_type);
+   }); 
 
 </script>
 <div class="search-header row">

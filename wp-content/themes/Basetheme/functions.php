@@ -24,6 +24,7 @@ $sage_includes = [
   'lib/function-debug.php',                // debuggings fun
   'lib/function-get-featured-image-url.php',      // get feaured image url for aq resizer
   'lib/function-getslug.php',                     // get the current slug
+  'lib/function-getYoutubeId.php',              // get the Yuotube code 
   'lib/function-get_id_from_slug.php',            // get id from slug
   'lib/function_clean_youtube_link.php',            // just get the v=
   'lib/function-display-gravity-form.php',            // Easy ACF to Gravity form display func

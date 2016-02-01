@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Solded Properties Template
+* Template Name: Sold
 */
 ?>
 <div class="row">
@@ -15,6 +15,7 @@
 <script>
     var saleType = "sold";
     var property_type = "property";
+    loadProperties(saleType,property_type);
 </script>
 <div class="tips-content">
         <div class="content">

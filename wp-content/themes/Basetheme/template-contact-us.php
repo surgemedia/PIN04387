@@ -1,9 +1,9 @@
 <?php
 /**
- * Template Name: Contact Us Template
+ * Template Name: Contact Us
  */
 ?>
-<div class="row"><?php while (have_posts()) : the_post(); ?>
+<div class="row contactus"><?php while (have_posts()) : the_post(); ?>
 	
 	<?php 
 		$extraClass=get_field("jumbotron_size");
@@ -15,7 +15,7 @@
 		
 	<div class="col-xs-12 col-md-6 col-md-push-3 general-content">
 		<?php the_content(); ?>
-	 <div id="gravity-form" class="contactus">
+	 <div id="gravity-form" class="">
     <?php  
     $pageID = get_option('page_on_front'); 
    	if(get_field('form',$pageID)){

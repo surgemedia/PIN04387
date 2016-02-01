@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row maxheight">
 <?php
 		
 		$the_property = get_post(get_the_id()) ;

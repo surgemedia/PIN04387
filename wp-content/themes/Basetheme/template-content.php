@@ -1,11 +1,11 @@
 <?php
 /**
- * Template Name: Content Template
+ * Template Name: Content
  */
 ?>
 <?php while (have_posts()) : the_post(); ?>
 
-<div class="row">
+<div class="row maxheight">
 	<?php 
 		$extraClass=get_field("jumbotron_size");
 		$image=getFeaturedUrl(get_the_id());

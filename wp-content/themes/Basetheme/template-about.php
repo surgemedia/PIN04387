@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About Template
+ * Template Name: About
  */
 ?>
 <?php while (have_posts()) : the_post(); ?>

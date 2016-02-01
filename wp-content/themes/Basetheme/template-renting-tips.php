@@ -1,6 +1,6 @@
- <?php
+<?php
 /**
- * Template Name: Buying Tips
+ * Template Name: Renting Tips
  */
 ?>
 <div class="row">
@@ -28,7 +28,7 @@
 	// WP_Query arguments
 	$args = array (
 		'post_type'  	=> array( 'tips' ),
-		'type_of_tip'         => 'buying',
+		'type_of_tip'         => 'renting',
 	);
 	
 	// The Query
