@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row maxheight">
 <?php
 		
 		$the_property = get_post(get_the_id()) ;
@@ -62,17 +62,18 @@ wp_reset_postdata(); ?>
 
 
 <div class="col-xs-12 col-md-6 col-md-push-3 general-content">
-	<a href="" class="back" ><i class="icon-arrow-left"></i> BACK TO SEARCH RESULTS</a>
+	<a href="/PinnacleProperties/property-search" class="back" ><i class="icon-arrow-left"></i> BACK TO SEARCH RESULTS</a>
+	<h1><?php echo $the_property_meta['property_heading'][0]; ?></h1>	
 	<?php echo wpautop( $the_property->post_content); ?> 
 </div>
 <div class="col-sm-6 col-md-3 col-md-pull-6 side">
 	<div class="property-info">
 		<div class="address">
-			<div class="suburb"><?php echo $the_property_meta['property_address_suburb'][0]; ?></div>
       <div class="street">
           <?php echo $the_property_meta['property_address_street_number'][0]; ?> &nbsp;
           <?php echo $the_property_meta['property_address_street'][0]; ?>
       </div>
+			<div class="suburb"><?php echo $the_property_meta['property_address_suburb'][0]; ?></div>
 		</div>
 
 		<i class="icon-BED" data-toggle="tooltip" data-placement="top" title="Bed"><?php echo $the_property_meta['property_bedrooms'][0]; ?></i>

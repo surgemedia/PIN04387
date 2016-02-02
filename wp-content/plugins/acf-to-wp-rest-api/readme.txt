@@ -3,7 +3,7 @@ Contributors: airesvsg
 Tags: acf, api, rest, wp-api, wp-rest-api, json, wp, wordpress, wp-rest-api
 Requires at least: 3.0.1
 Tested up to: 4.4
-Stable tag: 1.2
+Stable tag: 1.3
 License: MIT   
 License URI: http://opensource.org/licenses/MIT
 
@@ -11,6 +11,9 @@ Puts ACF data into the WP-REST-API ( WP-API | WordPress JSON API ).
 Also you can customize the answer using filters.
 
 == Description ==
+**This version was discontinued, please upgrade to V2**
+https://wordpress.org/plugins/acf-to-rest-api/
+
 Puts in answers all fields of ACF.
 
 **Fork me on GitHub**
@@ -20,6 +23,7 @@ https://github.com/airesvsg/acf-to-wp-rest-api
 **Get ACF data by ID**
 
 * /wp-json/acf/post/ID
+* /wp-json/acf/page/ID
 * /wp-json/acf/user/ID
 * /wp-json/acf/term/ID/TAXONOMY
 * /wp-json/acf/comment/ID
@@ -50,7 +54,7 @@ https://github.com/airesvsg/acf-to-wp-rest-api
 
 Use the filter (**acf_to_wp_rest_api_`{type}`_data**) to customize the answer.
 
-The wildcard `{type}` can be: **post**, **user**, **term**, **comment**, **attachment** or **options**
+The wildcard `{type}` can be: **post**, **page**, **user**, **term**, **comment**, **attachment** or **options**
 
 ***How to use***
 `

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Team Template
+ * Template Name: Team
  */
 ?>
 <div class="row">
@@ -9,7 +9,7 @@
     while (have_posts()):
         the_post(); ?>
     <?php 
-        $extraClass=get_field("jumbotron_size");
+        $extraClass="big";
         $image=getFeaturedUrl(get_the_id());
         $preTitle=get_field("light");
         $title="<b>".get_field("bold")."</b>";

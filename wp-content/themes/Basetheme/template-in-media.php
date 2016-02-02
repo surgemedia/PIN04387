@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: In Media Template
+ * Template Name: In Media
  */
 ?>
 <div class="row">

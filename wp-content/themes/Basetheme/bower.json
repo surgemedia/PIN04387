@@ -32,7 +32,7 @@
       "main": [
         "./dist/defiant.js"
       ]
-    },      
+    },
     "bootstrap-sass-official": {
       "main": [
         "./assets/stylesheets/_bootstrap.scss",
@@ -57,6 +57,6 @@
     }
   },
   "devDependencies": {
-  
+    "youtube-iframe-api": "~0.0.1"
   }
 }

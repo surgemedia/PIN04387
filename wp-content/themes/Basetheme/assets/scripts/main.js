@@ -1,4 +1,4 @@
-/* ========================================================================
+ /*========================================================================
  * DOM-based Routing
  * Based on http://goo.gl/EUTi53 by Paul Irish
  *
@@ -7,12 +7,11 @@
  *
  * .noConflict()
  * The routing is enclosed within an anonymous function so that you can
- * always reference jQuery with $, even when in .noConflict() mode.
+ * always reference jQuery with jQuery, even when in .noConflict() mode.
  * ======================================================================== */
 /*====================================
 =            Map function            =
 ====================================*/
-var property_json = [];
 (function($) {
 
 /*
@@ -183,9 +182,15 @@ $(document).ready(function(){
 });
 
 })(jQuery);
+var video;
+var property_json = [];
+var player;
+  var property_type;
+  var saleType;
 
 (function($) {
-
+    var property_type;
+  var saleType;
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
   var Sage = {
@@ -346,7 +351,7 @@ menuScroll.setBackground('.banner');
 /*===================================
   =            Owl Carousel           =
   ====================================*/
-  var owl = jQuery(".owl-carousel");
+  var owl = $(".owl-carousel");
 
   owl.owlCarousel({
     
@@ -373,15 +378,17 @@ menuScroll.setBackground('.banner');
 
   });
 // Go to the next item
-jQuery('.customNextBtn').click(function() {
+$('.customNextBtn').click(function() {
     owl.trigger('next.owl.carousel');
 });
 // Go to the previous item
-jQuery('.customPrevBtn').click(function() {
+$('.customPrevBtn').click(function() {
     // With optional speed parameter
     // Parameters has to be in square bracket '[]'
     owl.trigger('prev.owl.carousel', [300]);
 });
+
+})(jQuery); // Fully reference jQuery after this point.
 /*====================================================
 =           Social Networking Share Modal            =
 ====================================================*/
@@ -393,25 +400,25 @@ function appendShareLinks() {
     gpLink = 'https://plus.google.com/share?url='+location.href,
     ldLink = 'https://www.linkedin.com/shareArticle?mini=true&url='+location.href+'&title=Maxconnect&summary=&source=',
     mailLink= 'mailto:?Subject= Pinnacle Properties&Body=Hi look at this oportunity at '+location.href;
-    if($("a.mailLink").length>0) {
-        $("a.mailLink").attr('href',mailLink);
+    if(jQuery("a.mailLink").length>0) {
+        jQuery("a.mailLink").attr('href',mailLink);
     }
-    if($("a.fbLink").length>0) {
-        $("a.fbLink").attr('href',fbLink);
+    if(jQuery("a.fbLink").length>0) {
+        jQuery("a.fbLink").attr('href',fbLink);
     }
-    if($("a.twLink").length>0) {
-        $("a.twLink").attr('href',twLink);
+    if(jQuery("a.twLink").length>0) {
+        jQuery("a.twLink").attr('href',twLink);
     }
-    if($("a.gpLink").length>0) {
-        $("a.gpLink").attr('href',gpLink);
+    if(jQuery("a.gpLink").length>0) {
+        jQuery("a.gpLink").attr('href',gpLink);
     }
-    if($("a.ldLink").length>0) {
-        $("a.ldLink").attr('href',ldLink);
+    if(jQuery("a.ldLink").length>0) {
+        jQuery("a.ldLink").attr('href',ldLink);
     }
 }
-$('#shareBtn').on('click',function(){
+jQuery('#shareBtn').on('click',function(){
     appendShareLinks();
-    $('#myShareModal').modal();
+    jQuery('#myShareModal').modal();
 });
 appendShareLinks();
 
@@ -423,7 +430,7 @@ appendShareLinks();
 function menuActive(navTag){
     
     
-    $(".menu-item-has-children > a").click(function(event){
+    jQuery(".menu-item-has-children > a").click(function(event){
       event.preventDefault();
       jQuery(this).toggleClass("active");
       jQuery(this).parent().siblings(".menu-item-has-children").children("a").removeClass("active");
@@ -451,20 +458,19 @@ var toggleActiveClass = {
 /*=============================================
 =            Get Suburbs from file            =
 =============================================*/
-/*$.getJSON( "script/post-codes.json", function( data ) {
+/*jQuery.getJSON( "script/post-codes.json", function( data ) {
   var items = [];
-  $.each( data, function( key, val ) {
+  jQuery.each( data, function( key, val ) {
     items.push( "<li id='" + key + "'>" + val + "</li>" );
   });
  
-  $( "<ul/>", {
+  jQuery( "<ul/>", {
     "class": "my-new-list",
     html: items.join( "" )
   }).appendTo( "body" );
 });
 */
 
-})(jQuery); // Fully reference jQuery after this point.
 
 /*===================================
 =            Clean Array            =
@@ -492,116 +498,96 @@ function toRad(number) { return number * Math.PI / 180; }
 
 function getDistance(lat1,lon1,lat2,lon2){
 
-var R = 6371; // km 
-//has a problem with the .toRad() method below.
-var x1 = lat2-lat1;
-var dLat = toRad(x1);  
-var x2 = lon2-lon1;
-var dLon = toRad(x2);  
-var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
-                Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * 
-                Math.sin(dLon/2) * Math.sin(dLon/2);  
-var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-var d = R * c; 
-  return d
-}
-
-function tag_property(json){
-  var arr = [];
-
-
-jQuery.each(json, function (i, jsonSingle) {
-          arr.push({
-              property: jsonSingle
-          });
-    });           
-
- return arr; 
-
-}
-
-function noResults(){
-  jQuery(document).ready(function($) {
-        setTimeout(function(){
-        if(property_json.length < 1 || property_json == 'undefind'){
-            jQuery('#output').addClass('hidden');
-            jQuery('#noResults').removeClass('hidden');
-            }
-        }, 1000);
-            });
+  var R = 6371; // km 
+  //has a problem with the .toRad() method below.
+  var x1 = lat2-lat1;
+  var dLat = toRad(x1);  
+  var x2 = lon2-lon1;
+  var dLon = toRad(x2);  
+  var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
+                  Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * 
+                  Math.sin(dLon/2) * Math.sin(dLon/2);  
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+  var d = R * c; 
+    return d
 }
 
 
 
-function load(callback,status,property_type){
-    jQuery.ajax({  
-        type: "get",  
-        url: "http://www.pinnacleproperties.com.au/wp-json/wp/v2/json-"+property_type,  
-        contentType: "application/json; charset=utf-8",  
-        dataType: "json",  
-        success: function (json) {
-            // Call our callback with the message
-           property_json = callback(json);
-            
-            var filter_current = '//property[property_meta/property_status = "'+status+'" ]';
-            temp_json = JSON.search(property_json, filter_current );
-            property_json = temp_json;
-            var htm = Defiant.render('property', callback(temp_json));
-            document.getElementById('output').innerHTML = htm;
-        },  
-        failure: function () {
-           console.log("fail");
-        }
-     }); 
-
-}
 
 
-function search(){
-  var bed   = jQuery("#bed").val().trim()!==""?jQuery("#bed").val():0,
-      car   = jQuery("#car").val().trim()!==""?jQuery("#car").val(): 0,
-      bath  = jQuery("#bath").val().trim()!==""?jQuery("#bath").val(): 0,
+
+
+
+
+
+
+
+function search(render){
+  var bed   = jQuery("#bed").val(),
+      car   = jQuery("#car").val(),
+      bath  = jQuery("#bath").val(),
       type  = jQuery("#type").val(),
       suburb = jQuery("#suburb").val(),
       surrounding = jQuery("#surrounding").is(':checked');
+      if(suburb == null){
+        surrounding = false;
+      }
       // console.log(surrounding);
       setCookie(bed, car, bath, type, suburb, surrounding);
 /*=====================================================
 =       Search Suburb(Unless Surrounding           =
 =====================================================*/
-var search_json;
-var suburbSearch="";
-var filter_suburb; 
-    if (null !== suburb  && false == surrounding){
-      for (var i = suburb.length - 1; i >= 0; i--) {
-        if (i === 0){
-          suburbSearch+="contains(property_term,'"+suburb[i]+"')";
-        }else{
-          suburbSearch+="contains(property_term,'"+suburb[i]+"') or ";
+  var search_json = property_json;
+  var suburbSearch="";
+  var filter_suburb; 
+    if(suburb != null){
+          surrounding = false;
         }
+      if (null != suburb  && false == surrounding){
+        for (var i = suburb.length - 1; i >= 0; i--) {
+          if (i === 0){
+            suburbSearch+="contains(property_term,'"+suburb[i]+"')";
+          }else{
+            suburbSearch+="contains(property_term,'"+suburb[i]+"') or ";
+          }
+        }
+        filter_suburb = "//property["+suburbSearch+"]";
+        search_json = JSON.search(tag_property(property_json), filter_suburb );
       }
-      filter_suburb = "//property["+suburbSearch+"]";
-      search_json = JSON.search(tag_property(property_json), filter_suburb );
-    } else {
-      search_json = property_json;
-    }
 /*=======================================================
 =            Filter by Bath,Bed,Type and Car            =
 =======================================================*/
-var filter_type = "//property[contains(property_meta/property_category,'"+type+"')]",
-    filter_bed = "//property[property_meta/property_bedrooms >= "+bed+"]",
-    filter_bath = "//property[property_meta/property_bathrooms >= "+bath+"]",
-    filter_car = "//property[property_meta/property_garage >= "+car+"]";
+    var filter_type,filter_bed,filter_bath,filter_car;
 
-    search_json = JSON.search(tag_property(search_json), filter_bath );
-    search_json = JSON.search(tag_property(search_json), filter_car );
-    search_json = JSON.search(tag_property(search_json), filter_bed );
-    search_json = JSON.search(tag_property(search_json), filter_type );
+    if(type != null){
+        filter_type = "//property[contains(property_meta/property_category,'"+type+"')]"; 
+      search_json = JSON.search(tag_property(search_json), filter_type );
+
+     }
+    if(bed != null){ 
+        filter_bed = "//property[property_meta/property_bedrooms >= "+bed+"]";
+      search_json = JSON.search(tag_property(search_json), filter_bed );
+
+     }
+    if(bath != null){ 
+      filter_bath = "//property[property_meta/property_bathrooms >= "+bath+"]";
+        search_json = JSON.search(tag_property(search_json), filter_bath );
+
+     }
+    if(car != null){ 
+      filter_car = "//property[property_meta/property_garage >= "+car+"]";
+      search_json = JSON.search(tag_property(search_json), filter_car );
+
+     }
+
 
 /*=====================================================
 =            Search Surrounding properties            =
 =====================================================*/
     var closeProperies = [];
+    search_json=tag_property(search_json);
+
     if(null != suburb && true == surrounding){
     jQuery.getJSON('http://www.pinnacleproperties.com.au/wp-content/themes/Basetheme/dist/scripts/post-codes.json', function( data ) {
       var suburbPostcode="";
@@ -618,7 +604,6 @@ var filter_type = "//property[contains(property_meta/property_category,'"+type+"
 
       var suburb_data = JSON.search(data,filter_suburbPostcode);
       // console.log(suburb_data);
-
       if (null != suburb_data  ){
       for (var i = suburb_data.length - 1; i >= 0; i--) {
             var subLat = suburb_data[i].lat;
@@ -635,59 +620,80 @@ var filter_type = "//property[contains(property_meta/property_category,'"+type+"
         }
 
       }
-    
-      var final_props = closeProperies;
-      var htm = Defiant.render('property', final_props);
-      if("" != htm ){
-      document.getElementById('output').innerHTML = htm;
-    } else {
-      // warning = "<div id='no-results' class='text-center'><h3>Sorry, there isn't any results for that search</h3><p>try including surrounding properties</p></div>";
-      // document.getElementById('output').innerHTML = warning;
-      // var htm = Defiant.render('property', property_json);
-    }
-     });
-  }
-/*=============================================================
-=            Returning Search JSON for Tempalting             =
-=============================================================*/
-if( 0 <= closeProperies.length ){
-  search_json=tag_property(search_json);
-  var htm = Defiant.render('property', search_json);
-  document.getElementById('output').innerHTML = htm;
-  }
+      
+        //if surrounding search
+        var final_props = closeProperies;
+        var htm = Defiant.render('property', final_props);
+        if("" != htm  && surrounding == true){
+          renderHTML(htm);
+        }
+      });
+      }
+      // normal search
+      if(surrounding != true){
+      var htm = Defiant.render('property', search_json);
+      renderHTML(htm);
+      }
+} // end search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function noResults(){
+  console.log("enter no result");
+        setTimeout(function(){
+        if(property_json.length < 1 || property_json == 'undefind'){
+            jQuery('#output').addClass('hidden');
+            jQuery('#noResults').removeClass('hidden');
+            }
+        }, 1000);
+            
 }
+
 /*=======================================
-=            Call Properties            =
+=       LOAD -  Call Properties       =
 =======================================*/
-if(saleType && property_type){
+
+function loadProperties(saleType, property_type){
+if(0 < saleType.length && 0 < property_type.length){
   switch(saleType) {
     case 'current':
-      load(tag_property,'current',property_type); 
+      if(getCookie('suburb').length > 1){
+        load(tag_property,'current',property_type,false);
+      } else {
+        load(tag_property,'current',property_type,true);
+      }
       break;
     case 'sold': 
-      load(tag_property,'sold',property_type);
+      if(getCookie('suburb').length > 1){
+        load(tag_property,'current',property_type,false);
+      } else {
+        load(tag_property,'current',property_type,true);
+      }
       break;
   
   case 'leased': 
-      load(tag_property,'sold',property_type);
+      if(getCookie('suburb').length > 1){
+        load(tag_property,'current',property_type,false);
+      } else {
+        load(tag_property,'current',property_type,true);
+      }
       break;
   }
 }
-
-/*===============================
-=            Cookies            =
-===============================*/
-
-function setCookie(bed, car, bath, type, suburb, surrounding) {
-    document.cookie = "bed="+bed+";";
-    document.cookie = "car="+car+";";
-    document.cookie = "bath="+bath+";";
-    document.cookie = "type="+type+";";
-    document.cookie = "suburb="+suburb+";";
-    document.cookie = "surrounding="+surrounding+";";
-
 }
-
+     
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -698,19 +704,93 @@ function getCookie(cname) {
     }
     return "";
 }
+ 
+/*===============================
+=            Cookies            =
+===============================*/
 
-function checkCookie() {
-    var user = getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 365);
-        }
-    }
+function setCookie(bed, car, bath, type, suburb, surrounding) {
+        //1 day expire
+    var d = new Date();
+    d.setTime(d.getTime() + (1*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+
+    document.cookie = "bed="+bed+"; "+expires;
+    document.cookie = "car="+car+"; "+expires;
+    document.cookie = "bath="+bath+"; "+expires;
+    document.cookie = "type="+type+"; "+expires;
+    document.cookie = "suburb="+suburb+"; "+expires;
+    document.cookie = "surrounding="+surrounding+"; "+expires;
+
+
 }
 
 
 
+function setFields() {
 
+      jQuery("#bed").val(getCookie("bed")).trigger("chosen:updated");
+      jQuery("#car").val(getCookie("car")).trigger("chosen:updated");
+      jQuery("#bath").val(getCookie("bath")).trigger("chosen:updated");
+      jQuery("#type").val(getCookie("type")).trigger("chosen:updated");
+      jQuery("#suburb").val(getCookie("suburb")).trigger("chosen:updated");
+      
+      if(!getCookie("surrounding")){
+        jQuery("#surrounding").removeProp( "checked" );
+      }
+
+}
+
+function cleanCookie() {
+    document.cookie = "bed=''";
+    document.cookie = "car=''";
+    document.cookie = "bath=''";
+    document.cookie = "type=''";
+    document.cookie = "suburb=''";
+    document.cookie = "surrounding=''";
+}
+function load(callback,status,property_type,render){
+    jQuery.ajax({  
+        type: "get",  
+        url: "http://www.pinnacleproperties.com.au/wp-json/wp/v2/json-"+property_type,  
+        contentType: "application/json; charset=utf-8",  
+        dataType: "json",  
+        success: function (json) {
+            // Call our callback with the message
+           property_json = callback(json);
+            
+            var filter_current = '//property[property_meta/property_status = "'+status+'" ]';
+            temp_json = JSON.search(property_json, filter_current );
+            property_json = temp_json;
+            if(render == true){
+            var htm = Defiant.render('property', callback(temp_json));
+            renderHTML(htm);
+            }
+            if(getCookie('suburb').length > 1){
+              setFields();
+              search(true);
+            }
+        },  
+        failure: function () {
+           console.log("fail");
+        }
+     }); 
+
+}
+
+function tag_property(json){
+  var arr = [];
+
+
+  jQuery.each(json, function (i, jsonSingle) {
+            arr.push({
+                property: jsonSingle
+            });
+      });           
+
+   return arr; 
+
+}
+function renderHTML(htm){
+  document.getElementById('output').innerHTML = htm;
+}

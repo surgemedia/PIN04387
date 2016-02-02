@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Rental Property Search Template
+* Template Name: Rental Property Search
 */
 ?>
 <?php
@@ -32,19 +32,23 @@ $args = array(
     $terms = get_terms($taxonomies, $args);
 ?>
 <script>
+    jQuery(document).ready(function(){
     var saleType = "current";
     var property_type = "rental";
-
+    loadProperties(saleType,property_type);
+    });
 </script>
 <div class="search-header row">
         <?php include(locate_template('templates/organism-searchbox.php')); ?>
-        <?php include(locate_template('templates/molecule-property-of-the-week.php')); ?>
+        
+        <?php $type="rental";
+              include(locate_template('templates/molecule-property-of-the-week.php')); ?>
     <!-- Defiant template -->
 </div>
     <script type="defiant/xsl-template">
         <?php include(locate_template('templates/molecule-property.php')); ?>
     </script>
     <!-- Output element -->
-    <div id="output" class="row"></div>
+    <div id="output"></div>
      <?php include(locate_template('templates/molecule-noResults.php' )); ?>
     <?php wp_reset_postdata(); ?>

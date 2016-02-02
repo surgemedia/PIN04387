@@ -1,3 +1,6 @@
+**This version was discontinued, please upgrade to V2**
+https://github.com/airesvsg/acf-to-rest-api/
+
 ACF to WP REST API
 ================
 Puts ACF data into the WP-REST-API ( WP-API | WordPress JSON API ).
@@ -11,6 +14,7 @@ Installation
 Get ACF data by ID
 ================
 - /wp-json/acf/post/`<ID>`
+- /wp-json/acf/page/`<ID>`
 - /wp-json/acf/user/`<ID>`
 - /wp-json/acf/term/`<ID>`/`<TAXONOMY>`
 - /wp-json/acf/comment/`<ID>`
@@ -42,7 +46,7 @@ Filter
 ================
 Use the filter (**acf_to_wp_rest_api_`{type}`_data**) to customize the answer.
 
-The wildcard `{type}` can be: **post**, **user**, **term**, **comment**, **attachment** or **options**
+The wildcard `{type}` can be: **post**, **page**, **user**, **term**, **comment**, **attachment** or **options**
 
 #### How to use
 ```PHP

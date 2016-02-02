@@ -7,7 +7,15 @@
   overflow: visible;
   z-index: 1;
   min-height: 50em;
-
+  
+  h1{
+    color:$brand-primary;
+  }
+  .back{
+    margin-bottom: 2em;
+    font-size: .8em;
+    display: inline-block;
+  }
   .social{ 
    font-size: 14px; 
        margin-top: 4em;

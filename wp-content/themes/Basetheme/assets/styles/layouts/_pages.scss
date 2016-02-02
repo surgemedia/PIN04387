@@ -1,13 +1,17 @@
+
+.maxheight{ 
+    max-height: 149em;
+    overflow: hidden;
+}
 /*=================================
 =            Home Page            =
 =================================*/
 #featured {
-	
+	background-color: $brand-dark;
 	.side-block {
 	overflow:hidden;
 	min-height:449px;
-	-webkit-background-size: 100% auto;
-	background-size: 100% auto;
+	background-size: cover;
 	position:relative;
 	text-align:center;
 	.overlay {
@@ -39,9 +43,14 @@
 	 }
 	}
 }
-
+/* // background-size: cover;
+//     position: absolute;
+//     width: 100%;
+//     background-position: 42% 51%;
+//     height: 100%;
+//     opacity: 0.8; */
 #main-content {
-	height:50vh;
+	height:57vh;
 	overflow:hidden;
 	position: relative;
 	border-top:4px solid #fff;
@@ -55,7 +64,8 @@
 	}
 	hgroup {
 		h1 {
-			margin-top: 1em;;
+			transition: ease .3s all;
+			margin-top: 2em;
 			color:#fff;
 			font-size:7em;
 			z-index:3;
@@ -71,13 +81,26 @@
 			margin:0 auto;
 			width:90%;
 			position:relative;
-			z-index: 99;
+			z-index: 3;
 			color:#fff;
+			display: inline-block;
+		  a{
+		    width: initial;
+		    padding: 0;
+		    font-size: inherit;
+		    text-transform: none;
+		    font-weight: normal;
+		        display: inline;
+
+		    &:hover{
+		    	text-decoration: underline;
+		    }
+		  }
 		}
 		a {
 			margin: 1em 0 0 0;
 			position:relative;
-			z-index: 99;
+			z-index: 3;
 			width:100%;
 			display:block;
 			text-align:center;
@@ -87,6 +110,7 @@
 			font-size:1.3em;
 			text-transform:uppercase;
 			font-weight:bold;
+			outline: none;
 		}
 		a:hover {
 			color:#fff;
@@ -113,11 +137,25 @@
 	// .pattern {
 	// 	background-color:#000;
 	// }
-	
+	.content-hidden{
+		/* display: none; */
+		opacity: 0;
+		transition: ease .3s all;
+	}
+	&:hover{
+		transition: ease .3s all;
+			h1{
+				margin-top: 1em;
+			}
+			.content-hidden{
+				/* display: inline-block; */
+				opacity: 1;
+			}
+	}
 }
 #contact-us {
 	position:relative;
-	height: 54.95em;
+	min-height: 54.95em;
 	.row {
 		height:100%;
 	}
@@ -128,12 +166,16 @@
 		overflow:hidden;
 	}
 	.headshot {
-		height:100%;
+		height:auto;
 		color:#fff;
+		background: #BBBBB9;
 		img {
 			margin-top: 0em;
 			display:inline-block;
-			width:100%;
+	    width: auto;
+	    height: auto;
+	    overflow: hidden;
+	    padding-bottom: 9em;
 		}
 		.hgroup{
 			position:absolute;
@@ -163,78 +205,82 @@
 }
 
 #email-marketing {
-margin-top:4em;
-margin-bottom:4em;
-font-family:$fourth-font;
+	margin-top:4em;
+	margin-bottom:4em;
+	font-family:$fourth-font;
 
-textarea:hover, 
-input:hover, 
-textarea:active, 
-input:active, 
-textarea:focus, 
-input:focus,
-button:focus,
-button:active,
-button:hover
-{
-    outline:0px !important;
-    -webkit-appearance:none;
-}
-
-	.gform_title {
-		border: 0px;
-    	display:inline-block;
-    	margin:0px;
-		text-align:center;
-		width:100%;
-
+	textarea:hover, 
+	input:hover, 
+	textarea:active, 
+	input:active, 
+	textarea:focus, 
+	input:focus,
+	button:focus,
+	button:active,
+	button:hover{
+	    outline:0px !important;
+	    -webkit-appearance:none;
 	}
-	.gform_body {
-		margin:0 0em 0 3em ;
-	    border: 3px solid #E6E6E6;
-    display: inline-block;
-    float: left;
-    width: 60%;
-    height: 3em;
-    position: relative;
-		input {
-	height: 2.4em;
-    overflow: hidden;
-    width: 95%;
-    border: 0;
-    padding: 0 0 0 0.5em;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+		.gform_title {
+			border: 0px;
+	    	display:inline-block;
+	    	margin:0px;
+			text-align:center;
+			width:100%;
+
 		}
-
-	}
-	.gfield_label {
-		display:none;
-	}
-	.gform_footer {
-			
-	    border: 0px;
-	    border-color: $secondary-primary;
-	    font-size: 1.3em;
-	    font-family: $fourth-font;
+		.gform_body {
+			margin:0 0em 0 0em ;
+		  border: 3px solid #E6E6E6;
+	    display: inline-block;
 	    float: left;
-	    margin: 0;
-	    padding: 0;
-	    font-size: 1.3em;
-	    font-weight: 400;
-	    clear:none;
-	    input {
-	    height: 2.3em;
-	    overflow: hidden;
-	    border: 0;
-	    padding: .2em 1em;
-	    line-height: 0;
-	    
+	    width: 70%;
+	    height: 3em;
+	    position: relative;
+			input {
+				height: 2.4em;
+		    overflow: hidden;
+		    width: 95%;
+		    border: 0;
+		    padding: 0 0 0 0.5em;
+		    margin: 0;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+			}
+
 		}
-	}
+		.gfield_label {
+			display:none;
+		}
+		.gform_footer {
+				
+		    border: 0px;
+		    border-color: $secondary-primary;
+		    font-size: 1.3em;
+		    font-family: $fourth-font;
+		    float: left;
+		    margin: 0;
+		    padding: 0;
+		    font-size: 1.3em;
+		    font-weight: 400;
+		    width: 30%;
+		    clear:none;
+		    
+		    input {
+			    height: 2.3em;
+			    overflow: hidden;
+			    border: 0;
+			    padding: .2em 0em;
+			    line-height: 0;
+			    width:100%;
+		    
+			}
+		}
 }
+
+
 /*===============================
 =         Search Feature        =
 ===============================*/
@@ -266,14 +312,17 @@ padding: 0;
 	}
 	
 	h1{
-	background: $brand-primary;
-
+		background: $brand-primary;
+		font-weight: 100;
     margin: 0;
     height: 72px;
     padding: .5em;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
+    strong{
+    	font-weight: 500;
+    }
 	}
 	.property-obj{
 		a{
@@ -284,10 +333,16 @@ padding: 0;
 		.suburb,
 		.street{
 			font-size: 36px;
-			text-transform: uppercase;
+			
 			font-family:$fourth-font;
 			line-height:1.1em;
 
+		}
+		.suburb{
+			text-transform: uppercase;
+		}
+		.street{
+			text-transform: capitalize;
 		}
 		ul{
 			
@@ -326,6 +381,4 @@ padding: 0;
 		margin: auto;
 	}
 }
-
-
 

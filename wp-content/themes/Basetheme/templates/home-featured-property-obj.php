@@ -7,7 +7,7 @@ $the_property_meta = get_post_meta(get_the_id() );
 		 $image = getFeaturedUrl(get_the_id()); 
 		 $image_url = aq_resize($image,960,621,true,true,true);
 	?>
-	<img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>">
+	<div class="image" style="background-image:url('<?php echo $image_url; ?>')" ></div>
         <h1 class="title"><strong>Property</strong> of the week</h1>
         <div class="property-obj">
             <span><?php the_title(); ?></span>
@@ -22,7 +22,7 @@ $the_property_meta = get_post_meta(get_the_id() );
                         <span><?php echo $the_property_meta['property_garage'][0]; ?></span>
                     </li>
             </ul>
-            <a href="" class="details">Details</a>
+            <a href="<?php the_permalink()?>" class="details">Details</a>
 
         </div>
     </div>

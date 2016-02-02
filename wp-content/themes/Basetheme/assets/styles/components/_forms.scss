@@ -159,12 +159,15 @@
             
            } 
          button{
-          background-color: $secondary-primary;
-          color:#fff;
-          border:none;
-          width: 18%;
-          padding: .8em;
-          margin-left: 4.5%;
+            background-color: $secondary-primary;
+            color:#fff;
+            width: 23%;
+            height: 3.6em;
+            float: right;
+            margin-right: 4px;
+            border:none;
+            border-top: 4px $grey-light solid;
+            border-bottom: 4px $grey-light solid;
          }
 
      }
@@ -222,16 +225,21 @@
         border-radius:0px !important;
     }
 
-#gravity-form.contactus {
-    overflow:hidden !important;
-    margin:0 0 3em 0 !important;
-    display:block !important;
-    .gfield {
-        margin-top:1em;
+.contactus{
+    .general-content{
+        height:initial;
     }
-    #field_1_5 {
-        margin:0.5em 0 0 0;
-    }
-    .gform_heading { display:none;}
+    #gravity-form {
+        overflow:hidden !important;
+        margin:0 0 3em 0 !important;
+        display:block !important;
+        .gfield {
+            margin-top:1em;
+        }
+        #field_1_5 {
+            margin:0.5em 0 0 0;
+        }
+        .gform_heading { display:none;}
 
+    }
 }

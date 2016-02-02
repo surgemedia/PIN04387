@@ -8,18 +8,18 @@
                             }
                 ?>
             </select>
-            <button onclick="search();">SEARCH</button>
+            <button onclick="search(true);">SEARCH</button>
         </div>
 
         <div class="surrounding">
-            <input id="surrounding" type="checkbox" name="surrounding" value="include"> INCLUDE SURROUNDING PROPERTIES
+            <input id="surrounding" type="checkbox" name="surrounding" value="include" checked="checked"> INCLUDE SURROUNDING PROPERTIES
         </div>
 
         <div class="field">
             <label for="property_category">PROPERTY TYPE</label>
 
             <select name="property_category" id="type" class="">
-                <option value="" selected="selected">Any</option>
+                <option value="House" selected="selected">Any</option>
                 <option value="House" >House</option>
                 <option value="Unit">Unit</option>
                 <option value="Townhouse">Townhouse</option>
@@ -43,7 +43,7 @@
         <div class="field">
             <label for="">BEDROOMS</label>
             <select name="" id="bed">
-                <option value=""> Any </option>
+                <option value="0"> Any </option>
                 <option value="1"> 1+ </option>
                 <option value="2"> 2+ </option>
                 <option value="3"> 3+ </option>
@@ -58,7 +58,7 @@
         <div class="field">
             <label for="">BATHROOMS</label>
             <select name="" id="bath">
-                <option value=""> Any </option>
+                <option value="0"> Any </option>
                 <option value="1"> 1+ </option>
                 <option value="2"> 2+ </option>
                 <option value="3"> 3+ </option>
@@ -73,7 +73,7 @@
         <div class="field">
             <label for="">CAR SPACES</label>
             <select name="" id="car">
-                <option value=""> Any </option>
+                <option value="0"> Any </option>
                 <option value="1"> 1+ </option>
                 <option value="2"> 2+ </option>
                 <option value="3"> 3+ </option>

@@ -27,11 +27,17 @@
 		.suburb,
 		.street{
 			font-size: 36px;
-			text-transform: capitalize;
+			
 			span{
 				margin-right: .5em;
 			}
 		}
+		.suburb{
+			text-transform: uppercase;
+		}
+		.street{
+			text-transform: capitalize;
+		}	
 		.amenity{
 			list-style: none;
 			padding: 0;

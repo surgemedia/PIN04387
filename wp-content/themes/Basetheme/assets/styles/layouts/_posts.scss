@@ -2,7 +2,7 @@
 =            Property post Obj            =
 ======================================*/
 .property-obj {
-	padding:2.7em 2.7em 0.5em 2.7em;
+	padding:2.5em 2.7em 0.5em 2.7em;
 	span { 
 		font-size:2.3em; 
 		color:#fff;
@@ -43,6 +43,9 @@
 		padding:1em 0em;
 		display:inline-block;
 		font-weight: 400;
+		&:hover{
+			color: #D397C3;
+		}
 	}
 }
 /*==========================================
@@ -52,6 +55,7 @@
 	background:$purple-dark;
 	min-height:50vh;
 	padding-right:0px;
+	padding-left:0px;
 	margin: 0;
 	.title {
 		font-weight:100;
@@ -66,5 +70,9 @@
 	 	font-weight:400;
 	 }
 	}
-
+	.image{
+		background-size: cover;
+    height: 69.8vh;
+    background-position: center;
+	}
 }

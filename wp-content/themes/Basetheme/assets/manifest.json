@@ -2,7 +2,6 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/youtubeBackground/src/jquery.youtubebackground.js",
         "scripts/main.js"
       ],
       "main": true
@@ -29,6 +28,9 @@
     },
     "modernizr.js": {
       "bower": ["modernizr"]
+    },
+    "youtube.iframe-api.js": {
+      "bower": ["youtube-iframe-api"]
     }
   },
   "config": {

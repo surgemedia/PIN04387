@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About Template
+ * Template Name: About
  */
 ?>
 <?php while (have_posts()) : the_post(); ?>
@@ -17,9 +17,10 @@
 		
 	
 	<div class="col-xs-12 col-md-6 col-md-push-3 general-content">
+		<?php edit_post_link(); ?>
 		<?php
 	    the_content(); ?>
-	    <div class="bg_grey visible-lg"> </div>
+	    
 	</div>
 	<div class="col-sm-6 col-md-3 col-md-pull-6 side">
 		

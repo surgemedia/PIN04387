@@ -1,7 +1,12 @@
+.maxheight{ 
+    max-height: initial;
+    overflow: visible;
+}
 /*===================================
 =            Career Form            =
 ===================================*/
 .general-content{
+	height: initial;
 	.gform_wrapper{
 		form{
 			.gform_body{
@@ -50,4 +55,21 @@
 			}
 		}
 	}
+}
+
+#main-content {
+	hgroup {
+		h1 {
+			margin-top: 1em;
+		}
+	}
+	.content-hidden{
+		opacity: 1;
+	}
+}
+#main-content .bg-img{
+	width: auto;
+	height:100%;
+	right: 0;
+	left: initial;
 }
