@@ -26,6 +26,7 @@ $sage_includes = [
   'lib/function-getslug.php',                     // get the current slug
   'lib/function-getYoutubeId.php',              // get the Yuotube code 
   'lib/function-call_scripts.php',              // 
+  'lib/create-client-role.php',              // 
   
   'lib/function-get_id_from_slug.php',            // get id from slug
   'lib/function_clean_youtube_link.php',            // just get the v=
