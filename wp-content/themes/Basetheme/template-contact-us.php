@@ -13,7 +13,7 @@
 		$postTitle=("small"!==get_field("jumbotron_size")) ? get_field("light2") : "";
 		include(locate_template('templates/part-jumbotron.php')); ?>
 		
-	<div class="col-xs-12 col-md-6 col-md-push-3 general-content">
+	<div class="col-xs-12 col-lg-6 col-lg-push-3 general-content">
 		<?php the_content(); ?>
 	 <div id="gravity-form" class="">
     <?php  
@@ -69,10 +69,10 @@
 				<h3>Follow Us</h3>
 				<ul>
 					<li>
-						<a class="fbLink" href=""><i class="icon-facebook"></i></a>
+						<a class="fbLink" href="<?php echo get_field("facebook") ?>" target="_blank"><i class="icon-facebook"></i></a>
 					</li>
 					<li>
-						<a class="twLink" href=""><i class="icon-twitter"></i></a>
+						<a class="ytLink" href="<?php echo get_field("youtube") ?>"><i class="icon-youtube"></i></a>
 					</li>
 				</ul>
 			</div>
@@ -82,13 +82,13 @@
 
 	<!-- <div class="bg_grey visible-lg"> </div> -->
 	</div>
-	<div class="col-sm-6 col-md-3 col-md-pull-6 side">
+	<div class="col-md-6 col-lg-3 col-lg-pull-6 side">
 		<?php 
 	    
 	    $team_side_column="team_left_column";
 	    include(locate_template('templates/part-team-side.php')); ?>
 	</div>
-	<div class="col-sm-6 col-md-3 side">
+	<div class="col-md-6 col-lg-3 side">
 	    <?php 
 	    
 	    $team_side_column="team_right_column";

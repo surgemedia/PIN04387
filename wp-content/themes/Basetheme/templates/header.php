@@ -27,7 +27,7 @@
             endif;
             ?>
           
-            <section class="follow-us visible-xs-block">
+            <section class="follow-us visible-xs-block visible-sm-block">
               <h1>Follow Us</h1>
               <ul>
                 <li class="col-xs-6"><a class="fbLink" href=""><i class="icon-facebook"></i></a></li>

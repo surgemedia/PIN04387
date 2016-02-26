@@ -35,7 +35,11 @@ $args = array(
     jQuery(document).ready(function(){
     var saleType = "current";
     var property_type = "rental";
-    loadProperties(saleType,property_type);
+    
+    setTimeout(function(){
+        loadProperties(saleType,property_type);
+    }, 1000);
+    
     });
 </script>
 <div class="search-header row">

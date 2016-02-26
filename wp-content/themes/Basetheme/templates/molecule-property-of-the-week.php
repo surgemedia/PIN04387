@@ -45,7 +45,7 @@
                             <span><?php echo $the_property_meta['property_bathrooms'][0]; ?></span>
                         </li>
                         <li><i class="icon-CAR" data-toggle="tooltip" data-placement="top" title="Car"></i>
-                            <span><?php echo $the_property_meta['property_garage'][0]; ?></span>
+                            <span><?php echo $the_property_meta['property_carport'][0]+$the_property_meta['property_garage'][0]; ?></span>
                         </li>
                     </ul>
                 

@@ -16,7 +16,10 @@
     jQuery(document).ready(function(){
     var saleType = "sold";
     var property_type = "property";
-    loadProperties(saleType,property_type);
+    setTimeout(function(){
+       loadProperties(saleType,property_type);
+    }, 1000);
+    
     });
 </script>
 <div class="tips-content">

@@ -41,8 +41,11 @@ function stopVideo() {
       });
   }
 jQuery(document).ready(function(){    
-video.load('player');
-modalVideo();
+	var delay=2000;
+	setTimeout(function(){
+		video.load('player');
+		modalVideo();
+	}, delay);
 });
 </script>
 <?php while (have_posts()) : the_post(); ?>
