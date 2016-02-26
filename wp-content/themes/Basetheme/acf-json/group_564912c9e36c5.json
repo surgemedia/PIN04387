@@ -188,7 +188,7 @@
                     "key": "field_564d4de31f642",
                     "label": "Name",
                     "name": "name",
-                    "type": "text",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -197,13 +197,18 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "choices": {
+                        "facebook": "Facebook",
+                        "twitter": "Twitter"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
+                    "disabled": 0,
+                    "readonly": 0
                 },
                 {
                     "key": "field_564d4def1f643",
@@ -220,6 +225,22 @@
                     },
                     "default_value": "",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_56cfa93765c2a",
+                    "label": "Visible",
+                    "name": "visible",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0
                 }
             ]
         },
@@ -281,5 +302,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1450674294
+    "modified": 1456460914
 }
