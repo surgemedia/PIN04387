@@ -403,9 +403,9 @@ function appendShareLinks() {
     if(jQuery("a.mailLink").length>0) {
         jQuery("a.mailLink").attr('href',mailLink);
     }
-    if(jQuery("a.fbLink").length>0) {
+/*    if(jQuery("a.fbLink").length>0) {
         jQuery("a.fbLink").attr('href',fbLink);
-    }
+    }*/
     if(jQuery("a.twLink").length>0) {
         jQuery("a.twLink").attr('href',twLink);
     }
@@ -576,7 +576,7 @@ function search(render){
 
      }
     if(car != null){ 
-      filter_car = "//property[property_meta/property_garage >= "+car+"]";
+      filter_car = "//property[property_meta/property_carport + property_meta/property_garage >= "+car+"]";
       search_json = JSON.search(tag_property(search_json), filter_car );
 
      }
@@ -657,7 +657,7 @@ function noResults(){
             jQuery('#output').addClass('hidden');
             jQuery('#noResults').removeClass('hidden');
             }
-        }, 1000);
+        }, 3000);
             
 }
 
@@ -677,17 +677,17 @@ if(0 < saleType.length && 0 < property_type.length){
       break;
     case 'sold': 
       if(getCookie('suburb').length > 1){
-        load(tag_property,'current',property_type,false);
+        load(tag_property,'sold',property_type,false);
       } else {
-        load(tag_property,'current',property_type,true);
+        load(tag_property,'sold',property_type,true);
       }
       break;
   
   case 'leased': 
       if(getCookie('suburb').length > 1){
-        load(tag_property,'current',property_type,false);
+        load(tag_property,'leased',property_type,false);
       } else {
-        load(tag_property,'current',property_type,true);
+        load(tag_property,'leased',property_type,true);
       }
       break;
   }
