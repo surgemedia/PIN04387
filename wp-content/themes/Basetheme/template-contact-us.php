@@ -66,16 +66,34 @@
 		    <?php }; ?> </div>
 	<div class="col-xs-12 col-sm-4 col-md-12 col-lg-4">
 			<div class="followus">
-				<h3>Follow Us</h3>
-				<ul>
-					<li>
-						<a class="fbLink" href="<?php echo get_field("facebook") ?>" target="_blank"><i class="icon-facebook"></i></a>
-					</li>
-					<li>
-						<a class="ytLink" href="<?php echo get_field("youtube") ?>"><i class="icon-youtube"></i></a>
-					</li>
-				</ul>
+			<?php
+
+      // check if the repeater field has rows of data
+      if( have_rows('social_media','option') ):
+          
+        // loop through the rows of data
+          while ( have_rows('social_media','option') ) : the_row(); ?>
+    				<h3>Follow Us</h3>
+            <ul>
+     <?php  if (get_sub_field('visible')) : ?>
+							<li>
+								<a href="<?php echo get_sub_field('url');?>" target="_blank" class="">
+		              <i class="icon-<?php echo get_sub_field('name');?>"></i>
+		            </a>
+							</li>
+      <?php endif;?>
+       			</ul>
+     <?php endwhile;
+
+      else :
+
+          // no rows found
+
+      endif;
+
+      ?>
 			</div>
+
 	</div>
 
 </div>
