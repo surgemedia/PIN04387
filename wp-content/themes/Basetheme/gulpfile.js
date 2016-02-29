@@ -130,15 +130,15 @@ var cssTasks = function(filename) {
 // ```
 var jsTasks = function(filename) {
   return lazypipe()
-    .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.init());
-    })
+    // .pipe(function() {
+    //   // return gulpif(enabled.maps, sourcemaps.init());
+    // })
     .pipe(concat, filename)
-    .pipe(uglify, {
-      compress: {
-        'drop_debugger': enabled.stripJSDebug
-      }
-    })
+    // .pipe(uglify, {
+    //   compress: {
+    //     'drop_debugger': enabled.stripJSDebug
+    //   }
+    // })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
     })
@@ -148,6 +148,20 @@ var jsTasks = function(filename) {
       }));
     })();
 };
+
+
+var filesToMove = [
+        './post-codes.json'
+    ];
+
+gulp.task('movepostcode', function(){
+  // the base option sets the relative root for the set of files,
+  // preserving the folder structure
+  gulp.src(filesToMove, { base: './' })
+  .pipe(gulp.dest('dist/scripts'));
+});
+
+
 
 // ### Write to rev manifest
 // If there are any revved files then write them to the rev manifest.
@@ -269,6 +283,7 @@ gulp.task('build', function(callback) {
   runSequence('styles',
               'scripts',
               ['fonts', 'images'],
+              'movepostcode',
               callback);
 });
 

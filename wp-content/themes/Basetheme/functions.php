@@ -18,18 +18,25 @@ $sage_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
-  'lib/function-debug.php',                // Custom functions
-  'lib/function-get-featured-image-url.php',      // Custom functions
-  'lib/function-get-tax-names.php',               // Custom functions
-  'lib/function-getslug.php',                     // Custom functions
-  'lib/function-get_id_from_slug.php',            // Custom functions
-  'lib/function_clean_youtube_link.php',            // Custom functions
-  'lib/function-display-gravity-form.php',            // Custom functions
-  'lib/function-display-gravity-form.php',            // Custom functions
-  'lib/gravity_forms-v5.php',            // Custom functions
-  'lib/acf-option-page.php',            // Custom functions
-
-  'lib/aq_resizer.php',                // Custom functions
+  'post-types/action-post-type-testimonials.php',                // Custom post type
+  'post-types/action-post-type-people.php',                // Custom post type
+  'post-types/action-post-type-tips.php',                // Custom post type
+  'lib/function-debug.php',                // debuggings fun
+  'lib/function-get-featured-image-url.php',      // get feaured image url for aq resizer
+  'lib/function-getslug.php',                     // get the current slug
+  'lib/function-getYoutubeId.php',              // get the Yuotube code 
+  'lib/function-call_scripts.php',              // 
+  'lib/create-client-role.php',              // 
+  
+  'lib/function-get_id_from_slug.php',            // get id from slug
+  'lib/function_clean_youtube_link.php',            // just get the v=
+  'lib/function-display-gravity-form.php',            // Easy ACF to Gravity form display func
+  'lib/function-truncate-content.php',            // truncate long text
+  'lib/function-get_post_page_content.php',            // get content from another page
+  'lib/gravity_forms-v5.php',            // Adds Gravity form to ACF
+  'lib/acf-option-page.php',            // theme Option Page
+  'lib/wp-api-register-property.php',            // WP API post type addons
+  'lib/aq_resizer.php',                // Image resizer
 
 
 ];

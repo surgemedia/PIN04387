@@ -7,7 +7,7 @@ class UpdraftPlus_Options {
 
 	public static function user_can_manage() {
 		$user_can_manage = current_user_can(apply_filters('option_page_capability_updraft-options-group', 'manage_options'));
-		// false: not multisite add-on
+		// false: allows the filter to know that the request is not coming from the multisite add-on
 		return apply_filters('updraft_user_can_manage', $user_can_manage, false);
 	}
 
@@ -113,6 +113,7 @@ class UpdraftPlus_Options {
 		register_setting('updraft-options-group', 'updraft_dropbox', array($updraftplus, 'dropbox_checkchange'));
 		register_setting('updraft-options-group', 'updraft_googledrive', array($updraftplus, 'googledrive_checkchange'));
 		register_setting('updraft-options-group', 'updraft_onedrive', array($updraftplus, 'onedrive_checkchange'));
+		register_setting('updraft-options-group', 'updraft_azure', array($updraftplus, 'azure_checkchange'));
 		register_setting('updraft-options-group', 'updraft_googlecloud', array($updraftplus, 'googlecloud_checkchange'));
 
 		register_setting('updraft-options-group', 'updraft_sftp_settings');

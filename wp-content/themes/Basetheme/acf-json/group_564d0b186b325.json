@@ -1,0 +1,96 @@
+{
+    "key": "group_564d0b186b325",
+    "title": "Page - Contact us (Team)",
+    "fields": [
+        {
+            "key": "field_564d0b987383d",
+            "label": "Team Left Column",
+            "name": "team_left_column",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "team"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": 2,
+            "return_format": "id"
+        },
+        {
+            "key": "field_564d160652e76",
+            "label": "Team Right Column",
+            "name": "team_right_column",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "team"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": 2,
+            "return_format": "id"
+        },
+        {
+            "key": "field_564d4e1bed5bf",
+            "label": "Form",
+            "name": "form",
+            "type": "gravity_forms_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "allow_null": 0,
+            "allow_multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-team.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1447914456
+}

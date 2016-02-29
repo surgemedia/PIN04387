@@ -5,16 +5,52 @@
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import "../../bower_components/owl.carousel/src/scss/owl.animate.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.autoheight.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.lazyload.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.theme.default.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.theme.green.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.video.scss";
+
 @import "common/_global";
 @import "common/_fonts";
 @import "components/_buttons";
 @import "components/_comments";
 @import "components/_forms";
+@import "components/_navs";
 @import "components/_grid";
+@import "components/_content";
+@import "components/_property_card";
+@import "components/_sides";
+@import "components/_cards";
+@import "components/_modals";
+@import "components/_jumbotron";
+@import "components/_google_map";
 @import "components/_wp-classes";
 @import "layouts/_header";
 @import "layouts/_sidebar";
 @import "layouts/_footer";
 @import "layouts/_pages";
 @import "layouts/_posts";
+@import "components/_no_results";
 
+
+@media (max-width: $screen-sm-max) {
+	@import "res/_res-xs-sm.scss";
+}
+@media (max-width: $screen-xs-max) {
+	@import "res/_res-xs.scss";
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	@import "res/_res-sm.scss";
+}
+@media (min-width: $screen-md-min) {
+	@import "res/_res-md-lg.scss";
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	@import "res/_res-md.scss";
+}
+@media (min-width: $screen-lg-min) {
+	@import "res/_res-lg.scss";
+}

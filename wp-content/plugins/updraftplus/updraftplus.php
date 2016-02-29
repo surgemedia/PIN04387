@@ -4,7 +4,7 @@ Plugin Name: UpdraftPlus - Backup/Restore
 Plugin URI: https://updraftplus.com
 Description: Backup and restore: take backups locally, or backup to Amazon S3, Dropbox, Google Drive, Rackspace, (S)FTP, WebDAV & email, on automatic schedules.
 Author: UpdraftPlus.Com, DavidAnderson
-Version: 1.11.17
+Version: 1.11.23
 Donate link: http://david.dw-perspective.org.uk/donate
 License: GPLv3 or later
 Text Domain: updraftplus
@@ -13,7 +13,7 @@ Author URI: https://updraftplus.com
 */
 
 /*
-Portions copyright 2011-15 David Anderson
+Portions copyright 2011-16 David Anderson
 Portions copyright 2010 Paul Kehrer
 Other portions copyright as indicated by authors in the relevant files
 
@@ -34,14 +34,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 if (!defined('ABSPATH')) die('No direct access allowed');
 
+if ((isset($updraftplus) && is_object($updraftplus) && is_a($updraftplus, 'UpdraftPlus')) || function_exists('updraftplus_modify_cron_schedules')) return;
+
 define('UPDRAFTPLUS_DIR', dirname(__FILE__));
 define('UPDRAFTPLUS_URL', plugins_url('', __FILE__));
-define('UPDRAFT_DEFAULT_OTHERS_EXCLUDE','upgrade,cache,updraft,backup*,*backups,mysql.sql');
+define('UPDRAFT_DEFAULT_OTHERS_EXCLUDE','upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log');
 define('UPDRAFT_DEFAULT_UPLOADS_EXCLUDE','backup*,*backups,backwpup*,wp-clone');
 
 // The following can go in your wp-config.php
 // Tables whose data can be skipped without significant loss, if (and only if) the attempt to back them up fails (e.g. bwps_log, from WordPress Better Security, is log data; but individual entries can be huge and cause out-of-memory fatal errors on low-resource environments). Comma-separate the table names (without the WordPress table prefix).
-if (!defined('UPDRAFTPLUS_DATA_OPTIONAL_TABLES')) define('UPDRAFTPLUS_DATA_OPTIONAL_TABLES', 'bwps_log,statpress,slim_stats,redirection_logs,Counterize,Counterize_Referers,Counterize_UserAgents,wbz404_logs,wbz404_redirects,tts_trafficstats,tts_referrer_stats,wponlinebackup_generations,svisitor_stat,simple_feed_stats,itsec_log,relevanssi_log,blc_instances');
+if (!defined('UPDRAFTPLUS_DATA_OPTIONAL_TABLES')) define('UPDRAFTPLUS_DATA_OPTIONAL_TABLES', 'bwps_log,statpress,slim_stats,redirection_logs,Counterize,Counterize_Referers,Counterize_UserAgents,wbz404_logs,wbz404_redirects,tts_trafficstats,tts_referrer_stats,wponlinebackup_generations,svisitor_stat,simple_feed_stats,itsec_log,relevanssi_log,blc_instances,wysija_email_user_stat');
 if (!defined('UPDRAFTPLUS_ZIP_EXECUTABLE')) define('UPDRAFTPLUS_ZIP_EXECUTABLE', "/usr/bin/zip,/bin/zip,/usr/local/bin/zip,/usr/sfw/bin/zip,/usr/xdg4/bin/zip,/opt/bin/zip");
 if (!defined('UPDRAFTPLUS_MYSQLDUMP_EXECUTABLE')) define('UPDRAFTPLUS_MYSQLDUMP_EXECUTABLE', "/usr/bin/mysqldump,/bin/mysqldump,/usr/local/bin/mysqldump,/usr/sfw/bin/mysqldump,/usr/xdg4/bin/mysqldump,/opt/bin/mysqldump");
 // If any individual file size is greater than this, then a warning is given
@@ -58,12 +60,30 @@ if (!defined('UPDRAFTPLUS_MAXBATCHFILES')) define('UPDRAFTPLUS_MAXBATCHFILES', 5
 // If any individual email attachment is greater than this, then a warning is given (and then removed if the email actually succeeds)
 if (!defined('UPDRAFTPLUS_WARN_EMAIL_SIZE')) define('UPDRAFTPLUS_WARN_EMAIL_SIZE', 20*1048576);
 
-// Options to pass to the zip binary (if that method happens to be used). By default, we mark several extensions that refer to filetypes that are already compressed as not needing further compression - which saves time/resources.
-if (!defined('UPDRAFTPLUS_BINZIP_OPTS')) define('UPDRAFTPLUS_BINZIP_OPTS', '-n .jpg:.JPG:.jpeg:.JPEG:.png:.PNG:.gif:.GIF:.zip:.ZIP:.gz:.bz2:.xz.:.rar:.RAR:.mp3:.MP3:.mp4:.MP4:.mpeg:.MPEG:.avi:.AVI:.mov:.MOV');
+// Filetypes that should be stored inside the zip without any attempt at further compression. By default, we mark several extensions that refer to filetypes that are already compressed as not needing further compression - which saves time/resources. This option only applies to zip engines that support varying the compression method. Specify in lower-case, and upper-case variants (and for some zip engines, all variants) will automatically be included.
+if (!defined('UPDRAFTPLUS_ZIP_NOCOMPRESS')) define('UPDRAFTPLUS_ZIP_NOCOMPRESS', '.jpg,.jpeg,.png,.gif,.zip,.gz,.bz2,.xz,.rar,.mp3,.mp4,.mpeg,.avi,.mov');
+
+// This is passed to set_time_limit() at various points, to try to maximise run-time. (UD resumes if it gets killed, but more in one stretch always helps). The effect of this varies according to the hosting setup - it can't necessarily always be controlled.
+if (!defined('UPDRAFTPLUS_SET_TIME_LIMIT')) define('UPDRAFTPLUS_SET_TIME_LIMIT', 900);
+
+// Options to pass to the zip binary (if that method happens to be used). By default, we mark the extensions specified in UPDRAFTPLUS_ZIP_NOCOMPRESS for non-compression via the -n flag
+if (!defined('UPDRAFTPLUS_BINZIP_OPTS')) {
+	$zip_nocompress = array_map('trim', explode(',', UPDRAFTPLUS_ZIP_NOCOMPRESS));
+	$zip_binzip_opts = '';
+	foreach ($zip_nocompress as $ext) {
+		if (empty($zip_binzip_opts)) {
+			$zip_binzip_opts = "-n $ext:".strtoupper($ext);
+		} else {
+			$zip_binzip_opts .= ':'.$ext.':'.strtoupper($ext);
+		}
+	}
+	define('UPDRAFTPLUS_BINZIP_OPTS', $zip_binzip_opts);
+}
 
 // Load add-ons and files that may or may not be present, depending on where the plugin was distributed
 if (is_file(UPDRAFTPLUS_DIR.'/autoload.php')) require_once(UPDRAFTPLUS_DIR.'/autoload.php');
 
+if (!function_exists('updraftplus_modify_cron_schedules')):
 // wp-cron only has hourly, daily and twicedaily, so we need to add some of our own
 function updraftplus_modify_cron_schedules($schedules) {
 	$schedules['weekly'] = array('interval' => 604800, 'display' => 'Once Weekly');
@@ -73,14 +93,14 @@ function updraftplus_modify_cron_schedules($schedules) {
 	$schedules['every8hours'] = array('interval' => 28800, 'display' => sprintf(__('Every %s hours', 'updraftplus'), 8));
 	return $schedules;
 }
+endif;
 // http://codex.wordpress.org/Plugin_API/Filter_Reference/cron_schedules. Raised priority because some plugins wrongly over-write all prior schedule changes (including BackupBuddy!)
 add_filter('cron_schedules', 'updraftplus_modify_cron_schedules', 30);
 
 // The checks here before loading are for performance only - unless one of those conditions is met, then none of the hooks will ever be used
 
-if (!is_admin() && (!defined('DOING_CRON') || !DOING_CRON) && (!defined('XMLRPC_REQUEST') || !XMLRPC_REQUEST) && empty($_SERVER['SHELL']) && empty($_SERVER['USER']) && empty($_POST['udrpc_message'])) {
+if (!is_admin() && (!defined('DOING_CRON') || !DOING_CRON) && (!defined('XMLRPC_REQUEST') || !XMLRPC_REQUEST) && empty($_SERVER['SHELL']) && empty($_SERVER['USER']) && empty($_POST['udrpc_message']) && empty($_GET['udcentral_action']) && (empty($_SERVER['REQUEST_METHOD']) || 'OPTIONS' != $_SERVER['REQUEST_METHOD'])) {
 	// There is no good way to work out if the cron event is likely to be called under the ALTERNATE_WP_CRON system, other than re-running the calculation
-
 	// If ALTERNATE_WP_CRON is not active (and a few other things), then we are done
 	if ( !defined('ALTERNATE_WP_CRON') || !ALTERNATE_WP_CRON || !empty($_POST) || defined('DOING_AJAX') || isset($_GET['doing_wp_cron'])) return;
 
@@ -144,6 +164,13 @@ if (!file_exists(UPDRAFTPLUS_DIR.'/class-updraftplus.php') || !file_exists(UPDRA
 		}
 	}
 
+}
+
+# Ubuntu bug - https://bugs.launchpad.net/ubuntu/+source/php5/+bug/1315888
+if (!function_exists('gzopen') && function_exists('gzopen64')) {
+	function gzopen($filename , $mode, $use_include_path = 0 ) { 
+		return gzopen64($filename, $mode, $use_include_path);
+	}
 }
 
 // Do this even if the missing files detection above fired, as the "missing files" detection above has a greater chance of showing the user useful info

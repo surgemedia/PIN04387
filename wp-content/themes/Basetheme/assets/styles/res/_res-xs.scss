@@ -1,0 +1,226 @@
+
+.property-card .content {
+    position: absolute;
+    top: 35%;
+    z-index: 2;
+    left: 0%;
+    width: 100%;
+}
+#main-content {
+	height: auto;
+	hgroup h1{
+		font-size: 3em;
+	}
+}
+#contact-us .headshot {
+	height: auto;
+	.hgroup{
+		padding: 1.5em 1em;
+		h1{
+			font-size: 2.7em;
+		}
+	} 
+	img {
+
+		width:100%;
+		height:auto;
+	}
+}
+.navbar-header{
+	/* z-index: 9999; */
+}
+.navbar-toggle{
+	border: 1px solid #fff;
+	border-radius: 0;
+	margin-top: 17px;
+	background-color: $brand-light;
+	
+	.icon-bar{
+		background-color: #fff;
+		margin: 8px 0;
+		}
+	&.collapsed{
+		background-color:transparent;
+	}
+}
+
+.banner div {
+	position: static;
+	.logo-wrap {
+	    
+	    left: 2em;
+	    a{
+			img{
+				width:76px; 
+			}
+		}
+	}
+}	
+.jumbotron{
+	border-top:91px;
+}
+
+.banner,
+.banner.home{
+	background-color: $brand-dark;
+	opacity: 1;
+	height:91px;
+}
+.banner div .menu-wrap{
+	top:6.5em;
+	right:initial;
+	width:100%;
+	position:fixed;
+	height:auto;
+	.navbar-collapse{
+		margin-right: -15px;
+		margin-left: -15px;
+		width:100%;
+		text-align: center;
+		
+		.nav{
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+		ul{
+			li{
+				display: block;
+		    font-size: 2em;
+		    min-height: 3em;
+		    line-height: 3;
+		    text-transform: uppercase;
+			transition: ease .3s all;
+				.sub-menu{
+					transition: ease .3s all;
+					overflow: hidden;
+			    height: 0px;
+			    padding: 0;
+					position:static;
+					background:$brand-light;
+					width: 100%;
+					border:0;
+					display: block;
+					li{
+						font-size: .8em;
+						a{
+							padding:0;
+						}
+					}
+				}	
+				
+				a.active+.sub-menu{
+					height: 198px;
+					transition: ease .3s all;
+				}
+
+				&:before{
+
+					content: none;
+				}
+
+			}
+		}
+
+
+		&.collapsing,
+		&.collapse.in{
+			background: $brand-primary;
+			height: 100vh;
+		}
+	}
+	.follow-us{
+		margin-top: 2em;
+		padding-top: 2em;
+		border-top:1px solid #fff;
+		width: 220px;
+		margin: auto;
+		height:20em;
+		h1{
+			color:#fff;
+			font-family: 'Century Gothic';
+			font-weight: normal;
+			font-size: 28px;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			li{
+				display: inline-block;
+				line-height: 2;
+				i{
+					font-size: 2em;
+				}
+			}
+		}
+	}
+}
+
+/*==============================
+=            Footer            =
+==============================*/
+.general-content{
+	.social{
+		.gform_body .ginput_container_email input{
+			width: 100%;
+		}
+		.followus{
+			text-align: left;
+			h3{
+				padding-left:1em;
+			}
+		}
+	}
+}
+
+#email-marketing {
+	padding: 0;
+	margin-bottom: 1em;
+	.gform_body {
+		width:100%;
+	}
+	.gform_footer {
+		width: 100%; 
+	}
+}
+
+.contact-location .info,
+.info{
+	
+    li{
+    	padding-bottom: 2em;
+    	display: block;
+    	padding-right: 0;
+    	a{
+    		background-color: $brand-primary;
+    		color:inherit;
+    		font-family:$fourth-font;
+    		font-size:0.9em;
+    		color:#fff;
+				display: block;
+				height: 2em;
+				line-height: 2;
+    	}
+    }
+	}
+.content-info .foot span{
+	font-size: 14px;
+}
+
+#main-content .bg-img{
+	left: initial;
+	/* right: -100%; */
+}
+
+.modal .modal-dialog {
+	width:95%;
+	.modal-content .modal-body .close{
+		right:0;
+	}
+	
+}
+.jumbotron .content{
+	font-size: 73px;
+}
+.tips-content .content{
+	width:90%;
+}

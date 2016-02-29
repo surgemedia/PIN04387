@@ -111,7 +111,7 @@ class UpdraftPlus_BackupModule_updraftvault extends UpdraftPlus_BackupModule_s3 
 
 		if (!is_wp_error($getconfig) && false != $getconfig && is_array($getconfig) && isset($getconfig['body'])) {
 
-			if ($getconfig['response']['code'] >=200 && $getconfig['response']['code'] < 300) {
+			if ($getconfig['response']['code'] >= 200 && $getconfig['response']['code'] < 300) {
 				$response = json_decode($getconfig['body'], true);
 
 				if (is_array($response) && isset($response['user_messages']) && is_array($response['user_messages'])) {
@@ -137,7 +137,7 @@ class UpdraftPlus_BackupModule_updraftvault extends UpdraftPlus_BackupModule_s3 
 					$config['accesskey'] = $response['accesskey'];
 					$config['secretkey'] = $response['secretkey'];
 					$config['path'] = $response['path'];
-				} elseif (is_array($response) && isset($response['result']) && 'token_unknown' == $response['result']) {
+				} elseif (is_array($response) && isset($response['result']) && ('token_unknown' == $response['result'] || 'site_duplicated' == $response['result'])) {
 					$updraftplus->log("This site appears to not be connected to UpdraftPlus Vault");
 					$config['accesskey'] = '';
 					$config['secretkey'] = '';
@@ -163,6 +163,10 @@ class UpdraftPlus_BackupModule_updraftvault extends UpdraftPlus_BackupModule_s3 
 			} else {
 				$updraftplus->log("Unexpected HTTP response code (please try again later): ".$getconfig['response']['code']);
 			}
+		} elseif (is_wp_error($getconfig)) {
+			$updraftplus->log_wp_error($getconfig);
+		} else {
+			$updraftplus->log("HTTP failure: wp_remote_post returned a result that was not understood (".gettype($getconfig).")");
 		}
 
 		if (!$details_retrieved) {
@@ -199,6 +203,9 @@ class UpdraftPlus_BackupModule_updraftvault extends UpdraftPlus_BackupModule_s3 
 			break;
 			case 'vault_subscription_suspended':
 			return __("You have an UpdraftPlus Vault subscription that has not been renewed, and the grace period has expired. In a few days' time, your stored data will be permanently removed. If you do not wish this to happen, then you should renew as soon as possible.", 'updraftplus');
+			// The following shouldn't be a possible response (the server can deal with duplicated sites with the same IDs) - but there's no harm leaving it in for now (Dec 2015)
+			case 'site_duplicated':
+			return __('No Vault connection was found for this site (has it moved?); please disconnect and re-connect.', 'updraftplus');
 			break;
 		}
 		return $message;
@@ -219,6 +226,16 @@ class UpdraftPlus_BackupModule_updraftvault extends UpdraftPlus_BackupModule_s3 
 		<tr class="updraftplusmethod updraftvault">
 			<th><img style="padding-left: 40px;" src="<?php echo esc_attr(UPDRAFTPLUS_URL.'/images/updraftvault-150.png');?>" alt="UpdraftPlus Vault" width="150" height="116"></th>
 			<td valign="top" id="updraftvault_settings_cell">
+			<?php
+				global $updraftplus_admin;
+				if (!class_exists('SimpleXMLElement')) {
+					
+					$updraftplus_admin->show_double_warning('<strong>'.__('Warning', 'updraftplus').':</strong> '.sprintf(__("Your web server's PHP installation does not included a <strong>required</strong> (for %s) module (%s). Please contact your web hosting provider's support and ask for them to enable it.", 'updraftplus'), 'UpdraftPlus Vault', 'SimpleXMLElement'), 'updraftvault');
+				}
+
+				$updraftplus_admin->curl_check('UpdraftPlus Vault', false, 'updraftvault', true);
+			?>
+			
 				<div id="updraftvault_settings_default"<?php if ($connected) echo ' style="display:none;"';?>>
 					<p style="padding-bottom:20px;">
 						<?php echo __('UpdraftPlus Vault brings you storage that is <strong>reliable, easy to use and a great price</strong>.', 'updraftplus').' '.__('Press a button to get started.', 'updraftplus');?>
@@ -241,19 +258,22 @@ class UpdraftPlus_BackupModule_updraftvault extends UpdraftPlus_BackupModule_s3 
 						<?php echo __('UpdraftPlus Vault brings you storage that is <strong>reliable, easy to use and a great price</strong>.', 'updraftplus').' '.__('Press a button to get started.', 'updraftplus');?>
 					</p>
 					<div style="float: left; clear:left; width:33%; text-align:center;">
-						<div style="font-size: 200%;">5 Gb</div>
-						<div style="clear:both;font-size: 150%;"><?php printf(__('%s per quarter', 'updraftplus'), '$10'); ?></div>
-						<div style="clear:both;font-size: 150%;"><a target="_blank" href="https://updraftplus.com/shop/updraftplus-vault-storage-5-gb/"><?php _e('Buy It Now', 'updraftplus');?></a></div>
+						<div style="font-size: 200%; font-weight:bold;">5 Gb</div>
+						<div style="clear:both;font-size: 150%;"><a target="_blank" href="https://updraftplus.com/vault-5gb-quarterly"><?php printf(__('%s per quarter', 'updraftplus'), '$10'); ?></a></div>
+						<div style="clear:both;font-size: 115%; font-style:italic;"><?php _e('or (annual discount)', 'updraftplus');?></div>
+						<div style="clear:both;font-size: 150%;"><a target="_blank" href="https://updraftplus.com/vault-5gb-annual"><?php printf(__('%s per year', 'updraftplus'), '$35'); ?></a></div>
 					</div>
 					<div style="float: left; width:33%; text-align:center;">
-						<div style="font-size: 200%;">15 Gb</div>
-						<div style="clear:both;font-size: 150%;"><?php printf(__('%s per quarter', 'updraftplus'), '$20'); ?></div>
-						<div style="clear:both;font-size: 150%;"><a target="_blank" href="https://updraftplus.com/shop/updraftplus-vault-storage-15-gb/"><?php _e('Buy It Now', 'updraftplus');?></a></div>
+						<div style="font-size: 200%;font-weight:bold;">15 Gb</div>
+						<div style="clear:both;font-size: 150%;"><a target="_blank" href="https://updraftplus.com/vault-15gb-quarterly"><?php printf(__('%s per quarter', 'updraftplus'), '$20'); ?></a></div>
+						<div style="clear:both;font-size: 115%; font-style:italic;"><?php _e('or (annual discount)', 'updraftplus');?></div>
+						<div style="clear:both;font-size: 150%;"><a target="_blank" href="https://updraftplus.com/vault-15gb-annual"><?php printf(__('%s per year', 'updraftplus'), '$70');?></a></div>
 					</div>
 					<div style="float: left; width:33%; text-align:center;">
-						<div style="font-size: 200%;">50 Gb</div>
-						<div style="clear:both;font-size: 150%;"><?php printf(__('%s per quarter', 'updraftplus'), '$50'); ?></div>
-						<div style="clear:both;font-size: 150%;"><a target="_blank" href="https://updraftplus.com/shop/updraftplus-vault-storage-50-gb/"><?php _e('Buy It Now', 'updraftplus');?></a></div>
+						<div style="font-size: 200%;font-weight:bold;">50 Gb</div>
+						<div style="clear:both;font-size: 150%;"><a target="_blank" href="https://updraftplus.com/vault-50gb-quarterly"><?php printf(__('%s per quarter', 'updraftplus'), '$50'); ?></a></div>
+						<div style="clear:both;font-size: 115%; font-style:italic;"><?php _e('or (annual discount)', 'updraftplus');?></div>
+						<div style="clear:both;font-size: 150%;"><a target="_blank" href="https://updraftplus.com/vault-50gb-annual"><?php printf(__('%s per year', 'updraftplus'), '$175');;?></a></div>
 					</div>
 					<p style="clear:left; padding-top:20px;">
 						<?php echo __('Payments can be made in US dollars, euros or GB pounds sterling, via card or PayPal.', 'updraftplus').' '. __('Subscriptions can be cancelled at any time.', 'updraftplus');?>
@@ -290,14 +310,6 @@ class UpdraftPlus_BackupModule_updraftvault extends UpdraftPlus_BackupModule_s3 
 		</tr>
 
 		<?php
-		global $updraftplus_admin;
-		if (!class_exists('SimpleXMLElement')) {
-			
-			$updraftplus_admin->show_double_warning('<strong>'.__('Warning', 'updraftplus').':</strong> '.sprintf(__("Your web server's PHP installation does not included a required module (%s). Please contact your web hosting provider's support.", 'updraftplus'), 'SimpleXMLElement'), $key);
-		}
-
-		$updraftplus_admin->curl_check('UpdraftPlus Vault', false, 'updraftvault', false);
-
 		$this->vault_in_config_print = false;
 
 	}
@@ -517,8 +529,13 @@ class UpdraftPlus_BackupModule_updraftvault extends UpdraftPlus_BackupModule_s3 
 					unset($vault_settings['last_config']);
 					if (isset($response['quota'])) $vault_settings['quota'] = $response['quota'];
 					UpdraftPlus_Options::update_updraft_option('updraft_updraftvault', $vault_settings);
-					if (!empty($response['config']) && is_array($response['config']) && !empty($response['config']['accesskey'])) {
-						$this->vault_set_config($response['config']);
+					if (!empty($response['config']) && is_array($response['config'])) {
+						if (!empty($response['config']['accesskey'])) {
+							$this->vault_set_config($response['config']);
+						} elseif (!empty($response['config']['result']) && ('token_unknown' == $response['config']['result'] || 'site_duplicated' == $response['config']['result'])) {
+							return new WP_Error($response['config']['result'], $this->vault_translate_remote_message($response['config']['message'], $response['config']['result']));
+						}
+						// else... would also be an error condition, but not one known possible (and it will show a generic error anyway)
 					}
 				} elseif (isset($response['quota']) && !$response['quota']) {
 					return new WP_Error('no_quota', __('You do not currently have any UpdraftPlus Vault quota', 'updraftplus'));

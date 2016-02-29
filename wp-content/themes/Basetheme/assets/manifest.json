@@ -2,14 +2,14 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/youtubeBackground/src/jquery.youtubebackground.js",
         "scripts/main.js"
       ],
       "main": true
     },
     "main.css": {
       "files": [
-        "styles/main.scss"
+        "styles/main.scss",
+        "styles/chosen.min.css"
       ],
       "main": true
     },
@@ -21,8 +21,16 @@
     "jquery.js": {
       "bower": ["jquery"]
     },
+     "post-codes.json": {
+      "files": [
+        "scripts/post-codes.json"
+      ]
+    },
     "modernizr.js": {
       "bower": ["modernizr"]
+    },
+    "youtube.iframe-api.js": {
+      "bower": ["youtube-iframe-api"]
     }
   },
   "config": {

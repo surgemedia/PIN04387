@@ -19,7 +19,7 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     <div class="wrap" role="document">
-      <div class="content row">
+      <div class="content">
         <main class="main" role="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
@@ -35,5 +35,6 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/footer');
       wp_footer();
     ?>
+ 
   </body>
 </html>
