@@ -27,7 +27,7 @@
                 "featured_image"
             ],
             "min": "",
-            "max": 2,
+            "max": "",
             "return_format": "id"
         },
         {
@@ -55,7 +55,7 @@
                 "featured_image"
             ],
             "min": "",
-            "max": 2,
+            "max": -1,
             "return_format": "id"
         },
         {
@@ -80,7 +80,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-team.php"
+                "value": "template-contact-us.php"
             }
         ]
     ],
@@ -89,8 +89,13 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "custom_fields",
+        "discussion",
+        "comments",
+        "slug"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1447914456
+    "modified": 1454031277
 }
