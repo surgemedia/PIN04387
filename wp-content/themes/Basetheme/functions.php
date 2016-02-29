@@ -21,6 +21,7 @@ $sage_includes = [
   'post-types/action-post-type-testimonials.php',                // Custom post type
   'post-types/action-post-type-people.php',                // Custom post type
   'post-types/action-post-type-tips.php',                // Custom post type
+  'lib/add-menu-location.php',                // Add menu location
   'lib/function-debug.php',                // debuggings fun
   'lib/function-get-featured-image-url.php',      // get feaured image url for aq resizer
   'lib/function-getslug.php',                     // get the current slug

@@ -6,7 +6,7 @@
     $content_size="big";
 }
 ?>
-<div class="card col-lg-4 <?php echo $color; ?>">
+<div class="card col-sm-6 col-lg-4 <?php echo $color; ?>">
     <?php if (""!=$image):?>
         <div class="head-card">
             <img src="<?php echo $image; ?>" alt="">

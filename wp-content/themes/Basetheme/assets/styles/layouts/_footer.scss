@@ -4,20 +4,49 @@
     width: 100%;
 	
 	.foot{
-
-		height:110px;
+        height: auto;
+		min-height:110px;
 		background: $brand-dark;
 		text-align: center;
+        display: inline-block;
+        width:100%;
 		span{
 			color:#fff;
-    font-family:$fourth-font;
-    font-weight:100;
+            font-family:$fourth-font;
+            font-weight:100;
 			line-height: 110px;
 			font-size: 20px;
 		}
+        [class*="icon-"]{
+            font-size: 1.3em;
+            color: #fff;
+        }
+        .footer-nav{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li{
+                display:inline-block;
+                font-size: .7em;
+                a{
+                    font-size: inherit;
+                    &:hover{
+                       color:#fff;
+                    }
+                }
+                &:after{
+                    content:"|";
+                    padding-left: .3em;
+                }
+                &:last-child:after{
+                    content:"";
+                }
+            }
+
+        }
 	}
 }
-	.info{
+.info{
 	padding: 0;
     list-style: none;
     padding: 2em 0;
@@ -35,4 +64,4 @@
     		font-size:0.9em;
     	}
     }
-	}
+}

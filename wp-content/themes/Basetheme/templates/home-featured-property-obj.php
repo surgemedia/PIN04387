@@ -1,7 +1,9 @@
 <?php 
 // $the_property = get_post(get_the_id() );
 $the_property_meta = get_post_meta(get_the_id() );
+//debug($the_property_meta);
  ?>
+ 
 <div class="col-lg-6 featured">
 	<?php 
 		 $image = getFeaturedUrl(get_the_id()); 
@@ -19,7 +21,7 @@ $the_property_meta = get_post_meta(get_the_id() );
                         <span><?php echo $the_property_meta['property_bathrooms'][0]; ?></span>
                     </li>
                     <li><i class="icon-CAR" data-toggle="tooltip" data-placement="top" title="Car"></i>
-                        <span><?php echo $the_property_meta['property_garage'][0]; ?></span>
+                        <span><?php echo $the_property_meta['property_carport'][0]+$the_property_meta['property_garage'][0]; ?></span>
                     </li>
             </ul>
             <a href="<?php the_permalink()?>" class="details">Details</a>

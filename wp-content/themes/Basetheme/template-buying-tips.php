@@ -5,7 +5,7 @@
 ?>
 <div class="row">
 	
-	<?php 
+	<?php
 		$extraClass=get_field("jumbotron_size");
 		$image=getFeaturedUrl(get_the_id());
 		$preTitle=get_field("light");
@@ -42,7 +42,7 @@
 	<?php 
 	
 		
-		$image=wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+		$image=get_field('image');
 		// debug($image);
 		include(locate_template('templates/part-tips-card.php')); 
 	

@@ -14,7 +14,9 @@
                     </div>
                     <i class="icon-BED" data-toggle="tooltip" data-placement="top" title="Bed"><xsl:value-of select="property_meta/property_bedrooms"/></i>
                     <i class="icon-BATH" data-toggle="tooltip" data-placement="top" title="Bath"><xsl:value-of select="property_meta/property_bathrooms"/></i>
-                    <i class="icon-CAR" data-toggle="tooltip" data-placement="top" title="Bed"><xsl:value-of select="property_meta/property_garage"/>   </i>
+                    <i class="icon-CAR" data-toggle="tooltip" data-placement="top" title="Car"><xsl:value-of select="property_meta/property_all_carspaces"/></i>
+                    
+
                 </div>
                 </a>
         </article>

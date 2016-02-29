@@ -78,7 +78,7 @@ wp_reset_postdata(); ?>
 
 		<i class="icon-BED" data-toggle="tooltip" data-placement="top" title="Bed"><?php echo $the_property_meta['property_bedrooms'][0]; ?></i>
 		<i class="icon-BATH" data-toggle="tooltip" data-placement="top" title="Bath"><?php echo $the_property_meta['property_bathrooms'][0]; ?></i>
-		<i class="icon-CAR" data-toggle="tooltip" data-placement="top" title="Car"><?php echo $the_property_meta['property_garage'][0]; ?></i>
+		<i class="icon-CAR" data-toggle="tooltip" data-placement="top" title="Car"><?php echo $the_property_meta['property_carport'][0]+$the_property_meta['property_garage'][0]; ?></i>
 
 		<div class="price">
 		<?php
