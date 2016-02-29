@@ -13,7 +13,7 @@
 		$postTitle=("small"!==get_field("jumbotron_size")) ? get_field("light2") : "";
 		include(locate_template('templates/part-jumbotron.php')); ?>
 		
-	<div class="col-xs-12 col-md-6 col-md-push-3 general-content">
+	<div class="col-xs-12 col-lg-6 col-lg-push-3 general-content">
 		<?php the_content(); ?>
 	 <div id="gravity-form" class="">
     <?php  
@@ -66,29 +66,47 @@
 		    <?php }; ?> </div>
 	<div class="col-xs-12 col-sm-4 col-md-12 col-lg-4">
 			<div class="followus">
-				<h3>Follow Us</h3>
-				<ul>
-					<li>
-						<a class="fbLink" href=""><i class="icon-facebook"></i></a>
-					</li>
-					<li>
-						<a class="twLink" href=""><i class="icon-twitter"></i></a>
-					</li>
-				</ul>
+			<?php
+
+      // check if the repeater field has rows of data
+      if( have_rows('social_media','option') ):
+          
+        // loop through the rows of data
+          while ( have_rows('social_media','option') ) : the_row(); ?>
+    				<h3>Follow Us</h3>
+            <ul>
+     <?php  if (get_sub_field('visible')) : ?>
+							<li>
+								<a href="<?php echo get_sub_field('url');?>" target="_blank" class="">
+		              <i class="icon-<?php echo get_sub_field('name');?>"></i>
+		            </a>
+							</li>
+      <?php endif;?>
+       			</ul>
+     <?php endwhile;
+
+      else :
+
+          // no rows found
+
+      endif;
+
+      ?>
 			</div>
+
 	</div>
 
 </div>
 
 	<!-- <div class="bg_grey visible-lg"> </div> -->
 	</div>
-	<div class="col-sm-6 col-md-3 col-md-pull-6 side">
+	<div class="col-md-6 col-lg-3 col-lg-pull-6 side">
 		<?php 
 	    
 	    $team_side_column="team_left_column";
 	    include(locate_template('templates/part-team-side.php')); ?>
 	</div>
-	<div class="col-sm-6 col-md-3 side">
+	<div class="col-md-6 col-lg-3 side">
 	    <?php 
 	    
 	    $team_side_column="team_right_column";

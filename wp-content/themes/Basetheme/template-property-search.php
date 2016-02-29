@@ -34,9 +34,15 @@ $args = array(
 <script>
   
    jQuery(document).ready(function(){
-   var saleType = "current";
-   var  property_type = "property";
-   loadProperties(saleType,property_type);
+    var saleType = "current";
+    var  property_type = "property";
+    
+    setTimeout(function(){
+        loadProperties(saleType,property_type);
+    }, 1000);
+       
+
+   
    }); 
 
 </script>

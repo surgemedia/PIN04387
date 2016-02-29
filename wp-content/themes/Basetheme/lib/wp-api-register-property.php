@@ -116,20 +116,29 @@ function meta_register_property() {
         )
     );
 }
+
 function meta_get_property( $object ) {
     $post_meta = get_post_meta( $object[ 'id' ]);
-
+    $garage_num = $post_meta['property_garage'];
+    $carpost_num = $post_meta['property_carport'];
+    $sum = $carpost_num[0] + $garage_num[0];
+    // if(!is_numeric($sum)){ $sum = 'cheese'; }
+    
     $final_data = array(
         'property_address_street_number' => $post_meta['property_address_street_number'],
         'property_address_street' => $post_meta['property_address_street'],
         'property_bedrooms' => $post_meta['property_bedrooms'],
         'property_bathrooms' => $post_meta['property_bathrooms'],
         'property_address_suburb' => $post_meta['property_address_suburb'],
-        'property_garage' => $post_meta['property_garage'],
+        'property_carport' => $post_meta['property_carport'],
         'property_address_coordinates' => $post_meta['property_address_coordinates'],
         'property_status' => $post_meta['property_status'],
         'property_category' => $post_meta['property_category'],
+        'property_garage' => $post_meta['property_garage'],
+        'property_all_carspaces' => $sum
+
         );
+    
     return $final_data;
 }
 

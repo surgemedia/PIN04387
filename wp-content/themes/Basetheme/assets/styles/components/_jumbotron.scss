@@ -3,12 +3,13 @@
 	color:#fff;
 	background-size: cover;
 	display: table-cell;
-    width: 100vw;
-    text-align: center;
-    vertical-align: bottom;
-    position:relative;
-    padding-bottom: 0;
-    border-top: 110px solid $brand-dark;
+  width: 100vw;
+  text-align: center;
+  vertical-align: bottom;
+  position:relative;
+  padding-bottom: 0;
+  border-top: 110px solid $brand-dark;
+  background-position-x:40%;
 	.content {
 		font-size: 90px;
     height: 2.5em;
@@ -23,6 +24,7 @@
 			&.before-title{
 				display: inline-block;
 				font-weight: 100;
+				padding-right: 16px;
 			}
 			&.after-title{
 				display: block;

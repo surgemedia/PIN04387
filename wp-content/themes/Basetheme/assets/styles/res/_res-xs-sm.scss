@@ -1,3 +1,145 @@
+/*=====================================
+=            Menu Collapse            =
+=====================================*/
+.banner div {
+	position: static;
+	.navbar-header{
+		float: none;
+		.navbar-toggle{
+			display: inline-block;
+		}
+	}
+	.logo-wrap {
+	    
+	    left: 2em;
+	    a{
+			img{
+				width:76px; 
+			}
+		}
+	}
+}	
+
+.banner,
+.banner.home{
+	background-color: $brand-dark;
+	opacity: 1;
+	height:91px;
+}
+
+.banner div .menu-wrap{
+	top:6.5em;
+	right:initial;
+	width:100%;
+	position:fixed;
+	height:auto;
+	.navbar-collapse{
+		margin-right: -15px;
+		margin-left: -15px;
+		width:100%;
+		text-align: center;
+		&.collapse{
+			display: none !important;
+		}
+		.nav{
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+		ul{
+			li{
+				display: block;
+		    font-size: 2em;
+		    min-height: 3em;
+		    line-height: 3;
+		    text-transform: uppercase;
+			transition: ease .3s all;
+				.sub-menu{
+					transition: ease .3s all;
+					overflow: hidden;
+			    height: 0px;
+			    padding: 0;
+					position:static;
+					background:$brand-light;
+					width: 100%;
+					border:0;
+					display: block;
+					li{
+						font-size: .8em;
+						a{
+							padding:0;
+						}
+					}
+				}	
+				
+				a.active+.sub-menu{
+					height: 198px;
+					transition: ease .3s all;
+				}
+
+				&:before{
+
+					content: none;
+				}
+
+			}
+		}
+
+
+		&.collapsing,
+		&.collapse.in{
+			background: $brand-primary;
+			height: 100vh !important;
+			display: block !important;
+		}
+	}
+	.follow-us{
+		margin-top: 2em;
+		padding-top: 2em;
+		border-top:1px solid #fff;
+		width: 220px;
+		margin: auto;
+		height:20em;
+		h1{
+			color:#fff;
+			font-family: 'Century Gothic';
+			font-weight: normal;
+			font-size: 28px;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			li{
+				display: inline-block;
+				line-height: 2;
+				i{
+					font-size: 2em;
+				}
+			}
+		}
+	}
+}
+
+
+.navbar-toggle{
+	border: 1px solid #fff;
+	border-radius: 0;
+	margin-top: 17px;
+	background-color: $brand-light;
+	
+	.icon-bar{
+		background-color: #fff;
+		margin: 8px 0;
+		}
+	&.collapsed{
+		background-color:transparent;
+	}
+}
+
+
+/*=================================
+=            MaxHeight            =
+=================================*/
+
 .maxheight{ 
     max-height: initial;
     overflow: visible;

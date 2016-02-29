@@ -21,7 +21,7 @@
             $full_name=explode(" ", get_the_title());
             $name=$full_name[0];
             $surname=$full_name[1]?>
-            <div class="col-sm-6 col-md-3 side remove-padding">
+            <div class="col-sm-6 col-md-4 col-lg-3 side remove-padding">
             <div class="staff">
                 <div class="staff-image">
                     <img src=<?php echo $image_url; ?> >
