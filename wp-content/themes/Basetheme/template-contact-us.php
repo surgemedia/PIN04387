@@ -69,12 +69,12 @@
 			<?php
 
       // check if the repeater field has rows of data
-      if( have_rows('social_media','option') ):
-          
+      if( have_rows('social_media','option') ): ?>
+          <h3>Follow Us</h3>
+            <ul>
+    <?php				
         // loop through the rows of data
           while ( have_rows('social_media','option') ) : the_row(); ?>
-    				<h3>Follow Us</h3>
-            <ul>
      <?php  if (get_sub_field('visible')) : ?>
 							<li>
 								<a href="<?php echo get_sub_field('url');?>" target="_blank" class="">
@@ -82,10 +82,10 @@
 		            </a>
 							</li>
       <?php endif;?>
+     <?php endwhile;?>
        			</ul>
-     <?php endwhile;
 
-      else :
+   <?php   else :
 
           // no rows found
 

@@ -149,7 +149,7 @@ jQuery(document).ready(function(){
   <div class="headshot col-lg-6 text-center">
   	<?php
   	$image = get_field('headshot');
-	$image_url = aq_resize($image,700,770,true,true,false);
+	$image_url = aq_resize($image,840,770,true,true,false);
 		  ?>
     <img class="img-responsive"  src="<?php echo $image_url; ?>" alt="">
     <div class="hgroup">

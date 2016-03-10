@@ -52,9 +52,9 @@
           while ( have_rows('social_media','option') ) : the_row();
               
               if (get_sub_field('visible')) : 
-               
-                if("facebook"==get_sub_field('name')){ $icon="fb";}
-                if("twitter"==get_sub_field('name')){ $icon="tw";}?>
+                  $icon=get_sub_field('name');
+                //if("facebook"==get_sub_field('name')){ $icon="fb";}
+                //if("twitter"==get_sub_field('name')){ $icon="tw";}?>
                   
                   <a href="<?php echo get_sub_field('url');?>" target="_blank" class="">
                     <i class="icon-<?php echo $icon?>"></i>
@@ -71,7 +71,7 @@
       ?>
     </span>
 
-    <span class="col-lg-6 col-sm-12 col-md-6 col-md-pull-3">2015 © Pinnacle Properties Queensland</span>
+    <span class="col-lg-6 col-sm-12 col-md-6 col-md-pull-3"><?php echo date('Y'); ?> © Pinnacle Properties Queensland</span>
 
   </div>
     <script>
