@@ -210,6 +210,7 @@
      
 }
 
+
 #no-results {
     padding-top: 3em;
     padding-bottom: 3em;
@@ -241,5 +242,17 @@
         }
         .gform_heading { display:none;}
 
+    }
+}
+#otherSearch {
+        display:inline-block;
+    a { 
+        display:inline-block;
+        padding: 1em;
+        color: purple;
+        font-weight: bold;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

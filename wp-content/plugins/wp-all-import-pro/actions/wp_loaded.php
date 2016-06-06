@@ -23,9 +23,28 @@ function pmxi_wp_loaded() {
 	/* Check if cron is manualy, then execute import */
 	$cron_job_key = PMXI_Plugin::getInstance()->getOption('cron_job_key');
 	
-	if (!empty($cron_job_key) and !empty($_GET['import_id']) and !empty($_GET['import_key']) and $_GET['import_key'] == $cron_job_key and !empty($_GET['action']) and in_array($_GET['action'], array('processing','trigger','pipe','cancel'))) {		
+	if (!empty($cron_job_key) and !empty($_GET['import_key']) and $_GET['import_key'] == $cron_job_key and !empty($_GET['action']) and in_array($_GET['action'], array('processing','trigger','pipe','cancel','cleanup'))) {		
 		
 		$logger = create_function('$m', 'echo "<p>$m</p>\\n";');								
+
+		if (empty($_GET['import_id']))
+		{
+			if ($_GET['action'] == 'cleanup')
+			{
+				$settings = new PMXI_Admin_Settings();				
+				$settings->cleanup( true );
+				wp_send_json(array(
+					'status'     => 200,
+					'message'    => __('Cleanup completed.', 'wp_all_import_plugin')
+				));				
+				return;
+			}		
+			wp_send_json(array(
+				'status'     => 403,
+				'message'    => __('Missing import ID.', 'wp_all_import_plugin')
+			));				
+			return;
+		}
 
 		$import = new PMXI_Import_Record();
 		

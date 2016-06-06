@@ -2,6 +2,7 @@
   "dependencies": {
     "main.js": {
       "files": [
+        "scripts/chosen.jquery.js",
         "scripts/main.js"
       ],
       "main": true
