@@ -25,6 +25,8 @@ $the_property_meta = get_post_meta(get_the_id() );
                     </li>
             </ul>
             <a href="<?php the_permalink()?>" class="details">Details</a>
-
+            <div class="row">
+                <div class="col-lg-12 text-right"><a href="/property-search/" class="all-properties"><i class="icon-list"></i>ALL LISTED PROPERTIES</a></div>
+            </div>
         </div>
     </div>

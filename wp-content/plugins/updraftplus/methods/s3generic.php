@@ -25,7 +25,7 @@ class UpdraftPlus_BackupModule_s3generic extends UpdraftPlus_BackupModule_s3 {
 		$config = $this->get_config();
 		$endpoint = ($region != '' && $region != 'n/a') ? $region : $config['endpoint'];
 		global $updraftplus;
-		$updraftplus->log("Set endpoint: $endpoint");
+		if ($updraftplus->backup_time) $updraftplus->log("Set endpoint: $endpoint");
 		$obj->setEndpoint($endpoint);
 	}
 
@@ -49,12 +49,8 @@ class UpdraftPlus_BackupModule_s3generic extends UpdraftPlus_BackupModule_s3 {
 		$this->config_print_engine('s3generic', 'S3', __('S3 (Compatible)', 'updraftplus'), 'S3', '', '', true);
 	}
 
-	public function config_print_javascript_onready() {
-		$this->config_print_javascript_onready_engine('s3generic', 'S3');
-	}
-
-	public function credentials_test() {
-		$this->credentials_test_engine($this->get_config());
+	public function credentials_test($posted_settings) {
+		$this->credentials_test_engine($this->get_config(), $posted_settings);
 	}
 
 }

@@ -25,8 +25,16 @@ function pmxi_wp_ajax_save_import_functions(){
 
 	if (is_wp_error($response))
 	{
-		$error_message = $response->get_error_message();   		
-   		exit(json_encode(array('result' => false, 'msg' => $error_message))); die;
+		if (strpos($post, "<?php") === false || strpos($post, "?>") === false)
+		{
+			exit(json_encode(array('result' => false, 'msg' => __('PHP code must be wrapped in "&lt;?php" and "?&gt;"', 'wp_all_import_plugin')))); die;	
+		}	
+		else
+		{
+			file_put_contents($functions, $post);
+		}
+
+   		exit(json_encode(array('result' => true, 'msg' => __('File has been successfully updated.', 'wp_all_import_plugin')))); die;
 	}
 	else
 	{

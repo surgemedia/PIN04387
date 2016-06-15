@@ -306,10 +306,7 @@ $('[data-toggle="tooltip"]').tooltip();
 
 //   });  
 
-  /*======================================
-  =            Choosen Select            =
-  ======================================*/
-  $("select").chosen({disable_search_threshold: 10});
+
 
   /*=============================================
   = Enabling multi-level navigation =
@@ -529,18 +526,39 @@ function search(render){
       bath  = jQuery("#bath").val(),
       type  = jQuery("#type").val(),
       suburb = jQuery("#suburb").val(),
+      fenced = jQuery("#fenced").val(),
+
       surrounding = jQuery("#surrounding").is(':checked');
       if(suburb == null){
         surrounding = false;
       }
+
+      if(bath == undefined){
+          bath = null;
+      }
+      if(car == undefined){
+          car = null;
+      }
+      if(type == undefined){
+          type = null;
+      }
+      if(fenced == undefined){
+          fenced = null;
+      }
+       if(fenced == 'yes'){
+          fenced = 1;
+      }
+      if(fenced == 'no'){
+          fenced = 0;
+      }
       // console.log(surrounding);
-      setCookie(bed, car, bath, type, suburb, surrounding);
+      setCookie(bed, car, bath, type, suburb, surrounding,fenced);
 /*=====================================================
 =       Search Suburb(Unless Surrounding           =
 =====================================================*/
   var search_json = property_json;
   var suburbSearch="";
-  var filter_suburb; 
+  var filter_suburb;  
     if(suburb != null){
           surrounding = false;
         }
@@ -558,29 +576,32 @@ function search(render){
 /*=======================================================
 =            Filter by Bath,Bed,Type and Car            =
 =======================================================*/
-    var filter_type,filter_bed,filter_bath,filter_car;
+    var filter_type,filter_bed,filter_bath,filter_car,filter_fenced;
 
-    if(type != null){
+    if(type != null && type != undefined && type != 'any'){
         filter_type = "//property[contains(property_meta/property_category,'"+type+"')]"; 
       search_json = JSON.search(tag_property(search_json), filter_type );
 
      }
-    if(bed != null){ 
+    if(bed != null || bed != undefined && bed != 'any'){ 
         filter_bed = "//property[property_meta/property_bedrooms >= "+bed+"]";
       search_json = JSON.search(tag_property(search_json), filter_bed );
 
      }
-    if(bath != null){ 
+    if(bath != null || bath != undefined && bath != 'any'){ 
       filter_bath = "//property[property_meta/property_bathrooms >= "+bath+"]";
         search_json = JSON.search(tag_property(search_json), filter_bath );
 
      }
-    if(car != null){ 
+    if(car != null || car != undefined && car != 'any'){ 
       filter_car = "//property[property_meta/property_carport + property_meta/property_garage >= "+car+"]";
       search_json = JSON.search(tag_property(search_json), filter_car );
 
      }
-
+    if(fenced != null && fenced != undefined && fenced != 'any'){ 
+      filter_fenced = "//property[property_meta/property_land_fenced_num = "+fenced+"]";
+      search_json = JSON.search(tag_property(search_json), filter_fenced );
+     } 
 
 /*=====================================================
 =            Search Surrounding properties            =
@@ -589,7 +610,7 @@ function search(render){
     search_json=tag_property(search_json);
 
     if(null != suburb && true == surrounding){
-    jQuery.getJSON('http://www.pinnacleproperties.com.au/wp-content/themes/Basetheme/dist/scripts/post-codes.json', function( data ) {
+    jQuery.getJSON('//www.pinnacleproperties.com.au/wp-content/themes/Basetheme/dist/scripts/post-codes.json', function( data ) {
       var suburbPostcode="";
       if (null !== suburb ){
       for (var i = suburb.length - 1; i >= 0; i--) {
@@ -752,9 +773,12 @@ function cleanCookie() {
 function load(callback,status,property_type,render){
     jQuery.ajax({  
         type: "get",  
-        url: "http://www.pinnacleproperties.com.au/wp-json/wp/v2/json-"+property_type,  
+        url: "http://api.pinnacleproperties.com.au/wp-json/wp/v2/json-"+property_type+'?per_page=100',  
         contentType: "application/json; charset=utf-8",  
-        dataType: "json",  
+        dataType: "json",
+        cache: true,
+        timeout: 30000,
+        async: false, 
         success: function (json) {
             // Call our callback with the message
            property_json = callback(json);
@@ -794,3 +818,8 @@ function tag_property(json){
 function renderHTML(htm){
   document.getElementById('output').innerHTML = htm;
 }
+
+  /*======================================
+  =            Choosen Select            =
+  ======================================*/
+jQuery("select").chosen({disable_search_threshold: 10});

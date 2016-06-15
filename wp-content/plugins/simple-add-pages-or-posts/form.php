@@ -2,11 +2,10 @@
 /**
  * Simple add pages or posts.
  *
- * @category      Wordpress Plugins
+ * @category      WordPress Plugins
  * @package       Plugins
  * @author        Simon Dirlik, Ramon Fincken
  * @copyright     Yes, Open source
- * @version       v 1.1
  */
 if (!defined('ABSPATH'))
 die("Aren't you supposed to come here via WP-Admin?");
@@ -18,6 +17,12 @@ global $wpdb;
  * If submiting the form
  */
 if (isset ($_POST['submitbutton']) && isset ($_POST['postorpage'])) {
+
+	if (!isset( $_POST['nonce_check'] ) || ! wp_verify_nonce( $_POST['nonce_check'], 'mp_sapop' ) ) {
+		$message = $title = 'Sorry, your nonce did not verify.';
+		wp_die( $message, $title);
+	}
+
 	if (!isset ($_POST['titles']) || !$_POST['titles']) {
 		echo '<div id="message" class="error">No titles given</div>';
 	} else {
@@ -184,8 +189,14 @@ textarea {
 }
 </style>
 <br />
+<h3>Custom Post Type support</h3>
+<p><a href="http://webshop.mijnpress.nl/product-category/plugins">Buy our premium plugin to add Custom Post Type (CPT) support!</a></p> 
+<br/>
+
 <form id="form1" name="form1" method="post" action=""
 	onsubmit="return confirm('Are you sure?')">
+
+<?php wp_nonce_field( 'mp_sapop', 'nonce_check' ); ?>
 <table class="widefat">
 	<thead>
 		<tr>

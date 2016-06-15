@@ -27,7 +27,7 @@
             "key": "field_564d191c05076",
             "label": "Phone",
             "name": "phone",
-            "type": "number",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -40,9 +40,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
-            "max": "",
-            "step": "",
+            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         },
@@ -50,7 +48,7 @@
             "key": "field_564d199605077",
             "label": "Mobile",
             "name": "mobile",
-            "type": "number",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -63,9 +61,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
-            "max": "",
-            "step": "",
+            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         },
@@ -126,5 +122,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1448430910
+    "modified": 1450751304
 }

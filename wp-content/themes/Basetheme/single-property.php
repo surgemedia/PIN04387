@@ -24,8 +24,7 @@
 <div class="customPrevBtn"><i class="icon-arrow-left"></i></div>
 <div class="customNextBtn"><i class="icon-arrow-right"></i></div>
 <?php if ($the_property_meta['property_status'][0]=='sold'):?>
-	<?php $compare_id = get_the_id(); 
-	// debug($compare_id); ?>
+	<?php $compare_id = get_the_id(); ?>
 		
 			<?php 
 		$args = array (

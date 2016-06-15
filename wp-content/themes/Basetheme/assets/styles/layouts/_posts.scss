@@ -43,8 +43,18 @@
 		padding:1em 0em;
 		display:inline-block;
 		font-weight: 400;
+		font-size: 1.5em;
 		&:hover{
 			color: #D397C3;
+		}
+	}
+	.all-properties{
+		padding:0; 
+		i{
+			color: #fff;
+	    padding: 0 .5em;
+	    font-size: 1.5em;
+	    vertical-align: sub;
 		}
 	}
 }
@@ -72,7 +82,7 @@
 	}
 	.image{
 		background-size: cover;
-    height: 69vh;
+    height: 62vh;
     background-position: center;
 	}
 }

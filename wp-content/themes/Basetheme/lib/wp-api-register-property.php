@@ -23,7 +23,18 @@
         $wp_post_types[$post_type_name]->rest_base = 'json-rental';
         $wp_post_types[$post_type_name]->rest_controller_class = 'WP_REST_Posts_Controller';
     }
-  }
+    }
+     add_action( 'init', 'easyLand_rest_support', 25 );
+    function easyLand_rest_support() {
+      global $wp_post_types;
+      //be sure to set this to the name of your post type!
+      $post_type_name = 'land';
+      if( isset( $wp_post_types[ $post_type_name ] ) ) {
+          $wp_post_types[$post_type_name]->show_in_rest = true;
+          $wp_post_types[$post_type_name]->rest_base = 'json-land';
+          $wp_post_types[$post_type_name]->rest_controller_class = 'WP_REST_Posts_Controller';
+      }
+    }
 /*=======================================================
 =            Allow WPAPI TO USE Feature TAX            =
 =======================================================*/
@@ -115,6 +126,65 @@ function meta_register_property() {
             'schema'          => null,
         )
     );
+    /*===============================
+     =            Land            =
+     ===============================*/
+     register_api_field( 'land', 'property_meta',
+        array(
+            'get_callback'    => 'meta_get_land',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+     register_api_field( 'land', 'property_term',
+        array(
+            'get_callback'    => 'meta_get_property_term',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+     register_api_field( 'land', 'property_image',
+        array(
+            'get_callback'    => 'meta_get_property_image',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+function meta_get_land( $object ) {
+    $post_meta = get_post_meta( $object[ 'id' ]);
+    // $garage_num = $post_meta['property_garage'];
+    // $carpost_num = $post_meta['property_carport'];
+    // $sum = $carpost_num[0] + $garage_num[0];
+    // if(!is_numeric($sum)){ $sum = 'cheese'; }
+    $property_land_fully_fenced;
+    if($post_meta['property_land_fully_fenced'][0] == "yes"){
+      $property_land_fully_fenced = 'Fenced';
+      $property_land_fenced_num = 1;
+
+    } else {
+      $property_land_fully_fenced = 'Unfenced';
+      $property_land_fenced_num = 0;
+    }
+
+    
+    $final_data = array(
+        'property_address_street_number' => $post_meta['property_address_street_number'],
+        'property_address_street' => $post_meta['property_address_street'],
+        'property_address_suburb' => $post_meta['property_address_suburb'],
+        'property_address_coordinates' => $post_meta['property_address_coordinates'],
+        'property_status' => $post_meta['property_status'],
+        'property_category' => $post_meta['property_category'],
+        'property_price' => $post_meta['property_price'],
+        'property_land_area' => $post_meta['property_land_area'][0].' Sq m',
+        'property_land_area_unit' => $post_meta['property_land_area_unit'],
+        'property_category' => $post_meta['property_land_category'],
+        'property_land_fully_fenced' => $property_land_fully_fenced,
+        'property_land_fenced_num' => $property_land_fenced_num,
+
+        );
+    
+    return $final_data;
 }
 
 function meta_get_property( $object ) {
@@ -160,6 +230,10 @@ function my_remove_extra_product_data( $data, $post, $context ) {
         return $data;
     }
      if ( 'rental' !== $data[ 'type' ] ) {
+      
+        return $data;
+    }
+    if ( 'land' !== $data[ 'type' ] ) {
       
         return $data;
     }
