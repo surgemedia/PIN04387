@@ -12,14 +12,16 @@
 
 <?php
  $gallery =  get_attached_media( 'image' );
-			foreach ($gallery as $index => $image_id): ?>
+			foreach ($gallery as $index => $image_id):
+$feat_image = wp_get_attachment_url($image_id->ID);
+			 ?>
 
-	   <div class="wrap">
-	   <?php //debug($image_id); ?>
-<img  style='background-image:url(<?php  $feat_image = wp_get_attachment_url($image_id->ID);
-	                            echo $feat_image;?>)' alt="" >
+	   <div class="wrap" style="background-image:url('<?php echo $feat_image;?>'); background-size:cover;background-position: center;height: 100%;">
+	   <?php //debug($feat_image); ?>
+			<!-- <img style="background-image:url('<?php echo $feat_image;?>')" alt="" /> -->
+	   <!-- <div class="img"  ></div> -->
 	                            </div>
-	<?	endforeach; ?>
+	<?php	endforeach; ?>
 </div>
 <div class="customPrevBtn"><i class="icon-arrow-left"></i></div>
 <div class="customNextBtn"><i class="icon-arrow-right"></i></div>
@@ -86,6 +88,9 @@ wp_reset_postdata(); ?>
 		 switch ($the_property->post_type) {
 			case 'property':
 				$end_price = $the_property->property_price_view;
+				 if ($the_property_meta['property_status'][0]=='sold'){
+				 	$end_price .= " $".$soldPrice=$the_property_meta['property_sold_price'][0];
+				 }
 				break;
 			case 'rental':
 				$end_price = $the_property->property_rent_view;

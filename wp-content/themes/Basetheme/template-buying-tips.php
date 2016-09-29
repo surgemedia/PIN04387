@@ -14,7 +14,7 @@
 		include(locate_template('templates/part-jumbotron.php')); ?>
 		
 		<?php while (have_posts()) : the_post(); ?>
-	<div class="tips-content">
+	<div class="tips-content text-center">
 			<div class="content">
 				<?php edit_post_link(); ?>
 				

@@ -773,7 +773,7 @@ function cleanCookie() {
 function load(callback,status,property_type,render){
     jQuery.ajax({  
         type: "get",  
-        url: "http://api.pinnacleproperties.com.au/wp-json/wp/v2/json-"+property_type+'?per_page=100',  
+        url: "http://www.pinnacleproperties.com.au/wp-json/wp/v2/json-"+property_type+"?per_page=100",  
         contentType: "application/json; charset=utf-8",  
         dataType: "json",
         cache: true,
@@ -788,6 +788,7 @@ function load(callback,status,property_type,render){
             property_json = temp_json;
             if(render == true){
             var htm = Defiant.render('property', callback(temp_json));
+            // console.log(callback(temp_json));
             renderHTML(htm);
             }
             if(getCookie('suburb').length > 1){
