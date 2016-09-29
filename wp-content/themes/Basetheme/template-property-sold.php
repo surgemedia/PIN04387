@@ -22,7 +22,7 @@
     
     });
 </script>
-<div class="tips-content">
+<div class="tips-content text-center">
         <div class="content">
           <?php wp_reset_postdata(); ?>
             <?php the_content(); ?>
